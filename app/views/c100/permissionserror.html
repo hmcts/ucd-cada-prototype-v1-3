@@ -1,0 +1,133 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Child arrangement respondent
+{% endblock %}
+
+{% block header %}
+  <!-- Blank header with no service name for the start page -->
+
+{{ govukHeader({
+    homepageUrl: "/",
+    serviceName: serviceName,
+    serviceUrl: "/",
+    containerClasses: "govuk-width-container"
+}) }}
+
+{% endblock %}
+
+{% block content %}
+<div class="govuk-grid-row">
+   <div class="govuk-grid-column-two-thirds">
+    <div class="govuk-width-container">
+     <a href="#" onclick="history.back(-1)" class="govuk-back-link">Back</a>
+
+     <main class="govuk-main-wrapper app-main-class" id="main-content" role="main">
+         <form action="permissions-answer" method="post" novalidate>
+           <div class="govuk-error-summary" aria-labelledby="error-summary-title" role="alert" data-module="govuk-error-summary">
+             <h2 class="govuk-error-summary__title" id="error-summary-title">
+               There is a problem
+             </h2>
+             <div class="govuk-error-summary__body">
+               <ul class="govuk-list govuk-error-summary__list">
+                 <li>
+                   <a href="#solicitor">Select yes if there is any reason why you would need permission from the court to make this application</a>
+                 </li>
+               </ul>
+             </div>
+           </div>
+
+
+
+
+         <h1 class="govuk-heading-xl">Is there any reason why you would need permission from the court to make this application?</h1>
+
+         <div id="permissionreasons"
+           <p class="govuk-body">
+                 In some cases, the court will need to give permission before the application can be accepted.</p>
+
+          <p class="govuk-body">
+            You will not need permission if you are the:</p>
+              <ul class="govuk-list govuk-list--bullet">
+                <li>parent</li>
+                <li>guardian</li>
+               <li>special guardian</li>
+              </ul>
+              <p class="govuk-body">You may, or may not need permission from the court. </p>
+
+              <p class="govuk-body">
+                For example, you may need permission if you are in the children's lives, but not their parent or guardian.</p>
+
+            <p class="govuk-body">
+              You will need the court's permission if you are one of the children, and the application is about you.</p>
+         </div>
+
+         <p class="govuk-body">If you are not sure if you need permission,
+            <a href="https://www.gov.uk/government/publications/family-court-applications-that-involve-children-cb1" class="govuk-link" rel="external" target="_blank">see Section C of the Form CB1 guidance on GOV.UK</a>.</p>
+         <div class="govuk-!-padding-bottom-4"></div>
+
+
+
+         <div class="govuk-form-group govuk-form-group--error">
+           <p id="where-do-you-live-error" class="govuk-error-message">
+             <span class="govuk-visually-hidden">Error:</span>Select yes if there is any reason why you would need a permission from the court to make this application
+           </p>
+           <fieldset class="govuk-fieldset">
+             <div class="govuk-radios" data-module="govuk-radios">
+               <div class="govuk-radios__item">
+                 <input id="permission-yes" class="govuk-radios__input" type="radio" value="Yes" name="permission">
+                 <label for="permission-yes" class="govuk-label govuk-radios__label">Yes</label>
+               </div>
+
+
+               <div class="govuk-radios__item">
+                 <input id="permission-no" class="govuk-radios__input" type="radio" value="No" name="permission">
+                 <label for="permission-no" class="govuk-label govuk-radios__label">No</label>
+               </div>
+             </div>
+            </fieldset>
+          </div>
+
+
+          <div class="govuk-button-group govuk-!-margin-top-6">
+            <button class="govuk-button" data-module="govuk-button">
+              Continue
+            </button>
+            <a class="govuk-button govuk-button--secondary" href="../../applicanttasklist/inprogress"  data-module="govuk-button">
+              Save and come back later
+            </a>
+
+          </div>
+
+
+
+
+       </main>
+
+
+    </div>
+  </div>
+
+  <div class="govuk-grid-column-one-third">
+    <details class="govuk-details" data-module="govuk-details">
+ 			 <summary class="govuk-details__summary">
+   			 <span class="govuk-details__summary-text">
+    		  Contacts for help
+  			  </span>
+  			</summary>
+  			<div class="govuk-details__text">
+   			 Ask a question or get any help in any language
+   			 <p class="govuk-body govuk-!-font-weight-bold">Telephone</p>
+
+   			 <p class="govuk-body govuk-!-font-weight-regular">0300 303 0742</p>
+   			 <p class="govuk-body govuk-!-font-weight-regular">Monday to Friday, 8am to 8pm</p>
+   			 <a href="#" class="govuk-link">Find out about call charges</a>
+   			 <p class="govuk-body govuk-!-font-weight-regular">(opens in a new window)</p>
+			  </div>
+			</details>
+    </div>
+</div>
+
+
+
+{% endblock %}

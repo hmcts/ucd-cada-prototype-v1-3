@@ -1,0 +1,112 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  HMCTS prototyping
+{% endblock %}
+
+
+{% block header %}
+  <!-- Blank header with no service name for the start page -->
+
+{{ govukHeader({
+    homepageUrl: "/",
+    serviceName: "HMCTS",
+    serviceUrl: "/",
+    containerClasses: "govuk-width-container"
+}) }}
+
+{% endblock %}
+
+{% block beforeContent %}
+<a href="/accountdashboard.html" class="govuk-back-link">Back</a>
+{% endblock %}
+
+{% block content %}
+
+<!-- https://design-system.service.gov.uk/styles/layout/-->
+
+<div class="govuk-width-container">
+  <main class="govuk-main-wrapper">
+
+    <div class="govuk-grid-row">
+<!-- Left column-->
+      <div class="govuk-grid-column-two-thirds">
+<!-- https://design-system.service.gov.uk/styles/typography/ -->
+<h1 class="govuk-heading-l">Access your case</h1>
+
+ <p class="govuk-body">Access and manage your case using your case number and access code. These will be in the letter, email or pack sent by the court.</p>
+
+
+ <div class="govuk-form-group govuk-!-margin-top-8">
+  <h3 class="govuk-label-wrapper"><label class="govuk-label govuk-label--s" for="event-name">
+    Enter your case number
+    </label>
+  </h3>
+  <div id="event-name-hint" class="govuk-hint">
+    This is a 16-digit number
+  </div>
+  <input class="govuk-input" id="event-name" name="event-name" type="text" aria-describedby="event-name-hint">
+</div>
+
+<div class="govuk-form-group ">
+  <h3 class="govuk-label-wrapper"><label class="govuk-label govuk-label--s" for="event-name">
+    Enter your access code
+    </label>
+  </h3>
+  <div id="event-name-hint" class="govuk-hint">
+    This has 8 characters
+  </div>
+  <input class="govuk-input" id="event-name" name="event-name" type="text" aria-describedby="event-name-hint">
+</div>
+
+
+<!-- https://design-system.service.gov.uk/components/button/ -->
+
+<!-- NB1- use this if you have ARE NOT using logic and delete the below -->
+<div class="govuk-button-group govuk-!-margin-top-8">
+
+<a href="/pinactivation/caseactivated.html" role="button" draggable="false" class="govuk-button" data-module="govuk-button">
+  Submit
+</a>
+
+<a class="govuk-link" href="/accountdashboard.html">Cancel</a>
+</div>
+
+
+
+
+      
+<!-- enter all content of the left column before the div below-->
+</div>
+
+<!-- right column-->
+      <div class="govuk-grid-column-one-third">
+
+<details class="govuk-details" data-module="govuk-details">
+  <summary class="govuk-details__summary">
+    <span class="govuk-details__summary-text">
+     Contacts for help
+     </span>
+   </summary>
+   <div class="govuk-details__text">
+    Ask a question or get any help in any language
+    <p class="govuk-body govuk-!-font-weight-bold">Telephone</p>
+
+    <p class="govuk-body govuk-!-font-weight-regular">0300 303 0742</p>
+    <p class="govuk-body govuk-!-font-weight-regular">Monday to Friday, 8am to 8pm</p>
+    <a href="#" class="govuk-link">Find out about call charges</a>
+    <p class="govuk-body govuk-!-font-weight-regular">(opens in a new window)</p>
+
+   </div>
+ </details>
+
+</div>
+    </div>
+
+  </main>
+</div>
+
+
+
+{% endblock %}

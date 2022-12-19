@@ -1,0 +1,165 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Child arrangement respondent
+{% endblock %}
+
+{% block header %}
+  <!-- Blank header with no service name for the start page -->
+
+{{ govukHeader({
+    homepageUrl: "/",
+    serviceName: serviceName,
+    serviceUrl: "/",
+    containerClasses: "govuk-width-container"
+}) }}
+
+{% endblock %}
+
+{% block content %}
+ <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <div class="govuk-width-container">
+
+        <a href="#" onclick="history.back(-1)" class="govuk-back-link">Back</a>
+
+        <main class="govuk-main-wrapper app-main-class" id="main-content" role="main">
+
+          <form action="../start" method="post" novalidate>
+
+          <h1 class="govuk-heading-xl">Statement of Truth</h1>
+
+
+            <div id="cya-declaration-box">
+
+                <p class="govuk-body-l">I understand that proceedings for contempt of court may be brought against anyone who makes, or causes to be made, a false statement in a document verified by a statement of truth without an honest belief in its truth.</p>
+
+              <div class="govuk-form-group">
+                <fieldset class="govuk-fieldset">
+                  <legend class="govuk-fieldset__legend govuk-fieldset__legend--s govuk-visually-hidden">
+                    <span class="govuk-fieldset__heading">Declaration_confirmation</span>
+                  </legend>
+                    <input value="" type="hidden" name="steps_application_declaration_form[declaration_confirmation]" id="steps_application_declaration_form_declaration_confirmation">
+                    <div class="govuk-radios" data-module="govuk-radios">
+                      <div class="govuk-radios__item">
+                        <input id="steps-application-declaration-form-declaration-confirmation-applicant-field" class="govuk-radios__input" type="radio" value="applicant" name="steps_application_declaration_form[declaration_confirmation]">
+                        <label for="steps-application-declaration-form-declaration-confirmation-applicant-field" class="govuk-label govuk-radios__label"><strong>I believe</strong> I believe that the facts stated in this form (and any continuation sheet) are true.
+                        </label>
+                      </div>
+
+                    </div>
+                  </fieldset>
+                </div>
+              <div class="govuk-form-group">
+                <label for="steps-application-declaration-form-declaration-signee-field" class="govuk-label">Full name</label>
+                <input id="steps-application-declaration-form-declaration-signee-field" class="govuk-input govuk-!-width-full" type="text" value="" name="steps_application_declaration_form[declaration_signee]">
+              </div>
+
+              <div class="govuk-checkboxes__item">
+                <input class="govuk-checkboxes__input" id="private-number" name="private" type="checkbox" value="number">
+                <label class="govuk-label govuk-checkboxes__label govuk-!-margin-bottom-2" for="private-number">
+                  I am the respondent
+                </label>
+                </div>
+                <div class="govuk-!-padding-bottom-4"></div>
+              <div class="govuk-form-group">
+                  <fieldset class="govuk-fieldset" role="group" aria-describedby="passport-issued-hint">
+                    <div id="passport-issued-hint" class="govuk-label govuk-label--s">
+                      Date
+                    </div>
+                    <div class="govuk-date-input" id="passport-issued">
+                      <div class="govuk-date-input__item">
+                        <div class="govuk-form-group">
+                          <label class="govuk-label govuk-date-input__label" for="passport-issued-day">
+                            Day
+                          </label>
+                          <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="passport-issued-day" name="passport-issued-day" type="text" pattern="[0-9]*" inputmode="numeric">
+                        </div>
+                      </div>
+                      <div class="govuk-date-input__item">
+                        <div class="govuk-form-group">
+                          <label class="govuk-label govuk-date-input__label" for="passport-issued-month">
+                            Month
+                          </label>
+                          <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="passport-issued-month" name="passport-issued-month" type="text" pattern="[0-9]*" inputmode="numeric">
+                        </div>
+                      </div>
+                      <div class="govuk-date-input__item">
+                        <div class="govuk-form-group">
+                          <label class="govuk-label govuk-date-input__label" for="passport-issued-year">
+                            Year
+                          </label>
+                          <input class="govuk-input govuk-date-input__input govuk-input--width-4" id="passport-issued-year" name="passport-issued-year" type="text" pattern="[0-9]*" inputmode="numeric">
+                        </div>
+                      </div>
+                    </div>
+
+                  </fieldset>
+                </div>
+
+                <input value="applicant" type="hidden" name="steps_application_declaration_form[declaration_signee_capacity]" id="steps_application_declaration_form_declaration_signee_capacity">
+            </div>
+
+
+
+              <button type="submit" formnovalidate="formnovalidate" class="govuk-button" data-module="govuk-button" data-prevent-double-click="true">Continue</button>
+
+      </form>
+
+        <!--  This should be on an overview page
+         <details class="govuk-details" data-module="govuk-details">
+            <summary class="govuk-details__summary">
+              <span class="govuk-details__summary-text" data-ga-category="explanations" data-ga-label="cya download draft">
+                Download a draft of your application (PDF)
+              </span>
+            </summary>
+            <div class="govuk-details__text">
+              <p class="govuk-body">
+                  If you cannot open the PDF file after downloading, download and install
+                  <a href="https://get.adobe.com/uk/reader/" class="govuk-link" rel="external" target="_blank">Adobe Acrobat Reader</a> to try again.
+                </p>
+                <p class="govuk-body">
+                  Please note this draft is for your records. Only the completed application will be admitted in court.
+                </p>
+
+            <a class="govuk-button ga-pageLink govuk-button--secondary" role="button" draggable="false" data-module="govuk-button" data-ga-category="check your answers" data-ga-label="download draft" download="" href="/steps/completion/summary.pdf">Download draft application</a>
+
+            </div>
+          </details>
+          !-->
+
+
+          </main>
+      </div>
+
+
+
+
+    </div>
+    <div class="govuk-grid-column-one-third">
+
+    		<details class="govuk-details" data-module="govuk-details">
+ 			      <summary class="govuk-details__summary">
+       			 <span class="govuk-details__summary-text">
+        		  Contacts for help
+      			  </span>
+  			    </summary>
+  			<div class="govuk-details__text">
+   			 Ask a question or get any help in any language
+   			 <p class="govuk-body govuk-!-font-weight-bold">Telephone</p>
+
+   			 <p class="govuk-body govuk-!-font-weight-regular">0300 303 0742</p>
+   			 <p class="govuk-body govuk-!-font-weight-regular">Monday to Friday, 8am to 8pm</p>
+   			 <a href="#" class="govuk-link">Find out about call charges</a>
+   			 <p class="govuk-body govuk-!-font-weight-regular">(opens in a new window)</p>
+
+			  </div>
+			</details>
+    </div>
+
+</div>
+
+
+
+{% endblock %}

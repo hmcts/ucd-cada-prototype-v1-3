@@ -1,0 +1,112 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Child arrangement respondent
+{% endblock %}
+
+{% block header %}
+  <!-- Blank header with no service name for the start page -->
+
+{{ govukHeader({
+    homepageUrl: "/",
+    serviceName: serviceName,
+    serviceUrl: "/",
+    containerClasses: "govuk-width-container"
+}) }}
+
+{% endblock %}
+
+{% block content %}
+<div class="govuk-grid-row">
+   <div class="govuk-grid-column-two-thirds">
+    <div class="govuk-width-container">
+     <a href="#" onclick="history.back(-1)" class="govuk-back-link">Back</a>
+
+     <main class="govuk-main-wrapper " id="main-content" role="main">
+
+       <form action="passportofficenotified" method="post" novalidate>
+
+         <span class="govuk-caption-l">Safety concerns</span>
+         <h1 class="govuk-heading-xl">Provide details of the children’s passports</h1>
+
+            <div class="govuk-form-group">
+              <fieldset class="govuk-fieldset" aria-describedby="proposal-hint">
+              <legend class="govuk-fieldset__legend govuk-fieldset__legend--m"><span class="govuk-fieldset__heading">Do the children have more than one passport?</span></legend>
+                <div class="govuk-radios" data-module="govuk-radios">
+                  <div class="govuk-radios__item">
+                    <input class="govuk-radios__input" id="child-abuse-yes" name="abuse" type="radio" value="yes">
+                      <label class="govuk-label govuk-radios__label" for="child-abuse-yes">Yes</label>
+                  </div>
+                  <div class="govuk-radios__item">
+                    <input class="govuk-radios__input" id="child-abuse-no" name="abuse" type="radio" value="no">
+                      <label class="govuk-label govuk-radios__label" for="child-abuse-no">No</label>
+                  </div>
+                </div>
+              </div>
+
+              <div class="govuk-form-group">
+                <fieldset class="govuk-fieldset" aria-describedby="proposal-hint">
+
+                  <legend class="govuk-fieldset__legend govuk-fieldset__legend--m"><span class="govuk-fieldset__heading">Who is in possession of the children’s passports?</span>
+                  </legend>
+                  <span class="govuk-hint" id="steps-abduction-passport-details-form-passport-possession-hint">Select all that apply</span>
+
+
+                  <div class="govuk-checkboxes" data-module="govuk-checkboxes">
+                    <div class="govuk-checkboxes__item">
+                      <input class="govuk-checkboxes__input" id="passport-mother" name="passportlocation" type="checkbox" value="mother">
+                        <label class="govuk-label govuk-checkboxes__label" for="passport-mother">Mother</label>
+                    </div>
+                    <div class="govuk-checkboxes__item">
+                      <input class="govuk-checkboxes__input" id="passport-father" name="passportlocation" type="checkbox" value="father">
+                        <label class="govuk-label govuk-checkboxes__label" for="passport-father">Father</label>
+                    </div>
+                    <div class="govuk-checkboxes__item">
+                      <input class="govuk-checkboxes__input" id="passport-other" name="passportlocation" type="checkbox" value="other" data-aria-controls="conditional-otherlocation" >
+                        <label class="govuk-label govuk-checkboxes__label" for="passport-other">Other</label>
+                      </div>
+                      <div class="govuk-checkboxes__conditional govuk-checkboxes__conditional--hidden" id="conditional-otherlocation">
+                        <div class="govuk-form-group">
+                           <h1 class="govuk-label-wrapper"><label class="govuk-body"	for="other-reason">
+                              Provide more details
+                            </label>
+                          </h1>
+                           <textarea class="govuk-textarea" id="other" name="other" rows="4"></textarea>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+
+
+
+        <button class="govuk-button" data-module="govuk-button">
+          Save and continue
+        </button>
+      </main>
+    </div>
+  </div>
+
+  <div class="govuk-grid-column-one-third">
+    <details class="govuk-details" data-module="govuk-details">
+ 			 <summary class="govuk-details__summary">
+   			 <span class="govuk-details__summary-text">
+    		  Contacts for help
+  			  </span>
+  			</summary>
+  			<div class="govuk-details__text">
+   			 Ask a question or get any help in any language
+   			 <p class="govuk-body govuk-!-font-weight-bold">Telephone</p>
+
+   			 <p class="govuk-body govuk-!-font-weight-regular">0300 303 0742</p>
+   			 <p class="govuk-body govuk-!-font-weight-regular">Monday to Friday, 8am to 8pm</p>
+   			 <a href="#" class="govuk-link">Find out about call charges</a>
+   			 <p class="govuk-body govuk-!-font-weight-regular">(opens in a new window)</p>
+			  </div>
+			</details>
+    </div>
+</div>
+
+
+
+{% endblock %}

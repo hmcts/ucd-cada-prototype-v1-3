@@ -1,0 +1,91 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Child arrangement respondent
+{% endblock %}
+
+{% block header %}
+  <!-- Blank header with no service name for the start page -->
+
+{{ govukHeader({
+    homepageUrl: "/",
+    serviceName: serviceName,
+    serviceUrl: "/",
+    containerClasses: "govuk-width-container"
+}) }}
+
+{% endblock %}
+
+{% block content %}
+<div class="govuk-grid-row">
+   <div class="govuk-grid-column-two-thirds">
+    <div class="govuk-width-container">
+     <a href="#" onclick="history.back(-1)" class="govuk-back-link">Back</a>
+
+     <main class="govuk-main-wrapper " id="main-content" role="main">
+
+       <form action="../../start" method="post" novalidate>
+         <span class="govuk-caption-xl">Safety concerns</span>
+         <h1 class="govuk-heading-xl">The children's safety</h1>
+         <div>
+
+         <h3 class="govuk-heading-m">What you told us</h3>
+         <p class="govuk-body">The children in this application have not suffered or are not at risk of suffering: </p>
+         <ul class="govuk-list govuk-list--bullet">
+           <li>emotional or psychological abuse</li>
+           <li>physical abuse</li>
+           <li>sexual abuse</li>
+           <li>witnessing domestic violence or abuse</li>
+
+         </ul>
+
+
+         <p class="govuk-body">Based on your answer, we will not ask you any more questions about your children's safety. You can continue your response. </p>
+
+         <h3 class="govuk-heading-s">Are you unsure about the answer you gave?</h3>
+         <p class="govuk-body">Have a look at the following information if you are unsure about your answer.</p>
+         <p>*these links are a placeholder, and will change</p>
+         <p class="govuk-body"><a href="https://www.nspcc.org.uk/what-is-child-abuse/types-of-abuse/" class="govuk-link" rel="external">Find out about the signs of child abuse</a></p>
+         <p class="govuk-body"><a href="https://www.childline.org.uk/" class="govuk-link" rel="external">Childline</a></p>
+          <p class="govuk-body"><a href="https://www.womensaid.org.uk/" class="govuk-link" rel="external"> Lorem ipsum about Women's aid</a></p>
+         <p class="govuk-body"><a href="www.mensadviceline.org.uk" class="govuk-link" rel="external">If you are a man and have concerns for your or your children's safety</a></p>
+         <p class="govuk-body"><a href="www.nationaldomesticviolencehelpline.org.uk" class="govuk-link" rel="external">National Domestic Violence Helpline</a></p>
+         </div>
+          <p class="govuk-body">If you want to change your answer, go back to the previous screen. </p>
+
+          <div class="govuk-button-group">
+              <button class="govuk-button" data-module="govuk-button">
+                Continue
+              </button>
+
+              <a href="childrenabuse" class="govuk-button govuk-button--secondary" data-module="govuk-button" >Go back</a>
+          </div>
+
+
+      </main>
+    </div>
+  </div>
+
+  <div class="govuk-grid-column-one-third">
+    <details class="govuk-details" data-module="govuk-details">
+ 			 <summary class="govuk-details__summary">
+   			 <span class="govuk-details__summary-text">
+    		  Contacts for help
+  			  </span>
+  			</summary>
+  			<div class="govuk-details__text">
+   			 Ask a question or get any help in any language
+   			 <p class="govuk-body govuk-!-font-weight-bold">Telephone</p>
+
+   			 <p class="govuk-body govuk-!-font-weight-regular">0300 303 0742</p>
+   			 <p class="govuk-body govuk-!-font-weight-regular">Monday to Friday, 8am to 8pm</p>
+   			 <a href="#" class="govuk-link">Find out about call charges</a>
+   			 <p class="govuk-body govuk-!-font-weight-regular">(opens in a new window)</p>
+			  </div>
+			</details>
+    </div>
+</div>
+
+
+
+{% endblock %}

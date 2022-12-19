@@ -1,0 +1,85 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Child arrangement respondent
+{% endblock %}
+
+{% block header %}
+  <!-- Blank header with no service name for the start page -->
+
+{{ govukHeader({
+    homepageUrl: "/",
+    serviceName: serviceName,
+    serviceUrl: "/",
+    containerClasses: "govuk-width-container"
+}) }}
+
+{% endblock %}
+
+{% block content %}
+<div class="govuk-grid-row">
+   <div class="govuk-grid-column-two-thirds">
+    <div class="govuk-width-container">
+     <a href="#" onclick="history.back(-1)" class="govuk-back-link">Back</a>
+
+
+      <main class="govuk-main-wrapper app-main-class" id="main-content" role="main">
+        <form action="checkanswers" method="post" novalidate>
+
+           <span class="govuk-caption-xl">Safety concerns</span>
+           <h1 class="govuk-heading-xl">Why do you think the children may be abducted or kept outside the UK without your consent?</h1>
+
+             <p class="govuk-body">Briefly explain your concerns, including:</p>
+             <ul class="govuk-list govuk-list--bullet">
+               <li>who might take them</li>
+               <li>where they might be taken or kept</li>
+             </ul>
+
+             <div class="govuk-form-group">
+               <label for="steps-abduction-risk-details-form-risk-details-field" class="govuk-label"><span class="govuk-visually-hidden">Briefly explain your concerns about abduction</span>
+               </label>
+               <textarea id="steps-abduction-risk-details-form-risk-details-field" class="govuk-textarea" rows="5" name="steps_abduction_risk_details_form[risk_details]"></textarea>
+             </div>
+             <div class="govuk-form-group">
+               <label for="steps-abduction-risk-details-form-current-location-field" class="govuk-label govuk-label--s">Where are the children now?
+               </label>
+               <span class="govuk-hint" id="steps-abduction-risk-details-form-current-location-hint">If they're outside England or Wales, include what country they're in and how long they've been there. You don't need to include any addresses.</span>
+               <textarea id="steps-abduction-risk-details-form-current-location-field" class="govuk-textarea" rows="5" aria-describedby="steps-abduction-risk-details-form-current-location-hint" name="steps_abduction_risk_details_form[current_location]">
+               </textarea>
+             </div>
+
+
+               <button type="submit" formnovalidate="formnovalidate" class="govuk-button" data-module="govuk-button" data-prevent-double-click="true">Continue
+               </button>
+
+        </form>
+
+
+      </main>
+
+    </div>
+  </div>
+
+  <div class="govuk-grid-column-one-third">
+    <details class="govuk-details" data-module="govuk-details">
+ 			 <summary class="govuk-details__summary">
+   			 <span class="govuk-details__summary-text">
+    		  Contacts for help
+  			  </span>
+  			</summary>
+  			<div class="govuk-details__text">
+   			 Ask a question or get any help in any language
+   			 <p class="govuk-body govuk-!-font-weight-bold">Telephone</p>
+
+   			 <p class="govuk-body govuk-!-font-weight-regular">0300 303 0742</p>
+   			 <p class="govuk-body govuk-!-font-weight-regular">Monday to Friday, 8am to 8pm</p>
+   			 <a href="#" class="govuk-link">Find out about call charges</a>
+   			 <p class="govuk-body govuk-!-font-weight-regular">(opens in a new window)</p>
+			  </div>
+			</details>
+    </div>
+</div>
+
+
+
+{% endblock %}

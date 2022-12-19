@@ -1,0 +1,102 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Child arrangement respondent
+{% endblock %}
+
+{% block header %}
+  <!-- Blank header with no service name for the start page -->
+
+{{ govukHeader({
+    homepageUrl: "/",
+    serviceName: serviceName,
+    serviceUrl: "/",
+    containerClasses: "govuk-width-container"
+}) }}
+
+{% endblock %}
+
+{% block content %}
+<div class="govuk-grid-row">
+   <div class="govuk-grid-column-two-thirds">
+    <div class="govuk-width-container">
+     <a href="#" onclick="history.back(-1)" class="govuk-back-link">Back</a>
+
+     <main class="govuk-main-wrapper app-main-class" id="main-content" role="main">
+        <form action="parents" method="post" novalidate>
+
+           <div class="govuk-form-group">
+             <fieldset class="govuk-fieldset">
+               <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl">
+                 <h1 class="govuk-fieldset__heading">Are the children's lives mainly based outside of England and Wales?
+                 </h1>
+               </legend>
+               <div class="govuk-!-padding-bottom-2"></div>
+               <div class="govuk-radios" data-module="govuk-radios">
+                 <div id="waste-hint" class="govuk-hint">
+                   For example, is their family life mainly based outside of England and Wales?
+                  </div>
+                  <div class="govuk-!-padding-bottom-4"></div>
+             <div class="govuk-radios__item">
+               <input id="internationalchild-yes" class="govuk-radios__input" type="radio" value="Yes" name="internationalchild" aria-controls="internationalchild-yes-conditional" aria-expanded="false" {{ checked("internationalchild", "yes") }}>
+               <label for="internationalchild-yes" class="govuk-label govuk-radios__label">Yes
+               </label>
+             </div>
+             <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="internationalchild-yes-conditional">
+               <div class="govuk-form-group">
+                 <label for="internationalchild-details-field" class="govuk-label">Provide details
+                 </label>
+                 <textarea id="internationalchild-details-field" class="govuk-textarea" rows="5" name="internationalchild-textarea">
+                 </textarea>
+               </div>
+             </div>
+            <div class="govuk-radios__item">
+              <input id="internationalchild-no" class="govuk-radios__input" type="radio" value="No" name="internationalchild">
+              <label for="internationalchild-no" class="govuk-label govuk-radios__label">No
+              </label>
+            </div>
+           </div>
+         </fieldset>
+       </div>
+       <div class="govuk-button-group govuk-!-margin-top-6">
+         <button class="govuk-button" data-module="govuk-button">
+           Continue
+         </button>
+         <a class="govuk-button govuk-button--secondary" href="../../applicanttasklist/inprogress"  data-module="govuk-button">
+           Save and come back later
+         </a>
+
+       </div>
+     </form>
+
+
+
+       </main>
+
+
+    </div>
+  </div>
+
+  <div class="govuk-grid-column-one-third">
+    <details class="govuk-details" data-module="govuk-details">
+ 			 <summary class="govuk-details__summary">
+   			 <span class="govuk-details__summary-text">
+    		  Contacts for help
+  			  </span>
+  			</summary>
+  			<div class="govuk-details__text">
+   			 Ask a question or get any help in any language
+   			 <p class="govuk-body govuk-!-font-weight-bold">Telephone</p>
+
+   			 <p class="govuk-body govuk-!-font-weight-regular">0300 303 0742</p>
+   			 <p class="govuk-body govuk-!-font-weight-regular">Monday to Friday, 8am to 8pm</p>
+   			 <a href="#" class="govuk-link">Find out about call charges</a>
+   			 <p class="govuk-body govuk-!-font-weight-regular">(opens in a new window)</p>
+			  </div>
+			</details>
+    </div>
+</div>
+
+
+
+{% endblock %}

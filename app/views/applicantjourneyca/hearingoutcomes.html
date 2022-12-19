@@ -1,0 +1,168 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Hearing details
+{% endblock %}
+
+{% block header %}
+  <!-- Blank header with no service name for the start page -->
+
+{{ govukHeader({
+    homepageUrl: "/",
+    serviceName: "Child arrangements",
+    serviceUrl: "/",
+    containerClasses: "govuk-width-container"
+}) }}
+
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-full">
+
+    <a href="#" onclick="history.back(-1)" class="govuk-back-link">Back</a>
+         <h1 class="govuk-heading-xl govuk-!-margin-bottom-4">
+           Sam Richards 
+         </h1>
+         <p class="govuk-body">Case number: #1636575673018538</p>
+  </div>
+</div>
+
+ <div class="govuk-grid-row">
+
+    <div class="govuk-grid-column-two-thirds">
+
+        <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
+
+
+        <div class="hmcts-progress-bar-vertical" role="progressbar">
+          <ol class="hmcts-progress-bar__list">
+          
+            <li class="hmcts-progress-bar__list-item">
+              <span class="hmcts-progress-bar__icon hmcts-progress-bar__icon--complete"></span>
+              <span class="hmcts-progress-bar__label"><span class="govuk-visually-hidden">Step 1: </span>Application submitted</span>
+            </li>
+            
+            <li class="hmcts-progress-bar__list-item">
+              <span class="hmcts-progress-bar__icon hmcts-progress-bar__icon--complete"></span>
+              <span class="hmcts-progress-bar__label"><span class="govuk-visually-hidden">Step 2: </span>Hearings</span>
+            </li>
+            
+            <li class="hmcts-progress-bar__list-item">
+              <span class="hmcts-progress-bar__icon hmcts-progress-bar__icon--complete"></span>
+              <span class="hmcts-progress-bar__label"><span class="govuk-visually-hidden">Current Step 3: </span>Orders & hearings outcome</span>
+            </li>
+  
+            <li class="hmcts-progress-bar__list-item">
+              <span class="hmcts-progress-bar__icon"></span>
+              <span class="hmcts-progress-bar__label"><span class="govuk-visually-hidden">Step 4: </span>Case closed</span>
+            </li>
+  
+          </ol>
+        </div> 
+
+        <h2 class="govuk-heading-l govuk-!-margin-top-6">
+            Hearing outcome details
+          </h2>
+
+
+
+      <h3 class="govuk-heading-m govuk-!-margin-top-6">Hearing outcome</h3>
+      <img src="../public/images/tick.PNG" width="30px" height="30px" />
+      <dl class="govuk-summary-list govuk-summary-list--no-border govuk-!-margin-left-6">
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+           21 June 2021
+          </dt>
+          <dd class="govuk-summary-list__value">
+            <p>You attended the hearing</p>
+            <strong>Useful documents</strong><br>
+            <a href="#">HearingOutcome</a>
+          </dd>
+        </div>
+      </dl>
+
+
+
+
+
+      <div class="govuk-button-group">
+        <a class="govuk-link" href="/applicantjourney/start">Go back</a>
+       </div>
+
+
+
+
+
+
+
+
+</div>
+
+
+
+<div class="govuk-grid-column-one-third">
+
+    <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible govuk-!">
+
+
+      <h2 class="govuk-heading-m">
+        I want to...
+      </h2>
+
+      <ul class="govuk-list">
+
+        <li>
+          <a class="govuk-link" href="#">Find my local court</a>
+          <div class="govuk-!-padding-bottom-2"></div>
+        </li>
+        <li>
+          <a class="govuk-link" href="#">Find legal advice</a>
+          <div class="govuk-!-padding-bottom-2"></div>
+        </li>
+        <li>
+          <a class="govuk-link" href="#">Know more about child arrangements</a>
+          <div class="govuk-!-padding-bottom-2"></div>
+        </li>
+        <li>
+          <a class="govuk-link" href="#">Know more about attending court</a>
+          <div class="govuk-!-padding-bottom-2"></div>
+        </li>
+      </ul>
+
+
+
+    	<details class="govuk-details" data-module="govuk-details">
+ 			 <summary class="govuk-details__summary">
+   			 <span class="govuk-details__summary-text">
+    		  Contacts for help
+  			  </span>
+  			</summary>
+  			<div class="govuk-details__text">
+   			 Ask a question or get any help in any language
+   			 <p class="govuk-body govuk-!-font-weight-bold">Telephone</p>
+
+   			 <p class="govuk-body govuk-!-font-weight-regular">0300 303 0742</p>
+   			 <p class="govuk-body govuk-!-font-weight-regular">Monday to Friday, 8am to 8pm</p>
+   			 <a href="#" class="govuk-link">Find out about call charges</a>
+   			 <p class="govuk-body govuk-!-font-weight-regular">(opens in a new window)</p>
+
+			  </div>
+			</details>
+
+
+
+
+
+  </div>
+
+
+
+
+
+  </div>
+
+
+
+{% endblock %}

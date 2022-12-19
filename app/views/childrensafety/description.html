@@ -1,0 +1,269 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Child arrangement respondent
+{% endblock %}
+
+{% block header %}
+  <!-- Blank header with no service name for the start page -->
+
+{{ govukHeader({
+    homepageUrl: "/",
+    serviceName: serviceName,
+    serviceUrl: "/",
+    containerClasses: "govuk-width-container"
+}) }}
+
+{% endblock %}
+
+{% block content %}
+<div class="govuk-grid-row">
+   <div class="govuk-grid-column-two-thirds">
+    <div class="govuk-width-container">
+     <a href="#" onclick="history.back(-1)" class="govuk-back-link">Back</a>
+
+     <main class="govuk-main-wrapper " id="main-content" role="main">
+
+       <form action="abduction" method="post" novalidate>
+           <span class="govuk-caption-l">Safety concerns</span>
+           <h1 class="govuk-heading-l">About the child(ren)'s abuse</h1>
+           <div class="govuk-inset-text">
+           <div class="govuk-form-group">
+             <h2 class="govuk-label-wrapper"><label class="govuk-label govuk-label--s" for="more-detail">
+                 Briefly describe what happened and who was involved, if you feel able to
+               </label>
+             </h2>
+             <div id="more-detail-hint" class="govuk-hint">
+               This information will be treated sensitively, and you will have a chance to give further details to the court later in the proceedings.
+             </div>
+             <textarea class="govuk-textarea" id="more-detail" name="more-detail" rows="4"></textarea>
+
+             <h2 class="govuk-label-wrapper"><label class="govuk-label govuk-label--s" for="more-detail">
+                 When did this behaviour start?
+               </label>
+             </h2>
+             <div id="more-detail-hint" class="govuk-hint">
+               Add an approximate date (the closest date you can remember) if you are not sure.
+             </div>
+              <textarea class="govuk-textarea" id="more-detail" name="more-detail" rows="1"></textarea>
+
+             <div class="govuk-form-group">
+               <fieldset class="govuk-fieldset">
+                 <legend class="govuk-fieldset__legend">
+                   Is the behaviour still ongoing?
+                 </legend>
+                 <div class="govuk-radios" data-module="govuk-radios">
+                   <div class="govuk-radios__item">
+                     <input class="govuk-radios__input" id="respabuseongoing-yes" name="respabuseongoing" type="radio" value="yes">
+                     <label class="govuk-label govuk-radios__label" for="respabuseongoing-yes">
+                       Yes
+                     </label>
+                   </div>
+                   <div class="govuk-radios__item">
+                     <input class="govuk-radios__input" id="respabuseongoing-no" name="respabuseongoing" type="radio" value="no">
+                     <label class="govuk-label govuk-radios__label" for="respabuseongoing-no">
+                       No
+                     </label>
+                   </div>
+
+                 </div>
+
+               </fieldset>
+             </div>
+             <div>
+              <h2 class="govuk-label-wrapper"><label class="govuk-label govuk-label--s" for="more-detail">
+                  Have you ever asked for help?
+                  </label>
+              </h2>
+              <div id="more-detail-hint" class="govuk-hint">
+              For example, speaking to your local GP
+              </div>
+              <div class="govuk-form-group">
+                <div class="govuk-radios" data-module="govuk-radios">
+                  <div class="govuk-radios__item">
+                    <input class="govuk-radios__input" id="resphelp-yes" name="resphelp" type="radio" value="yes" data-aria-controls="conditional-resphelp">
+                    <label class="govuk-label govuk-radios__label" for="resphelp-yes">
+                      Yes
+                    </label>
+                  </div>
+                  <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-resphelp">
+                    <div class="govuk-form-group">
+                      <label class="govuk-label" for="proposal-howmany">Who did you ask?</label>
+                      <textarea class="govuk-textarea" id="non-molestation-date" name="non-molestation-date" rows="1" aria-describedby="resphelp"></textarea>
+                    </div>
+                      <div class="govuk-form-group">
+                        <fieldset class="govuk-fieldset">
+                          <legend class="govuk-fieldset__legend">
+                            Did they help you?
+                          </legend>
+                          <div class="govuk-radios" data-module="govuk-radios">
+                            <div class="govuk-radios__item">
+                              <input class="govuk-radios__input" id="where-do-you-live" name="where-do-you-live" type="radio" value="yes">
+                                <label class="govuk-label govuk-radios__label" for="where-do-you-live">
+                                  Yes
+                                </label>
+                            </div>
+                            <div class="govuk-radios__item">
+                              <input class="govuk-radios__input" id="where-do-you-live-2" name="where-do-you-live" type="radio" value="no">
+                                <label class="govuk-label govuk-radios__label" for="where-do-you-live-2">
+                                  No
+                                </label>
+                            </div>
+                          </div>
+                        </fieldset>
+                      </div>
+                      <div>
+                        <label class="govuk-label" for="proposal-howmany">What did they do?</label>
+                      </div>
+                      <textarea class="govuk-textarea" id="resphelpwhat" name="resphelpwhat" rows="1" aria-describedby="resphelpwhat"></textarea>
+                  </div>
+                <div class="govuk-radios__item">
+                  <input class="govuk-radios__input" id="resphelp-no" name="resphelp" type="radio" value="No">
+                    <label class="govuk-label govuk-radios__label" for="resphelp-no">
+                      No
+                    </label>
+                </div>
+              </div>
+             </div>
+           </div>
+         </div>
+
+<!--- start new question -->
+         <div class="govuk-form-group childquestions1">
+           <h2 class="govuk-label-wrapper"><label class="govuk-label govuk-label--s" for="more-detail">
+               Briefly describe what happened and who was involved, if you feel able to
+             </label>
+           </h2>
+           <div id="more-detail-hint" class="govuk-hint">
+             This information will be treated sensitively, and you will have a chance to give further details to the court later in the proceedings.
+           </div>
+           <textarea class="govuk-textarea" id="more-detail" name="more-detail" rows="4"></textarea>
+
+           <h2 class="govuk-label-wrapper"><label class="govuk-label govuk-label--s" for="more-detail">
+               When did this behaviour start?
+             </label>
+           </h2>
+           <div id="more-detail-hint" class="govuk-hint">
+             Add an approximate date (the closest date you can remember) if you are not sure.
+           </div>
+            <textarea class="govuk-textarea" id="more-detail" name="more-detail" rows="1"></textarea>
+
+           <div class="govuk-form-group">
+             <fieldset class="govuk-fieldset">
+               <legend class="govuk-fieldset__legend">
+                 Is the behaviour still ongoing?
+               </legend>
+               <div class="govuk-radios" data-module="govuk-radios">
+                 <div class="govuk-radios__item">
+                   <input class="govuk-radios__input" id="respabuseongoing-yes" name="respabuseongoing" type="radio" value="yes">
+                   <label class="govuk-label govuk-radios__label" for="respabuseongoing-yes">
+                     Yes
+                   </label>
+                 </div>
+                 <div class="govuk-radios__item">
+                   <input class="govuk-radios__input" id="respabuseongoing-no" name="respabuseongoing" type="radio" value="no">
+                   <label class="govuk-label govuk-radios__label" for="respabuseongoing-no">
+                     No
+                   </label>
+                 </div>
+
+               </div>
+
+             </fieldset>
+           </div>
+           <div>
+            <h2 class="govuk-label-wrapper"><label class="govuk-label govuk-label--s" for="more-detail">
+                Have you ever asked for help?
+                </label>
+            </h2>
+            <div id="more-detail-hint" class="govuk-hint">
+            For example, speaking to your local GP
+            </div>
+            <div class="govuk-form-group">
+              <div class="govuk-radios" data-module="govuk-radios">
+                <div class="govuk-radios__item">
+                  <input class="govuk-radios__input" id="resphelp-yes" name="resphelp" type="radio" value="yes" data-aria-controls="conditional-resphelp">
+                  <label class="govuk-label govuk-radios__label" for="resphelp-yes">
+                    Yes
+                  </label>
+                </div>
+                <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-resphelp">
+                  <div class="govuk-form-group">
+                    <label class="govuk-label" for="proposal-howmany">Who did you ask?</label>
+                    <textarea class="govuk-textarea" id="non-molestation-date" name="non-molestation-date" rows="1" aria-describedby="resphelp"></textarea>
+                  </div>
+                    <div class="govuk-form-group">
+                      <fieldset class="govuk-fieldset">
+                        <legend class="govuk-fieldset__legend">
+                          Did they help you?
+                        </legend>
+                        <div class="govuk-radios" data-module="govuk-radios">
+                          <div class="govuk-radios__item">
+                            <input class="govuk-radios__input" id="where-do-you-live" name="where-do-you-live" type="radio" value="yes">
+                              <label class="govuk-label govuk-radios__label" for="where-do-you-live">
+                                Yes
+                              </label>
+                          </div>
+                          <div class="govuk-radios__item">
+                            <input class="govuk-radios__input" id="where-do-you-live-2" name="where-do-you-live" type="radio" value="no">
+                              <label class="govuk-label govuk-radios__label" for="where-do-you-live-2">
+                                No
+                              </label>
+                          </div>
+                        </div>
+                      </fieldset>
+                    </div>
+                    <div>
+                      <label class="govuk-label" for="proposal-howmany">What did they do?</label>
+                    </div>
+                    <textarea class="govuk-textarea" id="resphelpwhat" name="resphelpwhat" rows="1" aria-describedby="resphelpwhat"></textarea>
+                </div>
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="resphelp-no" name="resphelp" type="radio" value="No">
+                  <label class="govuk-label govuk-radios__label" for="resphelp-no">
+                    No
+                  </label>
+              </div>
+            </div>
+           </div>
+         </div>
+       </div>
+<!--- end new question -->
+
+            <a href="#" class="govuk-button govuk-button--secondary addchild-button" data-module="govuk-button">
+                       Add another child
+            </a>
+
+          </div>
+
+        <button class="govuk-button" data-module="govuk-button">
+          Continue
+        </button>
+      </main>
+      </div>
+    </div>
+  </div>
+
+  <div class="govuk-grid-column-one-third">
+    <details class="govuk-details" data-module="govuk-details">
+ 			 <summary class="govuk-details__summary">
+   			 <span class="govuk-details__summary-text">
+    		  Contacts for help
+  			  </span>
+  			</summary>
+  			<div class="govuk-details__text">
+   			 Ask a question or get any help in any language
+   			 <p class="govuk-body govuk-!-font-weight-bold">Telephone</p>
+
+   			 <p class="govuk-body govuk-!-font-weight-regular">0300 303 0742</p>
+   			 <p class="govuk-body govuk-!-font-weight-regular">Monday to Friday, 8am to 8pm</p>
+   			 <a href="#" class="govuk-link">Find out about call charges</a>
+   			 <p class="govuk-body govuk-!-font-weight-regular">(opens in a new window)</p>
+			  </div>
+			</details>
+    </div>
+</div>
+
+
+
+{% endblock %}

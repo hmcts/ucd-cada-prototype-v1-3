@@ -1,0 +1,156 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Child arrangement respondent
+{% endblock %}
+
+{% block header %}
+  <!-- Blank header with no service name for the start page -->
+
+{{ govukHeader({
+    homepageUrl: "/",
+    serviceName: serviceName,
+    serviceUrl: "/",
+    containerClasses: "govuk-width-container"
+}) }}
+
+{% endblock %}
+
+{% block content %}
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <div class="govuk-width-container">
+     <a href="#" onclick="history.back(-1)" class="govuk-back-link">Back</a>
+     <main class="govuk-main-wrapper app-main-class" id="main-content" role="main">
+
+        <div class="govuk-grid-row">
+          <div class="govuk-grid-column-full">
+            <h1 class="govuk-heading-xl ">Safety concerns</h1>
+            <p class="govuk-body-l ">
+              The court needs to know about any abusive behaviour that puts you or the children at risk of harm.
+            </p>
+
+            <h2 class="govuk-heading-m ">Abusive behaviour<h2>
+
+              <p class="govuk-body">
+                The court needs to know about any abusive behaviour by the respondent.
+              </p>
+
+                <p class="govuk-body">
+                  This could be abuse that occured in the past, or abuse that is happening now.
+                </p>
+                <p class="govuk-body">
+                  Abuse is when someone causes you or the children harm or distress.
+                </p>
+
+                <p class="govuk-body">
+                  Abuse could be:
+                </p>
+                <ul class="govuk-list govuk-list--bullet">
+                  <li>physical</li>
+                  <li>psychological</li>
+                  <li>emotional</li>
+                  <li>sexual</li>
+                  <li>financial</li>
+                </ul>
+                <p class="govuk-body">
+                  It could also take other forms, such as abducting the children.
+                </p>
+
+                  <p class="govuk-body">
+                    If you are not sure if the respondent's behaviour is abusive, see the guidance on <a href="https://www.gov.uk/government/publications/domestic-abuse-recognise-the-signs/domestic-abuse-recognise-the-signs#how-to-recognise-domestic-abuse-in-a-relationship" class="govuk-link govuk-link" rel="external" target="_blank">types of abusive behaviour</a>.
+                  </p>
+
+              <h2 class="govuk-heading-m ">
+              How the court will use this information
+              </h2>
+              <p class="govuk-body ">The court needs to know about this behaviour, to make sure that any orders are in the best interests of you and the children.
+              </p>
+              <p class="govuk-body ">The court will use the information you provide to handle your case correctly.
+              </p>
+
+              <div class="govuk-warning-text">
+                <span class="govuk-warning-text__icon" aria-hidden="true">!</span>
+                <strong class="govuk-warning-text__text">
+                  <span class="govuk-warning-text__assistive">Warning</span>
+                 The information that you give in this section will also be shared with the respondent, so they are able to respond to what you have said.
+                </strong>
+              </div>
+
+
+
+
+              <h2 class="govuk-heading-m ">
+                If you don't feel ready to describe the abuse at this stage
+              </h2>
+              <p class="govuk-body ">If you don't feel ready to talk about the abuse right now, you can do so when you speak to <a href="https://www.cafcass.gov.uk/" class="govuk-link govuk-link" rel="external" target="_blank">Cafcass</a> or <a href="https://gov.wales/cafcass-cymru" class="govuk-link govuk-link" rel="external" target="_blank">Cafcass Cymru</a>.
+              </p>
+              <p class="govuk-body ">It will not harm your application if you give details of the abuse later in the process.
+              </p>
+
+              <details class="govuk-details " data-module="govuk-details">
+               <summary class="govuk-details__summary ">
+                 <span class="govuk-details__summary-text " data-ga-category="explanations" data-ga-label="abuse details">
+                   How Cafcass can support you in your case
+                 </span>
+                 </summary>
+                  <div class="govuk-details__text">
+                 <p class="govuk-body">The <a href="https://www.cafcass.gov.uk/" class="govuk-link govuk-link" rel="external" target="_blank">Children and Family Court Advisory and Support Service (Cafcass)</a>, in England, and <a href="https://gov.wales/cafcass-cymru" class="govuk-link govuk-link" rel="external" target="_blank">Cafcass Cymru</a>, in Wales, protect and promote the interests of children involved in family court cases. An advisor from Cafcass or Cafcass Cymru will look at your answers as part of their safeguarding checks, and may need to ask you further questions.</p>
+
+                 <p class="govuk-body ">As part of their enquiries they will contact organisations such as the police and local authorities for any relevant information about you, any other person and the children.</p>
+
+                 <p class="govuk-body ">They will submit information to the court before your first hearing. Their assessment helps the judge make a decision that is in the best interests of the children</p>
+                 </div>
+
+
+             </details>
+
+             <p class="govuk-body ">We will now ask you some questions about the abusive behaviour.
+             </p>
+
+
+             <p class="govuk-body ">Take your time filling in the information and write as much as you feel able to.
+             </p>
+             <div class="govuk-!-padding-bottom-4"></div>
+
+           </div>
+
+              <div class="govuk-button-group govuk-!-margin-top-6">
+                <a class="govuk-button " role="button" draggable="false" data-module="govuk-button" href="generalabuse">Continue</a>
+                <a class="govuk-button govuk-button--secondary" href="../../applicanttasklist/inprogress"  data-module="govuk-button">
+                  Save and come back later
+                </a>
+
+              </div>
+        </div>
+
+
+    </main>
+  </div>
+</div>
+<div class="govuk-grid-column-one-third">
+
+    <details class="govuk-details" data-module="govuk-details">
+   <summary class="govuk-details__summary">
+     <span class="govuk-details__summary-text">
+      Contacts for help
+      </span>
+    </summary>
+    <div class="govuk-details__text">
+     Ask a question or get any help in any language
+     <p class="govuk-body govuk-!-font-weight-bold">Telephone</p>
+
+     <p class="govuk-body govuk-!-font-weight-regular">0300 303 0742</p>
+     <p class="govuk-body govuk-!-font-weight-regular">Monday to Friday, 8am to 8pm</p>
+     <a href="#" class="govuk-link">Find out about call charges</a>
+     <p class="govuk-body govuk-!-font-weight-regular">(opens in a new window)</p>
+
+    </div>
+  </details>
+
+</div>
+</div>
+
+
+
+{% endblock %}

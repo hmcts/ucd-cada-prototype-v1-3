@@ -1,0 +1,116 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Child arrangement
+{% endblock %}
+
+
+{% block header %}
+
+{{ govukHeader({
+    homepageUrl: "/",
+    serviceName: serviceName,
+    serviceUrl: "/",
+    containerClasses: "govuk-width-container"
+}) }}
+
+{% endblock %}
+
+
+{% block beforeContent %}
+
+<div class="govuk-phase-banner">
+  <p class="govuk-phase-banner__content">
+    <strong class="govuk-tag govuk-phase-banner__content__tag">
+      alpha
+    </strong>
+    <span class="govuk-phase-banner__text">
+      This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.
+    </span>
+  </p>
+</div>
+
+<a href="#" class="govuk-back-link" onclick="history.back(-1)">Back</a>
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-width-container">
+
+  <main class="govuk-main-wrapper">
+
+    <form action="payonline" method="post" novalidate>
+      
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-two-thirds">
+        <h1 class="govuk-heading-xl">Do you agree to pay for your application online?</h1>
+        <p class="govuk-body">You will need to pay an online court fee of £232 to submit your application. If you think you may be eligible for help with fees, <a href="https://www.gov.uk/get-help-with-court-fees" class="govuk-link" rel="external" target="_blank"> apply online now </a>and make a note of your help with fees reference number.</p>
+
+          <p class="govuk-body">If you cannot pay online, you will need to <a href="https://www.gov.uk/government/publications/form-c100-application-under-the-children-act-1989-for-a-child-arrangements-prohibited-steps-specific-issue-section-8-order-or-to-vary-or-discharge" class="govuk-link" rel="external" target="_blank">apply using a paper form instead</a>.</p>
+
+
+<!-- Radio buttons -->
+
+<div class="govuk-form-group">
+  <fieldset class="govuk-fieldset">
+
+    </legend>
+    <div class="govuk-radios" data-module="govuk-radios">
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="payonline-yes" name="payonline" type="radio" value="yes">
+        <label class="govuk-label govuk-radios__label" for="payonline-yes">
+          Yes, I agree to complete my application online
+        </label>
+      </div>
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="payonline-no" name="payonline" type="radio" value="no">
+        <label class="govuk-label govuk-radios__label" for="payonline-no">
+          No, I would prefer to apply using a paper form
+        </label>
+      </div>
+
+
+  </fieldset>
+
+</div>
+</form>
+          
+<div class="govuk-button-group">
+  <button class="govuk-button" data-module="govuk-button">
+    Continue
+  </button>
+
+  <a class="govuk-link" href="/index">Cancel</a>
+</div>
+
+
+      </div>
+
+
+      <!-- Right side column -->
+      
+      <div class="govuk-grid-column-one-third">
+        <details class="govuk-details" data-module="govuk-details">
+          <summary class="govuk-details__summary">
+            <span class="govuk-details__summary-text">
+              Contacts for help
+            </span>
+          </summary>
+          <div class="govuk-details__text">
+
+            <p class="govuk-body"> Ask a question or get any help in any language</p>
+        
+                    <p class="govuk-body govuk-!-font-weight-bold">Telephone</p>
+                    <p class="govuk-body govuk-!-font-weight-regular">0300 303 0742</p>
+                    <p class="govuk-body govuk-!-font-weight-regular">Monday to Friday, 8am to 8pm</p>
+                    <a href="#" class="govuk-link">Find out about call charges</a>
+                    <p class="govuk-body govuk-!-font-weight-regular">(opens in a new window)</p>
+          </div>
+        </details>
+    </div>
+
+  </main>
+</div>
+
+
+{% endblock %}

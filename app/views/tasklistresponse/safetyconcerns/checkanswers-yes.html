@@ -1,0 +1,682 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Child arrangement respondent
+{% endblock %}
+
+{% block header %}
+  <!-- Blank header with no service name for the start page -->
+
+{{ govukHeader({
+    homepageUrl: "/",
+    serviceName: serviceName,
+    serviceUrl: "/",
+    containerClasses: "govuk-width-container"
+}) }}
+
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+   <div class="govuk-grid-column-two-thirds">
+    <div class="govuk-width-container">
+     <a href="#" onclick="history.back(-1)" class="govuk-back-link">Back</a>
+
+      <main class="govuk-main-wrapper " id="main-content" role="main">
+
+           <h1 class="govuk-heading-xl">Check your answers </h1>
+
+           <h2 class="govuk-heading-l">Safety concerns</h2>
+           <dl class="govuk-summary-list govuk-!-margin-bottom-9" id="applicant_abuse_details">
+
+             <div class="govuk-summary-list__row">
+               <dt class="govuk-summary-list__key govuk-!-width-one-third">
+                 Do you have any concerns for your safety or the safety of the children?
+               </dt>
+               <dd class="govuk-summary-list__value">
+                 Yes
+               </dd>
+               <dd class="govuk-summary-list__actions">
+                 <a class="govuk-link" href="#">
+                   Edit<span class="govuk-visually-hidden">your answer to, Have you suffered or are you at risk of suffering domestic violence or abuse?</span>
+                 </a>
+               </dd>
+             </div>
+
+             <div class="govuk-summary-list__row" id="abuse_sexual">
+               <dt class="govuk-summary-list__key govuk-!-width-one-third">
+                 Who are you concerned about?
+               </dt>
+               <dd class="govuk-summary-list__value">
+                 <ul class="govuk-list govuk-list--bullet">
+                   <li>The children in the application</li>
+                   <li>Yourself</li>
+                 </ul>
+               </dd>
+               <dd class="govuk-summary-list__actions">
+                 <a class="govuk-link govuk-link--no-visited-state ga-pageLink" href="">
+                   Edit <span class="govuk-visually-hidden">your answer to, Sexual abuse</span>
+                 </a>
+               </dd>
+             </div>
+             </dl>
+
+             <h3 class="app-task-list__section">
+               Safety concerns: the children in the application
+             </h3>
+
+                   <dl class="govuk-summary-list govuk-!-margin-bottom-9" id="applicant_abuse_details">
+
+                     <div class="govuk-summary-list__row" id="abuse_physical">
+                       <dt class="govuk-summary-list__key govuk-!-width-one-third">
+                         What type of behaviour have the children experienced or are at risk of experiencing?
+                       </dt>
+                       <dd class="govuk-summary-list__value">
+                         <ul class="govuk-list govuk-list--bullet">
+                           <li>Physical abuse</li>
+                           <li>Emotional abuse</li>
+                           <li>Abduction</li>
+                         </ul>
+                       </dd>
+                       <dd class="govuk-summary-list__actions">
+                         <a class="govuk-link govuk-link--no-visited-state ga-pageLink" href="">
+                           Edit <span class="govuk-visually-hidden">your answer to, Physical abuse</span>
+                         </a>
+                       </dd>
+                     </div>
+
+                     <div class="govuk-summary-list__row" id="language_interpreter">
+                       <dt class="govuk-summary-list__key govuk-!-width-one-third">
+                           Briefly describe the physical abuse against the children if you feel able to
+                       </dt>
+
+                       <dd class="govuk-summary-list__value">
+                           <dl class="govuk-summary-list">
+                             <div class="govuk-summary-list__row" id="urgent_hearing_when" style="border-bottom:1px solid #fff">
+                               <dt class="govuk-summary-list__key">
+                               Which children are you concerned about?
+                               </dt>
+                             </div>
+                             <div class="govuk-summary-list__row" >
+                               <dd class="govuk-summary-list__value">
+                                 No
+                               </dd>
+                             </div>
+                             <div class="govuk-summary-list__row" style="border-bottom:1px solid #fff" >
+                               <dt class="govuk-summary-list__key">
+                             Describe the behaviours you would like the court to be aware of.
+                               </dt>
+                             </div>
+                             <div class="govuk-summary-list__row" >
+                               <dd class="govuk-summary-list__value">
+                                 Yes
+                               </dd>
+                             </div>
+                             <div class="govuk-summary-list__row" style="border-bottom:1px solid #fff" >
+                               <dt class="govuk-summary-list__key">
+                               When did this behaviour start and how long did it continue?
+                               </dt>
+                             </div>
+                             <div class="govuk-summary-list__row" >
+                               <dd class="govuk-summary-list__value">
+                                 Yes
+                               </dd>
+                             </div>
+                             <div class="govuk-summary-list__row" style="border-bottom:1px solid #fff" >
+                               <dt class="govuk-summary-list__key">
+                               Is the behaviour ongoing?
+                               </dt>
+                             </div>
+                             <div class="govuk-summary-list__row" >
+                               <dd class="govuk-summary-list__value">
+                                 Yes
+                               </dd>
+                             </div>
+                             <div class="govuk-summary-list__row" style="border-bottom:1px solid #fff" >
+                               <dt class="govuk-summary-list__key">
+                               Have you ever asked for help from a professional person or agency?
+                               </dt>
+                             </div>
+                             <div class="govuk-summary-list__row" >
+                               <dd class="govuk-summary-list__value">
+                                 Yes
+                               </dd>
+                             </div>
+                             <div class="govuk-summary-list__row" style="border-bottom:1px solid #fff" >
+                               <dt class="govuk-summary-list__key">
+                                 What did they do?
+                               </dt>
+                             </div>
+                             <div class="govuk-summary-list__row" style="border-bottom:1px solid #fff" >
+                               <dd class="govuk-summary-list__value">
+                                 Yes
+                               </dd>
+                             </div>
+                           </dl>
+                       </dd>
+
+                       <dd class="govuk-summary-list__actions">
+                         <a class="govuk-link govuk-link--no-visited-state ga-pageLink"href="">
+                           Edit <span class="govuk-visually-hidden">your answer to, Urgent hearing details</span>
+                         </a>
+                       </dd>
+                     </div>
+
+                     <div class="govuk-summary-list__row app-cya--answers-group" id="language_interpreter">
+                       <dt class="govuk-summary-list__key govuk-!-width-one-third app-cya--answers-group__key">
+                           Briefly describe the emotional abuse against the children if you feel able to
+                       </dt>
+                       <dd class="govuk-summary-list__value">
+                           <dl class="govuk-summary-list">
+                             <div class="govuk-summary-list__row" id="urgent_hearing_when" style="border-bottom:1px solid #fff">
+                               <dt class="govuk-summary-list__key">
+                               Which children are you concerned about?
+                               </dt>
+                             </div>
+                             <div class="govuk-summary-list__row" >
+                               <dd class="govuk-summary-list__value">
+                                 No
+                               </dd>
+                             </div>
+                             <div class="govuk-summary-list__row" style="border-bottom:1px solid #fff" >
+                               <dt class="govuk-summary-list__key">
+                                   Describe the behaviours you would like the court to be aware of.
+                               </dt>
+                             </div>
+                             <div class="govuk-summary-list__row" >
+                               <dd class="govuk-summary-list__value">
+                                 Yes
+                               </dd>
+                             </div>
+                             <div class="govuk-summary-list__row" style="border-bottom:1px solid #fff" >
+                               <dt class="govuk-summary-list__key">
+                                 When did this behaviour start and how long did it continue?
+                               </dt>
+                             </div>
+                             <div class="govuk-summary-list__row" >
+                               <dd class="govuk-summary-list__value">
+                                 Yes
+                               </dd>
+                             </div>
+                             <div class="govuk-summary-list__row" style="border-bottom:1px solid #fff" >
+                               <dt class="govuk-summary-list__key">
+                               Is the behaviour ongoing?
+                               </dt>
+                             </div>
+                             <div class="govuk-summary-list__row" >
+                               <dd class="govuk-summary-list__value">
+                                 Yes
+                               </dd>
+                             </div>
+                             <div class="govuk-summary-list__row" style="border-bottom:1px solid #fff" >
+                               <dt class="govuk-summary-list__key">
+                                 Have you ever asked for help from a professional person or agency?
+                               </dt>
+                             </div>
+                             <div class="govuk-summary-list__row" >
+                               <dd class="govuk-summary-list__value">
+                                 Yes
+                               </dd>
+                             </div>
+                             <div class="govuk-summary-list__row" style="border-bottom:1px solid #fff" >
+                               <dt class="govuk-summary-list__key">
+                                   What did they do?
+                               </dt>
+                             </div>
+                             <div class="govuk-summary-list__row" style="border-bottom:1px solid #fff" >
+                               <dd class="govuk-summary-list__value">
+                                 Yes
+                               </dd>
+                             </div>
+                           </dl>
+                       </dd>
+                       <dd class="govuk-summary-list__actions">
+                         <a class="govuk-link govuk-link--no-visited-state ga-pageLink" href="">
+                           Edit <span class="govuk-visually-hidden">your answer to, Urgent hearing details</span>
+                         </a>
+                       </dd>
+                     </div>
+
+                     <div class="govuk-summary-list__row" id="abuse_financial">
+                       <dt class="govuk-summary-list__key govuk-!-width-one-third">
+                         Why do you think the children may be abducted or kept outside the UK without your consent?
+                       </dt>
+                       <dd class="govuk-summary-list__value">
+                         No
+                       </dd>
+                       <dd class="govuk-summary-list__actions">
+                         <a class="govuk-link govuk-link--no-visited-state ga-pageLink" href="">
+                           Edit <span class="govuk-visually-hidden">your answer to, Financial abuse</span>
+                         </a>
+                       </dd>
+                     </div>
+
+                     <div class="govuk-summary-list__row" id="abuse_psychological">
+                       <dt class="govuk-summary-list__key govuk-!-width-one-third">
+                         Where are the children now?
+                       </dt>
+                       <dd class="govuk-summary-list__value">
+                         No
+                       </dd>
+                       <dd class="govuk-summary-list__actions">
+                         <a class="govuk-link govuk-link--no-visited-state ga-pageLink" href="">
+                           Edit <span class="govuk-visually-hidden">your answer to, Psychological abuse</span>
+                         </a>
+                       </dd>
+                     </div>
+
+                     <div class="govuk-summary-list__row app-cya--answers-group" id="language_interpreter">
+                       <dt class="govuk-summary-list__key govuk-!-width-one-third app-cya--answers-group__key">
+                         Do any of the children have a passport?
+                       </dt>
+
+                       <dd class="govuk-summary-list__value">
+                         <dl class="govuk-summary-list">
+                             <div class="govuk-summary-list__row" id="language_interpreter">
+                               <dd class="govuk-summary-list__value">
+                                   Yes
+                               </dd>
+                             </div>
+                             <div class="govuk-summary-list__row" id="urgent_hearing_when" style="border-bottom:1px solid #fff">
+                               <dt class="govuk-summary-list__key">
+                               Do the children have more than one passport?
+                               </dt>
+                             </div>
+                             <div class="govuk-summary-list__row" >
+                               <dd class="govuk-summary-list__value">
+                                 No
+                               </dd>
+                             </div>
+                             <div class="govuk-summary-list__row" style="border-bottom:1px solid #fff" >
+                               <dt class="govuk-summary-list__key">
+                                 Who is in possession of the children’s passports?
+                               </dt>
+                             </div>
+                             <div class="govuk-summary-list__row" style="border-bottom:1px solid #fff" >
+                               <dd class="govuk-summary-list__value">
+                                 Yes
+                               </dd>
+                             </div>
+                           </dl>
+                       </dd>
+                       <dd class="govuk-summary-list__actions">
+                         <a class="govuk-link govuk-link--no-visited-state ga-pageLink" href="">
+                           Edit <span class="govuk-visually-hidden">your answer to, Urgent hearing details</span>
+                         </a>
+                       </dd>
+                     </div>
+
+                     <div class="govuk-summary-list__row" id="abuse_psychological">
+                       <dt class="govuk-summary-list__key govuk-!-width-one-third">
+                           Has the passport office been notified?
+                       </dt>
+                       <dd class="govuk-summary-list__value">
+                         No
+                       </dd>
+                       <dd class="govuk-summary-list__actions">
+                         <a class="govuk-link govuk-link--no-visited-state ga-pageLink" href="">
+                           Edit <span class="govuk-visually-hidden">your answer to, Psychological abuse</span>
+                         </a>
+                       </dd>
+                     </div>
+
+                     <div class="govuk-summary-list__row" id="abuse_psychological">
+                       <dt class="govuk-summary-list__key govuk-!-width-one-third">
+                         Have the children been abducted or kept outside the UK without your consent before?
+                       </dt>
+                       <dd class="govuk-summary-list__value">
+                         No
+                       </dd>
+                       <dd class="govuk-summary-list__actions">
+                         <a class="govuk-link govuk-link--no-visited-state ga-pageLink" href="/steps/abuse_concerns/question?kind=psychological&amp;subject=applicant">
+                           Edit <span class="govuk-visually-hidden">your answer to, Psychological abuse</span>
+                         </a>
+                       </dd>
+                     </div>
+
+
+                     <div class="govuk-summary-list__row" id="abuse_psychological">
+                       <dt class="govuk-summary-list__key govuk-!-width-one-third">
+                         Provide details of the previous abductions
+                       </dt>
+                       <dd class="govuk-summary-list__value">
+                         No
+                       </dd>
+                       <dd class="govuk-summary-list__actions">
+                         <a class="govuk-link govuk-link--no-visited-state ga-pageLink" data-ga-category="check your answers" data-ga-label="change link: abuse_psychological" href="/steps/abuse_concerns/question?kind=psychological&amp;subject=applicant">
+                           Edit <span class="govuk-visually-hidden">your answer to, Psychological abuse</span>
+                         </a>
+                       </dd>
+                     </div>
+
+                     <div class="govuk-summary-list__row" id="abuse_psychological">
+                       <dt class="govuk-summary-list__key govuk-!-width-one-third">
+                         Were the police, private investigators or any other organisation involved?
+                       </dt>
+                       <dd class="govuk-summary-list__value">
+                         No
+                       </dd>
+                       <dd class="govuk-summary-list__actions">
+                         <a class="govuk-link govuk-link--no-visited-state ga-pageLink" data-ga-category="check your answers" data-ga-label="change link: abuse_psychological" href="/steps/abuse_concerns/question?kind=psychological&amp;subject=applicant">
+                           Edit <span class="govuk-visually-hidden">your answer to, Psychological abuse</span>
+                         </a>
+                       </dd>
+                     </div>
+                     </dl>
+
+
+
+             <h3 class="app-task-list__section">
+               Safety concerns: your safety
+             </h3>
+
+                   <dl class="govuk-summary-list govuk-!-margin-bottom-9" id="applicant_abuse_details">
+
+                     <div class="govuk-summary-list__row" id="abuse_physical">
+                       <dt class="govuk-summary-list__key govuk-!-width-one-third">
+                         What type of behaviour have you experienced or are at risk of experiencing?
+                       </dt>
+                       <dd class="govuk-summary-list__value">
+                         <ul class="govuk-list govuk-list--bullet">
+                           <li>Physical abuse</li>
+                           <li>Emotional abuse</li>
+
+                         </ul>
+                       </dd>
+                       <dd class="govuk-summary-list__actions">
+                         <a class="govuk-link govuk-link--no-visited-state ga-pageLink" href="">
+                           Edit <span class="govuk-visually-hidden">your answer to, Physical abuse</span>
+                         </a>
+                       </dd>
+                     </div>
+
+                     <div class="govuk-summary-list__row" id="language_interpreter">
+                       <dt class="govuk-summary-list__key govuk-!-width-one-third">
+                           Briefly describe the physical abuse if you feel able to
+                       </dt>
+
+                       <dd class="govuk-summary-list__value">
+                           <dl class="govuk-summary-list">
+                             <div class="govuk-summary-list__row" style="border-bottom:1px solid #fff" >
+                               <dt class="govuk-summary-list__key">
+                             Describe the behaviours you would like the court to be aware of.
+                               </dt>
+                             </div>
+                             <div class="govuk-summary-list__row" >
+                               <dd class="govuk-summary-list__value">
+                                 Yes
+                               </dd>
+                             </div>
+                             <div class="govuk-summary-list__row" style="border-bottom:1px solid #fff" >
+                               <dt class="govuk-summary-list__key">
+                               When did this behaviour start and how long did it continue?
+                               </dt>
+                             </div>
+                             <div class="govuk-summary-list__row" >
+                               <dd class="govuk-summary-list__value">
+                                 Yes
+                               </dd>
+                             </div>
+                             <div class="govuk-summary-list__row" style="border-bottom:1px solid #fff" >
+                               <dt class="govuk-summary-list__key">
+                               Is the behaviour ongoing?
+                               </dt>
+                             </div>
+                             <div class="govuk-summary-list__row" >
+                               <dd class="govuk-summary-list__value">
+                                 Yes
+                               </dd>
+                             </div>
+                             <div class="govuk-summary-list__row" style="border-bottom:1px solid #fff" >
+                               <dt class="govuk-summary-list__key">
+                               Have you ever asked for help from a professional person or agency?
+                               </dt>
+                             </div>
+                             <div class="govuk-summary-list__row" >
+                               <dd class="govuk-summary-list__value">
+                                 Yes
+                               </dd>
+                             </div>
+                             <div class="govuk-summary-list__row" style="border-bottom:1px solid #fff" >
+                               <dt class="govuk-summary-list__key">
+                                 What did they do?
+                               </dt>
+                             </div>
+                             <div class="govuk-summary-list__row" style="border-bottom:1px solid #fff" >
+                               <dd class="govuk-summary-list__value">
+                                 Yes
+                               </dd>
+                             </div>
+                           </dl>
+                       </dd>
+
+                       <dd class="govuk-summary-list__actions">
+                         <a class="govuk-link govuk-link--no-visited-state ga-pageLink"href="">
+                           Edit <span class="govuk-visually-hidden">your answer to, Urgent hearing details</span>
+                         </a>
+                       </dd>
+                     </div>
+
+                     <div class="govuk-summary-list__row app-cya--answers-group" id="language_interpreter">
+                       <dt class="govuk-summary-list__key govuk-!-width-one-third app-cya--answers-group__key">
+                         Briefly describe the emotional abuse if you feel able to
+                       </dt>
+                       <dd class="govuk-summary-list__value">
+                           <dl class="govuk-summary-list">
+
+
+                             <div class="govuk-summary-list__row" style="border-bottom:1px solid #fff" >
+                               <dt class="govuk-summary-list__key">
+                                   Describe the behaviours you would like the court to be aware of.
+                               </dt>
+                             </div>
+                             <div class="govuk-summary-list__row" >
+                               <dd class="govuk-summary-list__value">
+                                 Yes
+                               </dd>
+                             </div>
+                             <div class="govuk-summary-list__row" style="border-bottom:1px solid #fff" >
+                               <dt class="govuk-summary-list__key">
+                                 When did this behaviour start and how long did it continue?
+                               </dt>
+                             </div>
+                             <div class="govuk-summary-list__row" >
+                               <dd class="govuk-summary-list__value">
+                                 Yes
+                               </dd>
+                             </div>
+                             <div class="govuk-summary-list__row" style="border-bottom:1px solid #fff" >
+                               <dt class="govuk-summary-list__key">
+                               Is the behaviour ongoing?
+                               </dt>
+                             </div>
+                             <div class="govuk-summary-list__row" >
+                               <dd class="govuk-summary-list__value">
+                                 Yes
+                               </dd>
+                             </div>
+                             <div class="govuk-summary-list__row" style="border-bottom:1px solid #fff" >
+                               <dt class="govuk-summary-list__key">
+                                 Have you ever asked for help from a professional person or agency?
+                               </dt>
+                             </div>
+                             <div class="govuk-summary-list__row" >
+                               <dd class="govuk-summary-list__value">
+                                 Yes
+                               </dd>
+                             </div>
+                             <div class="govuk-summary-list__row" style="border-bottom:1px solid #fff" >
+                               <dt class="govuk-summary-list__key">
+                                   What did they do?
+                               </dt>
+                             </div>
+                             <div class="govuk-summary-list__row" style="border-bottom:1px solid #fff" >
+                               <dd class="govuk-summary-list__value">
+                                 Yes
+                               </dd>
+                             </div>
+                           </dl>
+                       </dd>
+                       <dd class="govuk-summary-list__actions">
+                         <a class="govuk-link govuk-link--no-visited-state ga-pageLink" href="">
+                           Edit <span class="govuk-visually-hidden">your answer to, Urgent hearing details</span>
+                         </a>
+                       </dd>
+                     </div>
+
+                   </dl>
+
+                   <h3 class="app-task-list__section">
+                     Safety concerns: other concerns that you have
+                   </h3>
+
+                         <dl class="govuk-summary-list govuk-!-margin-bottom-9" id="applicant_abuse_details">
+                           <div class="govuk-summary-list__row" id="abuse_psychological">
+                             <dt class="govuk-summary-list__key govuk-!-width-one-third">
+                               Have the children been impacted by drug, alcohol or substance abuse?
+                             </dt>
+
+                             <div class="govuk-summary-list__row">
+                               <dd class="govuk-summary-list__value">
+                                 Yes
+                               </dd>
+                             </div>
+
+                             <div class="govuk-summary-list__row" style="border-bottom:1px solid #fff">
+                               <dt class="govuk-summary-list__key govuk-!-width-one-third">
+                                 Details
+                               </dt>
+                             </div>
+
+                               <div class="govuk-summary-list__row" style="border-bottom:1px solid #fff">
+                                 <dd class="govuk-summary-list__value">
+                                   Provide details
+                                 </dd>
+                               </div>
+
+                               <dd class="govuk-summary-list__actions">
+                                 <a class="govuk-link govuk-link--no-visited-state ga-pageLink" data-ga-category="check your answers" data-ga-label="change link: abuse_psychological" href="/steps/abuse_concerns/question?kind=psychological&amp;subject=applicant">
+                                   Edit <span class="govuk-visually-hidden">your answer to, Psychological abuse</span>
+                                 </a>
+                               </dd>
+                           </div>
+
+                           <div class="govuk-summary-list__row" id="abuse_psychological">
+                             <dt class="govuk-summary-list__key govuk-!-width-one-third">
+                             Do you have any other concerns about the children’s safety and wellbeing?
+                             </dt>
+                             <div class="govuk-summary-list__row">
+                               <dd class="govuk-summary-list__value">
+                                 Yes
+                               </dd>
+                             </div>
+
+                             <div class="govuk-summary-list__row" style="border-bottom:1px solid #fff">
+                               <dt class="govuk-summary-list__key govuk-!-width-one-third">
+                                 Details
+                               </dt>
+                             </div>
+
+                               <div class="govuk-summary-list__row" style="border-bottom:1px solid #fff">
+                                 <dd class="govuk-summary-list__value">
+                                   Provide details
+                                 </dd>
+                               </div>
+
+                               <dd class="govuk-summary-list__actions">
+                                 <a class="govuk-link govuk-link--no-visited-state ga-pageLink" data-ga-category="check your answers" data-ga-label="change link: abuse_psychological" href="/steps/abuse_concerns/question?kind=psychological&amp;subject=applicant">
+                                   Edit <span class="govuk-visually-hidden">your answer to, Psychological abuse</span>
+                                 </a>
+                               </dd>
+                           </div>
+
+                           <div class="govuk-summary-list__row" id="abuse_psychological">
+                             <dt class="govuk-summary-list__key govuk-!-width-one-third">
+                             What do you want the court to do to keep you and the children safe?
+                             </dt>
+                             <dd class="govuk-summary-list__value">
+
+
+                             </dd>
+                             <dd class="govuk-summary-list__actions">
+                               <a class="govuk-link govuk-link--no-visited-state ga-pageLink" data-ga-category="check your answers" data-ga-label="change link: abuse_psychological" href="/steps/abuse_concerns/question?kind=psychological&amp;subject=applicant">
+                                 Edit <span class="govuk-visually-hidden">your answer to, Psychological abuse</span>
+                               </a>
+                             </dd>
+                           </div>
+                           <div class="govuk-summary-list__row" id="abuse_psychological">
+                             <dt class="govuk-summary-list__key govuk-!-width-one-third">
+                           Do you agree to the children spending time with the other people in this application?
+                             </dt>
+                             <dd class="govuk-summary-list__value">
+
+
+                             </dd>
+                             <dd class="govuk-summary-list__actions">
+                               <a class="govuk-link govuk-link--no-visited-state ga-pageLink" data-ga-category="check your answers" data-ga-label="change link: abuse_psychological" href="/steps/abuse_concerns/question?kind=psychological&amp;subject=applicant">
+                                 Edit <span class="govuk-visually-hidden">your answer to, Psychological abuse</span>
+                               </a>
+                             </dd>
+                           </div>
+                           <div class="govuk-summary-list__row" id="abuse_psychological">
+                             <dt class="govuk-summary-list__key govuk-!-width-one-third">
+                               Do you agree to the other people in this application being in touch with the children in other ways?
+                             </dt>
+                             <dd class="govuk-summary-list__value">
+
+
+                             </dd>
+                             <dd class="govuk-summary-list__actions">
+                               <a class="govuk-link govuk-link--no-visited-state ga-pageLink" data-ga-category="check your answers" data-ga-label="change link: abuse_psychological" href="/steps/abuse_concerns/question?kind=psychological&amp;subject=applicant">
+                                 Edit <span class="govuk-visually-hidden">your answer to, Psychological abuse</span>
+                               </a>
+                             </dd>
+                           </div>
+
+
+                           </dl>
+
+         <div>
+
+
+       <form action="../start" method="post" novalidate>
+
+         <input type="hidden" name="answers-checked" value="true">
+
+         <button class="govuk-button" data-module="govuk-button">
+           Save and continue
+         </button>
+
+       </form>
+
+     </div>
+      </main>
+    </div>
+  </div>
+  <div class="govuk-grid-column-one-third">
+
+      <details class="govuk-details" data-module="govuk-details">
+          <summary class="govuk-details__summary">
+           <span class="govuk-details__summary-text">
+            Contacts for help
+            </span>
+          </summary>
+      <div class="govuk-details__text">
+       Ask a question or get any help in any language
+       <p class="govuk-body govuk-!-font-weight-bold">Telephone</p>
+
+       <p class="govuk-body govuk-!-font-weight-regular">0300 303 0742</p>
+       <p class="govuk-body govuk-!-font-weight-regular">Monday to Friday, 8am to 8pm</p>
+       <a href="#" class="govuk-link">Find out about call charges</a>
+       <p class="govuk-body govuk-!-font-weight-regular">(opens in a new window)</p>
+
+      </div>
+    </details>
+  </div>
+</div>
+
+
+
+
+{% endblock %}

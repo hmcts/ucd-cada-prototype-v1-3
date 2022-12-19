@@ -1,0 +1,94 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Child arrangement respondent
+{% endblock %}
+
+{% block header %}
+  <!-- Blank header with no service name for the start page -->
+
+{{ govukHeader({
+    homepageUrl: "/",
+    serviceName: serviceName,
+    serviceUrl: "/",
+    containerClasses: "govuk-width-container"
+}) }}
+
+{% endblock %}
+
+{% block content %}
+<div class="govuk-grid-row">
+   <div class="govuk-grid-column-two-thirds">
+    <div class="govuk-width-container">
+     <a href="#" onclick="history.back(-1)" class="govuk-back-link">Back</a>
+
+     <main class="govuk-main-wrapper app-main-class" id="main-content" role="main">
+         <form action="../start" method="post" novalidate>
+
+
+         <h1 class="govuk-heading-xl">Contact your legal representative</h1>
+
+         <p class="govuk-body">If you have a legal representative and want them to complete the application for you:</p>
+         <ul class="govuk-list govuk-list--bullet">
+          <li>get in touch with your legal representative</li>
+          <li>ask them what information they need from you to complete the application</li>
+          <li>ask them to explain the next steps</li>
+        </ul>
+
+
+
+         <div class="govuk-!-padding-bottom-4"></div>
+
+
+         <div class="govuk-warning-text">
+           <span class="govuk-warning-text__icon" aria-hidden="true">!</span>
+           <strong class="govuk-warning-text__text">
+             <span class="govuk-warning-text__assistive">Warning</span>
+             Do not complete the application yourself if you plan to have a legal representative fill it in.
+           </strong>
+         </div>
+
+
+
+            <div class="govuk-button-group">
+              <button class="govuk-button" data-module="govuk-button">
+                Close the application
+              </button>
+
+              <a href="legalrepresentationapplication" class="govuk-button govuk-button--secondary" data-module="govuk-button" >
+                  Go back
+              </a>
+
+
+          </div>
+
+
+       </main>
+
+
+    </div>
+  </div>
+
+  <div class="govuk-grid-column-one-third">
+    <details class="govuk-details" data-module="govuk-details">
+ 			 <summary class="govuk-details__summary">
+   			 <span class="govuk-details__summary-text">
+    		  Contacts for help
+  			  </span>
+  			</summary>
+  			<div class="govuk-details__text">
+   			 Ask a question or get any help in any language
+   			 <p class="govuk-body govuk-!-font-weight-bold">Telephone</p>
+
+   			 <p class="govuk-body govuk-!-font-weight-regular">0300 303 0742</p>
+   			 <p class="govuk-body govuk-!-font-weight-regular">Monday to Friday, 8am to 8pm</p>
+   			 <a href="#" class="govuk-link">Find out about call charges</a>
+   			 <p class="govuk-body govuk-!-font-weight-regular">(opens in a new window)</p>
+			  </div>
+			</details>
+    </div>
+</div>
+
+
+
+{% endblock %}

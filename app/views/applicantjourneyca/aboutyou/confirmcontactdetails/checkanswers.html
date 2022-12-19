@@ -1,0 +1,170 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Child arrangement respondent
+{% endblock %}
+
+{% block header %}
+  <!-- Blank header with no service name for the start page -->
+
+{{ govukHeader({
+    homepageUrl: "/",
+    serviceName: serviceName,
+    serviceUrl: "/",
+    containerClasses: "govuk-width-container"
+}) }}
+
+{% endblock %}
+
+{% block content %}
+ <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      <div class="govuk-width-container">
+        <a href="#" onclick="history.back(-1)" class="govuk-back-link">Back</a>
+
+        <main class="govuk-main-wrapper " id="main-content" role="main">
+
+          <h1 class="govuk-heading-xl">Check your details</h1>
+
+          <div id="prepopulated-hint" class="govuk-hint">Read the information to make sure it is correct, and add any missing details
+          </div>
+
+          <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+            <div class="govuk-summary-list__row">
+              <dt class="govuk-summary-list__key">
+                Name
+              </dt>
+              <dd class="govuk-summary-list__value">
+  <!--this will be prepopulated from the C100 but overwritten by user's input. If no input from C100, it will highlight that it needs to be filled-->
+                <!--{{ data['first-name'] }} {{ data['last-name'] }} {{ data['previous-name'] }}-->
+                Sam Richards
+              </dd>
+              <dd class="govuk-summary-list__actions">
+                <a class="govuk-link" href="personaldetails">Edit<span class="govuk-visually-hidden">name</span>
+                </a>
+              </dd>
+            </div>
+            <div class="govuk-summary-list__row">
+              <dt class="govuk-summary-list__key">
+                Date of birth
+              </dt>
+              <dd class="govuk-summary-list__value">
+  <!--this will be prepopulated from the C100 but overwritten by user's input. If no input from C100, it will highlight that it needs to be filled-->
+                <!--{{ data['dob-day'] }} {{ data['dob-month'] }} {{ data['dob-year'] }}-->
+                12 April 1980
+              </dd>
+              <dd class="govuk-summary-list__actions">
+                <a class="govuk-link" href="personaldetails">Edit<span class="govuk-visually-hidden">date of birth</span>
+                </a>
+              </dd>
+            </div>
+            <div class="govuk-summary-list__row">
+              <dt class="govuk-summary-list__key">
+                Place of birth
+              </dt>
+              <dd class="govuk-summary-list__value">
+  <!--this will be prepopulated from the C100 but overwritten by user's input. If no input from C100, it will highlight that it needs to be filled-->
+                <!--{{ data['pob'] }}-->
+                <p id="event-name-error" class="govuk-error-message">
+                  <span class="govuk-visually-hidden">Error:</span>Complete this section
+                </p>
+              </dd>
+              <dd class="govuk-summary-list__actions">
+                <a class="govuk-link" href="personaldetails">Edit<span class="govuk-visually-hidden">place of birth</span>
+                </a>
+              </dd>
+            </div>
+            <div class="govuk-summary-list__row">
+              <dt class="govuk-summary-list__key">
+                Address
+              </dt>
+              <dd class="govuk-summary-list__value">
+  <!--this will be prepopulated from the C100 but overwritten by user's input. If no input from C100, it will highlight that it needs to be filled-->
+                <!--{{ data['address-line-1'] }} {{ data['address-line-2'] }} {{ data['address-town'] }} {{ data['address-postcode'] }}-->
+                24 Happy Hill
+                <br>Happy End
+                <br>H24 HE
+              </dd>
+              <dd class="govuk-summary-list__actions">
+                <a class="govuk-link" href="addressdetails">Edit<span class="govuk-visually-hidden">address</span>
+                </a>
+              </dd>
+            </div>
+            <div class="govuk-summary-list__row">
+              <dt class="govuk-summary-list__key">
+                Address history
+              </dt>
+              <dd class="govuk-summary-list__value">
+  <!--this will be prepopulated from the C100 but overwritten by user's input. If no input from C100, it will highlight that it needs to be filled-->
+                <!--{{ data['more-detail'] }}-->
+                <p id="event-name-error" class="govuk-error-message">
+                  <span class="govuk-visually-hidden">Error:</span>Complete this section
+                </p>
+              </dd>
+              <dd class="govuk-summary-list__actions">
+                <a class="govuk-link" href="addresshistory">Edit<span class="govuk-visually-hidden">address</span>
+                </a>
+              </dd>
+            </div>
+            <div class="govuk-summary-list__row">
+              <dt class="govuk-summary-list__key">
+                Phone number
+              </dt>
+              <dd class="govuk-summary-list__value">
+  <!--this will be prepopulated from the C100 but overwritten by their input. If no input from C100, it will highlight that it needs to be filled-->
+                <!--{{ data['telephone-number'] }}-->
+                123456789
+                <div id="prepopulated-hint" class="govuk-hint">This information was provided by the applicant so it cannot be kept confidential.</div>
+              </dd>
+              <dd class="govuk-summary-list__actions">
+                <a class="govuk-link" href="contactdetails">Edit<span class="govuk-visually-hidden">number</span>
+                </a>
+              </dd>
+            </div>
+            <div class="govuk-summary-list__row">
+              <dt class="govuk-summary-list__key">
+                Email
+              </dt>
+              <dd class="govuk-summary-list__value">
+  <!--this will be prepopulated from the C100 but overwritten by user's input. If no input from C100, it will highlight that it needs to be filled-->
+                <!--{{ data['email'] }}-->
+                <p id="event-name-error" class="govuk-error-message">
+                  <span class="govuk-visually-hidden">Error:</span>Complete this section
+                </p>
+
+                <div id="prepopulated-hint" class="govuk-hint">This information will be kept confidential</div>
+              </dd>
+              <dd class="govuk-summary-list__actions">
+                <a class="govuk-link" href="contactdetails">Edit<span class="govuk-visually-hidden">email</span>
+                </a>
+              </dd>
+            </div>
+
+          </dl>
+
+      <div>
+
+        <form action="/applicantjourneyca/start" method="post" novalidate>
+
+          <input type="hidden" name="answers-checked" value="true">
+
+          <div class="govuk-button-group">
+            <button class="govuk-button" data-module="govuk-button">
+              Save and continue
+            </button>
+            <a href="personaldetails" class="govuk-button govuk-button--secondary" data-module="govuk-button">
+              Edit answers
+            </a>
+          </div>
+
+        </form>
+
+      </div>
+        </main>
+      </div>
+    </div>
+</div>
+
+
+
+{% endblock %}

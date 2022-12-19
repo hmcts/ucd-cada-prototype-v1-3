@@ -1,0 +1,112 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Child arrangement respondent
+{% endblock %}
+
+{% block header %}
+  <!-- Blank header with no service name for the start page -->
+
+{{ govukHeader({
+    homepageUrl: "/",
+    serviceName: serviceName,
+    serviceUrl: "/",
+    containerClasses: "govuk-width-container"
+}) }}
+
+{% endblock %}
+
+{% block content %}
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <div class="govuk-width-container">
+     <a href="#" onclick="history.back(-1)" class="govuk-back-link">Back</a>
+
+      <main class="govuk-main-wrapper app-main-class" id="main-content" role="main">
+           <form action="urgent-answer" method="post" novalidate>
+             <div class="govuk-grid-row">
+               <h1 class="govuk-heading-xl">Does your situation qualify for an urgent first hearing?</h1>
+
+               <p class="govuk-body">In many cases the first hearing will take place within 2 months. But the court may agree to an earlier first hearing (urgent hearing) if it is necessary.</p>
+               <p class="govuk-body">For example, there may be an immediate risk of harm to you or the children.</p>
+               <p class="govuk-body">If you get an urgent hearing, this may not mean that your case will be over sooner, and you may not receive a final decision on your case at this stage.</p>
+
+
+            <!--  <p class="govuk-body">See the list of <a href="https://www.justice.gov.uk/courts/procedure-rules/family/practice_directions/pd_part_12b#para12.1" class="govuk-link govuk-link a" rel="external" target="_blank">potential risk factors</a>.
+                </p> !-->
+
+
+                <div class="govuk-warning-text">
+                   <span class="govuk-warning-text__icon" aria-hidden="true">!</span>
+                   <strong class="govuk-warning-text__text">
+                     <span class="govuk-warning-text__assistive">Warning</span>
+                    Only ask for an urgent hearing if you have a good reason. The court will only agree to an urgent hearing if they think the situation is critical.
+                   </strong>
+                 </div>
+
+
+
+
+                 <div class="govuk-form-group">
+                   <fieldset class="govuk-fieldset">
+                     <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+                       <span class="govuk-fieldset__heading">Do you have a good reason to request an urgent hearing?</span>
+                     </legend>
+
+                     <div class="govuk-radios" data-module="govuk-radios">
+                       <div class="govuk-radios__item">
+                         <input id="urgenthering-yes" class="govuk-radios__input" type="radio" value="yes" name="urgenthering">
+                         <label for="urgenthering-yes" class="govuk-label govuk-radios__label">Yes</label>
+                       </div>
+                       <div class="govuk-radios__item">
+                         <input id="steurgenthering-no" class="govuk-radios__input" type="radio" value="no" name="urgenthering">
+                         <label for="surgenthering-no" class="govuk-label govuk-radios__label">No</label>
+                       </div>
+                     </div>
+                   </fieldset>
+                 </div>
+
+
+
+           <div class="govuk-button-group govuk-!-margin-top-6">
+             <button class="govuk-button" data-module="govuk-button">
+               Continue
+             </button>
+             <a class="govuk-button govuk-button--secondary" href="../../applicanttasklist/inprogress"  data-module="govuk-button">
+               Save and come back later
+             </a>
+
+           </div>
+
+
+
+
+      </main>
+
+
+    </div>
+  </div>
+
+  <div class="govuk-grid-column-one-third">
+  <details class="govuk-details" data-module="govuk-details">
+			 <summary class="govuk-details__summary">
+ 			 <span class="govuk-details__summary-text">
+  		  Contacts for help
+			  </span>
+			</summary>
+			<div class="govuk-details__text">
+ 			 Ask a question or get any help in any language
+ 			 <p class="govuk-body govuk-!-font-weight-bold">Telephone</p>
+
+ 			 <p class="govuk-body govuk-!-font-weight-regular">0300 303 0742</p>
+ 			 <p class="govuk-body govuk-!-font-weight-regular">Monday to Friday, 8am to 8pm</p>
+ 			 <a href="#" class="govuk-link">Find out about call charges</a>
+ 			 <p class="govuk-body govuk-!-font-weight-regular">(opens in a new window)</p>
+		  </div>
+		</details>
+  </div>
+</div>
+
+
+
+{% endblock %}

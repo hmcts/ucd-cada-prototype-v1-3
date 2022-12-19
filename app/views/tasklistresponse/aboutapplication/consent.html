@@ -1,0 +1,182 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Child arrangement respondent
+{% endblock %}
+
+{% block header %}
+  <!-- Blank header with no service name for the start page -->
+
+{{ govukHeader({
+    homepageUrl: "/",
+    serviceName: serviceName,
+    serviceUrl: "/",
+    containerClasses: "govuk-width-container"
+}) }}
+
+{% endblock %}
+
+{% block content %}
+ <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <div class="govuk-width-container">
+
+        <a href="#" onclick="history.back(-1)" class="govuk-back-link">Back</a>
+
+        <main class="govuk-main-wrapper " id="main-content" role="main">
+
+              <form action="checkanswers" method="post" novalidate>
+                <div class="govuk-form-group">
+                  <fieldset class="govuk-fieldset">
+                    <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl">
+                      <h1 class="govuk-fieldset__heading">
+                        Your understanding of the application
+                      </h1>
+                    </legend>
+
+
+
+                      <div class="govuk-!-padding-bottom-3"></div>
+                    <div class="govuk-form-group">
+                      <fieldset class="govuk-fieldset">
+                      <h2 class="govuk-heading-m">Do you consent to the application?
+                        </h2>
+                        <div class="govuk-radios" data-module="govuk-radios">
+                          <div class="govuk-radios__item">
+                            <input class="govuk-radios__input" id="consent-yes" name="consent" type="radio" value="Yes">
+                            <label class="govuk-label govuk-radios__label" for="consent-yes">
+                              Yes
+                            </label>
+                          </div>
+
+
+                          <div class="govuk-radios__item">
+                            <input class="govuk-radios__input" id="consent-no" name="consent" type="radio" value="No" data-aria-controls="conditional-confidential">
+                            <label class="govuk-label govuk-radios__label" for="consent-no">
+                              No
+                            </label>
+                          </div>
+                          <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-confidential">
+                            <div class="govuk-form-group">
+                              <label class="govuk-label" for="privatedetails">Give your reasons for not consenting to the application.</label>
+                              <textarea class="govuk-textarea" id="more-detail" name="more-detail" rows="5" aria-describedby="more-detail-hint"></textarea>
+                              </div>
+                            </div>
+                        </div>
+                      </fieldset>
+                    </div>
+
+
+
+                    <div class="govuk-!-padding-bottom-2"></div>
+
+                    <div class="govuk-form-group">
+                      <fieldset class="govuk-fieldset" role="group" aria-describedby="passport-issued-hint">
+                        <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+                          <h2 class="govuk-heading-m">
+                            When did you receive the application?
+                          </h2>
+                        </legend>
+                        <div id="passport-issued-hint" class="govuk-hint">
+                          For example, 27 3 2007
+                        </div>
+                        <div class="govuk-date-input" id="passport-issued">
+                          <div class="govuk-date-input__item">
+                            <div class="govuk-form-group">
+                              <label class="govuk-label govuk-date-input__label" for="receive-day">
+                                Day
+                              </label>
+                              <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="receive-day" name="receive-day" type="text" pattern="[0-9]*" inputmode="numeric">
+                            </div>
+                          </div>
+                          <div class="govuk-date-input__item">
+                            <div class="govuk-form-group">
+                              <label class="govuk-label govuk-date-input__label" for="receive-month">
+                                Month
+                              </label>
+                              <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="receive-month" name="receive-month" type="text" pattern="[0-9]*" inputmode="numeric">
+                            </div>
+                          </div>
+                          <div class="govuk-date-input__item">
+                            <div class="govuk-form-group">
+                              <label class="govuk-label govuk-date-input__label" for="receive-year">
+                                Year
+                              </label>
+                              <input class="govuk-input govuk-date-input__input govuk-input--width-4" id="receive-year" name="receive-year" type="text" pattern="[0-9]*" inputmode="numeric">
+                            </div>
+                          </div>
+                        </div>
+
+                      </fieldset>
+                    </div>
+
+                    <div class="govuk-!-padding-bottom-2"></div>
+
+                    <div class="govuk-form-group">
+                      <fieldset class="govuk-fieldset">
+                      <h2 class="govuk-heading-m">Does the applicant need permission from the court before making applications?
+                        </h2>
+                        <div class="govuk-radios" data-module="govuk-radios">
+                          <div class="govuk-radios__item">
+                            <input class="govuk-radios__input" id="permission-yes" name="permission" type="radio" value="Yes" data-aria-controls="permission-confidential">
+                            <label class="govuk-label govuk-radios__label" for="permission-yes">
+                              Yes
+                            </label>
+                          </div>
+                          <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="permission-confidential">
+                            <div class="govuk-form-group">
+                              <label class="govuk-label" for="permissiondetail">Provide details of the court order in place.</label>
+                              <textarea class="govuk-textarea" id="permissiondetails" name="permissiondetails" rows="5" aria-describedby="permissiondetails-hint"></textarea>
+                              </div>
+                            </div>
+
+                          <div class="govuk-radios__item">
+                            <input class="govuk-radios__input" id="permission-no" name="permission" type="radio" value="No" >
+                            <label class="govuk-label govuk-radios__label" for="permission-no">
+                              No
+                            </label>
+                          </div>
+
+                        </div>
+                      </fieldset>
+                    </div>
+
+                  </fieldset>
+                </div>
+
+                <button class="govuk-button" data-module="govuk-button">
+                  Save and continue
+                </button>
+              </form>
+
+        </main>
+      </div>
+
+    </div>
+    <div class="govuk-grid-column-one-third">
+
+    		<details class="govuk-details" data-module="govuk-details">
+ 			      <summary class="govuk-details__summary">
+       			 <span class="govuk-details__summary-text">
+        		  Contacts for help
+      			  </span>
+  			    </summary>
+  			<div class="govuk-details__text">
+   			 Ask a question or get any help in any language
+   			 <p class="govuk-body govuk-!-font-weight-bold">Telephone</p>
+
+   			 <p class="govuk-body govuk-!-font-weight-regular">0300 303 0742</p>
+   			 <p class="govuk-body govuk-!-font-weight-regular">Monday to Friday, 8am to 8pm</p>
+   			 <a href="#" class="govuk-link">Find out about call charges</a>
+   			 <p class="govuk-body govuk-!-font-weight-regular">(opens in a new window)</p>
+
+			  </div>
+			</details>
+    </div>
+
+</div>
+
+
+
+{% endblock %}

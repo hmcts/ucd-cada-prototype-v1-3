@@ -1,0 +1,124 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Child arrangement respondent
+{% endblock %}
+
+{% block header %}
+  <!-- Blank header with no service name for the start page -->
+
+{{ govukHeader({
+    homepageUrl: "/",
+    serviceName: serviceName,
+    serviceUrl: "/",
+    containerClasses: "govuk-width-container"
+}) }}
+
+{% endblock %}
+
+{% block content %}
+ <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <div class="govuk-width-container">
+
+        <a href="#" onclick="history.back(-1)" class="govuk-back-link">Back</a>
+
+        <main class="govuk-main-wrapper " id="main-content" role="main">
+
+              <form action="start-answer" method="post" novalidate>
+                <div class="govuk-form-group">
+                  <fieldset class="govuk-fieldset">
+                    <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl">
+                      <h1 class="govuk-fieldset__heading">
+                        Are you sure you want to withdraw your application?
+                      </h1>
+                    </legend>
+                    <div class="govuk-!-padding-bottom-4"></div>
+                    <p class="govuk-body">
+                        The court will consider your reasons, and decide whether or not you can withdraw the application.
+                        </p>
+                        <p class="govuk-body">
+                          If you have paid a court fee, you may not receive a refund.
+                        </p>
+
+                        <div class="govuk-warning-text">
+                            <span class="govuk-warning-text__icon" aria-hidden="true">!</span>
+                            <strong class="govuk-warning-text__text">
+                              <span class="govuk-warning-text__assistive">Warning</span>
+                              If you withdraw this application, you cannot resubmit it.
+                            </strong>
+                          </div>
+                        <div class="govuk-!-padding-bottom-4"></div>
+
+                    <div class="govuk-form-group">
+                      <fieldset class="govuk-fieldset">
+
+                        <div class="govuk-radios" data-module="govuk-radios">
+                          <div class="govuk-radios__item">
+                            <input class="govuk-radios__input" id="withdraw-yes" name="withdraw" type="radio" value="yes" aria-controls="conditional-withdraw">
+                            <label class="govuk-label govuk-radios__label" for="withdraw-yes">
+                              Yes
+                            </label>
+
+                          <div class="govuk-radios__conditional govuk-radios--hidden" id="conditional-withdraw">
+                            <div class="govuk-form-group">
+                              <label for="withdraw-details" class="govuk-label">Why are you withdrawing this application?</label>
+                              <textarea id="withdraw-details" class="govuk-textarea" rows="4" name="withdraw-details">
+                              </textarea>
+                            </div>
+                            </div>
+                            </div>
+
+
+                          <div class="govuk-radios__item">
+                            <input class="govuk-radios__input" id="withdraw-no" name="withdraw" type="radio" value="no">
+                            <label class="govuk-label govuk-radios__label" for="withdraw-no">
+                              No
+                            </label>
+                          </div>
+                        </div>
+                      </fieldset>
+                    </div>
+
+                  </fieldset>
+                </div>
+
+                <button class="govuk-button" data-module="govuk-button">
+                  Save and continue
+                </button>
+              </form>
+
+        </main>
+      </div>
+
+    </div>
+    <div class="govuk-grid-column-one-third">
+
+
+
+
+
+      <details class="govuk-details" data-module="govuk-details">
+   			 <summary class="govuk-details__summary">
+     			 <span class="govuk-details__summary-text">
+      		  Contacts for help
+    			  </span>
+    			</summary>
+    			<div class="govuk-details__text">
+     			 Ask a question or get any help in any language
+     			 <p class="govuk-body govuk-!-font-weight-bold">Telephone</p>
+
+     			 <p class="govuk-body govuk-!-font-weight-regular">0300 303 0742</p>
+     			 <p class="govuk-body govuk-!-font-weight-regular">Monday to Friday, 8am to 8pm</p>
+     			 <a href="#" class="govuk-link">Find out about call charges</a>
+     			 <p class="govuk-body govuk-!-font-weight-regular">(opens in a new window)</p>
+  			  </div>
+  			</details>
+      </div>
+
+</div>
+
+
+
+{% endblock %}

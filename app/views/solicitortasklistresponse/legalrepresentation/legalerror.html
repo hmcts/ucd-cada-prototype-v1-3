@@ -1,0 +1,109 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Child arrangement respondent
+{% endblock %}
+
+{% block header %}
+  <!-- Blank header with no service name for the start page -->
+
+{{ govukHeader({
+    homepageUrl: "/",
+    serviceName: serviceName,
+    serviceUrl: "/",
+    containerClasses: "govuk-width-container"
+}) }}
+
+{% endblock %}
+
+{% block content %}
+<div class="govuk-grid-row">
+   <div class="govuk-grid-column-two-thirds">
+    <div class="govuk-width-container">
+     <a href="#" onclick="history.back(-1)" class="govuk-back-link">Back</a>
+
+     <main class="govuk-main-wrapper app-main-class" id="main-content" role="main">
+         <form action="start-answer" method="post" novalidate>
+
+           <div class="govuk-error-summary" aria-labelledby="error-summary-title" role="alert" data-module="govuk-error-summary">
+             <h2 class="govuk-error-summary__title" id="error-summary-title">
+               There is a problem on this page
+             </h2>
+             <div class="govuk-error-summary__body">
+               <ul class="govuk-list govuk-error-summary__list">
+                 <li>
+                   <a href="#solicitor">Select yes if you are using a legal representative to respond to the application</a>
+                 </li>
+               </ul>
+             </div>
+           </div>
+
+           <div class="govuk-form-group govuk-form-group--error">
+             <fieldset class="govuk-fieldset" aria-describedby="where-do-you-live-error">
+               <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+               </legend>
+                   <h1 class="govuk-heading-xl">Will you be using a legal representative to respond to the application?</h1>
+
+                   <div class="govuk-inset-text">
+                     You can respond to the applicant's request yourself and then redirect your case to your legal representative for the remainder of the proceedings.
+                   </div>
+
+
+                   <div class="govuk-form-group govuk-form-group--error">
+                     <fieldset class="govuk-fieldset" aria-describedby="where-do-you-live-error">
+                       <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+                       </legend>
+                       <p id="where-do-you-live-error" class="govuk-error-message">
+                         <span class="govuk-visually-hidden">Error:</span> Select yes if you are using a legal representative to respond to the application
+                       </p>
+                       <div class="govuk-radios" data-module="govuk-radios">
+                         <div class="govuk-radios__item">
+                           <input id="solicitor-yes" class="govuk-radios__input" type="radio" value="yes" name="solicitor">
+                           <label for="solicitor-yes" class="govuk-label govuk-radios__label">Yes</label>
+                         </div>
+                         <div class="govuk-radios__item">
+                           <input id="solicitor-no" class="govuk-radios__input" type="radio" value="no" name="solicitor">
+                           <label for="solicitor-no" class="govuk-label govuk-radios__label">No</label>
+                         </div>
+                       </div>
+                      </fieldset>
+                    </div>
+                  </fieldset>
+                </div>
+
+          <button type="submit" formnovalidate="formnovalidate" class="govuk-button" data-module="govuk-button" data-prevent-double-click="true">Save and continue
+          </button>
+
+          <p class="govuk-body"><a href="https://www.gov.uk/find-legal-advice/find-legal-adviser" class="govuk-link" rel="external" target="_blank">Find legal representation</a></p>
+           <p class="govuk-body"><a href="https://www.gov.uk/legal-aid" class="govuk-link" rel="external" target="_blank">Do you need legal aid?</a></p>
+
+
+       </main>
+
+
+    </div>
+  </div>
+
+  <div class="govuk-grid-column-one-third">
+    <details class="govuk-details" data-module="govuk-details">
+ 			 <summary class="govuk-details__summary">
+   			 <span class="govuk-details__summary-text">
+    		  Contacts for help
+  			  </span>
+  			</summary>
+  			<div class="govuk-details__text">
+   			 Ask a question or get any help in any language
+   			 <p class="govuk-body govuk-!-font-weight-bold">Telephone</p>
+
+   			 <p class="govuk-body govuk-!-font-weight-regular">0300 303 0742</p>
+   			 <p class="govuk-body govuk-!-font-weight-regular">Monday to Friday, 8am to 8pm</p>
+   			 <a href="#" class="govuk-link">Find out about call charges</a>
+   			 <p class="govuk-body govuk-!-font-weight-regular">(opens in a new window)</p>
+			  </div>
+			</details>
+    </div>
+</div>
+
+
+
+{% endblock %}

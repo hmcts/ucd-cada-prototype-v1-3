@@ -1,0 +1,134 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Child arrangement respondent
+{% endblock %}
+
+{% block header %}
+  <!-- Blank header with no service name for the start page -->
+
+{{ govukHeader({
+    homepageUrl: "/",
+    serviceName: serviceName,
+    serviceUrl: "/",
+    containerClasses: "govuk-width-container"
+}) }}
+
+{% endblock %}
+
+{% block content %}
+<div class="govuk-grid-row">
+   <div class="govuk-grid-column-two-thirds">
+    <div class="govuk-width-container">
+     <a href="#" onclick="history.back(-1)" class="govuk-back-link">Back</a>
+
+     <main class="govuk-main-wrapper app-main-class" id="main-content" role="main">
+
+       <form action="../otherconcerns/drugs" method="post" novalidate>
+         <div class="govuk-error-summary" aria-labelledby="error-summary-title" role="alert" data-module="govuk-error-summary">
+           <h2 class="govuk-error-summary__title" id="error-summary-title">
+             There is a problem
+           </h2>
+           <div class="govuk-error-summary__body">
+             <ul class="govuk-list govuk-error-summary__list">
+               <li>
+                 <a href="#solicitor">Provide details of the police, private investigators or any other organisation involvement</a>
+               </li>
+
+             </ul>
+           </div>
+         </div>
+
+
+         <span class="govuk-caption-xl">Safety concerns</span>
+         <h1 class="govuk-heading-xl">Provide details of the previous abductions</h1>
+
+           <div class="govuk-form-group ">
+             <label for="steps-abduction-previous-attempt-details-form-previous-attempt-details-field" class="govuk-label">Give a short description of the previous incidents of abduction.</label>
+             <span class="govuk-hint" id="steps-abduction-previous-attempt-details-form-previous-attempt-details-hint">Include any previous attempts to threaten or abduct the children.</span>
+
+             <textarea id="steps-abduction-previous-attempt-details-form-previous-attempt-details-field" class="govuk-textarea" rows="5" aria-describedby="steps-abduction-previous-attempt-details-form-previous-attempt-details-hint" name="steps_abduction_previous_attempt_details_form[previous_attempt_details]">
+             </textarea>
+           </div>
+
+           <div class="govuk-form-group">
+
+               <fieldset class="govuk-fieldset" aria-describedby="steps-abduction-previous-attempt-details-form-previous-attempt-agency-involved-hint"><legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+                 <span class="govuk-fieldset__heading">Were the police, private investigators or any other organisation involved?</span>
+                 </legend>
+                 <span class="govuk-hint" id="steps-abduction-previous-attempt-details-form-previous-attempt-agency-involved-hint">Including in the UK or overseas.</span>
+
+                 <div class="govuk-radios" data-module="govuk-radios">
+                 <div class="govuk-radios__item">
+                   <input id="steps-abduction-previous-attempt-details-form-previous-attempt-agency-involved-yes-field" class="govuk-radios__input" type="radio" value="yes" name="steps_abduction_previous_attempt_details_form[previous_attempt_agency_involved]" aria-controls="steps-abduction-previous-attempt-details-form-previous-attempt-agency-involved-yes-conditional" aria-expanded="false" checked="checked">
+                   <label for="steps-abduction-previous-attempt-details-form-previous-attempt-agency-involved-yes-field" class="govuk-label govuk-radios__label">Yes</label>
+                 </div>
+               <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="steps-abduction-previous-attempt-details-form-previous-attempt-agency-involved-yes-conditional">
+                 <div class="govuk-form-group govuk-form-group--error">
+
+                   <label for="steps-abduction-previous-attempt-details-form-previous-attempt-agency-details-field" class="govuk-label">Provide more details</label>
+                   <p id="where-do-you-live-error" class="govuk-error-message">
+                     <span class="govuk-visually-hidden">Error:</span>Provide details of the police, private investigators or any other organisation involvement
+                   </p>
+                   <textarea id="steps-abduction-previous-attempt-details-form-previous-attempt-agency-details-field" class="govuk-textarea" rows="5" name="steps_abduction_previous_attempt_details_form[previous_attempt_agency_details]">
+                   </textarea>
+                 </div>
+               </div>
+
+                 <div class="govuk-radios__item">
+                   <input id="steps-abduction-previous-attempt-details-form-previous-attempt-agency-involved-no-field" class="govuk-radios__input" type="radio" value="no" name="steps_abduction_previous_attempt_details_form[previous_attempt_agency_involved]">
+                   <label for="steps-abduction-previous-attempt-details-form-previous-attempt-agency-involved-no-field" class="govuk-label govuk-radios__label">No</label>
+                 </div>
+               </div>
+             </fieldset>
+           </div>
+           <div class="govuk-button-group govuk-!-margin-top-6">
+             <button class="govuk-button" data-module="govuk-button">
+               Continue
+             </button>
+             <a class="govuk-button govuk-button--secondary" href="../../../applicanttasklist/inprogress"  data-module="govuk-button">
+               Save and come back later
+             </a>
+
+           </div>
+         </form>
+
+
+       </main>
+
+
+
+    </div>
+  </div>
+
+  <div class="govuk-grid-column-one-third">
+    <div class="govuk-form-group">
+
+         <ul class="govuk-list">
+           <li><a href="https://www.gov.uk/government/collections/child-abduction" class="govuk-link" rel="external" target="_blank">Guidance on parental child abduction</a></li>
+           <li><a href="https://www.gov.uk/return-or-contact-abducted-child" class="govuk-link" rel="external" target="_blank">Get help to return a child from abroad or arrange contact</a></li>
+           <li><a href="https://www.gov.uk/stop-child-passport" class="govuk-link" rel="external" target="_blank">Stop a child from getting a passport</a></li>
+         </ul>
+    </div>
+    <details class="govuk-details" data-module="govuk-details">
+ 			 <summary class="govuk-details__summary">
+   			 <span class="govuk-details__summary-text">
+    		  Contacts for help
+  			  </span>
+  			</summary>
+  			<div class="govuk-details__text">
+   			 Ask a question or get any help in any language
+   			 <p class="govuk-body govuk-!-font-weight-bold">Telephone</p>
+
+   			 <p class="govuk-body govuk-!-font-weight-regular">0300 303 0742</p>
+   			 <p class="govuk-body govuk-!-font-weight-regular">Monday to Friday, 8am to 8pm</p>
+   			 <a href="#" class="govuk-link">Find out about call charges</a>
+   			 <p class="govuk-body govuk-!-font-weight-regular">(opens in a new window)</p>
+			  </div>
+			</details>
+    </div>
+</div>
+
+
+
+{% endblock %}

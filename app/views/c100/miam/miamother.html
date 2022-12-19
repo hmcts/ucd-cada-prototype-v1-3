@@ -1,0 +1,265 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Child arrangement respondent
+{% endblock %}
+
+{% block header %}
+  <!-- Blank header with no service name for the start page -->
+
+{{ govukHeader({
+    homepageUrl: "/",
+    serviceName: serviceName,
+    serviceUrl: "/",
+    containerClasses: "govuk-width-container"
+}) }}
+
+{% endblock %}
+
+{% block content %}
+
+
+ <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <div class="govuk-width-container">
+
+        <a href="#" onclick="history.back(-1)" class="govuk-back-link">Back</a>
+
+        <main class="govuk-main-wrapper govuk-main-wrapper--auto-spacing" id="main-content" role="main">
+
+               <form action="miamnoneedreasons" method="post" novalidate>
+
+                 <span class="govuk-caption-l">MIAM exemptions</span>
+                 <h1 class="govuk-heading-xl">Can you confirm that any of the other valid reasons for not attending a MIAM apply in your case?</h1>
+
+                 <div class="govuk-inset-text">
+                  <p class="govuk-body">If you are seeking a MIAM exemption, you will need to give more details. </p>
+
+                   <p class="govuk-body">The court needs this information to decide if you need to attend a MIAM.</p>
+                 </div>
+
+               <div class="govuk-form-group">
+                 <fieldset class="govuk-fieldset" aria-describedby="steps-miam-exemptions-domestic-form-domestic-hint">
+                   <div id="da-hint" class="govuk-hint">
+                     Select all that apply to you
+                   </div>
+                   <div class="govuk-checkboxes" data-module="govuk-checkboxes">
+                       <div class="govuk-checkboxes__item police-involvement">
+                         <input id="nocontact" class="govuk-checkboxes__input" type="checkbox" value="group_police" name="otherreasons">
+                           <label for="nocontact" class="govuk-label govuk-checkboxes__label">
+                             You do not have sufficient contact details for the other people in this application (the respondents) to enable a family mediator to contact any of them for the purpose of scheduling the MIAM
+
+                          </label>
+                       </div>
+
+                       <div class="govuk-checkboxes__item">
+                         <input id="withoutnotice" class="govuk-checkboxes__input" type="checkbox" value="group_court" name="otherreasons" >
+                         <label for="withoutnotice" class="govuk-label govuk-checkboxes__label">
+                           You’re applying for a without notice hearing
+                           <div class="govuk-hint" id="withoutnotice-hint">
+                             Hearings which take place without notice to the other people will only be justified where your case is exceptionally urgent or there is good reason not to tell the other people about your application (either because they could take steps to obstruct the application or because doing so may expose you or the children to a risk of harm)
+                           </div>
+                         </label>
+                       </div>
+
+
+                       <div class="govuk-checkboxes__item">
+                         <input id="noaccess" class="govuk-checkboxes__input" type="checkbox" value="group_specialist" name="otherreasons" aria-controls="noaccess-conditional" aria-expanded="false">
+                         <label for="noaccess" class="govuk-label govuk-checkboxes__label">
+                           You cannot access a mediator
+                         <div class="govuk-hint" id="noaccess-hint">
+                           This may mean that you live further than 15 miles from a mediator, you are not able to get an appointment for a MIAM within 15 working days or you or the other people in this application (the respondents) have a disability and the mediator does not have disabled access. Select the specific reason why you cannot access a mediator.
+                         </div>
+                         </label>
+                       </div>
+
+                           <div class="govuk-checkboxes__conditional govuk-checkboxes__conditional--hidden" id="noaccess-conditional">
+                             <div class="govuk-form-group">
+                               <fieldset class="govuk-fieldset">
+                                 <div class="govuk-checkboxes" data-module="govuk-checkboxes">
+
+                                   <div class="govuk-checkboxes__item">
+                                     <input id="noaccessmediator-1" class="govuk-checkboxes__input" type="checkbox" value="noaccessmediator" name="noaccessmediator">
+                                     <label for="noaccessmediator-1" class="govuk-label govuk-checkboxes__label">
+                                      You or the other person has a disability and the mediator does not have disabled access
+                                     </label>
+                                     <div class="govuk-hint govuk-checkboxes__hint" id="noaccessmediator-1-hint">You will need to provide:
+                                       <ul class="govuk-list govuk-list--bullet govuk-hint govuk-!-margin-top-2">
+                                         <li>evidence you’ve contacted 3 mediators within 15 miles who all state they do not have disabled access</li>
+                                         <li>names and contact details of the mediators, including dates of contact</li>
+                                       </ul>
+                                    </div>
+                                  </div>
+
+                                   <div class="govuk-checkboxes__item">
+                                     <input id="noaccessmediator-2" class="govuk-checkboxes__input" type="checkbox" value="noaccessmediator" name="noaccessmediator">
+                                     <label for="noaccessmediator-2" class="govuk-label govuk-checkboxes__label">
+                                       You or the other person has contacted 3 mediators within 15 miles and cannot get an appointment within 15 working days
+                                     </label>
+                                     <div class="govuk-hint govuk-checkboxes__hint" id="noaccessmediator-hint">You will need to provide:
+                                       <ul class="govuk-list govuk-list--bullet govuk-hint govuk-!-margin-top-2">
+                                         <li>evidence you’ve contacted 3 mediators within 15 miles who all state they cannot offer an appointment within 15 days</li>
+                                         <li>names and contact details of the mediators, including dates of contact</li>
+
+                                       </ul>
+                                     </div>
+                                   </div>
+                                   <div class="govuk-checkboxes__item">
+                                     <input id="noaccessmediator-3" class="govuk-checkboxes__input" type="checkbox" value="noaccessmediator" name="noaccessmediator">
+                                     <label for="noaccessmediator-3" class="govuk-label govuk-checkboxes__label">
+                                       There is no authorised family mediator with an office within 15 miles of your home
+                                     </label>
+                                   </div>
+                                 </div>
+                               </fieldset>
+                             </div>
+                           </div>
+
+                       <div class="govuk-checkboxes__item">
+                         <input id="prison" class="govuk-checkboxes__input" type="checkbox" value="group_local_authority" name="otherreasons">
+                         <label for="prison" class="govuk-label govuk-checkboxes__label">
+                          You or all of the prospective respondents cannot attend a MIAM because one of you is in prison or any other institution; subject to bail conditions that prevent contact with each other; or subject to a licence with a prohibited contact with each other
+                         </label>
+                       </div>
+
+                       <div class="govuk-checkboxes__item">
+                         <input id="notresidents" class="govuk-checkboxes__input" type="checkbox" value="group_local_authority" name="otherreasons">
+                         <label for="notresidents" class="govuk-label govuk-checkboxes__label">
+                          You or all of the prospective respondents are not habitually resident in England and Wales
+                          <div class="govuk-hint" id="notresidents-hint">
+                            This may include working, owning property, having children in school or if family life mainly takes place outside England or Wales
+                          </div>
+                         </label>
+                       </div>
+
+                       <div class="govuk-checkboxes__item">
+                         <input id="underage" class="govuk-checkboxes__input" type="checkbox" value="group_da_service" name="otherreasons" ">
+                         <label for="underage" class="govuk-label govuk-checkboxes__label">
+                           You or the prospective respondents are under 18 years old
+
+                         </label>
+                       </div>
+
+
+
+
+
+                       <div class="govuk-checkboxes__divider">or</div>
+
+                       <div class="govuk-checkboxes__item">
+                         <input class="govuk-checkboxes__input" id="none" name="otherreasons" type="checkbox" value="No" data-behaviour="exclusive">
+                         <label class="govuk-label govuk-checkboxes__label" for="reasonable-adjustments-none">
+                           None of the above
+                         </label>
+                       </div>
+                  </div>
+
+             </fieldset>
+           </div>
+
+
+
+
+
+           <div class="govuk-button-group govuk-!-margin-top-6">
+             <button class="govuk-button" data-module="govuk-button">
+               Continue
+             </button>
+             <a class="govuk-button govuk-button--secondary" href="../../applicanttasklist/inprogress"  data-module="govuk-button">
+               Save and come back later
+             </a>
+
+           </div>
+
+
+
+
+
+              </form>
+        </main>
+      </div>
+
+
+
+
+    </div>
+    <div class="govuk-grid-column-one-third">
+
+    		<details class="govuk-details" data-module="govuk-details">
+ 			      <summary class="govuk-details__summary">
+       			 <span class="govuk-details__summary-text">
+        		  Contacts for help
+      			  </span>
+  			    </summary>
+  			<div class="govuk-details__text">
+   			 Ask a question or get any help in any language
+   			 <p class="govuk-body govuk-!-font-weight-bold">Telephone</p>
+
+   			 <p class="govuk-body govuk-!-font-weight-regular">0300 303 0742</p>
+   			 <p class="govuk-body govuk-!-font-weight-regular">Monday to Friday, 8am to 8pm</p>
+   			 <a href="#" class="govuk-link">Find out about call charges</a>
+   			 <p class="govuk-body govuk-!-font-weight-regular">(opens in a new window)</p>
+
+			  </div>
+			</details>
+    </div>
+
+</div>
+
+
+<script src="https://code.jquery.com/jquery-3.6.0.js"  crossorigin="anonymous"></script>
+<script type="text/javascript">
+  $(document).ready(function(){
+      $('input[id="noaccess"]').click(function(){
+          if($(this).prop("checked") == true){
+          }
+          else if($(this).prop("checked") == false){
+              $("input[name='noaccessmediator']").prop( "checked", false );
+
+          }
+      });
+
+      $('input[id="courtinvolvement"]').click(function(){
+          if($(this).prop("checked") == true){
+          }
+          else if($(this).prop("checked") == false){
+              $("input[name='miamcourtinvolvement']").prop( "checked", false );
+
+          }
+      });
+
+
+      $('input[id="letterconfirmation"]').click(function(){
+          if($(this).prop("checked") == true){
+          }
+          else if($(this).prop("checked") == false){
+              $("input[name='miamletterconfirmation']").prop( "checked", false );
+
+          }
+      });
+
+      $('input[id="authorityletter"]').click(function(){
+          if($(this).prop("checked") == true){
+          }
+          else if($(this).prop("checked") == false){
+              $("input[name='miamauthorityletter']").prop( "checked", false );
+
+          }
+      });
+
+      $('input[id="organisationletter"]').click(function(){
+          if($(this).prop("checked") == true){
+          }
+          else if($(this).prop("checked") == false){
+              $("input[name='miamorganisationletter']").prop( "checked", false );
+
+          }
+      });
+
+  });
+</script>
+
+
+
+{% endblock %}

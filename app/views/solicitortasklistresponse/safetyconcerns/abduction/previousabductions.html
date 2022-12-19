@@ -1,0 +1,104 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Child arrangement respondent
+{% endblock %}
+
+{% block header %}
+  <!-- Blank header with no service name for the start page -->
+
+{{ govukHeader({
+    homepageUrl: "/",
+    serviceName: serviceName,
+    serviceUrl: "/",
+    containerClasses: "govuk-width-container"
+}) }}
+
+{% endblock %}
+
+{% block content %}
+<div class="govuk-grid-row">
+   <div class="govuk-grid-column-two-thirds">
+    <div class="govuk-width-container">
+     <a href="#" onclick="history.back(-1)" class="govuk-back-link">Back</a>
+
+     <main class="govuk-main-wrapper app-main-class" id="main-content" role="main">
+
+       <form action="childlocation" method="post" novalidate>
+
+
+         <span class="govuk-caption-xl">Safety concerns</span>
+         <h1 class="govuk-heading-xl">Provide details of the previous abductions</h1>
+
+         <form class="edit_steps_abduction_previous_attempt_details_form" id="new_steps_abduction_previous_attempt_details_form" action="/steps/abduction/previous_attempt_details" accept-charset="UTF-8" method="post">
+           <input name="utf8" type="hidden" value="✓">
+           <input type="hidden" name="_method" value="put">
+           <input type="hidden" name="authenticity_token" value="RNDtqY0K4ZhoVVA34Ly7MIiSMQwqkTe4vmuflwE/kAvIPomgKi9zwO93JAD8U9kadlcOsCCY0ipfW5JHsRds1A==">
+           <div class="govuk-form-group">
+             <label for="steps-abduction-previous-attempt-details-form-previous-attempt-details-field" class="govuk-label">Give a short description of the previous incidents of abduction.</label>
+             <span class="govuk-hint" id="steps-abduction-previous-attempt-details-form-previous-attempt-details-hint">Include any previous attempts to threaten or abduct the children.</span>
+             <textarea id="steps-abduction-previous-attempt-details-form-previous-attempt-details-field" class="govuk-textarea" rows="5" aria-describedby="steps-abduction-previous-attempt-details-form-previous-attempt-details-hint" name="steps_abduction_previous_attempt_details_form[previous_attempt_details]">
+             </textarea>
+           </div>
+
+            <div class="govuk-form-group">
+               <fieldset class="govuk-fieldset" aria-describedby="steps-abduction-previous-attempt-details-form-previous-attempt-agency-involved-hint"><legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+                 <span class="govuk-fieldset__heading">Were the police, private investigators or any other organisation involved?</span>
+                 </legend>
+                 <span class="govuk-hint" id="steps-abduction-previous-attempt-details-form-previous-attempt-agency-involved-hint">Including in the UK or overseas.</span>
+                 <div class="govuk-radios" data-module="govuk-radios">
+                 <div class="govuk-radios__item">
+                   <input id="steps-abduction-previous-attempt-details-form-previous-attempt-agency-involved-yes-field" class="govuk-radios__input" type="radio" value="yes" name="steps_abduction_previous_attempt_details_form[previous_attempt_agency_involved]" aria-controls="steps-abduction-previous-attempt-details-form-previous-attempt-agency-involved-yes-conditional" aria-expanded="false">
+                   <label for="steps-abduction-previous-attempt-details-form-previous-attempt-agency-involved-yes-field" class="govuk-label govuk-radios__label">Yes</label>
+                 </div>
+               <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="steps-abduction-previous-attempt-details-form-previous-attempt-agency-involved-yes-conditional">
+                 <div class="govuk-form-group">
+                   <label for="steps-abduction-previous-attempt-details-form-previous-attempt-agency-details-field" class="govuk-label">Provide more details</label>
+                   <textarea id="steps-abduction-previous-attempt-details-form-previous-attempt-agency-details-field" class="govuk-textarea" rows="5" name="steps_abduction_previous_attempt_details_form[previous_attempt_agency_details]">
+                   </textarea>
+                 </div>
+               </div>
+
+                 <div class="govuk-radios__item">
+                   <input id="steps-abduction-previous-attempt-details-form-previous-attempt-agency-involved-no-field" class="govuk-radios__input" type="radio" value="no" name="steps_abduction_previous_attempt_details_form[previous_attempt_agency_involved]">
+                   <label for="steps-abduction-previous-attempt-details-form-previous-attempt-agency-involved-no-field" class="govuk-label govuk-radios__label">No</label>
+                 </div>
+               </div>
+             </fieldset>
+           </div>
+           <div class="govuk-button-group">
+             <button type="submit" formnovalidate="formnovalidate" class="govuk-button" data-module="govuk-button" data-prevent-double-click="true">Save and continue</button>
+           </div>
+         </form>
+
+
+       </main>
+
+
+
+    </div>
+  </div>
+
+  <div class="govuk-grid-column-one-third">
+    <details class="govuk-details" data-module="govuk-details">
+ 			 <summary class="govuk-details__summary">
+   			 <span class="govuk-details__summary-text">
+    		  Contacts for help
+  			  </span>
+  			</summary>
+  			<div class="govuk-details__text">
+   			 Ask a question or get any help in any language
+   			 <p class="govuk-body govuk-!-font-weight-bold">Telephone</p>
+
+   			 <p class="govuk-body govuk-!-font-weight-regular">0300 303 0742</p>
+   			 <p class="govuk-body govuk-!-font-weight-regular">Monday to Friday, 8am to 8pm</p>
+   			 <a href="#" class="govuk-link">Find out about call charges</a>
+   			 <p class="govuk-body govuk-!-font-weight-regular">(opens in a new window)</p>
+			  </div>
+			</details>
+    </div>
+</div>
+
+
+
+{% endblock %}

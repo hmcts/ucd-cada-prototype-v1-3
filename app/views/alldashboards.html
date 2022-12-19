@@ -1,0 +1,143 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  HMCTS prototyping
+{% endblock %}
+
+
+{% block header %}
+  <!-- Blank header with no service name for the start page -->
+
+{{ govukHeader({
+    homepageUrl: "/",
+    serviceName: "HMCTS",
+    serviceUrl: "/",
+    containerClasses: "govuk-width-container"
+}) }}
+
+{% endblock %}
+
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+      <h1 class="govuk-heading-l">
+        List of all dashboards
+      </h1>
+
+      <h2 class="govuk-heading-m">Child arrangements</h2>
+      <p>Applicant</p>
+
+      <Ol class="govuk-list govuk-list--number">
+
+        
+
+        <li><a href="/applicanttasklist/presub" target="_blank">You have not started your application - not started </a></li>
+
+        <li><a href="/applicanttasklist/inprogress" target="_blank">You have not started your application - in progress </a></li>
+
+        <li><a href="/applicanttasklist/appserved" target="_blank">The court has issued your application </a></li>
+
+        <li><a href="/applicanttasklist/startreply" target="_blank">Your application is in progress </a></li>
+
+
+        <li><a href="/applicanttasklist/postsubmissionordernohearingdetails" target="_blank">Your case will go to a hearing </a></li>
+
+        <li><a href="/applicanttasklist/speakwithcafcass" target="_blank">You will be contacted by the Children and Family Court Advisory and Support Service (CAFCASS)  </a></li>
+
+        <li><a href="/applicanttasklist/responsereceived" target="_blank">View the response to your application  </a></li>
+
+        <li><a href="applicanttasklist/ordersandhearingsattended" target="_blank">You have attended your hearing</a></li>
+
+
+        <li><a href="applicanttasklist/ordersandhearingscompleted" target="_blank">You will be notified of your final hearing</a></li>
+        <li><a href="/applicanttasklist/ordersandhearingsorderandhearingdetails" target="_blank">An order has been issued</a></li>       
+        
+        <li><a href="applicanttasklist/ordersandhearingsneworderpostsdo" target="_blank">A new order has been issued</a></li>
+
+        <li><a href="/applicanttasklist/finalorder" target="_blank">You have been sent a final order</a></li>
+        <li><a href="/applicanttasklist/withdrawalreq" target="_blank">Your withdrawal request is in progress</a></li>
+
+        <li><a href="/applicanttasklist/withdrawalrejected" target="_blank">Your withdrawal request was rejected </a></li>
+
+        <li><a href="/applicanttasklist/casewithdrawn" target="_blank">This case has now been withdrawn </a></li>
+
+        <li><a href="/applicanttasklist/caseclosed" target="_blank">The case is now closed</a></li>
+
+      </Ol>
+
+<!-- https://design-system.service.gov.uk/styles/typography/#lists-->
+<hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
+<p class="govuk-body">Respondent</p>
+
+<!-- https://design-system.service.gov.uk/styles/typography/#lists-->
+<ol class="govuk-list govuk-list--number">
+  <li><a href="/respondenttasklist/startreply" target="_blank">Respond to an application about a child </a> </li>
+
+  <li><a href="/tasklistresponse/start" target="_blank">Respond to the application (task list) </a> </li>
+
+
+  <li><a href="/respondenttasklist/speakwithcafcass" target="_blank">You will be contacted by the Children and Family Court Advisory and Support Service (CAFCASS)  </a> </li>
+
+  <li><a href="/respondenttasklist/responsesubmitted" target="_blank">Your response has been received </a> </li>
+
+  <li><a href="/respondenttasklist/postsubmissionorderandhearing" target="_blank">A date has been booked for your hearing</a> </li>
+
+  <li><a href="/respondenttasklist/ordersandhearingsneworderpostsdo" target="_blank">A new order has been issued</a> </li>
+
+  <li><a href="/respondenttasklist/ordersandhearingsattended" target="_blank">You have attended your hearing</a> </li>
+
+  <li><a href="/respondenttasklist/ordersandhearingscompleted" target="_blank">You will be notified of your final hearing</a> </li>
+
+  <li><a href="/respondenttasklist/finalorder" target="_blank">You have been sent a final order</a> </li>
+
+  <li><a href="/respondenttasklist/casewithdrawn" target="_blank">The case has now been withdrawn</a> </li>
+
+  <li><a href="/respondenttasklist/caseclosed" target="_blank">The case is now closed</a> </li>
+</ol>
+
+<hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
+
+<h2 class="govuk-heading-m">Domestic abuse</h2>
+
+<p class="govuk-body">Applicant</p>
+
+<ol class="govuk-list govuk-list--number">
+
+  <li><a href="/applicantjourney/start" target="_blank">The court is reviewing your application</a> </li>
+
+  <li><a href="/applicantjourney/order-issued" target="_blank">A new order has been issued.</a> </li>
+
+</ol>
+
+<hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
+
+<p class="govuk-body">Respondent</p>
+
+<ol class="govuk-list govuk-list--number">
+
+  <li><a href="/darespondenttasklist/start" target="_blank">You have been named as the respondent in a domestic abuse application and have an order from the court </a> </li>
+
+  <li><a href="/darespondenttasklist/servednohearing" target="_blank">You have been named as the respondent in a domestic abuse application</a> </li>
+  <li><a href="/darespondenttasklist/neworder" target="_blank">An new order has been issued</a> </li>
+  <li><a href="/darespondenttasklist/hearingupcoming" target="_blank">You will be notified of your next hearing</a> </li>
+  
+  <li><a href="/darespondenttasklist/hearingsattended" target="_blank">You have attended your hearing</a> </li>
+
+  <li><a href="/darespondenttasklist/hearingandorder" target="_blank">A date has been booked for your hearing</a> </li>
+
+   <li><a href="/darespondenttasklist/finalhearingupcoming" target="_blank">You will be notified of your final hearing</a> </li> 
+   
+   <li><a href="/darespondenttasklist/finalorder" target="_blank">You have been sent a final order</a> </li>
+
+  <li><a href="/darespondenttasklist/casewithdrawn" target="_blank">The case has now been withdrawn</a> </li>
+  <li><a href="/darespondenttasklist/caseclosed" target="_blank">The case is now closed</a> </li>
+  
+
+
+</ol>
+
+
+{% endblock %}

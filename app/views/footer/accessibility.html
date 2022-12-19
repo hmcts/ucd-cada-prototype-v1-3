@@ -1,0 +1,265 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Tasklist
+{% endblock %}
+
+{% block header %}
+  <!-- Blank header with no service name for the start page -->
+
+{{ govukHeader({
+    homepageUrl: "/",
+    serviceName: serviceName,
+    serviceUrl: "/",
+    containerClasses: "govuk-width-container"
+}) }}
+
+{% endblock %}
+
+{% block content %}
+  <form action="submitpage" method="post" novalidate>
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-full">
+ 		 <a href="#" class="govuk-back-link">Back</a>
+      <h1 class="govuk-heading-xl">
+        Respond to the application
+      </h1>
+
+      <!-- <h2 class="govuk-heading-s govuk-!-margin-bottom-2">Read and respond to the application</h2>
+      <p class="govuk-body govuk-!-margin-bottom-7">Read through the application and then respond to the questions about the case</p> !-->
+
+  </div>
+</div>
+<div class="govuk-inset-text">
+  Your response will be shared with the applicant
+</div>
+
+ <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      <ol class="app-task-list">
+        <li>
+          <h2 class="app-task-list__section">
+            <span class="app-task-list__section-number">1. </span> Legal representation
+          </h2>
+          <ul class="app-task-list__items">
+            <li class="app-task-list__item">
+              <span class="app-task-list__task-name">
+                <a href="legalrepresentation/start" aria-describedby="eligibility-status">
+                  Do you have a legal representation?
+                </a>
+              </span>
+              <strong class="govuk-tag app-task-list__tag" id="eligibility-status">Completed</strong>
+            </li>
+          </ul>
+        </li>
+
+        <li>
+          <h2 class="app-task-list__section">
+            <span class="app-task-list__section-number">2. </span> About the application
+          </h2>
+          <ul class="app-task-list__items">
+            <li class="app-task-list__item">
+              <span class="app-task-list__task-name">
+                <a href="aboutapplication/consent" aria-describedby="eligibility-status">
+                Do you consent to the application?
+                </a>
+              </span>
+              <strong class="govuk-tag app-task-list__tag" id="eligibility-status">Completed</strong>
+            </li>
+          </ul>
+        </li>
+
+        <li>
+          <h2 class="app-task-list__section">
+            <span class="app-task-list__section-number">3. </span> About you
+          </h2>
+          <ul class="app-task-list__items">
+        <li class="app-task-list__item">
+          <span class="app-task-list__task-name">
+            <a href="aboutyou/confidentiality/detailsknown" aria-describedby="eligibility-status">
+              Keep your details private
+            </a>
+          </span>
+          <strong class="govuk-tag app-task-list__tag govuk-tag govuk-tag--grey" id="eligibility-status">To do</strong>
+        </li>
+        <li class="app-task-list__item">
+          <span class="app-task-list__task-name">
+            <a href="aboutyou/confirmcontactdetails/checkanswers" aria-describedby="read-declaration-status">
+              Confirm or edit your contact details
+            </a>
+          </span>
+          <strong class="govuk-tag app-task-list__tag govuk-tag govuk-tag--grey" id="eligibility-status">To do</strong>
+        </li>
+        <li class="app-task-list__item">
+          <span class="app-task-list__task-name">
+            <a href="aboutyou/tellusyourhearingneeds/start" aria-describedby="read-declaration-status">
+              Enter your hearing needs
+            </a>
+          </span>
+          <strong class="govuk-tag app-task-list__tag govuk-tag govuk-tag--grey" id="eligibility-status">To do</strong>
+        </li>
+        </ul>
+        </li>
+
+        <li>
+          <h2 class="app-task-list__section">
+            <span class="app-task-list__section-number">4. </span> Application details
+          </h2>
+          <ul class="app-task-list__items">
+            <li class="app-task-list__item">
+              <span class="app-task-list__task-name">
+                 <a href="applicationdetails/miam/start" aria-describedby="application-details-miam">
+                  Mediation (MIAM)
+                </a>
+              </span>
+              <strong class="govuk-tag govuk-tag--grey app-task-list__tag" id="submit-pay-status">To do</strong>
+            </li>
+            <li class="app-task-list__item">
+              <span class="app-task-list__task-name">
+                <a href="applicationdetails/proceedings/start" aria-describedby="current-or-previous-proceedings">
+                  Current or previous proceedings
+                </a>
+              </span>
+              <strong class="govuk-tag govuk-tag--grey app-task-list__tag" id="submit-pay-status">To do</strong>
+            </li>
+          </ul>
+        </li>
+
+        <li>
+          <h2 class="app-task-list__section">
+            <span class="app-task-list__section-number">5. </span> Safety concerns
+          </h2>
+          <ul class="app-task-list__items">
+            <li class="app-task-list__item">
+              <span class="app-task-list__task-name">
+                <a href="safetyconcerns/yoursafety/safetyinfo" aria-describedby="your-safety">
+                  Your safety
+                </a>
+              </span>
+              <strong class="govuk-tag govuk-tag--grey app-task-list__tag" id="submit-pay-status">To do</strong>
+            </li>
+            <li class="app-task-list__item">
+              <span class="app-task-list__task-name">
+                <a href="safetyconcerns/childrensafety/childrenabuse" aria-describedby="children-safety">
+                  The children's safety
+                </a>
+              </span>
+              <strong class="govuk-tag govuk-tag--grey app-task-list__tag" id="submit-pay-status">To do</strong>
+            </li>
+            <li class="app-task-list__item">
+              <span class="app-task-list__task-name">
+                <a href="safetyconcerns/abduction/abduction" aria-describedby="abduction">
+                  Abduction concerns
+                </a>
+              </span>
+              <strong class="govuk-tag govuk-tag--grey app-task-list__tag" id="submit-pay-status">To do</strong>
+            </li>
+            <li class="app-task-list__item">
+              <span class="app-task-list__task-name">
+                <a href="safetyconcerns/otherconcerns/drugs" aria-describedby="risk-of-harm-or-violence">
+                  Other concerns
+                </a>
+              </span>
+              <strong class="govuk-tag govuk-tag--grey app-task-list__tag" id="submit-pay-status">To do</strong>
+            </li>
+            <li class="app-task-list__item">
+              <span class="app-task-list__task-name">
+                <a href="safetyconcerns/existingorders/orders" aria-describedby="risk-of-harm-or-violence">
+                  Existing orders
+                </a>
+              </span>
+              <strong class="govuk-tag govuk-tag--grey app-task-list__tag" id="submit-pay-status">To do</strong>
+            </li>
+            <li class="app-task-list__item">
+              <span class="app-task-list__task-name">
+                <a href="safetyconcerns/contact/unsupervised" aria-describedby="risk-of-harm-or-violence">
+                  Contact between children and applicants
+                </a>
+              </span>
+              <strong class="govuk-tag govuk-tag--grey app-task-list__tag" id="submit-pay-status">To do</strong>
+            </li>
+            <li class="app-task-list__item">
+              <span class="app-task-list__task-name">
+                <a href="safetyconcerns/ordersrequired/ordersrequired" aria-describedby="risk-of-harm-or-violence">
+                  What are you asking the court to decide?
+                </a>
+              </span>
+              <strong class="govuk-tag govuk-tag--grey app-task-list__tag" id="submit-pay-status">To do</strong>
+            </li>
+         </ul>
+        </li>
+
+        <li>
+          <h2 class="app-task-list__section">
+            <span class="app-task-list__section-number">6. </span> Additional information
+          </h2>
+          <ul class="app-task-list__items">
+            <li class="app-task-list__item">
+              <span class="app-task-list__task-name">
+                <a href="additionalinformation/internationalelement/start" aria-describedby="international-element">
+                  International element
+                </a>
+              </span>
+              <strong class="govuk-tag govuk-tag--grey app-task-list__tag" id="submit-pay-status">To do</strong>
+            </li>
+
+          </ul>
+        </li>
+
+        <li>
+          <h2 class="app-task-list__section">
+            <span class="app-task-list__section-number">7. </span> Sign and submit
+          </h2>
+          <ul class="app-task-list__items">
+            <li class="app-task-list__item">
+              <span class="app-task-list__task-name">
+                <a href="statementoftruth/statementoftruth" aria-describedby="statement-of-truth">
+                  Statement of truth
+                </a>
+              </span>
+              <strong class="govuk-tag govuk-tag--grey app-task-list__tag" id="submit-pay-status">To do</strong>
+            </li>
+         </ul>
+        </li>
+        <div class="govuk-button-group">
+
+
+  <div class="govuk-button-group">
+    <button class="govuk-button" data-module="govuk-button">
+      Review and submit
+    </button>
+
+  <a class="govuk-link" href="../respondenttasklist/startreply">Go back</a>
+</div>
+
+
+</div>
+      </ol>
+    </div>
+    <div class="govuk-grid-column-one-third">
+
+    		<details class="govuk-details" data-module="govuk-details">
+ 			 <summary class="govuk-details__summary">
+   			 <span class="govuk-details__summary-text">
+    		  Contacts for help
+  			  </span>
+  			</summary>
+  			<div class="govuk-details__text">
+   			 Ask a question or get any help in any language
+   			 <p class="govuk-body govuk-!-font-weight-bold">Telephone</p>
+
+   			 <p class="govuk-body govuk-!-font-weight-regular">0300 303 0742</p>
+   			 <p class="govuk-body govuk-!-font-weight-regular">Monday to Friday, 8am to 8pm</p>
+   			 <a href="#" class="govuk-link">Find out about call charges</a>
+   			 <p class="govuk-body govuk-!-font-weight-regular">(opens in a new window)</p>
+
+			  </div>
+			</details>
+
+    </div>
+  </div>
+  </form>
+
+
+
+{% endblock %}

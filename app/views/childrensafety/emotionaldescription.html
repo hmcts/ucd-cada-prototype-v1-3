@@ -1,0 +1,213 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Child arrangement respondent
+{% endblock %}
+
+{% block header %}
+  <!-- Blank header with no service name for the start page -->
+
+{{ govukHeader({
+    homepageUrl: "/",
+    serviceName: serviceName,
+    serviceUrl: "/",
+    containerClasses: "govuk-width-container"
+}) }}
+
+{% endblock %}
+
+{% block content %}
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <div class="govuk-width-container">
+     <a href="#" onclick="history.back(-1)" class="govuk-back-link">Back</a>
+
+     <main class="govuk-main-wrapper " id="main-content" role="main">
+
+       <form action="checkanswers" method="post" novalidate>
+
+         <span class="govuk-caption-l">Safety concerns</span>
+         <h1 class="govuk-heading-l">About the children’s emotional abuse</h1>
+
+         <details class="govuk-details" data-module="govuk-details">
+          <summary class="govuk-details__summary">
+            <span class="govuk-details__summary-text" data-ga-category="explanations" data-ga-label="abuse details">
+              Why do we need this information and what will we do with it?
+            </span>
+          </summary>
+          <div class="govuk-details__text">
+            <p class="govuk-body">The court needs to know if any of the other people in this application, or anyone connected to them who has contact with the children, poses a risk to the safety of the children.</p>
+            <p class="govuk-body">If you provide information about this now, it will make it easier for the court and Cafcass to make sure your case is dealt with appropriately at the earliest opportunity. If you do not want to provide details of the abuse at this stage, you will be able to do so when you speak to Cafcass or at a later stage in the court proceedings.</p>
+            <p class="govuk-body">The <a href="https://www.cafcass.gov.uk/" class="govuk-link" rel="external" target="_blank">Children and Family Court Advisory and Support Service (Cafcass)</a>, in England, and <a href="https://cafcass.gov.wales/" class="govuk-link" rel="external" target="_blank">Cafcass Cymru</a>, in Wales, protect and promote the interests of children involved in family court cases. An advisor from Cafcass or Cafcass Cymru will look at your answers as part of their safeguarding checks, and may need to ask you further questions.</p>
+            <p class="govuk-body">As part of their enquiries they will contact organisations such as the police and local authorities for any relevant information about you, any other person and the children.</p>
+            <p class="govuk-body">They will submit information to the court before your first hearing. Their assessment helps the judge make a decision that is in the best interests of the children.</p>
+            <p class="govuk-body">The information you provide in this section will also be shared with the respondents so that they have the opportunity to respond to your allegations.</p>
+          </div>
+        </details>
+
+        <div class="govuk-form-group">
+          <h2 class="govuk-label-wrapper">
+            <label class="govuk-label govuk-label--m" for="more-detail">
+               Briefly describe what happened and who was involved, if you feel able to
+            </label>
+          </h2>
+        <div id="more-detail-hint" class="govuk-hint">
+             This information will be treated sensitively, and you will have a chance to give further details to the court later in the proceedings.
+        </div>
+           <textarea class="govuk-textarea" id="more-detail" name="more-detail" rows="4"></textarea>
+
+           <h2 class="govuk-label-wrapper"><label class="govuk-label govuk-label--m" for="more-detail">
+               When did this behaviour start?
+             </label>
+           </h2>
+           <div id="more-detail-hint" class="govuk-hint">
+             Add an approximate date (the closest date you can remember) if you are not sure.
+           </div>
+            <textarea class="govuk-textarea" id="more-detail" name="more-detail" rows="1"></textarea>
+
+           <div class="govuk-form-group">
+             <fieldset class="govuk-fieldset">
+               <h2 class="govuk-label-wrapper"><label class="govuk-label govuk-label--m" for="more-detail">
+                   Is the behaviour still ongoing?
+               </h2>
+               <div class="govuk-radios" data-module="govuk-radios">
+                 <div class="govuk-radios__item">
+                   <input class="govuk-radios__input" id="respabuseongoing-yes" name="respabuseongoing" type="radio" value="yes">
+                   <label class="govuk-label govuk-radios__label" for="respabuseongoing-yes">
+                     Yes
+                   </label>
+                 </div>
+                 <div class="govuk-radios__item">
+                   <input class="govuk-radios__input" id="respabuseongoing-no" name="respabuseongoing" type="radio" value="no">
+                   <label class="govuk-label govuk-radios__label" for="respabuseongoing-no">
+                     No
+                   </label>
+                 </div>
+               </div>
+
+             </fieldset>
+           </div>
+           <div>
+            <h2 class="govuk-label-wrapper"><label class="govuk-label govuk-label--m" for="more-detail">
+                Have you ever asked for help?
+                </label>
+            </h2>
+            <div id="more-detail-hint" class="govuk-hint">
+              For example, speaking to your local GP.
+            </div>
+            <div class="govuk-form-group">
+              <div class="govuk-radios" data-module="govuk-radios">
+                <div class="govuk-radios__item">
+                  <input class="govuk-radios__input" id="resphelp-yes" name="resphelp" type="radio" value="yes" data-aria-controls="conditional-resphelp">
+                  <label class="govuk-label govuk-radios__label" for="resphelp-yes">
+                    Yes
+                  </label>
+                </div>
+                <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-resphelp">
+                  <div class="govuk-form-group">
+                    <label class="govuk-label govuk-label--s" for="proposal-howmany">Who did you ask?</label>
+                    <textarea class="govuk-textarea" id="non-molestation-date" name="non-molestation-date" rows="1" aria-describedby="resphelp"></textarea>
+                  </div>
+                    <div class="govuk-form-group">
+                      <fieldset class="govuk-fieldset">
+                        <label class="govuk-label govuk-label--s" for="proposal-howmany">
+                          Did they help you?
+                        </label>
+                        <div class="govuk-radios" data-module="govuk-radios">
+                          <div class="govuk-radios__item">
+                            <input class="govuk-radios__input" id="where-do-you-live" name="where-do-you-live" type="radio" value="yes">
+                              <label class="govuk-label govuk-radios__label" for="where-do-you-live">
+                                Yes
+                              </label>
+                          </div>
+                          <div class="govuk-radios__item">
+                            <input class="govuk-radios__input" id="where-do-you-live-2" name="where-do-you-live" type="radio" value="no">
+                              <label class="govuk-label govuk-radios__label" for="where-do-you-live-2">
+                                No
+                              </label>
+                          </div>
+                        </div>
+                      </fieldset>
+                    </div>
+                    <div>
+                      <label class="govuk-label govuk-label--s" for="proposal-howmany">What did they do?</label>
+                    </div>
+                    <textarea class="govuk-textarea" id="resphelpwhat" name="resphelpwhat" rows="1" aria-describedby="resphelpwhat"></textarea>
+                </div>
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="resphelp-no" name="resphelp" type="radio" value="No">
+                  <label class="govuk-label govuk-radios__label" for="resphelp-no">
+                    No
+                  </label>
+              </div>
+            </div>
+           </div>
+         </div>
+       </div>
+
+
+
+          <button class="govuk-button" data-module="govuk-button">
+            Continue
+          </button>
+      </main>
+    </div>
+  </div>
+
+  <div class="govuk-grid-column-one-third">
+      <div class="blue-bar"></div>
+      <div class="app-sidebar-grey govuk-!-padding-3" style="color:grey">
+
+        <h2 class="govuk-heading-m">Report an incident</h2>
+
+        <p class="govuk-body">
+          Always call 999 if there’s an emergency or if you think a child’s in danger.
+        </p>
+
+        <p class="govuk-body govuk-!-margin-bottom-1">If it is not an emergency, you can:</p>
+        <ul class="govuk-list govuk-list--bullet">
+          <li><a href="https://www.gov.uk/report-child-abuse" class="govuk-link" rel="external" target="_blank">report child abuse</a></li>
+          <li><a href="https://www.gov.uk/report-domestic-abuse" class="govuk-link" rel="external" target="_blank">report domestic abuse</a></li>
+        </ul>
+      </div>
+
+      <h2 class="govuk-heading-m">Get support</h2>
+
+      <h3 class="govuk-heading-s govuk-!-margin-bottom-2">Child safety</h3>
+      <ul class="govuk-list">
+        <li><a href="https://www.nspcc.org.uk" class="govuk-link" rel="external" target="_blank">NSPCC</a></li>
+        <li><a href="https://www.childline.org.uk" class="govuk-link" rel="external" target="_blank">Childline</a></li>
+      </ul>
+
+      <h3 class="govuk-heading-s govuk-!-margin-bottom-2">Domestic abuse</h3>
+      <ul class="govuk-list">
+        <li><a href="http://www.nationaldomesticviolencehelpline.org.uk" class="govuk-link" rel="external" target="_blank">National Domestic Violence Helpline</a></li>
+        <li><a href="https://www.womensaid.org.uk" class="govuk-link" rel="external" target="_blank">Women’s Aid</a></li>
+        <li><a href="http://www.mensadviceline.org.uk" class="govuk-link" rel="external" target="_blank">Men’s Advice Line</a></li>
+      </ul>
+    </div>
+
+
+  <div class="govuk-grid-column-one-third">
+    <details class="govuk-details" data-module="govuk-details">
+ 			 <summary class="govuk-details__summary">
+   			 <span class="govuk-details__summary-text">
+    		  Contacts for help
+  			  </span>
+  			</summary>
+  			<div class="govuk-details__text">
+   			 Ask a question or get any help in any language
+   			 <p class="govuk-body govuk-!-font-weight-bold">Telephone</p>
+
+   			 <p class="govuk-body govuk-!-font-weight-regular">0300 303 0742</p>
+   			 <p class="govuk-body govuk-!-font-weight-regular">Monday to Friday, 8am to 8pm</p>
+   			 <a href="#" class="govuk-link">Find out about call charges</a>
+   			 <p class="govuk-body govuk-!-font-weight-regular">(opens in a new window)</p>
+			  </div>
+			</details>
+    </div>
+</div>
+
+
+
+{% endblock %}

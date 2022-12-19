@@ -1,0 +1,213 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Child arrangement respondent
+{% endblock %}
+
+{% block header %}
+  <!-- Blank header with no service name for the start page -->
+
+{{ govukHeader({
+    homepageUrl: "/",
+    serviceName: serviceName,
+    serviceUrl: "/",
+    containerClasses: "govuk-width-container"
+}) }}
+
+{% endblock %}
+
+{% block content %}
+<div class="govuk-grid-row">
+     <div class="govuk-grid-column-two-thirds">
+    <div class="govuk-width-container">
+     <a href="#" onclick="history.back(-1)" class="govuk-back-link">Back</a>
+
+      <main class="govuk-main-wrapper " id="main-content" role="main">
+
+           <h1 class="govuk-heading-xl">Check your answers </h1>
+
+           <h2 class="govuk-heading-l">Current or previous court cases</h2>
+
+
+           <dl class="govuk-summary-list" id="abduction">
+
+           <div class="govuk-summary-list__row" id="abduction_children_have_passport">
+             <dt class="govuk-summary-list__key govuk-!-width-one-fourth">
+               Emergency Protection Order
+             </dt>
+             <dd class="govuk-summary-list__value">
+               No
+             </dd>
+             <dd class="govuk-summary-list__actions">
+
+             <a class="govuk-link govuk-link--no-visited-state ga-pageLink" data-ga-category="check your answers" data-ga-label="change link: abduction_children_have_passport" href="/steps/abduction/children_have_passport">
+               Edit <span class="govuk-visually-hidden">your answer to, Do any of the children have a passport?</span>
+           </a>
+             </dd>
+           </div>
+           <div class="govuk-summary-list__row app-cya--answers-group" id="abduction_passport_possession">
+             <dt class="govuk-summary-list__key govuk-!-width-one-fourth app-cya--answers-group__key">
+               Supervision Order
+             </dt>
+             <dd class="govuk-summary-list__value">
+               <dl class="govuk-summary-list">
+                 <div class="govuk-summary-list__row" id="abduction_risk_details">
+             <dt class="govuk-summary-list__key govuk-!-width-one-half" style="border-bottom: 1px solid #fff">
+               Case number
+             </dt>
+             <dd class="govuk-summary-list__value" style="border-bottom: 1px solid #fff">
+               <p class="govuk-body">123</p>
+             </dd>
+
+           </div>
+           <div class="govuk-summary-list__row" id="abduction_current_location">
+             <dt class="govuk-summary-list__key govuk-!-width-one-third" style="border-bottom: 1px solid #fff">
+              What date was it made
+             </dt>
+             <dd class="govuk-summary-list__value" style="border-bottom: 1px solid #fff">
+               <p class="govuk-body">01.02.2003</p>
+             </dd>
+
+           </div>
+           <div class="govuk-summary-list__row" id="abduction_current_location">
+             <dt class="govuk-summary-list__key govuk-!-width-one-third" style="border-bottom: 1px solid #fff">
+              How long was the order for?
+             </dt>
+             <dd class="govuk-summary-list__value" style="border-bottom: 1px solid #fff">
+               <p class="govuk-body">fwed</p>
+             </dd>
+
+           </div>
+           <div class="govuk-summary-list__row" id="abduction_current_location">
+             <dt class="govuk-summary-list__key govuk-!-width-one-third" style="border-bottom: 1px solid #fff">
+              Is this a current order?
+             </dt>
+             <dd class="govuk-summary-list__value" style="border-bottom: 1px solid #fff">
+               <p class="govuk-body">Yes</p>
+             </dd>
+
+
+           </div><div class="govuk-summary-list__row" id="abduction_current_location">
+             <dt class="govuk-summary-list__key govuk-!-width-one-third" style="border-bottom: 1px solid #fff">
+              Which court issued this order?
+             </dt>
+             <dd class="govuk-summary-list__value" style="border-bottom: 1px solid #fff">
+               <p class="govuk-body">freduhjks</p>
+             </dd>
+
+           </div>
+
+               </dl>
+             </dd>
+             <dd class="govuk-summary-list__actions">
+
+             <a class="govuk-link govuk-link--no-visited-state ga-pageLink" data-ga-category="check your answers" data-ga-label="change link: abduction_passport_possession" href="/steps/abduction/passport_details">
+               Edit <span class="govuk-visually-hidden">your answer to, Details of the children’s passports</span>
+           </a>
+             </dd>
+           </div>
+           <div class="govuk-summary-list__row app-cya--answers-group" id="abduction_risk_details">
+             <dt class="govuk-summary-list__key govuk-!-width-one-fourth app-cya--answers-group__key">
+               Restraining Order
+             </dt>
+             <dd class="govuk-summary-list__value">
+               <dl class="govuk-summary-list">
+                 <div class="govuk-summary-list__row" id="abduction_risk_details">
+             <dt class="govuk-summary-list__key govuk-!-width-one-half" style="border-bottom: 1px solid #fff">
+               Case number
+             </dt>
+             <dd class="govuk-summary-list__value" style="border-bottom: 1px solid #fff">
+               <p class="govuk-body">123</p>
+             </dd>
+
+           </div>
+           <div class="govuk-summary-list__row" id="abduction_current_location">
+             <dt class="govuk-summary-list__key govuk-!-width-one-third" style="border-bottom: 1px solid #fff">
+              What date was it made
+             </dt>
+             <dd class="govuk-summary-list__value" style="border-bottom: 1px solid #fff">
+               <p class="govuk-body">01.02.2003</p>
+             </dd>
+
+           </div>
+           <div class="govuk-summary-list__row" id="abduction_current_location">
+             <dt class="govuk-summary-list__key govuk-!-width-one-third" style="border-bottom: 1px solid #fff">
+              How long was the order for?
+             </dt>
+             <dd class="govuk-summary-list__value" style="border-bottom: 1px solid #fff">
+               <p class="govuk-body">fwed</p>
+             </dd>
+
+           </div>
+           <div class="govuk-summary-list__row" id="abduction_current_location">
+             <dt class="govuk-summary-list__key govuk-!-width-one-third" style="border-bottom: 1px solid #fff">
+              Is this a current order?
+             </dt>
+             <dd class="govuk-summary-list__value" style="border-bottom: 1px solid #fff">
+               <p class="govuk-body">Yes</p>
+             </dd>
+
+
+           </div><div class="govuk-summary-list__row" id="abduction_current_location">
+             <dt class="govuk-summary-list__key govuk-!-width-one-third" style="border-bottom: 1px solid #fff">
+              Which court issued this order?
+             </dt>
+             <dd class="govuk-summary-list__value" style="border-bottom: 1px solid #fff">
+               <p class="govuk-body">freduhjks</p>
+             </dd>
+
+           </div>
+
+               </dl>
+             </dd>
+             <dd class="govuk-summary-list__actions">
+
+             <a class="govuk-link govuk-link--no-visited-state ga-pageLink" data-ga-category="check your answers" data-ga-label="change link: abduction_risk_details" href="/steps/abduction/risk_details">
+               Change <span class="govuk-visually-hidden">your answer to, Why do you think the children may be abducted or kept outside the UK without your consent?</span>
+           </a>
+             </dd>
+           </div>
+
+           </dl>
+
+
+         <div>
+
+
+       <form action="/tasklistresponse/start" method="post" novalidate>
+
+         <input type="hidden" name="answers-checked" value="true">
+
+         <button class="govuk-button" data-module="govuk-button">
+           Save and continue
+         </button>
+
+       </form>
+
+     </div>
+      </main>
+    </div>
+  </div>
+  <div class="govuk-grid-column-one-third">
+    <details class="govuk-details" data-module="govuk-details">
+ 			 <summary class="govuk-details__summary">
+   			 <span class="govuk-details__summary-text">
+    		  Contacts for help
+  			  </span>
+  			</summary>
+  			<div class="govuk-details__text">
+   			 Ask a question or get any help in any language
+   			 <p class="govuk-body govuk-!-font-weight-bold">Telephone</p>
+
+   			 <p class="govuk-body govuk-!-font-weight-regular">0300 303 0742</p>
+   			 <p class="govuk-body govuk-!-font-weight-regular">Monday to Friday, 8am to 8pm</p>
+   			 <a href="#" class="govuk-link">Find out about call charges</a>
+   			 <p class="govuk-body govuk-!-font-weight-regular">(opens in a new window)</p>
+			  </div>
+			</details>
+    </div>
+    
+</div>
+
+
+{% endblock %}

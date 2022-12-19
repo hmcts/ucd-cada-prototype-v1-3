@@ -1,0 +1,109 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  HMCTS prototyping
+{% endblock %}
+
+
+{% block header %}
+  <!-- Blank header with no service name for the start page -->
+
+{{ govukHeader({
+    homepageUrl: "/",
+    serviceName: "HMCTS",
+    serviceUrl: "/",
+    containerClasses: "govuk-width-container"
+}) }}
+
+{% endblock %}
+
+{% block beforeContent %}
+
+
+<div class="govuk-phase-banner">
+  <p class="govuk-phase-banner__content">
+    <strong class="govuk-tag govuk-phase-banner__content__tag">
+      alpha
+    </strong>
+    <span class="govuk-phase-banner__text">
+      This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.
+    </span>
+  </p>
+</div>
+
+<a href="/payonline" class="govuk-back-link">Back</a>
+{% endblock %}
+
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-full">
+    <form method="post" action="check-email">
+    <h1 class="govuk-heading-xl">
+      Create an account or sign in
+    </h1>
+
+    <div class="govuk-grid-column-one-half" style="margin-left: -15px">
+      <h2 class="govuk-heading-l">Create an account</h2>
+
+      <div class="govuk-form-group">
+        <label class="govuk-label" for="first-name">
+            First name
+          </label>
+        <input class="govuk-input" id="first-name" name="first-name" type="text">
+      </div>
+
+      <div class="govuk-form-group">
+        <label class="govuk-label" for="Last-name">
+            Last name
+          </label>
+        <input class="govuk-input" id="Last-name" name="Last-name" type="text">
+      </div>
+
+      <div class="govuk-form-group">
+        <label class="govuk-label" for="Email">
+            Email address
+          </label>
+        <input class="govuk-input" id="Email" name="Email" type="text">
+      </div>
+
+      <p class="govuk-body">Read our <a href="#">privacy policy</a> and <a href="#">terms and conditions</a>
+
+
+<div class="govuk-button-group govuk-!-margin-top-8">
+
+  <a href="/idam/verifyaccount" role="button" draggable="false" class="govuk-button" data-module="govuk-button">
+    Continue
+  </a>
+
+  <a class="govuk-link" href="/index">Cancel</a>
+</div>
+ 
+        </a>
+
+    </div>
+
+
+    <div class="govuk-grid-column-one-half" id="create-account">
+      <h2 class="govuk-heading-l">Already have an account?</h2>
+      <a class="govuk-body govuk-link--no-visited-state" href="/idam/signin">Sign in to your account</a>
+    </div>
+  </form>
+
+
+  </div>
+</div>
+
+<style>
+
+#create-account {
+  border-left: 4px solid gray;
+  height: 500px;
+  margin-left: 10px;
+}
+
+</style>
+
+{% endblock %}

@@ -1,0 +1,95 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Child arrangement respondent
+{% endblock %}
+
+{% block header %}
+  <!-- Blank header with no service name for the start page -->
+
+{{ govukHeader({
+    homepageUrl: "/",
+    serviceName: serviceName,
+    serviceUrl: "/",
+    containerClasses: "govuk-width-container"
+}) }}
+
+{% endblock %}
+
+{% block content %}
+<div class="govuk-grid-row">
+   <div class="govuk-grid-column-two-thirds">
+    <div class="govuk-width-container">
+     <a href="#" onclick="history.back(-1)" class="govuk-back-link">Back</a>
+
+     <main class="govuk-main-wrapper " id="main-content" role="main">
+
+       <form action="sexualabuse" method="post" novalidate>
+         <span class="govuk-caption-xl">Safety concerns</span>
+         <h1 class="govuk-heading-xl">The children's safety</h1>
+         <div>
+
+          <p class="govuk-body">The court needs to know if any of the other people in this application, or anyone connected to them who has contact with the children, poses a risk to the safety of the children.
+          </p>
+
+         <h3 class="govuk-heading-m">What you told us</h3>
+
+         <ul class="govuk-list govuk-list--bullet">
+           <li>You have suffered or are at risk of suffering domestic violence or abuse </li>
+           <li>The children have not suffered or are not at risk of suffering domestic violence or abuse</li>
+         </ul>
+
+
+         <p class="govuk-body">If children see or hear someone else being treated badly, it can harm them. We'd like to ask a few questions about the children's safety.</p>
+
+         <p class="govuk-body">Your answers will help the court consider any risks to you or the children. This information forms part of your court application and will be dealt with sensitively.</p>
+
+         <p class="govuk-body">You may find some of the following questions difficult or upsetting to answer. Please complete them as best you can.</p>
+
+         <p class="govuk-body"><a href="https://www.nspcc.org.uk/preventing-abuse/child-abuse-and-neglect/" class="govuk-link" rel="external" target="_blank">Find out about the signs of child abuse</a>
+         </p>
+         </div>
+
+
+
+
+         <div class="govuk-button-group govuk-!-margin-top-6">
+           <button class="govuk-button" data-module="govuk-button">
+             Continue
+           </button>
+           <a class="govuk-button govuk-button--secondary" href="../../../applicanttasklist/inprogress"  data-module="govuk-button">
+             Save and come back later
+           </a>
+
+         </div>
+
+
+
+
+      </main>
+    </div>
+  </div>
+
+  <div class="govuk-grid-column-one-third">
+    <details class="govuk-details" data-module="govuk-details">
+ 			 <summary class="govuk-details__summary">
+   			 <span class="govuk-details__summary-text">
+    		  Contacts for help
+  			  </span>
+  			</summary>
+  			<div class="govuk-details__text">
+   			 Ask a question or get any help in any language
+   			 <p class="govuk-body govuk-!-font-weight-bold">Telephone</p>
+
+   			 <p class="govuk-body govuk-!-font-weight-regular">0300 303 0742</p>
+   			 <p class="govuk-body govuk-!-font-weight-regular">Monday to Friday, 8am to 8pm</p>
+   			 <a href="#" class="govuk-link">Find out about call charges</a>
+   			 <p class="govuk-body govuk-!-font-weight-regular">(opens in a new window)</p>
+			  </div>
+			</details>
+    </div>
+</div>
+
+
+
+{% endblock %}

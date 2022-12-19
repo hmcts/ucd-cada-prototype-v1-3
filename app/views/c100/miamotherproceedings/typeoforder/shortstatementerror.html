@@ -1,0 +1,124 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Child arrangement respondent
+{% endblock %}
+
+{% block header %}
+  <!-- Blank header with no service name for the start page -->
+
+{{ govukHeader({
+    homepageUrl: "/",
+    serviceName: serviceName,
+    serviceUrl: "/",
+    containerClasses: "govuk-width-container"
+}) }}
+
+{% endblock %}
+
+{% block content %}
+<div class="govuk-grid-row">
+   <div class="govuk-grid-column-two-thirds">
+    <div class="govuk-width-container">
+     <a href="#" onclick="history.back(-1)" class="govuk-back-link">Back</a>
+
+     <main class="govuk-main-wrapper app-main-class" id="main-content" role="main">
+         <form action="../typeofhearing/urgent" method="post" novalidate>
+           <div class="govuk-error-summary" aria-labelledby="error-summary-title" role="alert" data-module="govuk-error-summary">
+             <h2 class="govuk-error-summary__title" id="error-summary-title">
+               There is a problem on this page
+             </h2>
+             <div class="govuk-error-summary__body">
+               <ul class="govuk-list govuk-error-summary__list">
+                 <li>
+                   <a href="#solicitor">Describe what you want the court to do regarding the children in this application</a>
+                 </li>
+               </ul>
+             </div>
+           </div>
+
+           <div class="govuk-form-group">
+             <fieldset class="govuk-fieldset">
+               <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl">
+                 <h1 class="govuk-fieldset__heading">Describe what you want the court to do regarding the children in this application</h1>
+               </legend>
+               <div class="govuk-!-padding-bottom-4"></div>
+
+
+
+
+               <p class="govuk-body">Summarise what you want the court to do. Give your answer in bullet points and short paragraphs.
+               </p>
+               <p class="govuk-body">You should set out:
+               </p>
+                <ul class="govuk-list govuk-list--bullet">
+                 <li> any previous parenting plans between you and the other people in the case</li>
+                 <li>what happened in the previous agreements, and if they broke down</li>
+                 <li>why you are bringing this matter to the court</li>
+                 <li>what you would like the court to do</li>
+                </ul>
+
+
+
+
+
+
+                  <div class="govuk-form-group govuk-form-group--error">
+                      <p id="where-do-you-live-error" class="govuk-error-message">
+                        <span class="govuk-visually-hidden">Error:</span>Describe what you want the court to do regarding the children in this application
+                      </p>
+                  <textarea class="govuk-textarea" id="more-detail" name="more-detail" rows="10" aria-describedby="more-detail-hint"></textarea>
+                  </div>
+
+
+              </fieldset>
+            </div>
+
+         <div class="govuk-!-padding-bottom-4"></div>
+
+
+
+
+
+         <div class="govuk-button-group govuk-!-margin-top-6">
+           <button class="govuk-button" data-module="govuk-button">
+             Save and continue
+           </button>
+           <a class="govuk-button govuk-button--secondary" href="../../applicanttasklist/inprogress"  data-module="govuk-button">
+             Save and come back later
+           </a>
+
+         </div>
+
+
+
+
+       </main>
+
+
+    </div>
+  </div>
+
+  <div class="govuk-grid-column-one-third">
+    <details class="govuk-details" data-module="govuk-details">
+ 			 <summary class="govuk-details__summary">
+   			 <span class="govuk-details__summary-text">
+    		  Contacts for help
+  			  </span>
+  			</summary>
+  			<div class="govuk-details__text">
+   			 Ask a question or get any help in any language
+   			 <p class="govuk-body govuk-!-font-weight-bold">Telephone</p>
+
+   			 <p class="govuk-body govuk-!-font-weight-regular">0300 303 0742</p>
+   			 <p class="govuk-body govuk-!-font-weight-regular">Monday to Friday, 8am to 8pm</p>
+   			 <a href="#" class="govuk-link">Find out about call charges</a>
+   			 <p class="govuk-body govuk-!-font-weight-regular">(opens in a new window)</p>
+			  </div>
+			</details>
+    </div>
+</div>
+
+
+
+{% endblock %}

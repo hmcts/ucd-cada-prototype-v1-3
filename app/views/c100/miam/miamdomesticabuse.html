@@ -1,0 +1,463 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Child arrangement respondent
+{% endblock %}
+
+{% block header %}
+  <!-- Blank header with no service name for the start page -->
+
+{{ govukHeader({
+    homepageUrl: "/",
+    serviceName: serviceName,
+    serviceUrl: "/",
+    containerClasses: "govuk-width-container"
+}) }}
+
+{% endblock %}
+
+{% block content %}
+
+
+ <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <div class="govuk-width-container">
+
+        <a href="#" onclick="history.back(-1)" class="govuk-back-link">Back</a>
+
+        <main class="govuk-main-wrapper govuk-main-wrapper--auto-spacing" id="main-content" role="main">
+
+               <form action="miamchildprotection" method="post" novalidate>
+
+                 <span class="govuk-caption-l">MIAM exemptions</span>
+                 <h1 class="govuk-heading-xl">Do you have any of the following evidence of domestic violence or abuse?</h1>
+
+               <div class="govuk-inset-text">
+                <p class="govuk-body">If you are seeking a MIAM exemption, you will need to give more details. </p>
+
+                 <p class="govuk-body">The court needs this information to decide if you need to attend a MIAM.</p>
+               </div>
+               <p class="govuk-body">A 'prospective party' is someone named in this application. It could refer to you, or the other people in the application (the respondents).</p>
+
+               <div class="govuk-form-group">
+                 <fieldset class="govuk-fieldset" aria-describedby="steps-miam-exemptions-domestic-form-domestic-hint">
+                   <div id="da-hint" class="govuk-hint">
+                     Select all that apply to you
+                   </div>
+                   <div class="govuk-checkboxes" data-module="govuk-checkboxes">
+                       <div class="govuk-checkboxes__item police-involvement">
+                         <input id="policeinvolvement" class="govuk-checkboxes__input" type="checkbox" value="group_police" name="domesticabusereasons" aria-controls="policeinvolvement-conditional">
+                           <label for="policeinvolvement" class="govuk-label govuk-checkboxes__label">
+                             The police have been involved
+                               <div class="govuk-hint " id="policeinvolvement-hint">
+                                This may mean that someone in the application (you or the respondents) have been arrested, cautioned, charged or convicted for domestic or child abuse offences. Select all evidence you have to support your claim.
+                               </div>
+                          </label>
+                       </div>
+
+                           <div class="govuk-checkboxes__conditional govuk-checkboxes__conditional--hidden" id="policeinvolvement-conditional">
+                             <div class="govuk-form-group">
+                               <fieldset class="govuk-fieldset">
+                                 <div class="govuk-checkboxes" data-module="govuk-checkboxes">
+                                   <div class="govuk-checkboxes__item">
+                                     <input id="policeinvolvement-1-field" class="govuk-checkboxes__input" type="checkbox" value="police_arrested" name="miampoliceinvolvement">
+                                     <label for="policeinvolvement-1-field" class="govuk-label govuk-checkboxes__label">
+                                       Evidence that someone in the application has been arrested for a domestic violence offence
+
+                                     </label>
+                                   </div>
+
+                                   <div class="govuk-checkboxes__item">
+                                     <input id="policeinvolvement-2-field" class="govuk-checkboxes__input" type="checkbox" value="police_caution" name="miampoliceinvolvement">
+                                     <label for="policeinvolvement-2-field" class="govuk-label govuk-checkboxes__label">
+                                       Evidence of a police caution for a domestic violence offence
+
+                                     </label>
+                                   </div>
+
+                                   <div class="govuk-checkboxes__item">
+                                     <input id="policeinvolvement-3-field" class="govuk-checkboxes__input" type="checkbox" value="police_ongoing_proceedings" name="miampoliceinvolvement">
+                                     <label for="policeinvolvement-3-field" class="govuk-label govuk-checkboxes__label">
+                                       Evidence of ongoing criminal proceedings for a domestic violence offence
+
+                                     </label>
+                                   </div>
+
+                                   <div class="govuk-checkboxes__item">
+                                     <input id="policeinvolvement-4-field" class="govuk-checkboxes__input" type="checkbox" value="police_conviction" name="miampoliceinvolvement">
+                                     <label for="policeinvolvement-4-field" class="govuk-label govuk-checkboxes__label">
+                                       Evidence of a conviction for a domestic violence offence
+                                     </label>
+                                   </div>
+
+                                   <div class="govuk-checkboxes__item">
+                                     <input id="policeinvolvement-4-field" class="govuk-checkboxes__input" type="checkbox" value="police_dvpn" name="miampoliceinvolvement">
+                                     <label for="policeinvolvement-5-field" class="govuk-label govuk-checkboxes__label">
+                                       A domestic violence protection notice issued against someone in the application
+
+                                     </label>
+                                   </div>
+                                 </div>
+                               </fieldset>
+                             </div>
+                           </div>
+
+                       <div class="govuk-checkboxes__item">
+                         <input id="courtinvolvement" class="govuk-checkboxes__input" type="checkbox" value="group_court" name="domesticabusereasons" aria-controls="courtinvolvement-conditional">
+                         <label for="courtinvolvement" class="govuk-label govuk-checkboxes__label">
+                           A court has already been involved
+                           <div class="govuk-hint" id="courtinvolvement-hint">
+                             A court has made an order against you or the other people in the application (or someone close to you, or them) in connection to domestic violence and abuse. Select all evidence you have to support your claim.
+                           </div>
+                         </label>
+                       </div>
+
+                           <div class="govuk-checkboxes__conditional govuk-checkboxes__conditional--hidden" id="courtinvolvement-conditional">
+                             <div class="govuk-form-group">
+                               <fieldset class="govuk-fieldset">
+                                 <div class="govuk-checkboxes" data-module="govuk-checkboxes">
+
+                                   <div class="govuk-checkboxes__item">
+                                     <input id="courtinvolvement-1" class="govuk-checkboxes__input" type="checkbox" value="court_bound_over" name="miamcourtinvolvement">
+                                     <label for="courtinvolvement-1" class="govuk-label govuk-checkboxes__label">
+                                       Someone in the case is bound by a court order in connection with a domestic violence offence
+                                     </label>
+                                   </div>
+
+                                   <div class="govuk-checkboxes__item">
+                                     <input id="courtinvolvement-2" class="govuk-checkboxes__input" type="checkbox" value="court_protective_injunction" name="miamcourtinvolvement">
+                                     <label for="courtinvolvement-2" class="govuk-label govuk-checkboxes__label">
+                                       A protective injunction is in place
+                                     </label>
+                                   </div>
+
+                                   <div class="govuk-checkboxes__item">
+                                     <input id="courtinvolvement-3" class="govuk-checkboxes__input" type="checkbox" value="court_undertaking" name="miamcourtinvolvement">
+                                     <label for="courtinvolvement-3" class="govuk-label govuk-checkboxes__label">
+                                       An undertaking given in England and Wales under section 46 or 63E of the Family Law Act 1996 (or given in Scotland or Northern Ireland in place of a protective injunction) by a prospective party, provided that a cross-undertaking relating to domestic violence was not given by another prospective party
+                                     </label>
+                                   </div>
+
+                                   <div class="govuk-checkboxes__item">
+                                     <input id="courtinvolvement-4" class="govuk-checkboxes__input" type="checkbox" value="court_finding_of_fact" name="miamcourtinvolvement">
+                                     <label for="courtinvolvement-4" class="govuk-label govuk-checkboxes__label">
+                                       There has been a finding of fact in proceedings in the United Kingdom, that proves that someone in the case has committed domestic violence
+                                     </label>
+                                   </div>
+
+                                   <div class="govuk-checkboxes__item">
+                                     <input id="courtinvolvement-5" class="govuk-checkboxes__input" type="checkbox" value="court_expert_report" name="miamcourtinvolvement">
+                                     <label for="courtinvolvement-5" class="govuk-label govuk-checkboxes__label">
+                                       An expert report was produced as evidence in proceedings in the United Kingdom, and it showed that a person with whom a prospective party is or was in a family relationship was a victim (or potential victim) of domestic abuse by that person
+                                     </label>
+                                   </div>
+
+                                 </div>
+                               </fieldset>
+                             </div>
+                           </div>
+
+                       <div class="govuk-checkboxes__item">
+                         <input id="letterconfirmation" class="govuk-checkboxes__input" type="checkbox" value="group_specialist" name="domesticabusereasons" aria-controls="letterconfirmation-conditional" aria-expanded="false">
+                         <label for="letterconfirmation" class="govuk-label govuk-checkboxes__label">
+                           A letter confirms that you or the other people in the application are (or have been) a victim of domestic violence or abuse
+                         <div class="govuk-hint" id="letterconfirmation-hint">
+                          This may mean that a health professional has confirmed injuries that are (or were) a result of domestic violence and abuse. Select which evidence of this you can provide.
+                         </div>
+                         </label>
+                       </div>
+
+                           <div class="govuk-checkboxes__conditional govuk-checkboxes__conditional--hidden" id="letterconfirmation-conditional">
+                             <div class="govuk-form-group">
+                               <fieldset class="govuk-fieldset">
+                                 <div class="govuk-checkboxes" data-module="govuk-checkboxes">
+
+                                   <div class="govuk-checkboxes__item">
+                                     <input id="letterconfirmation-1" class="govuk-checkboxes__input" type="checkbox" value="specialist_examination" name="miamletterconfirmation">
+                                     <label for="letterconfirmation-1" class="govuk-label govuk-checkboxes__label">
+                                       A letter or report from an appropriate health professional
+                                     </label>
+                                     <div class="govuk-hint govuk-checkboxes__hint" id="letterconfirmation-1-hint">The letter or report must confirm that an appropriate health professional has examined the person directly - and in their professional judgement, the person has (or has had) injuries that are consistent with being a victim of domestic violence
+                                    </div>
+                                  </div>
+
+                                   <div class="govuk-checkboxes__item">
+                                     <input id="letterconfirmation-2" class="govuk-checkboxes__input" type="checkbox" value="specialist_referral" name="miamletterconfirmation">
+                                     <label for="letterconfirmation-2" class="govuk-label govuk-checkboxes__label">
+                                       A letter or report confirming that there was a referral by an appropriate health professional of a prospective party to a person who provides specialist support or assistance for victims of, or those at risk of, domestic violence
+                                     </label>
+                                     <div class="govuk-hint govuk-checkboxes__hint" id="sletterconfirmation-hint">The letter or report must be from:
+                                       <ul class="govuk-list govuk-list--bullet govuk-hint govuk-!-margin-top-2">
+                                         <li>the appropriate health professional who made the referral</li>
+                                         <li>an appropriate health professional who has access to the medical records of the prospective party referred to</li>
+                                         <li>or the person to whom the referral was made</li>
+                                       </ul>
+                                     </div>
+                                   </div>
+                                 </div>
+                               </fieldset>
+                             </div>
+                           </div>
+
+                       <div class="govuk-checkboxes__item">
+                         <input id="authorityletter" class="govuk-checkboxes__input" type="checkbox" value="group_local_authority" name="domesticabusereasons" aria-controls="authorityletter-conditional">
+                         <label for="authorityletter" class="govuk-label govuk-checkboxes__label">
+                           A letter from a local authority or other agency confirms a risk of harm
+                         <div class="govuk-hint" id="steps-miam-exemptions-domestic-form-domestic-group-local-authority-hint">
+                           For example, a local authority or housing association has confirmed there is or has been a risk of domestic violence or abuse. Select which evidence of this you can provide.
+                         </div>
+                         </label>
+                       </div>
+
+                         <div class="govuk-checkboxes__conditional govuk-checkboxes__conditional--hidden" id="authorityletter-conditional">
+                           <div class="govuk-form-group">
+                             <fieldset class="govuk-fieldset">
+                               <div class="govuk-checkboxes" data-module="govuk-checkboxes">
+
+                                 <div class="govuk-checkboxes__item">
+                                   <input id="authorityletter-1" class="govuk-checkboxes__input" type="checkbox" value="local_authority_marac" name="miamauthorityletter">
+                                   <label for="authorityletter-1" class="govuk-label govuk-checkboxes__label">
+                                     A letter from any person who is a member of a multi-agency risk assessment conference, or local safeguarding forum. The letter confirms that one of the people in the application, or someone in that person's family, are (or have been) at risk of harm from domestic violence from a prospective party.
+                                   </label>
+                                 </div>
+
+                                <div class="govuk-checkboxes__item">
+                                   <input id="authorityletter-2" class="govuk-checkboxes__input" type="checkbox" value="local_authority_la_ha" name="miamauthorityletter">
+                                   <label for="authorityletter-2" class="govuk-label govuk-checkboxes__label">
+                                     A letter from an officer employed by a local authority or housing association, for the purpose of supporting tenants.
+                                   </label>
+                                   <div class="govuk-hint govuk-checkboxes__hint" id="authorityletter-hint">The letter must contain:
+                                         <ul class="govuk-list govuk-list--bullet govuk-hint govuk-!-margin-top-2">
+                                           <li>a statement that says that in their professional judgement, a prospective party poses an actual or potential risk of domestic violence towards someone else who they are (or have been) in a family relationship with.</li>
+                                           <li>a description of the specific information they relied on to support this judgement</li>
+                                           <li>a description of the support that they provided to the victim (or potential victim) of domestic violence from the prospective party</li>
+                                         </ul>
+                                       </div>
+                                  </div>
+
+                                   <div class="govuk-checkboxes__item">
+                                     <input id="authorityletter-3" class="govuk-checkboxes__input" type="checkbox" value="local_authority_public_authority" name="miamauthorityletter">
+                                     <label for="authorityletter-3" class="govuk-label govuk-checkboxes__label">
+                                       A letter from a public authority confirming that a person with whom a prospective party is or was in a family relationship, was assessed as being, or at risk of being, a victim of domestic violence by that prospective party (or a copy of that assessment)
+                                     </label>
+                                   </div>
+                                 </div>
+                               </fieldset>
+                             </div>
+                        </div>
+
+                       <div class="govuk-checkboxes__item">
+                         <input id="organisationletter" class="govuk-checkboxes__input" type="checkbox" value="group_da_service" name="domesticabusereasons" aria-controls="organisationletter-conditional">
+                         <label for="organisationletter" class="govuk-label govuk-checkboxes__label">
+                           A letter from a domestic violence or abuse support service, specialist or organisation
+                           <div class="govuk-hint" id="organisationletter-hint">This could be an independent domestic violence or abuse adviser confirming support to you or the other people in this application (the respondents). Select which evidence of this you can provide.
+                           </div>
+                         </label>
+                       </div>
+
+                           <div class="govuk-checkboxes__conditional govuk-checkboxes__conditional--hidden" id="organisationletter-conditional">
+                             <div class="govuk-form-group">
+                               <fieldset class="govuk-fieldset">
+                                 <div class="govuk-checkboxes" data-module="govuk-checkboxes">
+
+                                   <div class="govuk-checkboxes__item">
+                                     <input id="organisationletter-1" class="govuk-checkboxes__input" type="checkbox" value="da_service_idva" name="miamorganisationletter">
+                                     <label for="organisationletter-1" class="govuk-label govuk-checkboxes__label">
+                                       A letter from an independent domestic violence advisor confirming that they are providing support to a prospective party
+                                     </label>
+                                   </div>
+
+                                   <div class="govuk-checkboxes__item">
+                                     <input id="organisationletter-2" class="govuk-checkboxes__input" type="checkbox" value="da_service_isva" name="miamorganisationletter">
+                                     <label for="organisationletter-2" class="govuk-label govuk-checkboxes__label">
+                                       A letter from an independent sexual violence advisor confirming that they are providing support to a prospective party relating to sexual violence by another prospective party
+                                     </label>
+                                   </div>
+
+                                   <div class="govuk-checkboxes__item">
+                                     <input id="organisationletter-3" class="govuk-checkboxes__input"  type="checkbox" value="da_service_organisation" name="miamorganisationletter">
+                                     <label for="organisationletter-3" class="govuk-label govuk-checkboxes__label">
+                                       A letter from an organisation providing domestic violence support services, or a registered charity
+                                     </label>
+                                     <div class="govuk-hint govuk-checkboxes__hint" id="organisationletter-hint">
+                                       <ol class="govuk-list app-list--lower-roman govuk-hint govuk-!-margin-top-2">
+                                       <li>The letter confirms all the following.
+                                         <br>The organisation:
+                                         <ul class="govuk-list govuk-list--bullet govuk-hint">
+                                           <li>is situated in England and Wales</li>
+                                           <li>has been operating for an uninterrupted period of six months or more</li>
+                                           <li>provided a prospective party with support in relation to that person’s needs as a victim, or a person at risk, of domestic violence</li>
+                                         </ul>
+                                       </li>
+                                       <li>The letter contains all the following:
+                                         <ul class="govuk-list govuk-list--bullet govuk-hint">
+                                           <li>a statement to the effect that, in the reasonable professional judgment of the author of the letter, the prospective party is, or is at risk of being, a victim of domestic violence</li>
+                                           <li>a description of the specific matters relied upon to support that judgment</li>
+                                           <li>a description of the support provided to the prospective party</li>
+                                           <li>a statement of the reasons why the prospective party needed that support</li>
+                                         </ul>
+                                       </li>
+                                     </ol>
+                                   </div>
+                                 </div>
+
+                                 <div class="govuk-checkboxes__item">
+                                   <input id="organisationletter-4" class="govuk-checkboxes__input"  type="checkbox" value="da_service_refuge_refusal" name="miamorganisationletter">
+                                   <label for="organisationletter-4" class="govuk-label govuk-checkboxes__label">
+                                     A letter or report from an organisation providing domestic violence support services in the United Kingdom
+                                   </label>
+                                   <div class="govuk-hint govuk-checkboxes__hint" id="organisationletter-hint">The letter or report must confirm all the following:
+                                     <ul class="govuk-list govuk-list--bullet govuk-hint govuk-!-margin-top-2">
+                                       <li>that a person with whom a prospective party is or was in a family relationship was refused admission to a refuge</li>
+                                       <li>the date on which they were refused admission to the refuge</li>
+                                       <li>they sought admission to the refuge because of allegations of domestic violence by the prospective party</li>
+                                     </ul>
+                                   </div>
+                                 </div>
+                               </div>
+                             </fieldset>
+                           </div>
+                          </div>
+
+                       <div class="govuk-checkboxes__item">
+                         <input id="leavetoremain" class="govuk-checkboxes__input" type="checkbox" value="right_to_remain" name="domesticabusereasons">
+                         <label for="leavetoremain" class="govuk-label govuk-checkboxes__label">
+                           You or any of the other people in this application (the respondents) have been granted indefinite leave to remain in the UK as a victim of domestic violence or abuse
+                           <div class="govuk-hint" id="leavetoremain-hint">A letter from the Home Office will have confirmed that leave was granted
+                           </div>
+                         </label>
+                       </div>
+
+                       <div class="govuk-checkboxes__item">
+                         <input id="financialabuse" class="govuk-checkboxes__input" type="checkbox" value="financial_abuse" name="domesticabusereasons">
+                         <label for="financialabuse" class="govuk-label govuk-checkboxes__label">
+                           You have evidence that you or the other people in the application (the respondents) have been (or are at risk of being) financially abused by the other party
+                             <div class="govuk-hint" id="financialabuse-hint">
+                               Financial abuse is a way of controlling someone being able to earn, spend or keep their own money. For example, preventing someone going to work, withholding money, or putting debts in someone else’s name. Evidence could include:
+                                 <ul class="govuk-list govuk-list--bullet govuk-hint govuk-!-margin-top-2">
+                                   <li>a copy of a credit card account, loan document or bank statements</li>
+                                   <li>a letter from a domestic violence support organisation</li>
+                                   <li>emails, text messages or a diary kept by the victim</li>
+                                 </ul>
+                             </div>
+                         </label>
+                       </div>
+
+                       <div class="govuk-checkboxes__divider">or</div>
+
+                       <div class="govuk-checkboxes__item">
+                         <input class="govuk-checkboxes__input" id="none" name="domesticabusereasons" type="checkbox" value="No" data-behaviour="exclusive">
+                         <label class="govuk-label govuk-checkboxes__label" for="reasonable-adjustments-none">
+                           None of the above
+                         </label>
+                       </div>
+                  </div>
+
+             </fieldset>
+           </div>
+
+
+
+
+
+           <div class="govuk-button-group govuk-!-margin-top-6">
+             <button class="govuk-button" data-module="govuk-button">
+               Continue
+             </button>
+             <a class="govuk-button govuk-button--secondary" href="../../applicanttasklist/inprogress"  data-module="govuk-button">
+               Save and come back later
+             </a>
+
+           </div>
+
+
+
+
+              </form>
+        </main>
+      </div>
+
+
+
+
+    </div>
+    <div class="govuk-grid-column-one-third">
+
+    		<details class="govuk-details" data-module="govuk-details">
+ 			      <summary class="govuk-details__summary">
+       			 <span class="govuk-details__summary-text">
+        		  Contacts for help
+      			  </span>
+  			    </summary>
+  			<div class="govuk-details__text">
+   			 Ask a question or get any help in any language
+   			 <p class="govuk-body govuk-!-font-weight-bold">Telephone</p>
+
+   			 <p class="govuk-body govuk-!-font-weight-regular">0300 303 0742</p>
+   			 <p class="govuk-body govuk-!-font-weight-regular">Monday to Friday, 8am to 8pm</p>
+   			 <a href="#" class="govuk-link">Find out about call charges</a>
+   			 <p class="govuk-body govuk-!-font-weight-regular">(opens in a new window)</p>
+
+			  </div>
+			</details>
+    </div>
+
+</div>
+
+
+<script src="https://code.jquery.com/jquery-3.6.0.js"  crossorigin="anonymous"></script>
+<script type="text/javascript">
+  $(document).ready(function(){
+      $('input[id="policeinvolvement"]').click(function(){
+          if($(this).prop("checked") == true){
+          }
+          else if($(this).prop("checked") == false){
+              $("input[name='miampoliceinvolvement']").prop( "checked", false );
+
+          }
+      });
+
+      $('input[id="courtinvolvement"]').click(function(){
+          if($(this).prop("checked") == true){
+          }
+          else if($(this).prop("checked") == false){
+              $("input[name='miamcourtinvolvement']").prop( "checked", false );
+
+          }
+      });
+
+
+      $('input[id="letterconfirmation"]').click(function(){
+          if($(this).prop("checked") == true){
+          }
+          else if($(this).prop("checked") == false){
+              $("input[name='miamletterconfirmation']").prop( "checked", false );
+
+          }
+      });
+
+      $('input[id="authorityletter"]').click(function(){
+          if($(this).prop("checked") == true){
+          }
+          else if($(this).prop("checked") == false){
+              $("input[name='miamauthorityletter']").prop( "checked", false );
+
+          }
+      });
+
+      $('input[id="organisationletter"]').click(function(){
+          if($(this).prop("checked") == true){
+          }
+          else if($(this).prop("checked") == false){
+              $("input[name='miamorganisationletter']").prop( "checked", false );
+
+          }
+      });
+
+  });
+</script>
+
+
+
+{% endblock %}

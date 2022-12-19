@@ -1,0 +1,121 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Child arrangement respondent
+{% endblock %}
+
+{% block header %}
+  <!-- Blank header with no service name for the start page -->
+
+{{ govukHeader({
+    homepageUrl: "/",
+    serviceName: serviceName,
+    serviceUrl: "/",
+    containerClasses: "govuk-width-container"
+}) }}
+
+{% endblock %}
+
+{% block content %}
+ <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <div class="govuk-width-container">
+
+        <a href="#" onclick="history.back(-1)" class="govuk-back-link">Back</a>
+
+        <main class="govuk-main-wrapper " id="main-content" role="main">
+
+              <form action="start-answer" method="post" novalidate>
+                <div class="govuk-form-group">
+                  <fieldset class="govuk-fieldset">
+                    <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl">
+                      <h1 class="govuk-fieldset__heading">
+                        Do you wish to respond to the applicant's allegations of harm and violence?
+                      </h1>
+                    </legend>
+                    <div class="govuk-!-padding-bottom-4"></div>
+                    <p class="govuk-body">
+                          If you do not agree with the allegations made by the applicant, you can give your point of view and reply to what has been said. All the people in this application will be able to see your comments.
+                        </p>
+                        <p class="govuk-body">
+                        If you choose not to respond right now, you'll still be able to respond to the allegations in court. The court will consider your response in the same way, whether you provide it now or when you are in court.
+                        </p>
+                        <div class="govuk-!-padding-bottom-4"></div>
+
+                    <div class="govuk-form-group">
+                      <fieldset class="govuk-fieldset">
+
+                        <div class="govuk-radios" data-module="govuk-radios">
+                          <div class="govuk-radios__item">
+                            <input class="govuk-radios__input" id="answer-yes" name="answer" type="radio" value="yes" data-aria-controls="conditional-confidential">
+                            <label class="govuk-label govuk-radios__label" for="answer-yes">
+                              Yes, I want to respond now
+                            </label>
+                          </div>
+
+
+                          <div class="govuk-radios__item">
+                            <input class="govuk-radios__input" id="answer-no" name="answer" type="radio" value="no">
+                            <label class="govuk-label govuk-radios__label" for="answer-no">
+                              No, I will respond in court
+                            </label>
+                          </div>
+                        </div>
+                      </fieldset>
+                    </div>
+
+                  </fieldset>
+                </div>
+
+                <button class="govuk-button" data-module="govuk-button">
+                  Continue
+                </button>
+              </form>
+
+        </main>
+      </div>
+
+    </div>
+    <div class="govuk-grid-column-one-third">
+      <div class="govuk-form-group">
+
+           <ul class="govuk-list">
+             <li><a href="https://www.mind.org.uk/help/advice_lines" class="govuk-link" rel="external" target="_blank">Confidential mental health support</a></li>
+             <li><a href="https://www.gov.uk/guidance/domestic-abuse-how-to-get-help" class="govuk-link" rel="external" target="_blank">Domestic abuse: Get help</a></li>
+             <li><a href="https://www.flows.org.uk/" class="govuk-link" rel="external" target="_blank">FLOWS: Finding Legal Options for Women Survivors</a></li>
+             <li><a href="https://www.womensaid.org.uk/" class="govuk-link" rel="external" target="_blank">Women's Aid</a></li>
+            <li><a href="https://mensadviceline.org.uk/" class="govuk-link" rel="external" target="_blank">Men's Advice Line</a></li>
+            <li><a href="https://www.nspcc.org.uk" class="govuk-link" rel="external" target="_blank">NSPCC: National Society for the Prevention of Cruelty to Children</a></li>
+
+         </ul>
+
+      </div>
+
+
+
+
+
+      <details class="govuk-details" data-module="govuk-details">
+   			 <summary class="govuk-details__summary">
+     			 <span class="govuk-details__summary-text">
+      		  Contacts for help
+    			  </span>
+    			</summary>
+    			<div class="govuk-details__text">
+     			 Ask a question or get any help in any language
+     			 <p class="govuk-body govuk-!-font-weight-bold">Telephone</p>
+
+     			 <p class="govuk-body govuk-!-font-weight-regular">0300 303 0742</p>
+     			 <p class="govuk-body govuk-!-font-weight-regular">Monday to Friday, 8am to 8pm</p>
+     			 <a href="#" class="govuk-link">Find out about call charges</a>
+     			 <p class="govuk-body govuk-!-font-weight-regular">(opens in a new window)</p>
+  			  </div>
+  			</details>
+      </div>
+
+</div>
+
+
+
+{% endblock %}

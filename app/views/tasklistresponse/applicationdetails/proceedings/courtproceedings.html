@@ -1,0 +1,204 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Page title
+{% endblock %}
+
+{% block header %}
+  <!-- Blank header with no service name for the start page -->
+
+{{ govukHeader({
+    homepageUrl: "/",
+    serviceName: serviceName,
+    serviceUrl: "/",
+    containerClasses: "govuk-width-container"
+}) }}
+
+{% endblock %}
+
+{% block content %}
+ <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+<div class="govuk-width-container">
+  <a href="#" onclick="history.back(-1)" class="govuk-back-link">Back</a>
+
+  <main class="govuk-main-wrapper " id="main-content" role="main">
+
+    <form action="courtproceedings-answer" method="post" novalidate>
+
+      <div class="govuk-form-group">
+        <fieldset class="govuk-fieldset">
+          <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+
+            <h1 class="govuk-heading-xl">Select all that apply to you or the children. If you have specific details, you will be able to provide that information shortly.</h1>
+
+          </legend>
+
+
+
+      <div class="govuk-form-group">
+        <fieldset class="govuk-fieldset" aria-describedby="proceedings-hint">
+          <div id="proceedings-hint" class="govuk-hint">
+            Select all that apply to you or the children. If you have specific details, you will be able to provide that information shortly.
+          </div>
+          <div class="govuk-checkboxes" data-module="govuk-checkboxes">
+            <div class="govuk-checkboxes__item">
+              <input class="govuk-checkboxes__input" id="proceedings-1" name="proceedings" type="checkbox" value="A Child Arrangements Order">
+              <label class="govuk-label govuk-checkboxes__label" for="proceedings-1">
+                A Child Arrangements Order
+                <div id="proceedings-4-hint" class="govuk-hint">
+                  Section 8 Children Act 1989
+                </div>
+              </label>
+            </div>
+            <div class="govuk-checkboxes__item">
+              <input class="govuk-checkboxes__input" id="proceedings-2" name="proceedings" type="checkbox" value="Emergency Protection Order">
+              <label class="govuk-label govuk-checkboxes__label" for="proceedings-2">
+                Emergency Protection Order
+              </label>
+            </div>
+            <div class="govuk-checkboxes__item">
+              <input class="govuk-checkboxes__input" id="proceedings-3" name="proceedings" type="checkbox" value="Supervision Order">
+              <label class="govuk-label govuk-checkboxes__label" for="proceedings-3">
+                Supervision Order
+              </label>
+            </div>
+            <div class="govuk-checkboxes__item">
+              <input class="govuk-checkboxes__input" id="proceedings-4" name="proceedings" type="checkbox" value="Care Order">
+              <label class="govuk-label govuk-checkboxes__label" for="proceedings-4">
+                Care Order
+
+              </label>
+            </div>
+            <div class="govuk-checkboxes__item">
+              <input class="govuk-checkboxes__input" id="proceedings-5" name="proceedings" type="checkbox" value="Child Abduction">
+              <label class="govuk-label govuk-checkboxes__label" for="proceedings-5">
+                Child Abduction
+
+              </label>
+
+            </div>
+            <div class="govuk-checkboxes__item">
+              <input class="govuk-checkboxes__input" id="proceedings-6" name="proceedings" type="checkbox" value="A contact or residence order made within proceedings for a divorce or dissolution of civil partnership">
+              <label class="govuk-label govuk-checkboxes__label" for="proceedings-6">
+                A contact or residence order made within proceedings for a divorce or dissolution of civil partnership
+                <div id="proceedings-4-hint" class="govuk-hint">
+                  Section 8 Children Act 1989
+                </div>
+              </label>
+            </div>
+
+            <div class="govuk-checkboxes" data-module="govuk-checkboxes">
+              <div class="govuk-checkboxes__item">
+                <input class="govuk-checkboxes__input" id="proceedings-7" name="proceedings" type="checkbox" value="A contact or residence order made in connection with an Adoption Order">
+                <label class="govuk-label govuk-checkboxes__label" for="proceedings-7">
+                  A contact or residence order made in connection with an Adoption Order
+                  <div id="proceedings-4-hint" class="govuk-hint">
+                    Section 8 Children Act 1989
+                  </div>
+                </label>
+              </div>
+              <div class="govuk-checkboxes__item">
+                <input class="govuk-checkboxes__input" id="proceedings-8" name="proceedings" type="checkbox" value="An order relating to child maintenance">
+                <label class="govuk-label govuk-checkboxes__label" for="proceedings-8">
+                  An order relating to child maintenance
+                  <div id="proceedings-4-hint" class="govuk-hint">
+                    Schedule 1 Children Act 1989
+                  </div>
+                </label>
+              </div>
+              <div class="govuk-checkboxes__item">
+                <input class="govuk-checkboxes__input" id="proceedings-9" name="proceedings" type="checkbox" value="Financial Order under Schedule 1 of the Children Act 1989">
+                <label class="govuk-label govuk-checkboxes__label" for="proceedings-9">
+                  Financial Order under Schedule 1 of the Children Act 1989
+                </label>
+              </div>
+              <div class="govuk-checkboxes__item">
+                <input class="govuk-checkboxes__input" id="proceedings-10" name="proceedings" type="checkbox" value="Non-molestation Order">
+                <label class="govuk-label govuk-checkboxes__label" for="proceedings-10">
+                  Non-molestation Order
+                </label>
+              </div>
+
+              <div class="govuk-checkboxes__item">
+                <input class="govuk-checkboxes__input" id="proceedings-11" name="proceedings" type="checkbox" value="Occupation Order">
+                <label class="govuk-label govuk-checkboxes__label" for="proceedings-11">
+                  Occupation Order
+
+                </label>
+              </div>
+              <div class="govuk-checkboxes__item">
+                <input class="govuk-checkboxes__input" id="proceedings-12" name="proceedings" type="checkbox" value="Forced Marriage Protection Order">
+                <label class="govuk-label govuk-checkboxes__label" for="proceedings-12">
+                  Forced Marriage Protection Order
+                </label>
+              </div>
+              <div class="govuk-checkboxes__item">
+                <input class="govuk-checkboxes__input" id="proceedings-13" name="proceedings" type="checkbox" value="Restraining order">
+                <label class="govuk-label govuk-checkboxes__label" for="proceedings-13">
+                  Restraining order
+                </label>
+              </div>
+              <div class="govuk-checkboxes__item">
+                <input class="govuk-checkboxes__input" id="proceedings-14" name="proceedings" type="checkbox" value="Other injunction order">
+                <label class="govuk-label govuk-checkboxes__label" for="proceedings-14">
+                  Other injunction order
+
+                </label>
+              </div>
+              <div class="govuk-checkboxes__item">
+                <input class="govuk-checkboxes__input" id="proceedings-15" name="proceedings" type="checkbox" value="Undertaking in place of an order">
+                <label class="govuk-label govuk-checkboxes__label" for="proceedings-15">
+                  Undertaking in place of an order
+                </label>
+              </div>
+
+              <div class="govuk-checkboxes__item">
+                <input class="govuk-checkboxes__input" id="proceedings-16" name="proceedings" type="checkbox" value="Other orders">
+                <label class="govuk-label govuk-checkboxes__label" for="proceedings-16">
+                  Other orders
+                </label>
+              </div>
+            </div>
+        </fieldset>
+      </div>
+
+
+
+      <div class="govuk-button-group govuk-!-margin-top-6">
+        <button class="govuk-button" data-module="govuk-button">
+          Save and continue
+        </button>
+      </div>
+
+
+
+  </main>
+</div>
+    </div>
+    <div class="govuk-grid-column-one-third">
+
+    		<details class="govuk-details" data-module="govuk-details">
+ 			 <summary class="govuk-details__summary">
+   			 <span class="govuk-details__summary-text">
+    		  Contacts for help
+  			  </span>
+  			</summary>
+  			<div class="govuk-details__text">
+   			 Ask a question or get any help in any language
+   			 <p class="govuk-body govuk-!-font-weight-bold">Telephone</p>
+
+   			 <p class="govuk-body govuk-!-font-weight-regular">0300 303 0742</p>
+   			 <p class="govuk-body govuk-!-font-weight-regular">Monday to Friday, 8am to 8pm</p>
+   			 <a href="#" class="govuk-link">Find out about call charges</a>
+   			 <p class="govuk-body govuk-!-font-weight-regular">(opens in a new window)</p>
+
+			  </div>
+			</details>
+
+    </div>
+  </div>
+
+
+
+{% endblock %}

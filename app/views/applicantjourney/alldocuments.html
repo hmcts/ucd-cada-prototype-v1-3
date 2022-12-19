@@ -1,0 +1,232 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  All documents
+{% endblock %}
+
+{% block header %}
+  <!-- Blank header with no service name for the start page -->
+
+{{ govukHeader({
+    homepageUrl: "/",
+    serviceName: "Family injunctions",
+    serviceUrl: "/",
+    containerClasses: "govuk-width-container"
+}) }}
+
+{% endblock %}
+
+{% block content %}
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-full">
+
+        <a href="#" onclick="history.back(-1)" class="govuk-back-link">Back</a>
+             <h1 class="govuk-heading-xl govuk-!-margin-bottom-4">
+               Sam Richards
+             </h1>
+             <p class="govuk-body">Case number: #1636575673018538</p>
+      </div>
+    </div>
+
+
+ <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+
+      <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
+
+      <h2 class="govuk-heading-l govuk-!-margin-top-6">
+          All documents
+      </h2>
+
+
+      <ol class="app-task-list">
+        <li>
+          <h2 class="app-task-list__section">
+            Case documents
+          </h2>
+          <ul class="app-task-list__items">
+            <li class="app-task-list__item">
+            <span class="app-task-list__task-name">
+                FL401 application
+            </span>
+            <a href="#"><strong class="govuk-tag app-task-list__tag govuk-tag govuk-tag--green" id="eligibility-status">DOWNLOAD</strong></a>
+            </li>
+
+            <li class="app-task-list__item">
+                <span class="app-task-list__task-name">
+                    Witness statement
+                </span>
+                <a href="#"><strong class="govuk-tag app-task-list__tag govuk-tag govuk-tag--green" id="eligibility-status">DOWNLOAD</strong></a>
+            </li>
+
+            <li class="app-task-list__item">
+                <span class="app-task-list__task-name">
+                    Applicant statement
+                </span>
+                <a href="#"><strong class="govuk-tag app-task-list__tag govuk-tag govuk-tag--green" id="eligibility-status">DOWNLOAD</strong></a>
+            </li>
+
+            <li class="app-task-list__item">
+                <span class="app-task-list__task-name">
+                    Tenancy agreement
+                </span>
+                <a href="#"><strong class="govuk-tag app-task-list__tag govuk-tag govuk-tag--grey" id="eligibility-status">VIEW</strong></a>
+            </li>
+
+
+            <li class="app-task-list__item">
+                <span class="app-task-list__task-name">
+                    Mortgage statement
+                </span>
+                <a href="#"><strong class="govuk-tag app-task-list__tag govuk-tag govuk-tag--grey" id="eligibility-status">VIEW</strong></a>
+            </li>
+
+
+
+        </ul>
+        </li>
+
+        <li>
+          <h2 class="app-task-list__section">
+             Attending the hearing
+          </h2>
+          <ul class="app-task-list__items">
+
+            <li class="app-task-list__item">
+                <span class="app-task-list__task-name">
+                    Notice of hearing
+                </span>
+                <a href="#"><strong class="govuk-tag app-task-list__tag govuk-tag govuk-tag--green" id="eligibility-status">DOWNLOAD</strong></a>
+            </li>
+
+            <li class="app-task-list__item">
+                <span class="app-task-list__task-name">
+                  Your needs when you go to court
+                </span>
+                <a href="#"><strong class="govuk-tag app-task-list__tag govuk-tag govuk-tag--green" id="eligibility-status">DOWNLOAD</strong></a>
+            </li>
+
+          </ul>
+        </li>
+
+
+        <li>
+            <h2 id="orders" class="app-task-list__section">
+              Orders from the court
+            </h2>
+            <ul class="app-task-list__items">
+
+              <li class="app-task-list__item">
+                  <span class="app-task-list__task-name">
+                      Remand order
+                  </span>
+                  <a href="#"><strong class="govuk-tag app-task-list__tag govuk-tag govuk-tag--green" id="eligibility-status">DOWNLOAD</strong></a>
+              </li>
+
+              <li class="app-task-list__item">
+                  <span class="app-task-list__task-name">
+                     Non-molestation order
+                  </span>
+                  <a href="#"><strong class="govuk-tag app-task-list__tag govuk-tag govuk-tag--green" id="eligibility-status">DOWNLOAD</strong></a>
+              </li>
+
+            </ul>
+          </li>
+
+
+
+          <li>
+            <h2 id="finaldecision" class="app-task-list__section">
+              Final decision from the court
+            </h2>
+            <ul class="app-task-list__items">
+
+              <li class="app-task-list__item">
+                  <span class="app-task-list__task-name">
+                      Final order
+                  </span>
+                  <a href="#"><strong class="govuk-tag app-task-list__tag govuk-tag govuk-tag--green" id="eligibility-status">DOWNLOAD</strong></a>
+              </li>
+
+            </ul>
+          </li>
+
+
+          <div class="govuk-button-group">
+          <a class="govuk-link" href="/applicantjourney/start">Go back</a>
+         </div>
+  </ol>
+
+</div>
+
+
+
+<div class="govuk-grid-column-one-third">
+
+    <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible govuk-!">
+
+
+      <h2 class="govuk-heading-m">
+        I want to...
+      </h2>
+
+      <ul class="govuk-list">
+
+        <li>
+          <a class="govuk-link" href="https://www.gov.uk/find-court-tribunal" target="_blank">Find my local court</a>
+          <div class="govuk-!-padding-bottom-2"></div>
+        </li>
+        <li>
+          <a class="govuk-link" href="https://www.gov.uk/guidance/domestic-abuse-how-to-get-help#get-help-and-support" target="_blank">Find legal advice</a>
+          <div class="govuk-!-padding-bottom-2"></div>
+        </li>
+        <li>
+          <a class="govuk-link" href="https://assets.publishing.service.gov.uk/government/uploads/system/uploads/attachment_data/file/717671/fl700-eng.pdf" target="_blank">Know more about domestic abuse</a>
+          <div class="govuk-!-padding-bottom-2"></div>
+        </li>
+        <li>
+          <a class="govuk-link" href="https://www.gov.uk/guidance/what-to-expect-coming-to-a-court-or-tribunal" target="_blank">Know more about attending court</a>
+          <div class="govuk-!-padding-bottom-2"></div>
+        </li>
+        <li>
+          <a class="govuk-link" href="https://www.justice.gov.uk/courts/procedure-rules/family/parts/part_29#IDABPVKC" target="_blank">Withdraw my application</a>
+          <div class="govuk-!-padding-bottom-2"></div>
+        </li>
+      </ul>
+
+
+
+    	<details class="govuk-details" data-module="govuk-details">
+ 			 <summary class="govuk-details__summary">
+   			 <span class="govuk-details__summary-text">
+    		  Contacts for help
+  			  </span>
+  			</summary>
+  			<div class="govuk-details__text">
+   			 Ask a question or get any help in any language
+   			 <p class="govuk-body govuk-!-font-weight-bold">Telephone</p>
+
+   			 <p class="govuk-body govuk-!-font-weight-regular">0300 303 0742</p>
+   			 <p class="govuk-body govuk-!-font-weight-regular">Monday to Friday, 8am to 8pm</p>
+   			 <a href="#" class="govuk-link">Find out about call charges</a>
+   			 <p class="govuk-body govuk-!-font-weight-regular">(opens in a new window)</p>
+
+			  </div>
+			</details>
+
+
+
+
+
+  </div>
+
+
+
+
+
+  </div>
+
+
+
+{% endblock %}

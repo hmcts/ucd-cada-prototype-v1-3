@@ -1,0 +1,2563 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+Child arrangement respondent
+{% endblock %}
+
+{% block header %}
+<!-- Blank header with no service name for the start page -->
+
+{{ govukHeader({
+  homepageUrl: "/",
+  serviceName: serviceName,
+  serviceUrl: "/",
+  containerClasses: "govuk-width-container"
+}) }}
+
+{% endblock %}
+
+{% block content %}
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-full">
+
+    <a href="#" onclick="history.back(-1)" class="govuk-back-link">Back</a>
+
+    <main class="govuk-main-wrapper " id="main-content" role="main">
+
+      <h1 class="govuk-heading-xl">Check your answers</h1>
+
+      <div class="govuk-warning-text">
+        <span class="govuk-warning-text__icon" aria-hidden="true">!</span>
+        <strong class="govuk-warning-text__text">
+          <span class="govuk-warning-text__assistive">Warning</span>
+          <div style=" margin-left: 10px;">Your answers will be shared with the other people in this case.</div>
+        </strong>
+      </div>
+
+      <p class="govuk-body-l">Please review your answers before you finish your application.</p>
+
+      <!--Beginning of legel representation-->
+
+
+      <h2 class="app-task-list__section">
+        <span class="app-task-list__section-number">1. </span> Location details
+      </h2>
+
+      <dl class="govuk-summary-list govuk-!-margin-bottom-9" id="opening_questions">
+
+        <div class="govuk-summary-list__row" id="consent_order_application">
+
+          <dt class="govuk-summary-list__key govuk-!-width-one-third">
+            Where do the children live?
+          </dt>
+
+          <dd class="govuk-summary-list__value">
+             {{ data['childpostcode'] }}
+          </dd>
+
+          <dd class="govuk-summary-list__actions">
+
+            <a class="govuk-link govuk-link--no-visited-state ga-pageLink" data-ga-category="check your answers" data-ga-label="change link: consent_order_application" href="">
+              Edit <span class="govuk-visually-hidden">your answer to, Where do the children live?</span>
+            </a>
+
+          </dd>
+
+        </div>
+      </dl>
+
+      <!--Beginning of Screening section-->
+        <!--Beginning of Consent order-->
+
+      <h2 class="app-task-list__section">
+        <span class="app-task-list__section-number">2. </span> Type of application
+      </h2>
+
+      <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key govuk-!-width-one-third">
+            Do you have a written agreement with the other people in the case, that you want formalised by the court?
+          </dt>
+          <dd class="govuk-summary-list__value">
+            Yes
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a class="govuk-link" href="#">
+              Edit<span class="govuk-visually-hidden">Consent agreement</span>
+            </a>
+          </dd>
+        </div>
+
+      </dl>
+
+      <!--End of Consent order-->
+
+      <!--Beginning of legal rep-->
+
+
+
+
+
+
+
+
+      <!--End of Your details: keep your details private-->
+
+      <!--Beginning of Your details: Confirm of edit your contact details-->
+
+
+      <!--End of Your details: Confirm of edit your contact details-->
+
+      <!--Beginning of Your details: Your hearing needs and requirements-->
+
+
+      <!--End of Your details: Your hearing needs and requirements-->
+
+      <!--Start of Application details: Mediation (MIAM)-->
+
+      <h2 class="app-task-list__section">
+        <span class="app-task-list__section-number">3. </span> What you're asking the court to decide
+      </h2>
+
+      <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key govuk-!-width-one-third">
+            What are you asking the court to do?
+          </dt>
+          <div class="govuk-summary-list__row" style="border-bottom:1px solid #fff" >
+            <dd class="govuk-summary-list__value">
+          Stop the other people in the application doing something:
+            </dd>
+          </div>
+          <div class="govuk-summary-list__row"  style="border-bottom:1px solid #fff" >
+            <dd class="govuk-summary-list__value">
+              <ul class="govuk-list govuk-list--bullet">
+                <li>Allowing medical treatment to be carried out on the children</li>
+                <li>Taking the children on holiday</li>
+
+              </ul>
+            </dd>
+          </div>
+          <dd class="govuk-summary-list__actions">
+            <a class="govuk-link" href="start">
+              Edit<span class="govuk-visually-hidden">MIAM</span>
+            </a>
+          </dd>
+        </div>
+
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key govuk-!-width-one-third">
+            Describe what you want the court to do regarding the children in this application
+          </dt>
+          <dd class="govuk-summary-list__value">
+          {{ data['shortstatement-textarea'] }}
+          </dd>
+          <dd class="govuk-summary-list__actions govuk-!-width-one-third">
+            <a class="govuk-link" href="willingnesstoattend">
+              Edit<span class="govuk-visually-hidden">MIAM-willing</span>
+            </a>
+          </dd>
+        </div>
+
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key govuk-!-width-one-third">
+            Draft consent order uploaded?
+          </dt>
+          <dd class="govuk-summary-list__value">
+        Yes
+          </dd>
+          <dd class="govuk-summary-list__actions govuk-!-width-one-third">
+            <a class="govuk-link" href="willingnesstoattend">
+              Edit<span class="govuk-visually-hidden">MIAM-willing</span>
+            </a>
+          </dd>
+        </div>
+
+      </dl>
+
+      <!--End of Application details: Mediation (MIAM)-->
+
+      <!--Start of Current or previous proceedings-->
+
+      <h2 class="app-task-list__section">
+        <span class="app-task-list__section-number">4. </span> Hearing details
+      </h2>
+
+
+      <dl class="govuk-summary-list govuk-!-margin-bottom-9" id="abduction">
+
+        <div class="govuk-summary-list__row app-cya--answers-group" id="urgent_hearing_details">
+          <dt class="govuk-summary-list__key govuk-!-width-one-third app-cya--answers-group__key">
+          Does your situation qualify for an urgent first hearing?
+          </dt>
+
+          <dd class="govuk-summary-list__value">
+            {{ data['urgenthering'] }}
+          </dd>
+          <dd class="govuk-summary-list__actions">
+
+            <a class="govuk-link govuk-link--no-visited-state ga-pageLink" data-ga-category="check your answers" data-ga-label="change link: urgent_hearing_details" href="/steps/application/urgent_hearing_details">
+              Edit <span class="govuk-visually-hidden">your answer to, Urgent hearing details</span>
+            </a>
+          </dd>
+        </div>
+
+
+
+              <div class="govuk-summary-list__row app-cya--answers-group" id="language_interpreter">
+                <dt class="govuk-summary-list__key govuk-!-width-one-third app-cya--answers-group__key">
+                  Are you asking for a without notice hearing?
+                </dt>
+                <dd class="govuk-summary-list__value">
+                    <dl class="govuk-summary-list">
+                      <div class="govuk-summary-list__row" id="language_interpreter">
+
+                        <dd class="govuk-summary-list__value">
+                          Yes
+                        </dd>
+
+                      </div>
+
+                      <div class="govuk-summary-list__row" id="urgent_hearing_when" style="border-bottom:1px solid #fff">
+                        <dt class="govuk-summary-list__key">
+                          Give details of why you’re asking for a without notice hearing
+                        </dt>
+                      </div>
+                      <div class="govuk-summary-list__row" >
+                        <dd class="govuk-summary-list__value">
+                          No
+                        </dd>
+                      </div>
+                      <div class="govuk-summary-list__row" style="border-bottom:1px solid #fff" >
+                        <dt class="govuk-summary-list__key">
+                        Are you asking for a without notice hearing because the other person or people may do something that would obstruct the order you are asking for if they knew about the application?
+                        </dt>
+                      </div>
+                      <div class="govuk-summary-list__row" style="border-bottom:1px solid #fff" >
+                        <dd class="govuk-summary-list__value">
+                          Yes
+                        </dd>
+                      </div>
+                      <div class="govuk-summary-list__row" style="border-bottom:1px solid #fff" >
+                        <dt class="govuk-summary-list__key">
+                      Details
+                        </dt>
+                      </div>
+                      <div class="govuk-summary-list__row" >
+                        <dd class="govuk-summary-list__value">
+                          Describe the details
+                        </dd>
+                      </div>
+                      <div class="govuk-summary-list__row" style="border-bottom:1px solid #fff" >
+                        <dt class="govuk-summary-list__key">
+                        Are you asking for a without notice hearing because there is literally no time to give notice of the application to the other person or people?
+                        </dt>
+                      </div>
+                      <div class="govuk-summary-list__row" style="border-bottom:1px solid #fff" >
+                        <dd class="govuk-summary-list__value">
+                          Yes
+                        </dd>
+                      </div>
+                      <div class="govuk-summary-list__row" style="border-bottom:1px solid #fff" >
+                        <dt class="govuk-summary-list__key">
+                      Details
+                        </dt>
+                      </div>
+                      <div class="govuk-summary-list__row" style="border-bottom:1px solid #fff" >
+                        <dd class="govuk-summary-list__value">
+                          Describe the details
+                        </dd>
+                      </div>
+                    </dl>
+                </dd>
+                <dd class="govuk-summary-list__actions">
+
+                  <a class="govuk-link govuk-link--no-visited-state ga-pageLink" data-ga-category="check your answers" data-ga-label="change link: urgent_hearing_details" href="/steps/application/urgent_hearing_details">
+                    Edit <span class="govuk-visually-hidden">your answer to, Urgent hearing details</span>
+                  </a>
+                </dd>
+              </div>
+        </dl>
+
+
+
+
+
+
+
+
+            <h2 class="app-task-list__section">
+              <span class="app-task-list__section-number">5. </span> Details of the people in the application
+            </h2>
+                  <h3 class="app-task-list__section">
+                    Children's details
+                  </h3>
+                  <h4 class="app-task-list__section">
+                    Child 1
+                  </h4>
+
+                  <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+                    <div class="govuk-summary-list__row">
+                      <dt class="govuk-summary-list__key govuk-!-width-one-third">
+                      Full name
+                      </dt>
+                      <dd class="govuk-summary-list__value">
+
+                      </dd>
+                      <dd class="govuk-summary-list__actions">
+                        <a class="govuk-link" href="languagerequirements">
+                          Edit<span class="govuk-visually-hidden">languagerequirements</span>
+                        </a>
+                      </dd>
+                    </div>
+
+                    <div class="govuk-summary-list__row">
+                      <dt class="govuk-summary-list__key govuk-!-width-one-third">
+                        Date of birth
+                      <dd class="govuk-summary-list__value">
+
+                      </dd>
+                      <dd class="govuk-summary-list__actions govuk-!-width-one-third">
+                        <a class="govuk-link" href="start">
+                          Edit<span class="govuk-visually-hidden">MIAM-willing</span>
+                        </a>
+                      </dd>
+                    </div>
+                    <div class="govuk-summary-list__row">
+                      <dt class="govuk-summary-list__key govuk-!-width-one-third">
+                      Gender
+                      <dd class="govuk-summary-list__value">
+
+                      </dd>
+                      <dd class="govuk-summary-list__actions govuk-!-width-one-third">
+                        <a class="govuk-link" href="start">
+                          Edit<span class="govuk-visually-hidden">MIAM-willing</span>
+                        </a>
+                      </dd>
+                    </div>
+
+                    <div class="govuk-summary-list__row">
+                      <dt class="govuk-summary-list__key govuk-!-width-one-third">
+                        Orders applied for
+                      </dt>
+                      <dd class="govuk-summary-list__value">
+
+                      </dd>
+                      <dd class="govuk-summary-list__actions govuk-!-width-one-third">
+                        <a class="govuk-link" href="start">
+                          Edit<span class="govuk-visually-hidden">MIAM-willing</span>
+                        </a>
+                      </dd>
+                    </div>
+
+                    <div class="govuk-summary-list__row app-cya--answers-group" id="special_arrangements">
+                      <dt class="govuk-summary-list__key govuk-!-width-one-third app-cya--answers-group__key">
+                      State everyone who has parental responsibility for child 1 and how they have parental responsibility
+                      </dt>
+                      <dd class="govuk-summary-list__value">
+                        Yes
+                      </dd>
+                      <dd class="govuk-summary-list__actions govuk-!-width-one-third">
+                        <a class="govuk-link" href="start">
+                          Edit<span class="govuk-visually-hidden">MIAM-willing</span>
+                        </a>
+                      </dd>
+
+                      </div>
+
+
+
+                  </dl>
+
+                  <h4 class="app-task-list__section">
+                    Child 2
+                  </h4>
+                  <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+                    <div class="govuk-summary-list__row">
+                      <dt class="govuk-summary-list__key govuk-!-width-one-third">
+                      Full name
+                      </dt>
+                      <dd class="govuk-summary-list__value">
+
+                      </dd>
+                      <dd class="govuk-summary-list__actions">
+                        <a class="govuk-link" href="languagerequirements">
+                          Edit<span class="govuk-visually-hidden">languagerequirements</span>
+                        </a>
+                      </dd>
+                    </div>
+
+                    <div class="govuk-summary-list__row">
+                      <dt class="govuk-summary-list__key govuk-!-width-one-third">
+                        Date of birth
+                      <dd class="govuk-summary-list__value">
+
+                      </dd>
+                      <dd class="govuk-summary-list__actions govuk-!-width-one-third">
+                        <a class="govuk-link" href="start">
+                          Edit<span class="govuk-visually-hidden">MIAM-willing</span>
+                        </a>
+                      </dd>
+                    </div>
+                    <div class="govuk-summary-list__row">
+                      <dt class="govuk-summary-list__key govuk-!-width-one-third">
+                      Gender
+                      <dd class="govuk-summary-list__value">
+
+                      </dd>
+                      <dd class="govuk-summary-list__actions govuk-!-width-one-third">
+                        <a class="govuk-link" href="start">
+                          Edit<span class="govuk-visually-hidden">MIAM-willing</span>
+                        </a>
+                      </dd>
+                    </div>
+
+                    <div class="govuk-summary-list__row">
+                      <dt class="govuk-summary-list__key govuk-!-width-one-third">
+                        Orders applied for
+                      </dt>
+                      <dd class="govuk-summary-list__value">
+
+                      </dd>
+                      <dd class="govuk-summary-list__actions govuk-!-width-one-third">
+                        <a class="govuk-link" href="start">
+                          Edit<span class="govuk-visually-hidden">MIAM-willing</span>
+                        </a>
+                      </dd>
+                    </div>
+
+                    <div class="govuk-summary-list__row app-cya--answers-group" id="special_arrangements">
+                      <dt class="govuk-summary-list__key govuk-!-width-one-third app-cya--answers-group__key">
+                      State everyone who has parental responsibility for child 2 and how they have parental responsibility
+                      </dt>
+                      <dd class="govuk-summary-list__value">
+                        Yes
+                      </dd>
+                      <dd class="govuk-summary-list__actions govuk-!-width-one-third">
+                        <a class="govuk-link" href="start">
+                          Edit<span class="govuk-visually-hidden">MIAM-willing</span>
+                        </a>
+                      </dd>
+
+                      </div>
+
+
+
+                  </dl>
+
+                  <h4 class="app-task-list__section">
+                    Additional details about the children
+                  </h4>
+
+                  <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+                    <div class="govuk-summary-list__row">
+                      <dt class="govuk-summary-list__key govuk-!-width-one-third">
+                      Are any of the children known to social services?
+                      </dt>
+                      <dd class="govuk-summary-list__value">
+
+                      </dd>
+                      <dd class="govuk-summary-list__actions">
+                        <a class="govuk-link" href="languagerequirements">
+                          Edit<span class="govuk-visually-hidden">languagerequirements</span>
+                        </a>
+                      </dd>
+                    </div>
+
+                    <div class="govuk-summary-list__row">
+                      <dt class="govuk-summary-list__key govuk-!-width-one-third">
+                        Are any of the children the subject of a child protection plan?
+                      <dd class="govuk-summary-list__value">
+
+                      </dd>
+                      <dd class="govuk-summary-list__actions govuk-!-width-one-third">
+                        <a class="govuk-link" href="start">
+                          Edit<span class="govuk-visually-hidden">MIAM-willing</span>
+                        </a>
+                      </dd>
+                    </div>
+                    <div class="govuk-summary-list__row">
+                      <dt class="govuk-summary-list__key govuk-!-width-one-third">
+                      Do you or the respondents have other children who aren't part of this application?
+                      <dd class="govuk-summary-list__value">
+
+                      </dd>
+                      <dd class="govuk-summary-list__actions govuk-!-width-one-third">
+                        <a class="govuk-link" href="start">
+                          Edit<span class="govuk-visually-hidden">MIAM-willing</span>
+                        </a>
+                      </dd>
+                    </div>
+
+                    </dl>
+
+                  <h3 class="app-task-list__section">
+                    Details of the applicants
+                  </h3>
+
+                  <h4 class="app-task-list__section">
+                    Applicant 1 - Your details
+                  </h4>
+
+                  <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+                    <div class="govuk-summary-list__row">
+                      <dt class="govuk-summary-list__key govuk-!-width-one-third">
+                        Full name
+                      </dt>
+                      <dd class="govuk-summary-list__value">
+
+                      </dd>
+                      <dd class="govuk-summary-list__actions">
+                        <a class="govuk-link" href="languagerequirements">
+                          Edit<span class="govuk-visually-hidden">languagerequirements</span>
+                        </a>
+                      </dd>
+                    </div>
+
+
+
+                      <div class="govuk-summary-list__row app-cya--answers-group" id="urgent_hearing_details">
+                        <dt class="govuk-summary-list__key govuk-!-width-one-third app-cya--answers-group__key">
+                        Do the other people named in this application (the respondents) know any of your contact details?
+                        </dt>
+
+                        <dd class="govuk-summary-list__value">
+                          {{ data['detailsknown'] }}
+                        </dd>
+                        <dd class="govuk-summary-list__actions">
+
+                          <a class="govuk-link govuk-link--no-visited-state ga-pageLink" data-ga-category="check your answers" data-ga-label="change link: urgent_hearing_details" href="/steps/application/urgent_hearing_details">
+                            Edit <span class="govuk-visually-hidden">your answer to, Urgent hearing details</span>
+                          </a>
+                        </dd>
+                      </div>
+
+                      <div class="govuk-summary-list__row app-cya--answers-group" id="language_interpreter">
+                        <dt class="govuk-summary-list__key govuk-!-width-one-third app-cya--answers-group__key">
+                          Do you want to keep your contact details private from the other people named in the application (the respondents)?
+                        </dt>
+                        <dd class="govuk-summary-list__value">
+                            <dl class="govuk-summary-list">
+                              <div class="govuk-summary-list__row" id="language_interpreter">
+
+                                <dd class="govuk-summary-list__value">
+                                  Yes
+                                </dd>
+
+                              </div>
+
+                              <div class="govuk-summary-list__row" id="urgent_hearing_when" style="border-bottom:1px solid #fff">
+                                <dd class="govuk-summary-list__key">
+                                  <ul class="govuk-list govuk-list--bullet">
+                                    <li>Address</li>
+                                    <li>Telephone number</li>
+                                    <li>Email</li>
+                                  </ul>
+                                </dd>
+                              </div>
+                              </dl>
+                              </dd>
+                              <dd class="govuk-summary-list__actions">
+
+                                <a class="govuk-link govuk-link--no-visited-state ga-pageLink" data-ga-category="check your answers" data-ga-label="change link: urgent_hearing_details" href="/steps/application/urgent_hearing_details">
+                                  Edit <span class="govuk-visually-hidden">your answer to, Urgent hearing details</span>
+                                </a>
+                              </dd>
+                              </div>
+
+
+
+                    <div class="govuk-summary-list__row">
+                      <dt class="govuk-summary-list__key govuk-!-width-one-third">
+                        Previous name
+                      </dt>
+                      <dd class="govuk-summary-list__value">
+
+                      </dd>
+                      <dd class="govuk-summary-list__actions govuk-!-width-one-third">
+                        <a class="govuk-link" href="start">
+                          Edit<span class="govuk-visually-hidden">MIAM-willing</span>
+                        </a>
+                      </dd>
+                    </div>
+
+                    <div class="govuk-summary-list__row">
+                      <dt class="govuk-summary-list__key govuk-!-width-one-third">
+                        Gender
+                      </dt>
+                      <dd class="govuk-summary-list__value">
+
+                      </dd>
+                      <dd class="govuk-summary-list__actions govuk-!-width-one-third">
+                        <a class="govuk-link" href="start">
+                          Edit<span class="govuk-visually-hidden">MIAM-willing</span>
+                        </a>
+                      </dd>
+                    </div>
+
+                    <div class="govuk-summary-list__row app-cya--answers-group" id="special_arrangements">
+                      <dt class="govuk-summary-list__key govuk-!-width-one-third app-cya--answers-group__key">
+                      Date of birth
+                      </dt>
+                      <dd class="govuk-summary-list__value">
+
+                      </dd>
+                      <dd class="govuk-summary-list__actions govuk-!-width-one-third">
+                        <a class="govuk-link" href="start">
+                          Edit<span class="govuk-visually-hidden">MIAM-willing</span>
+                        </a>
+                      </dd>
+                      </div>
+
+                      <div class="govuk-summary-list__row app-cya--answers-group" id="special_arrangements">
+                        <dt class="govuk-summary-list__key govuk-!-width-one-third app-cya--answers-group__key">
+                        Place of birth
+                        </dt>
+                        <dd class="govuk-summary-list__value">
+
+                        </dd>
+                        <dd class="govuk-summary-list__actions govuk-!-width-one-third">
+                          <a class="govuk-link" href="start">
+                            Edit<span class="govuk-visually-hidden">MIAM-willing</span>
+                          </a>
+                        </dd>
+                        </div>
+
+                        <div class="govuk-summary-list__row app-cya--answers-group" id="language_interpreter">
+                          <dt class="govuk-summary-list__key govuk-!-width-one-third app-cya--answers-group__key">
+                            Address details
+                          </dt>
+                          <dd class="govuk-summary-list__value">
+                              <dl class="govuk-summary-list">
+
+
+                                <div class="govuk-summary-list__row" id="urgent_hearing_when" style="border-bottom:1px solid #fff">
+                                  <dt class="govuk-summary-list__key">
+                                    Address
+                                  </dt>
+                                </div>
+                                <div class="govuk-summary-list__row" >
+                                  <dd class="govuk-summary-list__value">
+                                    No
+                                  </dd>
+                                </div>
+                                <div class="govuk-summary-list__row" style="border-bottom:1px solid #fff" >
+                                  <dt class="govuk-summary-list__key">
+                                  Have you lived at this address for more than 5 years?
+                                  </dt>
+                                </div>
+                                <div class="govuk-summary-list__row" >
+                                  <dd class="govuk-summary-list__value">
+                                    No
+                                  </dd>
+                                </div>
+
+                                <div class="govuk-summary-list__row" style="border-bottom:1px solid #fff" >
+                                  <dt class="govuk-summary-list__key">
+                                  Previous addresses
+                                  </dt>
+                                </div>
+                                <div class="govuk-summary-list__row" style="border-bottom:1px solid #fff" >
+                                  <dd class="govuk-summary-list__value">
+                                    Yes
+                                  </dd>
+                                </div>
+
+                              </dl>
+                          </dd>
+                          <dd class="govuk-summary-list__actions">
+
+                            <a class="govuk-link govuk-link--no-visited-state ga-pageLink" data-ga-category="check your answers" data-ga-label="change link: urgent_hearing_details" href="/steps/application/urgent_hearing_details">
+                              Edit <span class="govuk-visually-hidden">your answer to, Urgent hearing details</span>
+                            </a>
+                          </dd>
+                        </div>
+
+                        <div class="govuk-summary-list__row app-cya--answers-group" id="language_interpreter">
+                          <dt class="govuk-summary-list__key govuk-!-width-one-third app-cya--answers-group__key">
+                            Email
+                          </dt>
+                          <dd class="govuk-summary-list__value">
+                              <dl class="govuk-summary-list">
+
+
+                                <div class="govuk-summary-list__row" id="urgent_hearing_when" style="border-bottom:1px solid #fff">
+                                  <dt class="govuk-summary-list__key">
+                                    Provided
+                                  </dt>
+                                </div>
+                                <div class="govuk-summary-list__row" >
+                                  <dd class="govuk-summary-list__value">
+                                    Yes
+                                  </dd>
+                                </div>
+                                <div class="govuk-summary-list__row" style="border-bottom:1px solid #fff" >
+                                  <dt class="govuk-summary-list__key">
+                                  Email address
+                                  </dt>
+                                </div>
+                                <div class="govuk-summary-list__row"  style="border-bottom:1px solid #fff">
+                                  <dd class="govuk-summary-list__value">
+                                    No
+                                  </dd>
+                                </div>
+
+
+
+                              </dl>
+                          </dd>
+                          <dd class="govuk-summary-list__actions">
+
+                            <a class="govuk-link govuk-link--no-visited-state ga-pageLink" data-ga-category="check your answers" data-ga-label="change link: urgent_hearing_details" href="/steps/application/urgent_hearing_details">
+                              Edit <span class="govuk-visually-hidden">your answer to, Urgent hearing details</span>
+                            </a>
+                          </dd>
+                        </div>
+
+                        <div class="govuk-summary-list__row app-cya--answers-group" id="special_arrangements">
+                          <dt class="govuk-summary-list__key govuk-!-width-one-third app-cya--answers-group__key">
+                          Telephone number
+                          </dt>
+                          <dd class="govuk-summary-list__value">
+
+                          </dd>
+                          <dd class="govuk-summary-list__actions govuk-!-width-one-third">
+                            <a class="govuk-link" href="start">
+                              Edit<span class="govuk-visually-hidden">MIAM-willing</span>
+                            </a>
+                          </dd>
+                          </div>
+
+                          <div class="govuk-summary-list__row app-cya--answers-group" id="special_arrangements">
+                            <dt class="govuk-summary-list__key govuk-!-width-one-third app-cya--answers-group__key">
+                          Relationship to child 1
+                            </dt>
+                            <dd class="govuk-summary-list__value">
+
+                            </dd>
+                            <dd class="govuk-summary-list__actions govuk-!-width-one-third">
+                              <a class="govuk-link" href="start">
+                                Edit<span class="govuk-visually-hidden">MIAM-willing</span>
+                              </a>
+                            </dd>
+                            </div>
+
+                            <div class="govuk-summary-list__row app-cya--answers-group" id="special_arrangements">
+                              <dt class="govuk-summary-list__key govuk-!-width-one-third app-cya--answers-group__key">
+                            Relationship to child 2
+                              </dt>
+                              <dd class="govuk-summary-list__value">
+
+                              </dd>
+                              <dd class="govuk-summary-list__actions govuk-!-width-one-third">
+                                <a class="govuk-link" href="start">
+                                  Edit<span class="govuk-visually-hidden">MIAM-willing</span>
+                                </a>
+                              </dd>
+                              </div>
+
+                  </dl>
+
+                  <h4 class="app-task-list__section">
+                    Applicant 2
+                  </h4>
+
+                  <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+                    <div class="govuk-summary-list__row">
+                      <dt class="govuk-summary-list__key govuk-!-width-one-third">
+                        Full name
+                      </dt>
+                      <dd class="govuk-summary-list__value">
+
+                      </dd>
+                      <dd class="govuk-summary-list__actions">
+                        <a class="govuk-link" href="languagerequirements">
+                          Edit<span class="govuk-visually-hidden">languagerequirements</span>
+                        </a>
+                      </dd>
+                    </div>
+
+
+                      <div class="govuk-summary-list__row app-cya--answers-group" id="urgent_hearing_details">
+                        <dt class="govuk-summary-list__key govuk-!-width-one-third app-cya--answers-group__key">
+                        Do the other people named in this application (the respondents) know any of your contact details?
+                        </dt>
+
+                        <dd class="govuk-summary-list__value">
+                          {{ data['detailsknown'] }}
+                        </dd>
+                        <dd class="govuk-summary-list__actions">
+
+                          <a class="govuk-link govuk-link--no-visited-state ga-pageLink" data-ga-category="check your answers" data-ga-label="change link: urgent_hearing_details" href="/steps/application/urgent_hearing_details">
+                            Edit <span class="govuk-visually-hidden">your answer to, Urgent hearing details</span>
+                          </a>
+                        </dd>
+                      </div>
+
+                      <div class="govuk-summary-list__row app-cya--answers-group" id="language_interpreter">
+                        <dt class="govuk-summary-list__key govuk-!-width-one-third app-cya--answers-group__key">
+                          Do you want to keep your contact details private from the other people named in the application (the respondents)?
+                        </dt>
+                        <dd class="govuk-summary-list__value">
+                            <dl class="govuk-summary-list">
+                              <div class="govuk-summary-list__row" id="language_interpreter">
+
+                                <dd class="govuk-summary-list__value">
+                                  Yes
+                                </dd>
+
+                              </div>
+
+                              <div class="govuk-summary-list__row" id="urgent_hearing_when" style="border-bottom:1px solid #fff">
+                                <dd class="govuk-summary-list__key">
+                                  <ul class="govuk-list govuk-list--bullet">
+                                    <li>Address</li>
+                                    <li>Telephone number</li>
+                                    <li>Email</li>
+                                  </ul>
+                                </dd>
+                              </div>
+                              </dl>
+                              </dd>
+                              <dd class="govuk-summary-list__actions">
+
+                                <a class="govuk-link govuk-link--no-visited-state ga-pageLink" data-ga-category="check your answers" data-ga-label="change link: urgent_hearing_details" href="/steps/application/urgent_hearing_details">
+                                  Edit <span class="govuk-visually-hidden">your answer to, Urgent hearing details</span>
+                                </a>
+                              </dd>
+                              </div>
+
+                    <div class="govuk-summary-list__row">
+                      <dt class="govuk-summary-list__key govuk-!-width-one-third">
+                        Previous name
+                      </dt>
+                      <dd class="govuk-summary-list__value">
+
+                      </dd>
+                      <dd class="govuk-summary-list__actions govuk-!-width-one-third">
+                        <a class="govuk-link" href="start">
+                          Edit<span class="govuk-visually-hidden">MIAM-willing</span>
+                        </a>
+                      </dd>
+                    </div>
+
+                    <div class="govuk-summary-list__row">
+                      <dt class="govuk-summary-list__key govuk-!-width-one-third">
+                        Gender
+                      </dt>
+                      <dd class="govuk-summary-list__value">
+
+                      </dd>
+                      <dd class="govuk-summary-list__actions govuk-!-width-one-third">
+                        <a class="govuk-link" href="start">
+                          Edit<span class="govuk-visually-hidden">MIAM-willing</span>
+                        </a>
+                      </dd>
+                    </div>
+
+                    <div class="govuk-summary-list__row app-cya--answers-group" id="special_arrangements">
+                      <dt class="govuk-summary-list__key govuk-!-width-one-third app-cya--answers-group__key">
+                      Date of birth
+                      </dt>
+                      <dd class="govuk-summary-list__value">
+
+                      </dd>
+                      <dd class="govuk-summary-list__actions govuk-!-width-one-third">
+                        <a class="govuk-link" href="start">
+                          Edit<span class="govuk-visually-hidden">MIAM-willing</span>
+                        </a>
+                      </dd>
+                      </div>
+
+                      <div class="govuk-summary-list__row app-cya--answers-group" id="special_arrangements">
+                        <dt class="govuk-summary-list__key govuk-!-width-one-third app-cya--answers-group__key">
+                        Place of birth
+                        </dt>
+                        <dd class="govuk-summary-list__value">
+
+                        </dd>
+                        <dd class="govuk-summary-list__actions govuk-!-width-one-third">
+                          <a class="govuk-link" href="start">
+                            Edit<span class="govuk-visually-hidden">MIAM-willing</span>
+                          </a>
+                        </dd>
+                        </div>
+
+
+
+                        <div class="govuk-summary-list__row app-cya--answers-group" id="language_interpreter">
+                          <dt class="govuk-summary-list__key govuk-!-width-one-third app-cya--answers-group__key">
+                            Address details
+                          </dt>
+                          <dd class="govuk-summary-list__value">
+                              <dl class="govuk-summary-list">
+
+
+                                <div class="govuk-summary-list__row" id="urgent_hearing_when" style="border-bottom:1px solid #fff">
+                                  <dt class="govuk-summary-list__key">
+                                    Address
+                                  </dt>
+                                </div>
+                                <div class="govuk-summary-list__row" >
+                                  <dd class="govuk-summary-list__value">
+                                    No
+                                  </dd>
+                                </div>
+                                <div class="govuk-summary-list__row" style="border-bottom:1px solid #fff" >
+                                  <dt class="govuk-summary-list__key">
+                                  Have they lived at this address for more than 5 years?
+                                  </dt>
+                                </div>
+                                <div class="govuk-summary-list__row" >
+                                  <dd class="govuk-summary-list__value">
+                                    No
+                                  </dd>
+                                </div>
+
+                                <div class="govuk-summary-list__row" style="border-bottom:1px solid #fff" >
+                                  <dt class="govuk-summary-list__key">
+                                  Previous addresses
+                                  </dt>
+                                </div>
+                                <div class="govuk-summary-list__row" style="border-bottom:1px solid #fff" >
+                                  <dd class="govuk-summary-list__value">
+                                    Yes
+                                  </dd>
+                                </div>
+
+                              </dl>
+                          </dd>
+                          <dd class="govuk-summary-list__actions">
+
+                            <a class="govuk-link govuk-link--no-visited-state ga-pageLink" data-ga-category="check your answers" data-ga-label="change link: urgent_hearing_details" href="/steps/application/urgent_hearing_details">
+                              Edit <span class="govuk-visually-hidden">your answer to, Urgent hearing details</span>
+                            </a>
+                          </dd>
+                        </div>
+
+                        <div class="govuk-summary-list__row app-cya--answers-group" id="language_interpreter">
+                          <dt class="govuk-summary-list__key govuk-!-width-one-third app-cya--answers-group__key">
+                            Email
+                          </dt>
+                          <dd class="govuk-summary-list__value">
+                              <dl class="govuk-summary-list">
+
+
+                                <div class="govuk-summary-list__row" id="urgent_hearing_when" style="border-bottom:1px solid #fff">
+                                  <dt class="govuk-summary-list__key">
+                                    Provided
+                                  </dt>
+                                </div>
+                                <div class="govuk-summary-list__row" >
+                                  <dd class="govuk-summary-list__value">
+                                    Yes
+                                  </dd>
+                                </div>
+                                <div class="govuk-summary-list__row" style="border-bottom:1px solid #fff" >
+                                  <dt class="govuk-summary-list__key">
+                                  Email address
+                                  </dt>
+                                </div>
+                                <div class="govuk-summary-list__row"  style="border-bottom:1px solid #fff">
+                                  <dd class="govuk-summary-list__value">
+                                    No
+                                  </dd>
+                                </div>
+
+
+
+                              </dl>
+                          </dd>
+                          <dd class="govuk-summary-list__actions">
+
+                            <a class="govuk-link govuk-link--no-visited-state ga-pageLink" data-ga-category="check your answers" data-ga-label="change link: urgent_hearing_details" href="/steps/application/urgent_hearing_details">
+                              Edit <span class="govuk-visually-hidden">your answer to, Urgent hearing details</span>
+                            </a>
+                          </dd>
+                        </div>
+
+                        <div class="govuk-summary-list__row app-cya--answers-group" id="special_arrangements">
+                          <dt class="govuk-summary-list__key govuk-!-width-one-third app-cya--answers-group__key">
+                          Telephone number
+                          </dt>
+                          <dd class="govuk-summary-list__value">
+
+                          </dd>
+                          <dd class="govuk-summary-list__actions govuk-!-width-one-third">
+                            <a class="govuk-link" href="start">
+                              Edit<span class="govuk-visually-hidden">MIAM-willing</span>
+                            </a>
+                          </dd>
+                          </div>
+
+                          <div class="govuk-summary-list__row app-cya--answers-group" id="special_arrangements">
+                            <dt class="govuk-summary-list__key govuk-!-width-one-third app-cya--answers-group__key">
+                          Relationship to child 1
+                            </dt>
+                            <dd class="govuk-summary-list__value">
+
+                            </dd>
+                            <dd class="govuk-summary-list__actions govuk-!-width-one-third">
+                              <a class="govuk-link" href="start">
+                                Edit<span class="govuk-visually-hidden">MIAM-willing</span>
+                              </a>
+                            </dd>
+                            </div>
+
+                            <div class="govuk-summary-list__row app-cya--answers-group" id="special_arrangements">
+                              <dt class="govuk-summary-list__key govuk-!-width-one-third app-cya--answers-group__key">
+                            Relationship to child 2
+                              </dt>
+                              <dd class="govuk-summary-list__value">
+
+                              </dd>
+                              <dd class="govuk-summary-list__actions govuk-!-width-one-third">
+                                <a class="govuk-link" href="start">
+                                  Edit<span class="govuk-visually-hidden">MIAM-willing</span>
+                                </a>
+                              </dd>
+                              </div>
+
+                  </dl>
+
+
+                  <h3 class="app-task-list__section">
+                    Details of the respondents
+                  </h3>
+
+                  <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+                    <div class="govuk-summary-list__row">
+                      <dt class="govuk-summary-list__key govuk-!-width-one-third">
+                        Full name
+                      </dt>
+                      <dd class="govuk-summary-list__value">
+
+                      </dd>
+                      <dd class="govuk-summary-list__actions">
+                        <a class="govuk-link" href="languagerequirements">
+                          Edit<span class="govuk-visually-hidden">languagerequirements</span>
+                        </a>
+                      </dd>
+                    </div>
+
+                    <div class="govuk-summary-list__row">
+                      <dt class="govuk-summary-list__key govuk-!-width-one-third">
+                        Previous name
+                      </dt>
+                      <dd class="govuk-summary-list__value">
+
+                      </dd>
+                      <dd class="govuk-summary-list__actions govuk-!-width-one-third">
+                        <a class="govuk-link" href="start">
+                          Edit<span class="govuk-visually-hidden">MIAM-willing</span>
+                        </a>
+                      </dd>
+                    </div>
+
+                    <div class="govuk-summary-list__row">
+                      <dt class="govuk-summary-list__key govuk-!-width-one-third">
+                        Gender
+                      </dt>
+                      <dd class="govuk-summary-list__value">
+
+                      </dd>
+                      <dd class="govuk-summary-list__actions govuk-!-width-one-third">
+                        <a class="govuk-link" href="start">
+                          Edit<span class="govuk-visually-hidden">MIAM-willing</span>
+                        </a>
+                      </dd>
+                    </div>
+
+                    <div class="govuk-summary-list__row app-cya--answers-group" id="special_arrangements">
+                      <dt class="govuk-summary-list__key govuk-!-width-one-third app-cya--answers-group__key">
+                      Date of birth
+                      </dt>
+                      <dd class="govuk-summary-list__value">
+
+                      </dd>
+                      <dd class="govuk-summary-list__actions govuk-!-width-one-third">
+                        <a class="govuk-link" href="start">
+                          Edit<span class="govuk-visually-hidden">MIAM-willing</span>
+                        </a>
+                      </dd>
+                      </div>
+
+                      <div class="govuk-summary-list__row app-cya--answers-group" id="special_arrangements">
+                        <dt class="govuk-summary-list__key govuk-!-width-one-third app-cya--answers-group__key">
+                        Place of birth
+                        </dt>
+                        <dd class="govuk-summary-list__value">
+
+                        </dd>
+                        <dd class="govuk-summary-list__actions govuk-!-width-one-third">
+                          <a class="govuk-link" href="start">
+                            Edit<span class="govuk-visually-hidden">MIAM-willing</span>
+                          </a>
+                        </dd>
+                        </div>
+
+                        <div class="govuk-summary-list__row app-cya--answers-group" id="language_interpreter">
+                          <dt class="govuk-summary-list__key govuk-!-width-one-third app-cya--answers-group__key">
+                            Address details
+                          </dt>
+                          <dd class="govuk-summary-list__value">
+                              <dl class="govuk-summary-list">
+
+
+                                <div class="govuk-summary-list__row" id="urgent_hearing_when" style="border-bottom:1px solid #fff">
+                                  <dt class="govuk-summary-list__key">
+                                    Address
+                                  </dt>
+                                </div>
+                                <div class="govuk-summary-list__row" >
+                                  <dd class="govuk-summary-list__value">
+                                    No
+                                  </dd>
+                                </div>
+                                <div class="govuk-summary-list__row" style="border-bottom:1px solid #fff" >
+                                  <dt class="govuk-summary-list__key">
+                                  Have they lived at this address for more than 5 years?
+                                  </dt>
+                                </div>
+                                <div class="govuk-summary-list__row" style="border-bottom:1px solid #fff" >
+                                  <dd class="govuk-summary-list__value">
+                                    Yes
+                                  </dd>
+                                </div>
+
+
+                              </dl>
+                          </dd>
+                          <dd class="govuk-summary-list__actions">
+
+                            <a class="govuk-link govuk-link--no-visited-state ga-pageLink" data-ga-category="check your answers" data-ga-label="change link: urgent_hearing_details" href="/steps/application/urgent_hearing_details">
+                              Edit <span class="govuk-visually-hidden">your answer to, Urgent hearing details</span>
+                            </a>
+                          </dd>
+                        </div>
+
+                        <div class="govuk-summary-list__row app-cya--answers-group" id="language_interpreter">
+                          <dt class="govuk-summary-list__key govuk-!-width-one-third app-cya--answers-group__key">
+                            Email
+                          </dt>
+                          <dd class="govuk-summary-list__value">
+                              <dl class="govuk-summary-list">
+
+
+                                <div class="govuk-summary-list__row" id="urgent_hearing_when" style="border-bottom:1px solid #fff">
+                                  <dt class="govuk-summary-list__key">
+                                    Provided
+                                  </dt>
+                                </div>
+                                <div class="govuk-summary-list__row" style="border-bottom:1px solid #fff">
+                                  <dd class="govuk-summary-list__value">
+                                    No
+                                  </dd>
+                                </div>
+
+
+
+
+                              </dl>
+                          </dd>
+                          <dd class="govuk-summary-list__actions">
+
+                            <a class="govuk-link govuk-link--no-visited-state ga-pageLink" data-ga-category="check your answers" data-ga-label="change link: urgent_hearing_details" href="/steps/application/urgent_hearing_details">
+                              Edit <span class="govuk-visually-hidden">your answer to, Urgent hearing details</span>
+                            </a>
+                          </dd>
+                        </div>
+
+                        <div class="govuk-summary-list__row app-cya--answers-group" id="special_arrangements">
+                          <dt class="govuk-summary-list__key govuk-!-width-one-third app-cya--answers-group__key">
+                          Telephone number
+                          </dt>
+                          <dd class="govuk-summary-list__value">
+
+                          </dd>
+                          <dd class="govuk-summary-list__actions govuk-!-width-one-third">
+                            <a class="govuk-link" href="start">
+                              Edit<span class="govuk-visually-hidden">MIAM-willing</span>
+                            </a>
+                          </dd>
+                          </div>
+
+                          <div class="govuk-summary-list__row app-cya--answers-group" id="special_arrangements">
+                            <dt class="govuk-summary-list__key govuk-!-width-one-third app-cya--answers-group__key">
+                          Relationship to child 1
+                            </dt>
+                            <dd class="govuk-summary-list__value">
+
+                            </dd>
+                            <dd class="govuk-summary-list__actions govuk-!-width-one-third">
+                              <a class="govuk-link" href="start">
+                                Edit<span class="govuk-visually-hidden">MIAM-willing</span>
+                              </a>
+                            </dd>
+                            </div>
+
+                            <div class="govuk-summary-list__row app-cya--answers-group" id="special_arrangements">
+                              <dt class="govuk-summary-list__key govuk-!-width-one-third app-cya--answers-group__key">
+                            Relationship to child 2
+                              </dt>
+                              <dd class="govuk-summary-list__value">
+
+                              </dd>
+                              <dd class="govuk-summary-list__actions govuk-!-width-one-third">
+                                <a class="govuk-link" href="start">
+                                  Edit<span class="govuk-visually-hidden">MIAM-willing</span>
+                                </a>
+                              </dd>
+                              </div>
+
+                  </dl>
+
+                  <h3 class="app-task-list__section">
+                    Details of the other people in the application
+                  </h3>
+
+                  <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+                    <div class="govuk-summary-list__row">
+                      <dt class="govuk-summary-list__key govuk-!-width-one-third">
+                      Is there anyone else who should know about your application?
+                      </dt>
+                      <dd class="govuk-summary-list__value">
+                      No
+                      </dd>
+                      <dd class="govuk-summary-list__actions">
+                        <a class="govuk-link" href="languagerequirements">
+                          Edit<span class="govuk-visually-hidden">languagerequirements</span>
+                        </a>
+                      </dd>
+                    </div>
+
+                  </dl>
+
+                  <h3 class="app-task-list__section">
+                    Where the children live
+                  </h3>
+
+                  <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+                    <div class="govuk-summary-list__row">
+                      <dt class="govuk-summary-list__key govuk-!-width-one-third">
+                      Child 1
+                      </dt>
+                      <dd class="govuk-summary-list__value">
+                      No
+                      </dd>
+                      <dd class="govuk-summary-list__actions">
+                        <a class="govuk-link" href="languagerequirements">
+                          Edit<span class="govuk-visually-hidden">languagerequirements</span>
+                        </a>
+                      </dd>
+                    </div>
+                    <div class="govuk-summary-list__row">
+                      <dt class="govuk-summary-list__key govuk-!-width-one-third">
+                      Child 2
+                      </dt>
+                      <dd class="govuk-summary-list__value">
+                      No
+                      </dd>
+                      <dd class="govuk-summary-list__actions">
+                        <a class="govuk-link" href="languagerequirements">
+                          Edit<span class="govuk-visually-hidden">languagerequirements</span>
+                        </a>
+                      </dd>
+                    </div>
+                  </dl>
+
+
+
+                  <h2 class="app-task-list__section">
+                    <span class="app-task-list__section-number">6. </span> Past and current proceedings
+                  </h2>
+
+                  <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+
+                    <div class="govuk-summary-list__row">
+                      <dt class="govuk-summary-list__key govuk-!-width-one-third">
+                        Have the children been involved in a court case?
+                      </dt>
+                      <dd class="govuk-summary-list__value">
+                          {{ data['childrenorders'] }}
+                      </dd>
+                      <dd class="govuk-summary-list__actions">
+                        <a class="govuk-link" href="#">
+                          Edit<span class="govuk-visually-hidden">Legal</span>
+                        </a>
+                      </dd>
+                    </div>
+
+
+                      <div class="govuk-summary-list__row app-cya--answers-group" id="language_interpreter">
+                          <dt class="govuk-summary-list__key govuk-!-width-one-third app-cya--answers-group__key">
+                            Have you had a court order made for your protection?
+                          </dt>
+                          <dd class="govuk-summary-list__value">
+                                  {{ data['protection'] }}
+                          </dd>
+                          <dd class="govuk-summary-list__actions">
+                            <a class="govuk-link" href="#">
+                              Edit<span class="govuk-visually-hidden">Legal</span>
+                            </a>
+                          </dd>
+                        </div>
+
+                        <div class="govuk-summary-list__row app-cya--answers-group" id="language_interpreter">
+                            <dt class="govuk-summary-list__key govuk-!-width-one-third app-cya--answers-group__key">
+                              Provide details of court cases you or the children have been involved in
+                            </dt>
+                            <dd class="govuk-summary-list__value">
+                              <ul class="govuk-list govuk-list--bullet">
+                                <li>Emergency Protection Order</li>
+                                <li>Other Order</li>
+
+                              </ul>
+                            </dd>
+                            <dd class="govuk-summary-list__actions">
+                              <a class="govuk-link" href="#">
+                                Edit<span class="govuk-visually-hidden">Legal</span>
+                              </a>
+                            </dd>
+                          </div>
+
+                          <div class="govuk-summary-list__row app-cya--answers-group" id="language_interpreter">
+                            <dt class="govuk-summary-list__key govuk-!-width-one-third app-cya--answers-group__key">
+                            Emergency Protection Order
+                            </dt>
+                            <dd class="govuk-summary-list__value">
+                                <dl class="govuk-summary-list">
+
+
+                                  <div class="govuk-summary-list__row" id="urgent_hearing_when" style="border-bottom:1px solid #fff">
+                                    <dt class="govuk-summary-list__key">
+                                      Which court issued the order?
+                                    </dt>
+                                  </div>
+                                  <div class="govuk-summary-list__row" >
+                                    <dd class="govuk-summary-list__value">
+                                      No
+                                    </dd>
+                                  </div>
+                                  <div class="govuk-summary-list__row" style="border-bottom:1px solid #fff" >
+                                    <dt class="govuk-summary-list__key">
+                                  Case number
+                                    </dt>
+                                  </div>
+                                  <div class="govuk-summary-list__row" >
+                                    <dd class="govuk-summary-list__value">
+                                      Yes
+
+
+                                    </dd>
+                                  </div>
+                                  <div class="govuk-summary-list__row" style="border-bottom:1px solid #fff" >
+                                    <dt class="govuk-summary-list__key">
+                                    What date was it made?
+                                    </dt>
+                                  </div>
+                                  <div class="govuk-summary-list__row" >
+                                    <dd class="govuk-summary-list__value">
+                                      Yes
+
+                                    </dd>
+                                  </div>
+                                  <div class="govuk-summary-list__row" style="border-bottom:1px solid #fff" >
+                                    <dt class="govuk-summary-list__key">
+                                    How long was the order for?
+                                    </dt>
+                                  </div>
+                                  <div class="govuk-summary-list__row" >
+                                    <dd class="govuk-summary-list__value">
+                                      Yes
+
+                                    </dd>
+                                  </div>
+                                  <div class="govuk-summary-list__row" style="border-bottom:1px solid #fff" >
+                                    <dt class="govuk-summary-list__key">
+                                    Is this a current order?
+                                    </dt>
+                                  </div>
+                                  <div class="govuk-summary-list__row" >
+                                    <dd class="govuk-summary-list__value">
+                                      Yes
+
+                                    </dd>
+                                  </div>
+                                  <div class="govuk-summary-list__row" style="border-bottom:1px solid #fff" >
+                                    <dt class="govuk-summary-list__key">
+                                    Do you have a copy of the order
+                                    </dt>
+                                  </div>
+                                  <div class="govuk-summary-list__row"  >
+                                    <dd class="govuk-summary-list__value">
+                                      Yes
+
+                                    </dd>
+                                  </div>
+                                  <div class="govuk-summary-list__row" style="border-bottom:1px solid #fff" >
+                                    <dt class="govuk-summary-list__key">
+                                    Copy uploaded?
+                                    </dt>
+                                  </div>
+                                  <div class="govuk-summary-list__row" style="border-bottom:1px solid #fff" >
+                                    <dd class="govuk-summary-list__value">
+                                      Yes
+
+                                    </dd>
+                                  </div>
+                                </dl>
+                            </dd>
+                            <dd class="govuk-summary-list__actions">
+
+                              <a class="govuk-link govuk-link--no-visited-state ga-pageLink" data-ga-category="check your answers" data-ga-label="change link: urgent_hearing_details" href="/steps/application/urgent_hearing_details">
+                                Edit <span class="govuk-visually-hidden">your answer to, Urgent hearing details</span>
+                              </a>
+                            </dd>
+                          </div>
+                          <div class="govuk-summary-list__row app-cya--answers-group" id="language_interpreter">
+                            <dt class="govuk-summary-list__key govuk-!-width-one-third app-cya--answers-group__key">
+                              Other Orders
+                            </dt>
+                            <dd class="govuk-summary-list__value">
+                                <dl class="govuk-summary-list">
+
+
+                                  <div class="govuk-summary-list__row" id="urgent_hearing_when" style="border-bottom:1px solid #fff">
+                                    <dt class="govuk-summary-list__key">
+                                      Which court issued the order?
+                                    </dt>
+                                  </div>
+                                  <div class="govuk-summary-list__row" >
+                                    <dd class="govuk-summary-list__value">
+                                      No
+                                    </dd>
+                                  </div>
+                                  <div class="govuk-summary-list__row" style="border-bottom:1px solid #fff" >
+                                    <dt class="govuk-summary-list__key">
+                                  Case number
+                                    </dt>
+                                  </div>
+                                  <div class="govuk-summary-list__row" >
+                                    <dd class="govuk-summary-list__value">
+                                      Yes
+
+
+                                    </dd>
+                                  </div>
+                                  <div class="govuk-summary-list__row" style="border-bottom:1px solid #fff" >
+                                    <dt class="govuk-summary-list__key">
+                                    What date was it made?
+                                    </dt>
+                                  </div>
+                                  <div class="govuk-summary-list__row" >
+                                    <dd class="govuk-summary-list__value">
+                                      Yes
+
+                                    </dd>
+                                  </div>
+                                  <div class="govuk-summary-list__row" style="border-bottom:1px solid #fff" >
+                                    <dt class="govuk-summary-list__key">
+                                    How long was the order for?
+                                    </dt>
+                                  </div>
+                                  <div class="govuk-summary-list__row" >
+                                    <dd class="govuk-summary-list__value">
+                                      Yes
+
+                                    </dd>
+                                  </div>
+                                  <div class="govuk-summary-list__row" style="border-bottom:1px solid #fff" >
+                                    <dt class="govuk-summary-list__key">
+                                    Is this a current order?
+                                    </dt>
+                                  </div>
+                                  <div class="govuk-summary-list__row" >
+                                    <dd class="govuk-summary-list__value">
+                                      Yes
+
+                                    </dd>
+                                  </div>
+                                  <div class="govuk-summary-list__row" style="border-bottom:1px solid #fff" >
+                                    <dt class="govuk-summary-list__key">
+                                    Do you have a copy of the order
+                                    </dt>
+                                  </div>
+                                  <div class="govuk-summary-list__row"  >
+                                    <dd class="govuk-summary-list__value">
+                                      Yes
+
+                                    </dd>
+                                  </div>
+                                  <div class="govuk-summary-list__row" style="border-bottom:1px solid #fff" >
+                                    <dt class="govuk-summary-list__key">
+                                    Copy uploaded?
+                                    </dt>
+                                  </div>
+                                  <div class="govuk-summary-list__row" style="border-bottom:1px solid #fff" >
+                                    <dd class="govuk-summary-list__value">
+                                      Yes
+
+                                    </dd>
+                                  </div>
+                                </dl>
+                            </dd>
+                            <dd class="govuk-summary-list__actions">
+
+                              <a class="govuk-link govuk-link--no-visited-state ga-pageLink" data-ga-category="check your answers" data-ga-label="change link: urgent_hearing_details" href="/steps/application/urgent_hearing_details">
+                                Edit <span class="govuk-visually-hidden">your answer to, Urgent hearing details</span>
+                              </a>
+                            </dd>
+                          </div>
+                  </dl>
+
+
+
+
+
+
+
+
+
+
+      <!--End of Current or previous proceedings-->
+
+      <!--Start of Safety concerns: Your safety-->
+
+      <h2 class="app-task-list__section">
+        <span class="app-task-list__section-number">7. </span> Safety concerns
+      </h2>
+
+      <dl class="govuk-summary-list govuk-!-margin-bottom-9" id="applicant_abuse_details">
+
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key govuk-!-width-one-third">
+            Do you have any concerns for your safety or the safety of the children?
+          </dt>
+          <dd class="govuk-summary-list__value">
+            Yes
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a class="govuk-link" href="#">
+              Edit<span class="govuk-visually-hidden">your answer to, Have you suffered or are you at risk of suffering domestic violence or abuse?</span>
+            </a>
+          </dd>
+        </div>
+
+        <div class="govuk-summary-list__row" id="abuse_sexual">
+          <dt class="govuk-summary-list__key govuk-!-width-one-third">
+            Who are you concerned about?
+          </dt>
+          <dd class="govuk-summary-list__value">
+            <ul class="govuk-list govuk-list--bullet">
+              <li>The children in the application</li>
+              <li>Yourself</li>
+            </ul>
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a class="govuk-link govuk-link--no-visited-state ga-pageLink" href="">
+              Edit <span class="govuk-visually-hidden">your answer to, Sexual abuse</span>
+            </a>
+          </dd>
+        </div>
+        </dl>
+
+        <h3 class="app-task-list__section">
+          Safety concerns: the children in the application
+        </h3>
+
+              <dl class="govuk-summary-list govuk-!-margin-bottom-9" id="applicant_abuse_details">
+
+                <div class="govuk-summary-list__row" id="abuse_physical">
+                  <dt class="govuk-summary-list__key govuk-!-width-one-third">
+                    What type of behaviour have the children experienced or are at risk of experiencing?
+                  </dt>
+                  <dd class="govuk-summary-list__value">
+                    <ul class="govuk-list govuk-list--bullet">
+                      <li>Physical abuse</li>
+                      <li>Emotional abuse</li>
+                      <li>Abduction</li>
+                    </ul>
+                  </dd>
+                  <dd class="govuk-summary-list__actions">
+                    <a class="govuk-link govuk-link--no-visited-state ga-pageLink" href="">
+                      Edit <span class="govuk-visually-hidden">your answer to, Physical abuse</span>
+                    </a>
+                  </dd>
+                </div>
+
+                <div class="govuk-summary-list__row" id="language_interpreter">
+                  <dt class="govuk-summary-list__key govuk-!-width-one-third">
+                      Briefly describe the physical abuse against the children if you feel able to
+                  </dt>
+
+                  <dd class="govuk-summary-list__value">
+                      <dl class="govuk-summary-list">
+                        <div class="govuk-summary-list__row" id="urgent_hearing_when" style="border-bottom:1px solid #fff">
+                          <dt class="govuk-summary-list__key">
+                          Which children are you concerned about?
+                          </dt>
+                        </div>
+                        <div class="govuk-summary-list__row" >
+                          <dd class="govuk-summary-list__value">
+                            No
+                          </dd>
+                        </div>
+                        <div class="govuk-summary-list__row" style="border-bottom:1px solid #fff" >
+                          <dt class="govuk-summary-list__key">
+                        Describe the behaviours you would like the court to be aware of.
+                          </dt>
+                        </div>
+                        <div class="govuk-summary-list__row" >
+                          <dd class="govuk-summary-list__value">
+                            Yes
+                          </dd>
+                        </div>
+                        <div class="govuk-summary-list__row" style="border-bottom:1px solid #fff" >
+                          <dt class="govuk-summary-list__key">
+                          When did this behaviour start and how long did it continue?
+                          </dt>
+                        </div>
+                        <div class="govuk-summary-list__row" >
+                          <dd class="govuk-summary-list__value">
+                            Yes
+                          </dd>
+                        </div>
+                        <div class="govuk-summary-list__row" style="border-bottom:1px solid #fff" >
+                          <dt class="govuk-summary-list__key">
+                          Is the behaviour ongoing?
+                          </dt>
+                        </div>
+                        <div class="govuk-summary-list__row" >
+                          <dd class="govuk-summary-list__value">
+                            Yes
+                          </dd>
+                        </div>
+                        <div class="govuk-summary-list__row" style="border-bottom:1px solid #fff" >
+                          <dt class="govuk-summary-list__key">
+                          Have you ever asked for help from a professional person or agency?
+                          </dt>
+                        </div>
+                        <div class="govuk-summary-list__row" >
+                          <dd class="govuk-summary-list__value">
+                            Yes
+                          </dd>
+                        </div>
+                        <div class="govuk-summary-list__row" style="border-bottom:1px solid #fff" >
+                          <dt class="govuk-summary-list__key">
+                            What did they do?
+                          </dt>
+                        </div>
+                        <div class="govuk-summary-list__row" style="border-bottom:1px solid #fff" >
+                          <dd class="govuk-summary-list__value">
+                            Yes
+                          </dd>
+                        </div>
+                      </dl>
+                  </dd>
+
+                  <dd class="govuk-summary-list__actions">
+                    <a class="govuk-link govuk-link--no-visited-state ga-pageLink"href="">
+                      Edit <span class="govuk-visually-hidden">your answer to, Urgent hearing details</span>
+                    </a>
+                  </dd>
+                </div>
+
+                <div class="govuk-summary-list__row app-cya--answers-group" id="language_interpreter">
+                  <dt class="govuk-summary-list__key govuk-!-width-one-third app-cya--answers-group__key">
+                      Briefly describe the emotional abuse against the children if you feel able to
+                  </dt>
+                  <dd class="govuk-summary-list__value">
+                      <dl class="govuk-summary-list">
+                        <div class="govuk-summary-list__row" id="urgent_hearing_when" style="border-bottom:1px solid #fff">
+                          <dt class="govuk-summary-list__key">
+                          Which children are you concerned about?
+                          </dt>
+                        </div>
+                        <div class="govuk-summary-list__row" >
+                          <dd class="govuk-summary-list__value">
+                            No
+                          </dd>
+                        </div>
+                        <div class="govuk-summary-list__row" style="border-bottom:1px solid #fff" >
+                          <dt class="govuk-summary-list__key">
+                              Describe the behaviours you would like the court to be aware of.
+                          </dt>
+                        </div>
+                        <div class="govuk-summary-list__row" >
+                          <dd class="govuk-summary-list__value">
+                            Yes
+                          </dd>
+                        </div>
+                        <div class="govuk-summary-list__row" style="border-bottom:1px solid #fff" >
+                          <dt class="govuk-summary-list__key">
+                            When did this behaviour start and how long did it continue?
+                          </dt>
+                        </div>
+                        <div class="govuk-summary-list__row" >
+                          <dd class="govuk-summary-list__value">
+                            Yes
+                          </dd>
+                        </div>
+                        <div class="govuk-summary-list__row" style="border-bottom:1px solid #fff" >
+                          <dt class="govuk-summary-list__key">
+                          Is the behaviour ongoing?
+                          </dt>
+                        </div>
+                        <div class="govuk-summary-list__row" >
+                          <dd class="govuk-summary-list__value">
+                            Yes
+                          </dd>
+                        </div>
+                        <div class="govuk-summary-list__row" style="border-bottom:1px solid #fff" >
+                          <dt class="govuk-summary-list__key">
+                            Have you ever asked for help from a professional person or agency?
+                          </dt>
+                        </div>
+                        <div class="govuk-summary-list__row" >
+                          <dd class="govuk-summary-list__value">
+                            Yes
+                          </dd>
+                        </div>
+                        <div class="govuk-summary-list__row" style="border-bottom:1px solid #fff" >
+                          <dt class="govuk-summary-list__key">
+                              What did they do?
+                          </dt>
+                        </div>
+                        <div class="govuk-summary-list__row" style="border-bottom:1px solid #fff" >
+                          <dd class="govuk-summary-list__value">
+                            Yes
+                          </dd>
+                        </div>
+                      </dl>
+                  </dd>
+                  <dd class="govuk-summary-list__actions">
+                    <a class="govuk-link govuk-link--no-visited-state ga-pageLink" href="">
+                      Edit <span class="govuk-visually-hidden">your answer to, Urgent hearing details</span>
+                    </a>
+                  </dd>
+                </div>
+
+                <div class="govuk-summary-list__row" id="abuse_financial">
+                  <dt class="govuk-summary-list__key govuk-!-width-one-third">
+                    Why do you think the children may be abducted or kept outside the UK without your consent?
+                  </dt>
+                  <dd class="govuk-summary-list__value">
+                    No
+                  </dd>
+                  <dd class="govuk-summary-list__actions">
+                    <a class="govuk-link govuk-link--no-visited-state ga-pageLink" href="">
+                      Edit <span class="govuk-visually-hidden">your answer to, Financial abuse</span>
+                    </a>
+                  </dd>
+                </div>
+
+                <div class="govuk-summary-list__row" id="abuse_psychological">
+                  <dt class="govuk-summary-list__key govuk-!-width-one-third">
+                    Where are the children now?
+                  </dt>
+                  <dd class="govuk-summary-list__value">
+                    No
+                  </dd>
+                  <dd class="govuk-summary-list__actions">
+                    <a class="govuk-link govuk-link--no-visited-state ga-pageLink" href="">
+                      Edit <span class="govuk-visually-hidden">your answer to, Psychological abuse</span>
+                    </a>
+                  </dd>
+                </div>
+
+                <div class="govuk-summary-list__row app-cya--answers-group" id="language_interpreter">
+                  <dt class="govuk-summary-list__key govuk-!-width-one-third app-cya--answers-group__key">
+                    Do any of the children have a passport?
+                  </dt>
+
+                  <dd class="govuk-summary-list__value">
+                    <dl class="govuk-summary-list">
+                        <div class="govuk-summary-list__row" id="language_interpreter">
+                          <dd class="govuk-summary-list__value">
+                              Yes
+                          </dd>
+                        </div>
+                        <div class="govuk-summary-list__row" id="urgent_hearing_when" style="border-bottom:1px solid #fff">
+                          <dt class="govuk-summary-list__key">
+                          Do the children have more than one passport?
+                          </dt>
+                        </div>
+                        <div class="govuk-summary-list__row" >
+                          <dd class="govuk-summary-list__value">
+                            No
+                          </dd>
+                        </div>
+                        <div class="govuk-summary-list__row" style="border-bottom:1px solid #fff" >
+                          <dt class="govuk-summary-list__key">
+                            Who is in possession of the children’s passports?
+                          </dt>
+                        </div>
+                        <div class="govuk-summary-list__row" style="border-bottom:1px solid #fff" >
+                          <dd class="govuk-summary-list__value">
+                            Yes
+                          </dd>
+                        </div>
+                      </dl>
+                  </dd>
+                  <dd class="govuk-summary-list__actions">
+                    <a class="govuk-link govuk-link--no-visited-state ga-pageLink" href="">
+                      Edit <span class="govuk-visually-hidden">your answer to, Urgent hearing details</span>
+                    </a>
+                  </dd>
+                </div>
+
+                <div class="govuk-summary-list__row" id="abuse_psychological">
+                  <dt class="govuk-summary-list__key govuk-!-width-one-third">
+                      Has the passport office been notified?
+                  </dt>
+                  <dd class="govuk-summary-list__value">
+                    No
+                  </dd>
+                  <dd class="govuk-summary-list__actions">
+                    <a class="govuk-link govuk-link--no-visited-state ga-pageLink" href="">
+                      Edit <span class="govuk-visually-hidden">your answer to, Psychological abuse</span>
+                    </a>
+                  </dd>
+                </div>
+
+                <div class="govuk-summary-list__row" id="abuse_psychological">
+                  <dt class="govuk-summary-list__key govuk-!-width-one-third">
+                    Have the children been abducted or kept outside the UK without your consent before?
+                  </dt>
+                  <dd class="govuk-summary-list__value">
+                    No
+                  </dd>
+                  <dd class="govuk-summary-list__actions">
+                    <a class="govuk-link govuk-link--no-visited-state ga-pageLink" href="/steps/abuse_concerns/question?kind=psychological&amp;subject=applicant">
+                      Edit <span class="govuk-visually-hidden">your answer to, Psychological abuse</span>
+                    </a>
+                  </dd>
+                </div>
+
+
+                <div class="govuk-summary-list__row" id="abuse_psychological">
+                  <dt class="govuk-summary-list__key govuk-!-width-one-third">
+                    Provide details of the previous abductions
+                  </dt>
+                  <dd class="govuk-summary-list__value">
+                    No
+                  </dd>
+                  <dd class="govuk-summary-list__actions">
+                    <a class="govuk-link govuk-link--no-visited-state ga-pageLink" data-ga-category="check your answers" data-ga-label="change link: abuse_psychological" href="/steps/abuse_concerns/question?kind=psychological&amp;subject=applicant">
+                      Edit <span class="govuk-visually-hidden">your answer to, Psychological abuse</span>
+                    </a>
+                  </dd>
+                </div>
+
+                <div class="govuk-summary-list__row" id="abuse_psychological">
+                  <dt class="govuk-summary-list__key govuk-!-width-one-third">
+                    Were the police, private investigators or any other organisation involved?
+                  </dt>
+                  <dd class="govuk-summary-list__value">
+                    No
+                  </dd>
+                  <dd class="govuk-summary-list__actions">
+                    <a class="govuk-link govuk-link--no-visited-state ga-pageLink" data-ga-category="check your answers" data-ga-label="change link: abuse_psychological" href="/steps/abuse_concerns/question?kind=psychological&amp;subject=applicant">
+                      Edit <span class="govuk-visually-hidden">your answer to, Psychological abuse</span>
+                    </a>
+                  </dd>
+                </div>
+                </dl>
+
+
+
+        <h3 class="app-task-list__section">
+          Safety concerns: your safety
+        </h3>
+
+              <dl class="govuk-summary-list govuk-!-margin-bottom-9" id="applicant_abuse_details">
+
+                <div class="govuk-summary-list__row" id="abuse_physical">
+                  <dt class="govuk-summary-list__key govuk-!-width-one-third">
+                    What type of behaviour have you experienced or are at risk of experiencing?
+                  </dt>
+                  <dd class="govuk-summary-list__value">
+                    <ul class="govuk-list govuk-list--bullet">
+                      <li>Physical abuse</li>
+                      <li>Emotional abuse</li>
+
+                    </ul>
+                  </dd>
+                  <dd class="govuk-summary-list__actions">
+                    <a class="govuk-link govuk-link--no-visited-state ga-pageLink" href="">
+                      Edit <span class="govuk-visually-hidden">your answer to, Physical abuse</span>
+                    </a>
+                  </dd>
+                </div>
+
+                <div class="govuk-summary-list__row" id="language_interpreter">
+                  <dt class="govuk-summary-list__key govuk-!-width-one-third">
+                      Briefly describe the physical abuse if you feel able to
+                  </dt>
+
+                  <dd class="govuk-summary-list__value">
+                      <dl class="govuk-summary-list">
+                        <div class="govuk-summary-list__row" style="border-bottom:1px solid #fff" >
+                          <dt class="govuk-summary-list__key">
+                        Describe the behaviours you would like the court to be aware of.
+                          </dt>
+                        </div>
+                        <div class="govuk-summary-list__row" >
+                          <dd class="govuk-summary-list__value">
+                            Yes
+                          </dd>
+                        </div>
+                        <div class="govuk-summary-list__row" style="border-bottom:1px solid #fff" >
+                          <dt class="govuk-summary-list__key">
+                          When did this behaviour start and how long did it continue?
+                          </dt>
+                        </div>
+                        <div class="govuk-summary-list__row" >
+                          <dd class="govuk-summary-list__value">
+                            Yes
+                          </dd>
+                        </div>
+                        <div class="govuk-summary-list__row" style="border-bottom:1px solid #fff" >
+                          <dt class="govuk-summary-list__key">
+                          Is the behaviour ongoing?
+                          </dt>
+                        </div>
+                        <div class="govuk-summary-list__row" >
+                          <dd class="govuk-summary-list__value">
+                            Yes
+                          </dd>
+                        </div>
+                        <div class="govuk-summary-list__row" style="border-bottom:1px solid #fff" >
+                          <dt class="govuk-summary-list__key">
+                          Have you ever asked for help from a professional person or agency?
+                          </dt>
+                        </div>
+                        <div class="govuk-summary-list__row" >
+                          <dd class="govuk-summary-list__value">
+                            Yes
+                          </dd>
+                        </div>
+                        <div class="govuk-summary-list__row" style="border-bottom:1px solid #fff" >
+                          <dt class="govuk-summary-list__key">
+                            What did they do?
+                          </dt>
+                        </div>
+                        <div class="govuk-summary-list__row" style="border-bottom:1px solid #fff" >
+                          <dd class="govuk-summary-list__value">
+                            Yes
+                          </dd>
+                        </div>
+                      </dl>
+                  </dd>
+
+                  <dd class="govuk-summary-list__actions">
+                    <a class="govuk-link govuk-link--no-visited-state ga-pageLink"href="">
+                      Edit <span class="govuk-visually-hidden">your answer to, Urgent hearing details</span>
+                    </a>
+                  </dd>
+                </div>
+
+                <div class="govuk-summary-list__row app-cya--answers-group" id="language_interpreter">
+                  <dt class="govuk-summary-list__key govuk-!-width-one-third app-cya--answers-group__key">
+                    Briefly describe the emotional abuse if you feel able to
+                  </dt>
+                  <dd class="govuk-summary-list__value">
+                      <dl class="govuk-summary-list">
+
+
+                        <div class="govuk-summary-list__row" style="border-bottom:1px solid #fff" >
+                          <dt class="govuk-summary-list__key">
+                              Describe the behaviours you would like the court to be aware of.
+                          </dt>
+                        </div>
+                        <div class="govuk-summary-list__row" >
+                          <dd class="govuk-summary-list__value">
+                            Yes
+                          </dd>
+                        </div>
+                        <div class="govuk-summary-list__row" style="border-bottom:1px solid #fff" >
+                          <dt class="govuk-summary-list__key">
+                            When did this behaviour start and how long did it continue?
+                          </dt>
+                        </div>
+                        <div class="govuk-summary-list__row" >
+                          <dd class="govuk-summary-list__value">
+                            Yes
+                          </dd>
+                        </div>
+                        <div class="govuk-summary-list__row" style="border-bottom:1px solid #fff" >
+                          <dt class="govuk-summary-list__key">
+                          Is the behaviour ongoing?
+                          </dt>
+                        </div>
+                        <div class="govuk-summary-list__row" >
+                          <dd class="govuk-summary-list__value">
+                            Yes
+                          </dd>
+                        </div>
+                        <div class="govuk-summary-list__row" style="border-bottom:1px solid #fff" >
+                          <dt class="govuk-summary-list__key">
+                            Have you ever asked for help from a professional person or agency?
+                          </dt>
+                        </div>
+                        <div class="govuk-summary-list__row" >
+                          <dd class="govuk-summary-list__value">
+                            Yes
+                          </dd>
+                        </div>
+                        <div class="govuk-summary-list__row" style="border-bottom:1px solid #fff" >
+                          <dt class="govuk-summary-list__key">
+                              What did they do?
+                          </dt>
+                        </div>
+                        <div class="govuk-summary-list__row" style="border-bottom:1px solid #fff" >
+                          <dd class="govuk-summary-list__value">
+                            Yes
+                          </dd>
+                        </div>
+                      </dl>
+                  </dd>
+                  <dd class="govuk-summary-list__actions">
+                    <a class="govuk-link govuk-link--no-visited-state ga-pageLink" href="">
+                      Edit <span class="govuk-visually-hidden">your answer to, Urgent hearing details</span>
+                    </a>
+                  </dd>
+                </div>
+
+              </dl>
+
+              <h3 class="app-task-list__section">
+                Safety concerns: other concerns that you have
+              </h3>
+
+                    <dl class="govuk-summary-list govuk-!-margin-bottom-9" id="applicant_abuse_details">
+                      <div class="govuk-summary-list__row" id="abuse_psychological">
+                        <dt class="govuk-summary-list__key govuk-!-width-one-third">
+                          Have the children been impacted by drug, alcohol or substance abuse?
+                        </dt>
+
+                        <div class="govuk-summary-list__row">
+                          <dd class="govuk-summary-list__value">
+                            Yes
+                          </dd>
+                        </div>
+
+                        <div class="govuk-summary-list__row" style="border-bottom:1px solid #fff">
+                          <dt class="govuk-summary-list__key govuk-!-width-one-third">
+                            Details
+                          </dt>
+                        </div>
+
+                          <div class="govuk-summary-list__row" style="border-bottom:1px solid #fff">
+                            <dd class="govuk-summary-list__value">
+                              Provide details
+                            </dd>
+                          </div>
+
+                          <dd class="govuk-summary-list__actions">
+                            <a class="govuk-link govuk-link--no-visited-state ga-pageLink" data-ga-category="check your answers" data-ga-label="change link: abuse_psychological" href="/steps/abuse_concerns/question?kind=psychological&amp;subject=applicant">
+                              Edit <span class="govuk-visually-hidden">your answer to, Psychological abuse</span>
+                            </a>
+                          </dd>
+                      </div>
+
+                      <div class="govuk-summary-list__row" id="abuse_psychological">
+                        <dt class="govuk-summary-list__key govuk-!-width-one-third">
+                        Do you have any other concerns about the children’s safety and wellbeing?
+                        </dt>
+                        <div class="govuk-summary-list__row">
+                          <dd class="govuk-summary-list__value">
+                            Yes
+                          </dd>
+                        </div>
+
+                        <div class="govuk-summary-list__row" style="border-bottom:1px solid #fff">
+                          <dt class="govuk-summary-list__key govuk-!-width-one-third">
+                            Details
+                          </dt>
+                        </div>
+
+                          <div class="govuk-summary-list__row" style="border-bottom:1px solid #fff">
+                            <dd class="govuk-summary-list__value">
+                              Provide details
+                            </dd>
+                          </div>
+
+                          <dd class="govuk-summary-list__actions">
+                            <a class="govuk-link govuk-link--no-visited-state ga-pageLink" data-ga-category="check your answers" data-ga-label="change link: abuse_psychological" href="/steps/abuse_concerns/question?kind=psychological&amp;subject=applicant">
+                              Edit <span class="govuk-visually-hidden">your answer to, Psychological abuse</span>
+                            </a>
+                          </dd>
+                      </div>
+
+                      <div class="govuk-summary-list__row" id="abuse_psychological">
+                        <dt class="govuk-summary-list__key govuk-!-width-one-third">
+                        What do you want the court to do to keep you and the children safe?
+                        </dt>
+                        <dd class="govuk-summary-list__value">
+
+
+                        </dd>
+                        <dd class="govuk-summary-list__actions">
+                          <a class="govuk-link govuk-link--no-visited-state ga-pageLink" data-ga-category="check your answers" data-ga-label="change link: abuse_psychological" href="/steps/abuse_concerns/question?kind=psychological&amp;subject=applicant">
+                            Edit <span class="govuk-visually-hidden">your answer to, Psychological abuse</span>
+                          </a>
+                        </dd>
+                      </div>
+                      <div class="govuk-summary-list__row" id="abuse_psychological">
+                        <dt class="govuk-summary-list__key govuk-!-width-one-third">
+                      Do you agree to the children spending time with the other people in this application?
+                        </dt>
+                        <dd class="govuk-summary-list__value">
+
+
+                        </dd>
+                        <dd class="govuk-summary-list__actions">
+                          <a class="govuk-link govuk-link--no-visited-state ga-pageLink" data-ga-category="check your answers" data-ga-label="change link: abuse_psychological" href="/steps/abuse_concerns/question?kind=psychological&amp;subject=applicant">
+                            Edit <span class="govuk-visually-hidden">your answer to, Psychological abuse</span>
+                          </a>
+                        </dd>
+                      </div>
+                      <div class="govuk-summary-list__row" id="abuse_psychological">
+                        <dt class="govuk-summary-list__key govuk-!-width-one-third">
+                          Do you agree to the other people in this application being in touch with the children in other ways?
+                        </dt>
+                        <dd class="govuk-summary-list__value">
+
+
+                        </dd>
+                        <dd class="govuk-summary-list__actions">
+                          <a class="govuk-link govuk-link--no-visited-state ga-pageLink" data-ga-category="check your answers" data-ga-label="change link: abuse_psychological" href="/steps/abuse_concerns/question?kind=psychological&amp;subject=applicant">
+                            Edit <span class="govuk-visually-hidden">your answer to, Psychological abuse</span>
+                          </a>
+                        </dd>
+                      </div>
+
+
+                      </dl>
+
+      <!--End of Safety concerns: Your safety-->
+
+      <!--Start of Safety concerns: The children's safety-->
+
+      <h2 class="app-task-list__section">
+           <span class="app-task-list__section-number">8. </span> International elements
+      </h2>
+
+            <dl class="govuk-summary-list govuk-!-margin-bottom-9" id="applicant_abuse_details">
+              <div class="govuk-summary-list__row" id="abuse_psychological">
+                <dt class="govuk-summary-list__key govuk-!-width-one-third">
+                  Are the children's lives mainly based outside of England and Wales?
+                </dt>
+
+                <div class="govuk-summary-list__row">
+                  <dd class="govuk-summary-list__value">
+                    Yes
+                  </dd>
+                </div>
+
+                <div class="govuk-summary-list__row" style="border-bottom:1px solid #fff">
+                  <dt class="govuk-summary-list__key govuk-!-width-one-third">
+                    Details
+                  </dt>
+                </div>
+
+                  <div class="govuk-summary-list__row" style="border-bottom:1px solid #fff">
+                    <dd class="govuk-summary-list__value">
+                      Provide details
+                    </dd>
+                  </div>
+
+                  <dd class="govuk-summary-list__actions">
+                    <a class="govuk-link govuk-link--no-visited-state ga-pageLink" data-ga-category="check your answers" data-ga-label="change link: abuse_psychological" href="/steps/abuse_concerns/question?kind=psychological&amp;subject=applicant">
+                      Edit <span class="govuk-visually-hidden">your answer to, Psychological abuse</span>
+                    </a>
+                  </dd>
+              </div>
+
+              <div class="govuk-summary-list__row" id="abuse_psychological">
+                <dt class="govuk-summary-list__key govuk-!-width-one-third">
+                Are the children's parents (or anyone significant to the children) mainly based outside of England and Wales?
+                </dt>
+                <div class="govuk-summary-list__row">
+                  <dd class="govuk-summary-list__value">
+                    Yes
+                  </dd>
+                </div>
+
+                <div class="govuk-summary-list__row" style="border-bottom:1px solid #fff">
+                  <dt class="govuk-summary-list__key govuk-!-width-one-third">
+                    Details
+                  </dt>
+                </div>
+
+                  <div class="govuk-summary-list__row" style="border-bottom:1px solid #fff">
+                    <dd class="govuk-summary-list__value">
+                      Provide details
+                    </dd>
+                  </div>
+
+                  <dd class="govuk-summary-list__actions">
+                    <a class="govuk-link govuk-link--no-visited-state ga-pageLink" data-ga-category="check your answers" data-ga-label="change link: abuse_psychological" href="/steps/abuse_concerns/question?kind=psychological&amp;subject=applicant">
+                      Edit <span class="govuk-visually-hidden">your answer to, Psychological abuse</span>
+                    </a>
+                  </dd>
+              </div>
+
+              <div class="govuk-summary-list__row" id="abuse_psychological">
+                <dt class="govuk-summary-list__key govuk-!-width-one-third">
+                Could another person in the application apply for a similar order in a country outside England or Wales?
+                </dt>
+                <div class="govuk-summary-list__row">
+                  <dd class="govuk-summary-list__value">
+                    Yes
+                  </dd>
+                </div>
+
+                <div class="govuk-summary-list__row" style="border-bottom:1px solid #fff">
+                  <dt class="govuk-summary-list__key govuk-!-width-one-third">
+                    Details
+                  </dt>
+                </div>
+
+                  <div class="govuk-summary-list__row" style="border-bottom:1px solid #fff">
+                    <dd class="govuk-summary-list__value">
+                      Provide details
+                    </dd>
+                  </div>
+
+                  <dd class="govuk-summary-list__actions">
+                    <a class="govuk-link govuk-link--no-visited-state ga-pageLink" data-ga-category="check your answers" data-ga-label="change link: abuse_psychological" href="/steps/abuse_concerns/question?kind=psychological&amp;subject=applicant">
+                      Edit <span class="govuk-visually-hidden">your answer to, Psychological abuse</span>
+                    </a>
+                  </dd>
+              </div>
+
+              <div class="govuk-summary-list__row" id="abuse_psychological">
+                <dt class="govuk-summary-list__key govuk-!-width-one-third">
+                  Has another country asked (or been asked) for information or help for the children?
+                </dt>
+                <div class="govuk-summary-list__row">
+                  <dd class="govuk-summary-list__value">
+                    Yes
+                  </dd>
+                </div>
+
+                <div class="govuk-summary-list__row" style="border-bottom:1px solid #fff">
+                  <dt class="govuk-summary-list__key govuk-!-width-one-third">
+                    Details
+                  </dt>
+                </div>
+
+                  <div class="govuk-summary-list__row" style="border-bottom:1px solid #fff">
+                    <dd class="govuk-summary-list__value">
+                      Provide details
+                    </dd>
+                  </div>
+
+                  <dd class="govuk-summary-list__actions">
+                    <a class="govuk-link govuk-link--no-visited-state ga-pageLink" data-ga-category="check your answers" data-ga-label="change link: abuse_psychological" href="/steps/abuse_concerns/question?kind=psychological&amp;subject=applicant">
+                      Edit <span class="govuk-visually-hidden">your answer to, Psychological abuse</span>
+                    </a>
+                  </dd>
+              </div>
+              </dl>
+
+
+
+
+
+      <h2 class="app-task-list__section">
+        <span class="app-task-list__section-number">9. </span> Support you need during your case
+      </h2>
+
+      <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key govuk-!-width-one-third">
+            Would you be able to take part in hearings by video and phone?
+          </dt>
+          <dd class="govuk-summary-list__value">
+            {{ data['remotehearing'] }}
+           <p> {{ data['nophoneorvideo-details'] }}</p>
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a class="govuk-link" href="remotehearing">
+              Edit<span class="govuk-visually-hidden">remotehearing</span>
+            </a>
+          </dd>
+        </div>
+
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key govuk-!-width-one-third">
+            Do you have any language requirements?
+          </dt>
+          <dd class="govuk-summary-list__value">
+            {{ data['languagerequirements'] }}
+           <p> {{ data['languagerequirements-textarea'] }}</p>
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a class="govuk-link" href="languagerequirements">
+              Edit<span class="govuk-visually-hidden">languagerequirements</span>
+            </a>
+          </dd>
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key govuk-!-width-one-third">
+           Do you or the children need special safety arrangements at court?
+          </dt>
+          <dd class="govuk-summary-list__value">
+            <ul class="govuk-list govuk-list--bullet">
+              <li>
+              Separate waiting rooms
+              </li>
+              <li>
+                Protectice screens
+              </li>
+              <li>
+                Other: {value}
+              </li>
+          </dd>
+          <dd class="govuk-summary-list__actions govuk-!-width-one-third">
+            <a class="govuk-link" href="safetyrequirements">
+              Edit<span class="govuk-visually-hidden">safetyrequirements</span>
+            </a>
+          </dd>
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key govuk-!-width-one-third">
+           Do you have a physical, mental or learning disability or health condition that means you need support during your case?
+          </dt>
+          <dd class="govuk-summary-list__value">
+            <ul class="govuk-list govuk-list--bullet">
+              <li>
+                I I need documents in an alternative format
+              </li>
+              <li>
+                I need to bring support with me to a hearing
+              </li>
+            </ul>
+          </dd>
+          <dd class="govuk-summary-list__actions govuk-!-width-one-third">
+            <a class="govuk-link" href="start">
+              Edit<span class="govuk-visually-hidden">MIAM-willing</span>
+            </a>
+          </dd>
+        </div>
+
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key govuk-!-width-one-third">
+           I need documents in an alternative format
+          </dt>
+          <dd class="govuk-summary-list__value">
+            <ul class="govuk-list govuk-list--bullet">
+              <li>
+              Documents in a specified colour: {Value}
+              </li>
+              <li>
+                Documents read out to me
+              </li>
+              <li>
+                Documents in large print: {Value}
+              </li>
+            </ul>
+          </dd>
+          <dd class="govuk-summary-list__actions govuk-!-width-one-third">
+            <a class="govuk-link" href="start">
+              Edit<span class="govuk-visually-hidden">MIAM-willing</span>
+            </a>
+          </dd>
+        </div>
+
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key govuk-!-width-one-third">
+            I need to bring support with me to a court hearing
+          </dt>
+          <dd class="govuk-summary-list__value">
+            <ul class="govuk-list govuk-list--bullet">
+              <li>
+              A support worker or carer: {Value}
+              </li>
+              <li>
+                Therapy animal: {Value}
+              </li>
+
+            </ul>
+          </dd>
+          <dd class="govuk-summary-list__actions govuk-!-width-one-third">
+            <a class="govuk-link" href="start">
+              Edit<span class="govuk-visually-hidden">MIAM-willing</span>
+            </a>
+          </dd>
+        </div>
+
+      </dl>
+
+      <h2 class="app-task-list__section">
+        <span class="app-task-list__section-number">10. </span> How you will submit the application
+      </h2>
+
+      <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+
+        <div class="govuk-summary-list__row" id="risk_of_abduction">
+          <dt class="govuk-summary-list__key govuk-!-width-one-third">
+            How would you like to submit your application to court?
+          </dt>
+          <dd class="govuk-summary-list__value">
+              <dl class="govuk-summary-list">
+                <div class="govuk-summary-list__row" id="language_interpreter" style="border-bottom:1px solid #fff">
+
+                  <dd class="govuk-summary-list__value">
+                    Print and send by post
+                  </dd>
+
+                </div>
+
+
+
+                </dd>
+                <dd class="govuk-summary-list__actions">
+            <a class="govuk-link govuk-link--no-visited-state ga-pageLink" data-ga-category="check your answers" data-ga-label="change link: risk_of_abduction" href="/steps/safety_questions/risk_of_abduction">
+              Edit <span class="govuk-visually-hidden">your answer to, Are the children at risk of being abducted?</span>
+            </a>
+          </dd>
+        </div>
+        </dl>
+
+
+      <!--End of Safety concerns: The children's safety-->
+
+      <!--Start of Safety concerns: Abduction concerns-->
+
+      <h2 class="app-task-list__section">
+        <span class="app-task-list__section-number">11. </span> Help with Fees
+      </h2>
+
+      <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+
+        <div class="govuk-summary-list__row" id="risk_of_abduction">
+          <dt class="govuk-summary-list__key govuk-!-width-one-third">
+            Do you need help with paying the fee for this application?
+          </dt>
+          <dd class="govuk-summary-list__value">
+            No
+          </dd>
+          <dd class="govuk-summary-list__actions">
+
+            <a class="govuk-link govuk-link--no-visited-state ga-pageLink" data-ga-category="check your answers" data-ga-label="change link: risk_of_abduction" href="/steps/safety_questions/risk_of_abduction">
+              Edit <span class="govuk-visually-hidden">your answer to, Are the children at risk of being abducted?</span>
+            </a>
+          </dd>
+        </div>
+
+
+      </dl>
+
+
+
+      <!--End of Additional info: International elements-->
+
+
+      <!--Start of statement of truth-->
+
+      <div class="govuk-grid-column-full">
+
+        <h2 class="govuk-heading-l">Statement of Truth</h2>
+
+        <h2 class="govuk-heading-m govuk-!-padding-bottom-4">Confirm before you submit the application</h2>
+
+        <div class="govuk-warning-text">
+          <span class="govuk-warning-text__icon" aria-hidden="true">!</span>
+          <strong class="govuk-warning-text__text">
+            <span class="govuk-warning-text__assistive">Warning</span>
+            <div style="margin-top: -15px; margin-left: 10px;">Proceedings for contempt of court may be brought against anyone who makes, or causes to be made, a false statement verified by a statement of truth without an honest belief in its truth.</div>
+          </strong>
+        </div>
+
+        <div class="govuk-inset-text">
+          <p>Once you submit your application, you cannot make further changes. Select 'Save and come back later' to save your application, or select 'Continue' to complete your application.</p>
+            <p>You can download a copy of your submitted application in PDF format using the link provided.</p>
+        </div>
+
+        <div class="govuk-!-padding-bottom-6"></div>
+
+        <div class="govuk-form-group">
+          <div class="govuk-checkboxes govuk-!-padding-bottom-2">
+            <div class="govuk-checkboxes__item">
+              <input class="govuk-checkboxes__input" style="background-color: white" id="statement-truth" name="statement-truth" type="checkbox" value="checked">
+              <label class="govuk-label govuk-checkboxes__label" for="statement-truth">
+                I believe that the facts stated in this application are true
+              </label>
+            </div>
+          </div>
+        </div>
+
+
+        <p class="govuk-body govuk-!-padding-bottom-4">
+          This confirms that the information you are submitting is true and accurate, to the best of your knowledge. It’s known as your ‘statement of truth’.
+        </p>
+
+      <div class="govuk-!-padding-bottom-6"></div>
+
+      </div>
+
+
+
+
+      <!--End of statement of truth-->
+
+
+      <div class="govuk-button-group">
+
+        <form action="submissionguidance" method="post" novalidate>
+
+          <input type="hidden" name="answers-checked" value="true">
+
+          <button class="govuk-button" data-module="govuk-button" >Continue</button>
+
+        </form>
+
+        <form action="../../applicanttasklist/inprogress" method="post" novalidate>
+
+          <input type="hidden" name="answers-checked" value="true">
+
+          <button class="govuk-button govuk-button--secondary" data-module="govuk-button"  value="Save and come back later">Save and come back later</button>
+
+        </form>
+
+      </div>
+
+
+      <details class="govuk-details" data-module="govuk-details">
+        <summary class="govuk-details__summary">
+          <span class="govuk-details__summary-text" data-ga-category="explanations" data-ga-label="cya download draft">
+            Download a draft of your application (PDF)
+          </span>
+        </summary>
+        <div class="govuk-details__text">
+          <p class="govuk-body">
+            If you cannot open the PDF file after downloading, download and install
+            <a href="https://get.adobe.com/uk/reader/" class="govuk-link" rel="external" target="_blank">Adobe Acrobat Reader</a> to try again.
+          </p>
+          <p class="govuk-body">
+            Please note this draft is for your records. Only the completed application will be admitted in court.
+          </p>
+
+          <a class="govuk-button ga-pageLink govuk-button--secondary" role="button" draggable="false" data-module="govuk-button" data-ga-category="check your answers" data-ga-label="download draft" download="" href="/steps/completion/summary.pdf">Download draft application</a>
+
+        </div>
+      </details>
+
+
+
+
+
+    </main>
+
+  </div>
+
+</div>
+
+
+{% endblock %}

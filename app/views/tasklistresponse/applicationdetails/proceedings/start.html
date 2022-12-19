@@ -1,0 +1,110 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Child arrangements
+{% endblock %}
+
+{% block header %}
+  <!-- Blank header with no service name for the start page -->
+
+{{ govukHeader({
+    homepageUrl: "/",
+    serviceName: serviceName,
+    serviceUrl: "/",
+    containerClasses: "govuk-width-container"
+}) }}
+
+{% endblock %}
+
+{% block content %}
+ <div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <div class="govuk-width-container">
+      <a href="#" onclick="history.back(-1)" class="govuk-back-link">Back</a>
+
+      <main class="govuk-main-wrapper " id="main-content" role="main">
+
+        <form action="start-answer" method="post" novalidate>
+
+        <div class="govuk-form-group">
+          <fieldset class="govuk-fieldset">
+            <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+
+              <h1 class="govuk-heading-xl">Have you or the children ever been involved in court proceedings?</h1>
+
+            </legend>
+            <h2 class="govuk-heading-m">Have the children been involved in a court case?</h2>
+            <div class="govuk-radios" data-module="govuk-radios">
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="childrenorders-yes" name="childrenorders" type="radio" value="yes">
+                <label class="govuk-label govuk-radios__label" for="answer-1">
+                 Yes
+                </label>
+              </div>
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="childrenorders-no" name="childrenorders" type="radio" value="no">
+                <label class="govuk-label govuk-radios__label" for="answer-2">
+                  No
+                </label>
+              </div>
+
+            </div>
+          </fieldset>
+        </div>
+
+                <div class="govuk-form-group">
+                  <fieldset class="govuk-fieldset">
+                    <h2 class="govuk-heading-m">Have you had a court order made for your protection?</h2>
+                    <div class="govuk-radios" data-module="govuk-radios">
+                      <div class="govuk-radios__item">
+                        <input class="govuk-radios__input" id="protection-yes" name="protection" type="radio" value="yes">
+                        <label class="govuk-label govuk-radios__label" for="answer-1">
+                         Yes
+                        </label>
+                      </div>
+                      <div class="govuk-radios__item">
+                        <input class="govuk-radios__input" id="protection-no" name="protection" type="radio" value="no">
+                        <label class="govuk-label govuk-radios__label" for="answer-2">
+                          No
+                        </label>
+                      </div>
+                    </div>
+                </div>
+
+                <div class="govuk-button-group govuk-!-margin-top-6">
+                  <button class="govuk-button" data-module="govuk-button">
+                    Save and continue
+                  </button>
+                </div>
+    </form>
+
+
+  </main>
+</div>
+    </div>
+    <div class="govuk-grid-column-one-third">
+
+    		<details class="govuk-details" data-module="govuk-details">
+ 			 <summary class="govuk-details__summary">
+   			 <span class="govuk-details__summary-text">
+    		  Contacts for help
+  			  </span>
+  			</summary>
+  			<div class="govuk-details__text">
+   			 Ask a question or get any help in any language
+   			 <p class="govuk-body govuk-!-font-weight-bold">Telephone</p>
+
+   			 <p class="govuk-body govuk-!-font-weight-regular">0300 303 0742</p>
+   			 <p class="govuk-body govuk-!-font-weight-regular">Monday to Friday, 8am to 8pm</p>
+   			 <a href="#" class="govuk-link">Find out about call charges</a>
+   			 <p class="govuk-body govuk-!-font-weight-regular">(opens in a new window)</p>
+
+			  </div>
+			</details>
+
+    </div>
+  </div>
+
+
+
+{% endblock %}

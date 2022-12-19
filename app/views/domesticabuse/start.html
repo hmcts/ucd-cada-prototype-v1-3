@@ -1,0 +1,212 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Start page example
+{% endblock %}
+
+{% block header %}
+  <!-- Blank header with no service name for the start page -->
+
+{{ govukHeader({
+    homepageUrl: "/",
+    serviceName: serviceName,
+    serviceUrl: "/",
+    containerClasses: "govuk-width-container"
+}) }}
+
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+
+    <div class="govuk-grid-column-two-thirds">
+
+      <h1 class="govuk-heading-l">Progess bar proof of concept</h1>
+
+      <h2 class="govuk-heading-m">
+        Desktop progress bar - Responsive mode: vertical
+      </h2>
+
+        <!-- start components here -->
+
+        <div class="hmcts-progress-bar" role="progressbar">
+          <ol class="hmcts-progress-bar__list">
+          
+          <li class="hmcts-progress-bar__list-item">
+            <span class="hmcts-progress-bar__icon hmcts-progress-bar__icon--complete"></span>
+            <span class="hmcts-progress-bar__label">Application issued</span>
+            <span class="govuk-visually-hidden">Step 1: Application issued</span>
+          </li>
+          
+          <li class="hmcts-progress-bar__list-item" aria-current="step">
+            <span class="hmcts-progress-bar__icon"></span>
+            <span class="hmcts-progress-bar__label">Response submitted</span>
+            <span class="govuk-visually-hidden">Current Step 2: Response submitted</span>
+          </li>
+          
+          <li class="hmcts-progress-bar__list-item">
+            <span class="hmcts-progress-bar__icon"></span>
+            <span class="hmcts-progress-bar__label">Hearing</span>
+            <span class="govuk-visually-hidden">Step 3: Hearing</span>
+          </li>
+          
+          <li class="hmcts-progress-bar__list-item">
+            <span class="hmcts-progress-bar__icon"></span>
+            <span class="hmcts-progress-bar__label">Order</span>
+            <span class="govuk-visually-hidden">Step 4: Order</span>
+          </li>
+
+
+          <li class="hmcts-progress-bar__list-item">
+            <span class="hmcts-progress-bar__icon"></span>
+            <span class="hmcts-progress-bar__label">Final order</span>
+            <span class="govuk-visually-hidden">Step 5: Final order</span>
+          </li>
+
+          <li class="hmcts-progress-bar__list-item">
+            <span class="hmcts-progress-bar__icon"></span>
+            <span class="hmcts-progress-bar__label">Case reopened</span>
+            <span class="govuk-visually-hidden">Step 5: Case reopened</span>
+          </li>
+
+
+          </ol>
+        </div> 
+
+
+        <br><br><br>
+
+
+        <h2 class="govuk-heading-m">
+          Desktop progress bar - Responsive mode: active only
+        </h2>
+
+
+        <div class="hmcts-progress-bar-active" role="progressbar" >
+            <ol class="hmcts-progress-bar__list">
+            
+            <li class="hmcts-progress-bar__list-item">
+              <span class="hmcts-progress-bar__icon hmcts-progress-bar__icon--complete"></span>
+              <span class="hmcts-progress-bar__label">You apply</span>
+              <span class="govuk-visually-hidden">Step 1: You apply</span>
+            </li>
+            
+            <li class="hmcts-progress-bar__list-item" aria-current="step">
+              <span class="hmcts-progress-bar__icon"></span>
+              <span class="hmcts-progress-bar__label">Response submitted</span>
+              <span class="govuk-visually-hidden">Current step 2: Response submitted</span>
+            </li>
+            
+            <li class="hmcts-progress-bar__list-item">
+              <span class="hmcts-progress-bar__icon"></span>
+              <span class="hmcts-progress-bar__label">The court decides</span>
+              <span class="govuk-visually-hidden">Step 3: The court decides</span>
+            </li>
+            
+            <li class="hmcts-progress-bar__list-item">
+              <span class="hmcts-progress-bar__icon"></span>
+              <span class="hmcts-progress-bar__label">Order</span>
+              <span class="govuk-visually-hidden">Step 4: Order</span>
+            </li>
+          
+          
+            <li class="hmcts-progress-bar__list-item">
+              <span class="hmcts-progress-bar__icon"></span>
+              <span class="hmcts-progress-bar__label">Final order</span>
+              <span class="govuk-visually-hidden">Step 5: Final order</span>
+            </li>
+          
+            <li class="hmcts-progress-bar__list-item">
+              <span class="hmcts-progress-bar__icon"></span>
+              <span class="hmcts-progress-bar__label">Case reopened</span>
+              <span class="govuk-visually-hidden">Step 6: Case reopened</span>
+            </li>
+            
+            </ol>
+          </div> 
+
+          <br><br><br>
+
+          <h2 class="govuk-heading-m">
+            Progress bar as an image - with alt text for screenreaders       
+          </h2>
+      
+          <img src="../public/images/svgImage.png" width="100%" alt="Progress stage: Response submitted">
+
+          <!-- end components here -->
+
+        </div>
+
+
+        <div class="govuk-grid-column-one-third">
+            <p class="govuk-body">This is the one third container This is the one third containerThis is the one third containerThis is the one third containerThis is the one third containerThis is the one third containerThis is the one third containerThis is the one third containerThis is the one third containerThis is the one third containerThis is the one third containerThis is the one third containerThis is the one third containerThis is the one third container</p>
+        </div>
+
+
+</div>
+
+
+
+
+<style>
+
+  .hmcts-progress-bar__list-item { width:100px; display:inline-block }
+
+.hmcts-progress-bar__icon {
+    background-color: #fff;
+    border: 4px solid #CECECE
+}
+
+.hmcts-progress-bar__icon--complete { 
+    background-color: #1D70B8;
+    border: 4px solid #1D70B8
+
+}
+
+.hmcts-progress-bar__list::before {
+    border-top: 4px solid #CECECE;
+}
+
+
+  @media screen and (max-width:1200px) {
+
+    .hmcts-progress-bar .hmcts-progress-bar__list-item { max-width:45px; display:block; margin-top: 10px; }
+    .hmcts-progress-bar .hmcts-progress-bar__list::before {
+      border-top: none;
+      position: absolute;
+      top: 0px;
+      border-left: 6px solid #CECECE;
+      height: 100%;
+      position: absolute;
+      left:20px;
+      top: 0;
+
+  }
+  
+  .hmcts-progress-bar .hmcts-progress-bar__label { margin-top:-25px; margin-left:50px; width:350px; text-align:left }
+
+  
+    .hmcts-progress-bar-active .hmcts-progress-bar__list-item { max-width:45px; display:block; margin-top: 10px; }
+    .hmcts-progress-bar-active .hmcts-progress-bar__list::before {
+      border-top: none;
+      position: absolute;
+      top: 0px;
+      border-left: 6px solid #CECECE;
+      height: 100%;
+      position: absolute;
+      left:20px;
+      top: 0;
+  }
+
+  .hmcts-progress-bar-active .hmcts-progress-bar__label { margin-top:-25px; margin-left:50px; width:350px; text-align:left }
+  .hmcts-progress-bar-active .hmcts-progress-bar__list-item { display:none }
+  .hmcts-progress-bar-active .hmcts-progress-bar__list-item[aria-current=step] { display:block }
+
+  }
+  
+  </style>
+
+
+
+{% endblock %}

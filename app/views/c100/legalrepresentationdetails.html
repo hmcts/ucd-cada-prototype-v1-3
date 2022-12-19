@@ -1,0 +1,99 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Child arrangement respondent
+{% endblock %}
+
+{% block header %}
+  <!-- Blank header with no service name for the start page -->
+
+{{ govukHeader({
+    homepageUrl: "/",
+    serviceName: serviceName,
+    serviceUrl: "/",
+    containerClasses: "govuk-width-container"
+}) }}
+
+{% endblock %}
+
+{% block content %}
+<div class="govuk-grid-row">
+   <div class="govuk-grid-column-two-thirds">
+    <div class="govuk-width-container">
+     <a href="#" onclick="history.back(-1)" class="govuk-back-link">Back</a>
+
+     <main class="govuk-main-wrapper app-main-class" id="main-content" role="main">
+         <form action="legalrepresentationaddress" method="post" novalidate>
+
+           <h1 class="govuk-heading-xl">Details of solicitor</h1>
+
+           <p class="govuk-body-l">This is the person who’s been instructed to act in these proceedings.</p>
+
+      <form class="edit_steps_solicitor_personal_details_form" id="new_steps_solicitor_personal_details_form" action="/steps/solicitor/personal_details" accept-charset="UTF-8" method="post">
+        <input name="utf8" type="hidden" value="✓">
+        <input type="hidden" name="_method" value="put">
+        <input type="hidden" name="authenticity_token" value="3nPt3GgBWCA0TtkZB2R7pFRCI44YvrpZZVndpEU9LNdUPQckFeabNpuXK8ZE4NI6AdEDroFlnqLtWJ9zBdte0A==">
+        <div class="govuk-form-group">
+          <label for="steps-solicitor-personal-details-form-full-name-field" class="govuk-label">
+            Full name
+          </label>
+          <input id="steps-solicitor-personal-details-form-full-name-field" class="govuk-input" type="text" value="" name="steps_solicitor_personal_details_form[full_name]">
+        </div>
+        <div class="govuk-form-group">
+          <label for="steps-solicitor-personal-details-form-firm-name-field" class="govuk-label">
+            Name of firm
+          </label>
+          <input id="steps-solicitor-personal-details-form-firm-name-field" class="govuk-input" type="text" value="" name="steps_solicitor_personal_details_form[firm_name]">
+        </div>
+        <div class="govuk-form-group">
+          <label for="steps-solicitor-personal-details-form-reference-field" class="govuk-label">
+            Solicitor’s reference
+          </label>
+          <span class="govuk-hint" id="steps-solicitor-personal-details-form-reference-hint">
+            This is the reference for this case
+          </span>
+          <input id="steps-solicitor-personal-details-form-reference-field" class="govuk-input" aria-describedby="steps-solicitor-personal-details-form-reference-hint" type="text" value="" name="steps_solicitor_personal_details_form[reference]">
+        </div>
+
+
+            <div class="govuk-button-group govuk-!-margin-top-6">
+              <button class="govuk-button" data-module="govuk-button">
+                Continue
+              </button>
+              <a class="govuk-button govuk-button--secondary" href="../../applicanttasklist/inprogress"  data-module="govuk-button">
+                Save and come back later
+              </a>
+
+            </div>
+          </form>
+
+
+       </main>
+
+
+    </div>
+  </div>
+
+  <div class="govuk-grid-column-one-third">
+    <details class="govuk-details" data-module="govuk-details">
+ 			 <summary class="govuk-details__summary">
+   			 <span class="govuk-details__summary-text">
+    		  Contacts for help
+  			  </span>
+  			</summary>
+  			<div class="govuk-details__text">
+   			 Ask a question or get any help in any language
+   			 <p class="govuk-body govuk-!-font-weight-bold">Telephone</p>
+
+   			 <p class="govuk-body govuk-!-font-weight-regular">0300 303 0742</p>
+   			 <p class="govuk-body govuk-!-font-weight-regular">Monday to Friday, 8am to 8pm</p>
+   			 <a href="#" class="govuk-link">Find out about call charges</a>
+   			 <p class="govuk-body govuk-!-font-weight-regular">(opens in a new window)</p>
+			  </div>
+			</details>
+    </div>
+</div>
+
+
+
+{% endblock %}

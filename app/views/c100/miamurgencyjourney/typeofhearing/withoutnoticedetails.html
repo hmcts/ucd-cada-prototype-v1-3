@@ -1,0 +1,134 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Child arrangement respondent
+{% endblock %}
+
+{% block header %}
+  <!-- Blank header with no service name for the start page -->
+
+{{ govukHeader({
+    homepageUrl: "/",
+    serviceName: serviceName,
+    serviceUrl: "/",
+    containerClasses: "govuk-width-container"
+}) }}
+
+{% endblock %}
+
+{% block content %}
+<div class="govuk-grid-row">
+   <div class="govuk-grid-column-two-thirds">
+
+    <div class="govuk-width-container">
+
+       <a href="#" onclick="history.back(-1)" class="govuk-back-link">Back</a>
+
+      <main class="govuk-main-wrapper " id="main-content" role="main">
+
+        <form action="../typeoforder/courtorder" method="post" novalidate>
+          <h1 class="govuk-heading-xl">Details of without notice hearing</h1>
+
+            <div class="govuk-form-group">
+              <h2 class="govuk-heading-m">Give details of why you’re asking for a without notice hearing</h2>
+              <span class="govuk-hint">A judge will need to be sure that there is a good reason why the other people in the application should not be told about the application before the hearing takes place.</span>
+              <textarea id="withoutnoticedetails-textarea" class="govuk-textarea" rows="5" aria-describedby="withoutnoticedetails-hint" name="withoutnoticedetails-textarea"></textarea>
+            </div>
+
+            <div class="govuk-form-group">
+              <fieldset class="govuk-fieldset">
+                <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+                  <span class="govuk-fieldset__heading">Are you asking for a without notice hearing because the other person or people may do something that would obstruct the order you are asking for if they knew about the application?</span>
+                </legend>
+                <div class="govuk-radios" data-module="govuk-radios">
+                  <div class="govuk-radios__item">
+                    <input id="avoidobstruction-yes" class="govuk-radios__input" type="radio" value="yes" name="savoidobstruction" aria-controls="avoidobstruction-conditional" aria-expanded="false">
+                    <label for="avoidobstruction-yes" class="govuk-label govuk-radios__label">Yes</label>
+                  </div>
+
+                  <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="avoidobstruction-conditional">
+                    <div class="govuk-form-group">
+                      <label for="avoidobstruction-details" class="govuk-label">Provide details</label>
+                      <textarea id="savoidobstruction-textarea" class="govuk-textarea" rows="5" name="avoidobstruction-details">
+                      </textarea>
+                    </div>
+                  </div>
+                  <div class="govuk-radios__item">
+                    <input id="avoidobstruction-no" class="govuk-radios__input" type="radio" value="no" name="avoidobstruction">
+                    <label for="avoidobstruction-no" class="govuk-label govuk-radios__label">No</label>
+                  </div>
+                </div>
+              </fieldset>
+            </div>
+
+            <div class="govuk-form-group">
+              <fieldset class="govuk-fieldset">
+                <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+                  <span class="govuk-fieldset__heading">Are you asking for a without notice hearing because there is literally no time to give notice of the application to the other person or people?</span>
+                </legend>
+                <span class="govuk-hint" id="extremeurgency-hint">This may be relevant in cases of exceptional urgency where the order is needed to prevent a threatened wrongful act. In some cases you may still be expected to have tried to give informal notice for example by telephone, text message, or email.</span>
+                <div class="govuk-radios" data-module="govuk-radios">
+                  <div class="govuk-radios__item">
+                    <input id="extremeurgency-yes" class="govuk-radios__input" type="radio" value="yes" name="extremeurgency" aria-controls="extremeurgency-conditional" aria-expanded="false">
+                    <label for="extremeurgency-yes" class="govuk-label govuk-radios__label">Yes</label>
+                  </div>
+                  <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="extremeurgency-conditional">
+                    <div class="govuk-form-group">
+                      <label for="extremeurgency-details" class="govuk-label">Provide details</label>
+                      <textarea id="extremeurgency-details-textarea" class="govuk-textarea" rows="5" name="extremeurgency-textarea">
+                      </textarea>
+                    </div>
+                  </div>
+                  <div class="govuk-radios__item">
+                    <input id="extremeurgency-no" class="govuk-radios__input" type="radio" value="no" name="extremeurgency">
+                    <label for="extremeurgency-no" class="govuk-label govuk-radios__label">No</label>
+                  </div>
+                </div>
+              </fieldset>
+            </div>
+
+
+
+            <div class="govuk-button-group govuk-!-margin-top-6">
+              <button class="govuk-button" data-module="govuk-button">
+                Continue
+              </button>
+              <a class="govuk-button govuk-button--secondary" href="../../applicanttasklist/inprogress"  data-module="govuk-button">
+                Save and come back later
+              </a>
+
+            </div>
+
+
+
+                 </form>
+
+      </main>
+
+
+    </div>
+  </div>
+
+  <div class="govuk-grid-column-one-third">
+    <details class="govuk-details" data-module="govuk-details">
+  			 <summary class="govuk-details__summary">
+   			 <span class="govuk-details__summary-text">
+    		  Contacts for help
+  			  </span>
+  			</summary>
+  			<div class="govuk-details__text">
+   			 Ask a question or get any help in any language
+   			 <p class="govuk-body govuk-!-font-weight-bold">Telephone</p>
+
+   			 <p class="govuk-body govuk-!-font-weight-regular">0300 303 0742</p>
+   			 <p class="govuk-body govuk-!-font-weight-regular">Monday to Friday, 8am to 8pm</p>
+   			 <a href="#" class="govuk-link">Find out about call charges</a>
+   			 <p class="govuk-body govuk-!-font-weight-regular">(opens in a new window)</p>
+  		  </div>
+  	</details>
+  </div>
+</div>
+
+
+
+{% endblock %}

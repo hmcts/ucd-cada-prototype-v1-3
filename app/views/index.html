@@ -1,0 +1,73 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  HMCTS prototyping
+{% endblock %}
+
+
+{% block header %}
+  <!-- Blank header with no service name for the start page -->
+
+{{ govukHeader({
+    homepageUrl: "/",
+    serviceName: "HMCTS",
+    serviceUrl: "/",
+    containerClasses: "govuk-width-container"
+}) }}
+
+{% endblock %}
+
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+      <h1 class="govuk-heading-l">
+        HMCTS prototyping for CA and DA : <span style="color:red">DESIGN ONLY.</span>
+      </h1>
+
+      <h2 class="govuk-heading-m">Child arrangements</h2>
+      <p>Prototyping for CA</p>
+
+      <Ol class="govuk-list govuk-list--number">
+        <li><a href="/idam/payonline.html">Applicant Journey - pay online (START HERE)</a></li>
+
+        <li><a href="/idam/setpassword.html">Applicant Journey - IDAM set password</a></li>
+
+        <li><a href="/applicanttasklist/presub">Applicant - start application from mini-dashboard</a></li>
+
+        <li><a href="applicanttasklist/appserved">Applicant - application in progress dashboard</a></li>
+        
+        <li><a href="/respondenttasklist/startreply">Respondent journey - strat on dashboard</a></li>
+
+        <li><a href="/respondenttasklist/speakwithcafcass.html">Respondent dashboard - after responding</a></li>
+
+        <li><a href="/solicitortasklistresponse/start">Solicitors respondent journey</a></li>
+
+       
+      </Ol>
+
+      <h2 class="govuk-heading-m">Domestic abuse</h2>
+      <p>Prototyping for DA</p>
+         <ol class="govuk-list govuk-list--number">
+        <li><a href="/applicantjourney/start">Applicant journey for DA</a></li>
+        <li><a href="/darespondenttasklist/start">Respondent journey for DA</a></li>
+      </ol>
+
+
+      <h2 class="govuk-heading-m">Proof of concept</h2>
+      <p>Prototyping for new components</p>
+      <ol class="govuk-list govuk-list--number">
+        <li><a href="/progressbar/start">Progress bar</a></li>
+        <li><a href="/tags/start">Status tags</a></li>
+        <li><a href="/tracks/start">Train tracks for CA and DA</a></li>
+        <li><a href="/accountdashboard.html">Case dashboard (all cases)</a></li>
+        <li><a href="/alldashboards">All dashboards</a></li>
+      </ol>
+
+    </div>
+  </div>
+
+
+{% endblock %}

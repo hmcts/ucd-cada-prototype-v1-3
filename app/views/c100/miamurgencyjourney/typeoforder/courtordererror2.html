@@ -1,0 +1,249 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Child arrangement respondent
+{% endblock %}
+
+{% block header %}
+  <!-- Blank header with no service name for the start page -->
+
+{{ govukHeader({
+    homepageUrl: "/",
+    serviceName: serviceName,
+    serviceUrl: "/",
+    containerClasses: "govuk-width-container"
+}) }}
+
+{% endblock %}
+
+{% block content %}
+<div class="govuk-grid-row">
+   <div class="govuk-grid-column-two-thirds">
+    <div class="govuk-width-container">
+     <a href="#" onclick="history.back(-1)" class="govuk-back-link">Back</a>
+
+     <main class="govuk-main-wrapper app-main-class" id="main-content" role="main">
+         <form action="courtorder-answer" method="post" novalidate>
+           <div class="govuk-error-summary" aria-labelledby="error-summary-title" role="alert" data-module="govuk-error-summary">
+             <h2 class="govuk-error-summary__title" id="error-summary-title">
+               There is a problem on this page
+             </h2>
+             <div class="govuk-error-summary__body">
+               <ul class="govuk-list govuk-error-summary__list">
+                 <li>
+                   <a href="#solicitor">Select what you are asking the court to do</a>
+                 </li>
+                 <li>
+                   <a href="#solicitor">Specify what you want the court to the other people in the application doing</a>
+                 </li>
+                 <li>
+                   <a href="#solicitor">Specify what issue you want the court to resolve</a>
+                 </li>
+               </ul>
+             </div>
+           </div>
+
+           <div class="govuk-form-group">
+             <fieldset class="govuk-fieldset">
+               <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl">
+                 <h1 class="govuk-fieldset__heading">What are you asking the court to do?
+                 </h1>
+               </legend>
+               <div class="govuk-!-padding-bottom-4"></div>
+
+               <span class="govuk-hint" id="courtorder-hint">Select all that apply</span>
+               <div class="govuk-!-padding-bottom-2"></div>
+
+               <div class="govuk-checkboxes" data-module="govuk-checkboxes">
+               <div class="govuk-checkboxes__item">
+                 <input id="child-arrangements-home" class="govuk-checkboxes__input" type="checkbox" value="child_arrangements_home" name="typeoforder">
+                 <label for="child-arrangements-home" class="govuk-label govuk-checkboxes__label">Decide who the children live with and when
+                 </label>
+               </div>
+
+             <div class="govuk-checkboxes__item">
+               <input id="child-arrangements-time" class="govuk-checkboxes__input" type="checkbox" value="child_arrangements_time" name="typeoforder">
+               <label for="child-arrangements-time" class="govuk-label govuk-checkboxes__label">Decide how much time the children spend with each person
+               </label>
+             </div>
+
+             <div class="govuk-checkboxes__item">
+               <input id="prohibited-steps" class="govuk-checkboxes__input" aria-describedby="prohibited-steps-hint" type="checkbox" value="group_prohibited_steps" name="prohibited-steps" aria-controls="prohibited-steps-conditional" aria-expanded="false" checked="checked">
+               <label for="prohibited-steps-field" class="govuk-label govuk-checkboxes__label">
+                 Stop the other people in the application doing something
+               </label>
+                 <span class="govuk-hint govuk-checkboxes__hint" id="prohibited-steps-hint">For example, moving abroad or abducting the children</span>
+               </div>
+
+               <div class="govuk-checkboxes__conditional govuk-checkboxes__conditional--hidden" id="prohibited-steps-conditional">
+                 <div class="govuk-form-group govuk-form-group--error">
+                   <p id="where-do-you-live-error" class="govuk-error-message">
+                     <span class="govuk-visually-hidden">Error:</span>Specify what you want the court to the other people in the application doing
+                   </p>
+                 <fieldset class="govuk-fieldset">
+                   <div class="govuk-checkboxes" data-module="govuk-checkboxes">
+                     <div class="govuk-checkboxes__item">
+                       <input id="prohibitedsteps-1" class="govuk-checkboxes__input" type="checkbox" value="prohibited_steps_names" name="prohibitedsteps-types">
+                       <label for="prohibitedsteps-1" class="govuk-label govuk-checkboxes__label">
+                         Changing the children's names or surname
+                       </label>
+                     </div>
+                     <div class="govuk-checkboxes__item">
+                       <input id="prohibitedsteps-2" class="govuk-checkboxes__input" type="checkbox" value="prohibited_steps_medical" name="prohibitedsteps-types">
+                       <label for="sprohibitedsteps-2" class="govuk-label govuk-checkboxes__label">
+                         Allowing medical treatment to be carried out on the children
+                       </label>
+                     </div>
+
+                     <div class="govuk-checkboxes__item">
+                       <input id="prohibitedsteps-3" class="govuk-checkboxes__input" type="checkbox" value="prohibited_steps_holiday" name="prohibitedsteps-types">
+                       <label for="prohibitedsteps-3" class="govuk-label govuk-checkboxes__label">
+                         Taking the children on holiday
+                       </label>
+                     </div>
+                     <div class="govuk-checkboxes__item">
+                       <input id="prohibitedsteps-4" class="govuk-checkboxes__input" type="checkbox" value="prohibited_steps_moving" name="prohibitedsteps-types">
+                       <label for="prohibitedsteps-4" class="govuk-label govuk-checkboxes__label">
+                         Relocating the children to a different area in England and Wales
+                       </label>
+                     </div>
+                     <div class="govuk-checkboxes__item">
+                       <input id="prohibitedsteps-5" class="govuk-checkboxes__input" type="checkbox" value="prohibited_steps_moving_abroad" name="prohibitedsteps-types">
+                       <label for="prohibitedsteps-5" class="govuk-label govuk-checkboxes__label">
+                         Relocating the children outside of England and Wales (including Scotland and Northern Ireland)
+                       </label>
+                     </div>
+                   </div>
+                 </fieldset>
+               </div>
+             </div>
+
+             <div class="govuk-checkboxes__item">
+               <input id="specific-issues" class="govuk-checkboxes__input" aria-describedby="specific-issues-hint" type="checkbox" value="group_specific_issues" name="typeoforder" aria-controls="specific-issues-conditional" aria-expanded="false" checked="checked">
+               <label for="specific-issues" class="govuk-label govuk-checkboxes__label">
+                 Resolve a specific issue you are concerned about
+               </label>
+               <span class="govuk-hint govuk-checkboxes__hint" id="specific-issues-hint">For example, what school the children will go to
+               </span>
+             </div>
+
+             <div class="govuk-checkboxes__conditional govuk-checkboxes__conditional--hidden" id="specific-issues-conditional">
+               <div class="govuk-form-group govuk-form-group--error">
+                 <p id="where-do-you-live-error" class="govuk-error-message">
+                   <span class="govuk-visually-hidden">Error:</span>Specify what issue you want the court to resolve
+                 </p>
+                 <fieldset class="govuk-fieldset">
+                   <div class="govuk-checkboxes" data-module="govuk-checkboxes">
+                     <div class="govuk-checkboxes__item">
+                       <input id="specific-issues-1" class="govuk-checkboxes__input" type="checkbox" value="specific_issues_holiday" name="specificissuestypes">
+                       <label for="specific-issues-1" class="govuk-label govuk-checkboxes__label">
+                         A specific holiday or arrangement
+                       </label>
+                     </div>
+                     <div class="govuk-checkboxes__item">
+                       <input id="specific-issues-2" class="govuk-checkboxes__input" type="checkbox" value="specific_issues_school" name="specificissuestypes">
+                       <label for="specific-issues-2" class="govuk-label govuk-checkboxes__label">
+                         What school the children will go to
+                       </label>
+                     </div>
+                     <div class="govuk-checkboxes__item">
+                       <input id="specific-issues-3" class="govuk-checkboxes__input" type="checkbox" value="specific_issues_religion" name="specificissuestypes">
+                       <label for="specific-issues-3" class="govuk-label govuk-checkboxes__label">
+                         A religious issue
+                       </label>
+                     </div>
+                     <div class="govuk-checkboxes__item">
+                       <input id="specific-issues-4" class="govuk-checkboxes__input" type="checkbox" value="specific_issues_names" name="specificissuestypes">
+                       <label for="specific-issues-4" class="govuk-label govuk-checkboxes__label">
+                         Changing the children's names or surname
+                       </label>
+                     </div>
+                     <div class="govuk-checkboxes__item">
+                       <input id="specific-issues-5" class="govuk-checkboxes__input" type="checkbox" value="specific_issues_medical" name="specificissuestypes">
+                       <label for="specific-issues-5" class="govuk-label govuk-checkboxes__label">
+                         Medical treatment
+                       </label>
+                     </div>
+                     <div class="govuk-checkboxes__item">
+                       <input id="specific-issues-6" class="govuk-checkboxes__input" type="checkbox" value="specific_issues_moving" name="specificissuestypes">
+                       <label for="specific-issues-6" class="govuk-label govuk-checkboxes__label">
+                         Relocating the children to a different area in England and Wales
+                       </label>
+                     </div>
+                     <div class="govuk-checkboxes__item">
+                       <input id="specific-issues-7" class="govuk-checkboxes__input" type="checkbox" value="specific_issues_moving_abroad" name="specificissuestypes">
+                       <label for="specific-issues-7" class="govuk-label govuk-checkboxes__label">
+                         Relocating the children outside of England and Wales (including Scotland and Northern Ireland)
+                       </label>
+                     </div>
+                     <div class="govuk-checkboxes__item">
+                       <input id="specific-issues-8" class="govuk-checkboxes__input" aria-describedby="specific-issues-8-hint" type="checkbox" value="specific_issues_child_return" name="specificissuestypes">
+                       <label for="specific-issues-8" class="govuk-label govuk-checkboxes__label">
+                         Returning the children to your care
+                       </label>
+                       <span class="govuk-hint govuk-checkboxes__hint" id="specific-issues-8-hint">
+                         If the children have been abducted, unlawfully removed or unlawfully retained
+                       </span>
+                     </div>
+                   </div>
+                 </fieldset>
+               </div>
+             </div>
+
+           </div>
+          </fieldset>
+          </div>
+
+
+
+
+
+
+
+
+
+
+
+
+         <div class="govuk-button-group govuk-!-margin-top-6">
+           <button class="govuk-button" data-module="govuk-button">
+             Continue
+           </button>
+           <a class="govuk-button govuk-button--secondary" href="../../applicanttasklist/inprogress"  data-module="govuk-button">
+             Save and come back later
+           </a>
+
+         </div>
+
+
+
+
+       </main>
+
+
+    </div>
+  </div>
+
+  <div class="govuk-grid-column-one-third">
+    <details class="govuk-details" data-module="govuk-details">
+ 			 <summary class="govuk-details__summary">
+   			 <span class="govuk-details__summary-text">
+    		  Contacts for help
+  			  </span>
+  			</summary>
+  			<div class="govuk-details__text">
+   			 Ask a question or get any help in any language
+   			 <p class="govuk-body govuk-!-font-weight-bold">Telephone</p>
+
+   			 <p class="govuk-body govuk-!-font-weight-regular">0300 303 0742</p>
+   			 <p class="govuk-body govuk-!-font-weight-regular">Monday to Friday, 8am to 8pm</p>
+   			 <a href="#" class="govuk-link">Find out about call charges</a>
+   			 <p class="govuk-body govuk-!-font-weight-regular">(opens in a new window)</p>
+			  </div>
+			</details>
+    </div>
+</div>
+
+
+
+{% endblock %}

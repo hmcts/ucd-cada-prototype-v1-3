@@ -1,0 +1,236 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+State tags
+{% endblock %}
+
+{% block header %}
+  <!-- Blank header with no service name for the start page -->
+
+{{ govukHeader({
+    homepageUrl: "/",
+    serviceName: serviceName,
+    serviceUrl: "/",
+    containerClasses: "govuk-width-container"
+}) }}
+
+{% endblock %}
+
+{% block content %}
+
+<style>
+.govuk-tag { text-transform:none }
+</style>
+
+  <div class="govuk-grid-row">
+
+    <div class="govuk-grid-column-two-thirds">
+
+      <h1 class="govuk-heading-l">Status tags</h1>
+
+      <table class="govuk-table">
+        <thead class="govuk-table__head">
+          <tr class="govuk-table__row">
+            <th class="govuk-table__header" scope="col"> Class name </th>
+            <th class="govuk-table__header" scope="col"> Tag </th>
+          </tr>
+        </thead>
+        <tbody class="govuk-table__body">
+
+
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell">
+              <code> govuk-tag--grey </code>
+            </td>
+            <td class="govuk-table__cell">
+              <strong class="govuk-tag govuk-tag--grey">
+                Cannot start yet
+              </strong>
+            </td>
+          </tr>
+
+
+
+          
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell">
+              <code> govuk-tag--grey </code>
+            </td>
+            <td class="govuk-table__cell">
+              <strong class="govuk-tag govuk-tag--grey">
+                Cannot view yet
+              </strong>
+            </td>
+          </tr>
+
+
+
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell">
+              <code> govuk-tag--grey </code>
+            </td>
+            <td class="govuk-table__cell">
+              <strong class="govuk-tag govuk-tag--grey">
+                Not available yet
+              </strong>
+            </td>
+          </tr>
+
+
+          
+
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell">
+              <code> govuk-tag--grey </code>
+            </td>
+            <td class="govuk-table__cell">
+              <strong class="govuk-tag govuk-tag--grey">
+                Waiting for the court
+              </strong>
+            </td>
+          </tr>
+
+
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell">
+              <code> govuk-tag--red </code>
+            </td>
+            <td class="govuk-table__cell">
+              <strong class="govuk-tag govuk-tag--red">
+                Not started yet
+              </strong>
+            </td>
+          </tr>
+
+
+
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell">
+              <code> govuk-tag--red </code>
+            </td>
+            <td class="govuk-table__cell">
+              <strong class="govuk-tag govuk-tag--red">
+                Decision received
+              </strong>
+            </td>
+          </tr>
+
+
+
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell">
+              <code> govuk-tag--blue </code>
+            </td>
+            <td class="govuk-table__cell">
+              <strong class="govuk-tag govuk-tag--blue">
+                Optional
+              </strong>
+            </td>
+          </tr>
+
+
+
+
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell">
+              <code> govuk-tag--blue </code>
+            </td>
+            <td class="govuk-table__cell">
+              <strong class="govuk-tag govuk-tag--blue">
+                Ready to view
+              </strong>
+            </td>
+          </tr>
+
+
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell">
+              <code> govuk-tag--blue </code>
+            </td>
+            <td class="govuk-table__cell">
+              <strong class="govuk-tag govuk-tag--blue">
+                Updated
+              </strong>
+            </td>
+          </tr>
+
+
+
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell">
+              <code> govuk-tag--yellow </code>
+            </td>
+            <td class="govuk-table__cell">
+              <strong class="govuk-tag govuk-tag--yellow">
+                In progress
+              </strong>
+            </td>
+          </tr>
+
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell">
+              <code> govuk-tag--turquoise </code>
+            </td>
+            <td class="govuk-table__cell">
+              <strong class="govuk-tag govuk-tag--turquoise">
+               Viewed
+              </strong>
+            </td>
+          </tr>
+
+
+
+          
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell">
+              <code> govuk-tag--turquoise </code>
+            </td>
+            <td class="govuk-table__cell">
+              <strong class="govuk-tag govuk-tag--turquoise">
+               Submitted
+              </strong>
+            </td>
+          </tr>
+
+
+
+
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell">
+              <code> govuk-tag--green </code>
+            </td>
+            <td class="govuk-table__cell">
+              <strong class="govuk-tag govuk-tag--green">
+               Completed
+              </strong>
+            </td>
+          </tr>
+
+
+
+
+
+
+
+        </tbody>
+      </table>
+
+
+
+
+    </div>
+
+
+    <div class="govuk-grid-column-one-third">
+      <h3 class="govuk-heading-m">
+        Notes:
+      </h3>
+        <p class="govuk-body">A list of status tags as they are currently represented on the dashboard.</p>
+    </div>
+
+
+</div>
+
+
+
+{% endblock %}

@@ -1,0 +1,125 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Child arrangement respondent
+{% endblock %}
+
+{% block header %}
+  <!-- Blank header with no service name for the start page -->
+
+{{ govukHeader({
+    homepageUrl: "/",
+    serviceName: serviceName,
+    serviceUrl: "/",
+    containerClasses: "govuk-width-container"
+}) }}
+
+{% endblock %}
+
+{% block content %}
+<div class="govuk-grid-row">
+   <div class="govuk-grid-column-two-thirds">
+    <div class="govuk-width-container">
+     <a href="#" onclick="history.back(-1)" class="govuk-back-link">Back</a>
+
+     <main class="govuk-main-wrapper " id="main-content" role="main">
+
+       <form action="start-answer" method="post" novalidate>
+
+         <div class="govuk-error-summary" aria-labelledby="error-summary-title" role="alert" data-module="govuk-error-summary">
+           <h2 class="govuk-error-summary__title" id="error-summary-title">
+             There is a problem on this page
+           </h2>
+           <div class="govuk-error-summary__body">
+             <ul class="govuk-list govuk-error-summary__list">
+               <li>
+                 <a href="#MIAM">Select yes if you have attended a Mediation Information and Assessment Meeting (MIAM)</a>
+               </li>
+             </ul>
+           </div>
+         </div>
+
+         <div class="govuk-form-group govuk-form-group--error">
+           <fieldset class="govuk-fieldset" aria-describedby="where-do-you-live-error">
+            <h1 class="govuk-heading-xl">Have you attended a Mediation Information and Assessment Meeting (MIAM)?</h1>
+
+            <details class="govuk-details" data-module="govuk-details">
+              <summary class="govuk-details__summary">
+                <span class="govuk-details__summary-text">
+                  What is a Mediation Information and Assessment Meeting (MIAM)?
+                </span>
+              </summary>
+              <div class="govuk-details__text">
+                <p>A MIAM is a first meeting with a mediator.</p>
+                <p>The MIAM will:
+                <ul>
+                  <li>last about an hour</li>
+                  <li>give you the opportunity to tell the mediator about your situation, and the issues to be decided</li>
+                  <li>explain the mediation process, and other options for reaching agreements</li>
+                </ul></p>
+                <p>At the end of the meeting, the mediator will tell you if your case is suitable for mediation. You can then decide if you want to proceed, or explore other options.</p>
+                <p>The benefits of a MIAM are:
+                <ul>
+                  <li>less stress and a faster process than going to court</li>
+                  <li>help with making arrangements over parenting, property and money</li>
+                  <li>more control over your family's future</li>
+                  <li>help with putting your childrens' interests first</li>
+                  <li>help with moving on to the next stage of your lives</li>
+                </ul></p>
+                <p>The MIAM process works, with agreement reached in over 70% of cases.</p>
+              </div>
+            </details>
+
+          <div class="govuk-form-group govuk-form-group--error">
+             <fieldset class="govuk-fieldset" aria-describedby="where-do-you-live-error">
+               <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+               </legend>
+               <p id="where-do-you-live-error" class="govuk-error-message">
+                 <span class="govuk-visually-hidden">Error:</span> Select yes if you have attended a Mediation Information and Assessment Meeting (MIAM)
+               </p>
+              <div class="govuk-radios" data-module="govuk-radios">
+                <div class="govuk-radios__item">
+                  <input class="govuk-radios__input" id="MIAM-yes" name="MIAM" type="radio" value="yes">
+                    <label class="govuk-label govuk-radios__label" for="MIAM-yes">Yes</label>
+                </div>
+                <div class="govuk-radios__item">
+                  <input class="govuk-radios__input" id="MIAM-no" name="MIAM" type="radio" data-aria-controls="conditional-MIAM">
+                    <label class="govuk-label govuk-radios__label" for="MIAM-no">No</label>
+                </div>
+
+                </div>
+                </fieldset>
+              </div>
+            </fieldset>
+          </div>
+
+        <button class="govuk-button" data-module="govuk-button">
+          Save and continue
+        </button>
+      </main>
+    </div>
+  </div>
+
+  <div class="govuk-grid-column-one-third">
+    <details class="govuk-details" data-module="govuk-details">
+ 			 <summary class="govuk-details__summary">
+   			 <span class="govuk-details__summary-text">
+    		  Contacts for help
+  			  </span>
+  			</summary>
+  			<div class="govuk-details__text">
+   			 Ask a question or get any help in any language
+   			 <p class="govuk-body govuk-!-font-weight-bold">Telephone</p>
+
+   			 <p class="govuk-body govuk-!-font-weight-regular">0300 303 0742</p>
+   			 <p class="govuk-body govuk-!-font-weight-regular">Monday to Friday, 8am to 8pm</p>
+   			 <a href="#" class="govuk-link">Find out about call charges</a>
+   			 <p class="govuk-body govuk-!-font-weight-regular">(opens in a new window)</p>
+			  </div>
+			</details>
+    </div>
+</div>
+
+
+
+{% endblock %}

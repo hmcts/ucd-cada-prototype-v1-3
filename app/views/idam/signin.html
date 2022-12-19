@@ -1,0 +1,109 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Child arrangement
+{% endblock %}
+
+
+{% block header %}
+
+{{ govukHeader({
+    homepageUrl: "/",
+    serviceName: serviceName,
+    serviceUrl: "/",
+    containerClasses: "govuk-width-container"
+}) }}
+
+{% endblock %}
+
+{% block beforeContent %}
+
+
+<div class="govuk-phase-banner">
+  <p class="govuk-phase-banner__content">
+    <strong class="govuk-tag govuk-phase-banner__content__tag">
+      alpha
+    </strong>
+    <span class="govuk-phase-banner__text">
+      This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.
+    </span>
+  </p>
+</div>
+
+
+{% endblock %}
+
+
+{% block content %}
+
+
+
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-full">
+    <form method="post" action="check-email">
+    <h1 class="govuk-heading-xl">
+      Sign in or create an account
+    </h1>
+
+    <div class="govuk-grid-column-one-half" style="margin-left: -15px">
+      <h2 class="govuk-heading-l">Sign in</h2>
+
+
+      <div class="govuk-form-group">
+        <label class="govuk-label" for="Email">
+            Email address
+          </label>
+        <input class="govuk-input" id="Email" name="Email" type="email" pattern=".+@globex\.com" size="30" required>
+      </div>
+
+      <div class="govuk-form-group">
+        <label class="govuk-label" for="password">
+            Password
+          </label>
+        <input class="govuk-input" id="password" name="password" type="password">
+      </div>
+
+      <a class="govuk-body govuk-link--no-visited-state" href="/idam/signin">Forgotten password?</a>
+      
+
+      <div class="govuk-button-group govuk-!-margin-top-8">
+
+
+          <a href="/accountdashboard.html" role="button" draggable="false" class="govuk-button" data-module="govuk-button">
+            Continue
+          </a>
+        
+          <a class="govuk-link" href="/index">Cancel</a>
+
+          </a>
+        </div>
+
+
+    </div>
+
+
+    <div class="govuk-grid-column-one-half" id="create-account">
+      <h2 class="govuk-heading-l">Create an account</h2>
+      <p class="govuk-body">You need to <a class="govuk-body govuk-link--no-visited-state" href="/idam/newaccount">create an account</a> to use this service.</p>
+    </div>
+  </form>
+
+  
+
+  </div>
+</div>
+
+<style>
+
+  
+  #create-account {
+    border-left: 4px solid gray;
+    height: 500px;
+    margin-left: 10px;
+  }
+  
+  </style>
+  
+
+{% endblock %}

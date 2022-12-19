@@ -1,0 +1,242 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Child arrangement respondent
+{% endblock %}
+
+{% block header %}
+  <!-- Blank header with no service name for the start page -->
+
+{{ govukHeader({
+    homepageUrl: "/",
+    serviceName: serviceName,
+    serviceUrl: "/",
+    containerClasses: "govuk-width-container"
+}) }}
+
+{% endblock %}
+
+{% block content %}
+
+
+ <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <div class="govuk-width-container">
+
+        <a href="#" onclick="history.back(-1)" class="govuk-back-link">Back</a>
+
+        <main class="govuk-main-wrapper govuk-main-wrapper--auto-spacing" id="main-content" role="main">
+
+               <form action="miamurgency-answer" method="post" novalidate>
+
+                 <span class="govuk-caption-l">MIAM exemptions</span>
+                 <h1 class="govuk-heading-xl">Do you require an urgent hearing because you or the children are at risk for any of the following reasons?</h1>
+
+                 <div class="govuk-inset-text">
+                  <p class="govuk-body">If you are seeking a MIAM exemption, you will need to give more details. </p>
+
+                   <p class="govuk-body">The court needs this information to decide if you need to attend a MIAM.</p>
+                 </div>
+
+                 <p class="govuk-body">If you get an urgent hearing, this does not mean that your case will be over sooner, and you will not receive a final decision on your case at this stage.
+                 </p>
+
+                 <p class="govuk-body">The court will only agree to an urgent hearing if the situation is critical and any of the following reasons apply.
+                 </p>
+
+               <!--<p class="govuk-body"><a href="https://www.justice.gov.uk/courts/procedure-rules/family/practice_directions/pd_part_03a" class="govuk-link govuk-link a" rel="external" target="_blank">See the practice directions</a> for the full list of valid reasons for a MIAM exemption.
+               </p>!-->
+
+
+               <div class="govuk-form-group">
+                 <fieldset class="govuk-fieldset" aria-describedby="steps-miam-exemptions-domestic-form-domestic-hint">
+                   <div id="da-hint" class="govuk-hint">
+                     Select all that apply to you
+                   </div>
+                   <div class="govuk-checkboxes" data-module="govuk-checkboxes">
+                       <div class="govuk-checkboxes__item police-involvement">
+                         <input id="risktolife" class="govuk-checkboxes__input" type="checkbox" value="group_police" name="urgency">
+                           <label for="risktolife" class="govuk-label govuk-checkboxes__label">
+                             There is a risk to your life, freedom or physical safety
+                          </label>
+                       </div>
+
+                       <div class="govuk-checkboxes__item police-involvement">
+                         <input id="risktolife" class="govuk-checkboxes__input" type="checkbox" value="group_police" name="urgency">
+                           <label for="risktolife" class="govuk-label govuk-checkboxes__label">
+                             There is a risk to the life, freedom or physical safety of someone in your family
+                          </label>
+                       </div>
+                       <div class="govuk-checkboxes__item police-involvement">
+                         <input id="risktolife" class="govuk-checkboxes__input" type="checkbox" value="group_police" name="urgency">
+                           <label for="risktolife" class="govuk-label govuk-checkboxes__label">
+                             There is a risk to the safety of your home
+                          </label>
+                       </div>
+
+                       <div class="govuk-checkboxes__item">
+                         <input id="unreasonablehardship" class="govuk-checkboxes__input" type="checkbox" value="group_court" name="urgency">
+                         <label for="unreasonablehardship" class="govuk-label govuk-checkboxes__label">
+                           Any delay caused by attending a MIAM would cause a risk of unreasonable financial hardship
+
+                         </label>
+                       </div>
+
+
+                       <div class="govuk-checkboxes__item">
+                         <input id="risktochildren" class="govuk-checkboxes__input" type="checkbox" value="group_specialist" name="urgency">
+                         <label for="risktochildren" class="govuk-label govuk-checkboxes__label">
+                          Any delay caused by attending a MIAM would cause a risk of harm to the children
+                         </label>
+                       </div>
+
+                       <div class="govuk-checkboxes__item">
+                         <input id="abduction" class="govuk-checkboxes__input" type="checkbox" value="group_local_authority" name="urgency" >
+                         <label for="abduction" class="govuk-label govuk-checkboxes__label">
+                           Any delay caused by attending a MIAM would cause a risk that the children will be unlawfully removed from the UK or unlawfully kept overseas
+
+                         </label>
+                       </div>
+
+
+                       <div class="govuk-checkboxes__item">
+                         <input id="miscarriageofjustice" class="govuk-checkboxes__input" type="checkbox" value="group_da_service" name="urgency">
+                         <label for="miscarriageofjustice" class="govuk-label govuk-checkboxes__label">
+                          Any delay caused by attending a MIAM would cause a significant risk of an unfair court decision (miscarriage of justice)
+                         </label>
+                       </div>
+
+
+                       <div class="govuk-checkboxes__item">
+                         <input id="irretrievableproblems" class="govuk-checkboxes__input" type="checkbox" value="right_to_remain" name="urgency">
+                         <label for="irretrievableproblems" class="govuk-label govuk-checkboxes__label">
+                           Any delay caused by attending a MIAM would cause a risk of irretrievable problems, including irretrievable loss of evidence in the case
+                         </label>
+                       </div>
+
+                       <div class="govuk-checkboxes__item">
+                         <input id="internationalelement" class="govuk-checkboxes__input" type="checkbox" value="financial_abuse" name="urgency">
+                         <label for="internationalelement" class="govuk-label govuk-checkboxes__label">
+                           There is a risk of court proceedings related to the dispute starting or taking place in a country other than England or Wales
+                         </label>
+                       </div>
+
+                       <div class="govuk-checkboxes__divider">or</div>
+
+                       <div class="govuk-checkboxes__item">
+                         <input class="govuk-checkboxes__input" id="none" name="urgency" type="checkbox" value="No" data-behaviour="exclusive">
+                         <label class="govuk-label govuk-checkboxes__label" for="reasonable-adjustments-none">
+                           None of the above
+                         </label>
+                       </div>
+                  </div>
+
+             </fieldset>
+           </div>
+
+
+
+
+
+           <div class="govuk-button-group govuk-!-margin-top-6">
+             <button class="govuk-button" data-module="govuk-button">
+               Continue
+             </button>
+             <a class="govuk-button govuk-button--secondary" href="../../applicanttasklist/inprogress"  data-module="govuk-button">
+               Save and come back later
+             </a>
+
+           </div>
+
+
+
+
+
+              </form>
+        </main>
+      </div>
+
+
+
+
+    </div>
+    <div class="govuk-grid-column-one-third">
+
+    		<details class="govuk-details" data-module="govuk-details">
+ 			      <summary class="govuk-details__summary">
+       			 <span class="govuk-details__summary-text">
+        		  Contacts for help
+      			  </span>
+  			    </summary>
+  			<div class="govuk-details__text">
+   			 Ask a question or get any help in any language
+   			 <p class="govuk-body govuk-!-font-weight-bold">Telephone</p>
+
+   			 <p class="govuk-body govuk-!-font-weight-regular">0300 303 0742</p>
+   			 <p class="govuk-body govuk-!-font-weight-regular">Monday to Friday, 8am to 8pm</p>
+   			 <a href="#" class="govuk-link">Find out about call charges</a>
+   			 <p class="govuk-body govuk-!-font-weight-regular">(opens in a new window)</p>
+
+			  </div>
+			</details>
+    </div>
+
+</div>
+
+
+<script src="https://code.jquery.com/jquery-3.6.0.js"  crossorigin="anonymous"></script>
+<script type="text/javascript">
+  $(document).ready(function(){
+      $('input[id="policeinvolvement"]').click(function(){
+          if($(this).prop("checked") == true){
+          }
+          else if($(this).prop("checked") == false){
+              $("input[name='miampoliceinvolvement']").prop( "checked", false );
+
+          }
+      });
+
+      $('input[id="courtinvolvement"]').click(function(){
+          if($(this).prop("checked") == true){
+          }
+          else if($(this).prop("checked") == false){
+              $("input[name='miamcourtinvolvement']").prop( "checked", false );
+
+          }
+      });
+
+
+      $('input[id="letterconfirmation"]').click(function(){
+          if($(this).prop("checked") == true){
+          }
+          else if($(this).prop("checked") == false){
+              $("input[name='miamletterconfirmation']").prop( "checked", false );
+
+          }
+      });
+
+      $('input[id="authorityletter"]').click(function(){
+          if($(this).prop("checked") == true){
+          }
+          else if($(this).prop("checked") == false){
+              $("input[name='miamauthorityletter']").prop( "checked", false );
+
+          }
+      });
+
+      $('input[id="organisationletter"]').click(function(){
+          if($(this).prop("checked") == true){
+          }
+          else if($(this).prop("checked") == false){
+              $("input[name='miamorganisationletter']").prop( "checked", false );
+
+          }
+      });
+
+  });
+</script>
+
+
+
+{% endblock %}

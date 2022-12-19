@@ -1,0 +1,91 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Child arrangement respondent
+{% endblock %}
+
+{% block header %}
+  <!-- Blank header with no service name for the start page -->
+
+{{ govukHeader({
+    homepageUrl: "/",
+    serviceName: serviceName,
+    serviceUrl: "/",
+    containerClasses: "govuk-width-container"
+}) }}
+
+{% endblock %}
+
+{% block content %}
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <div class="govuk-width-container">
+     <a href="#" onclick="history.back(-1)" class="govuk-back-link">Back</a>
+
+      <main class="govuk-main-wrapper app-main-class" id="main-content" role="main">
+
+
+
+            <form action="sexualabuse-answer" method="post" novalidate>
+
+               <div class="govuk-form-group">
+                 <fieldset class="govuk-fieldset" aria-describedby="steps-abuse-concerns-question-form-answer-supplemental">
+                   <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl">
+                     <h1 class="govuk-fieldset__heading">
+                       <span class="govuk-caption-xl">Safety concerns</span>
+                       Have the children ever been sexually abused?
+                     </h1>
+                   </legend>
+
+                   <input value="" type="hidden" name="steps_abuse_concerns_question_form[answer]" id="steps_abuse_concerns_question_form_answer">
+                   <div id="steps-abuse-concerns-question-form-answer-supplemental">
+                     <p class="govuk-body">A child is sexually abused when they are forced or persuaded to take part in sexual activities, including online. It may not necessarily involve a high level of violence, and the child may or may not be aware of what's happening.</p>
+                    <p class="govuk-body">There are 2 types of child sexual abuse:</p>
+                      <ul class="govuk-list govuk-list--bullet">
+                       <li>contact abuse (where an abuser makes physical contact)</li>
+                       <li>non-contact abuse (for example grooming or exploitation)</li>
+                     </ul>
+                  </div>
+                  <div class="govuk-radios" data-module="govuk-radios">
+                    <div class="govuk-radios__item">
+                      <input id="sexualabuse-yes" class="govuk-radios__input" type="radio" value="yes" name="sexualabuse">
+                      <label for="sexualabuse-yes" class="govuk-label govuk-radios__label">Yes</label>
+                    </div>
+                    <div class="govuk-radios__item">
+                      <input id="sexualabuse-no" class="govuk-radios__input" type="radio" value="no" name="sexualabuse">
+                      <label for="sexualabuse-no" class="govuk-label govuk-radios__label">No</label>
+                    </div>
+                  </div>
+                </fieldset>
+              </div>
+
+               <button type="submit" formnovalidate="formnovalidate" class="govuk-button" data-module="govuk-button" data-prevent-double-click="true">Save and continue</button>
+            </form>
+
+      </main>
+    </div>
+  </div>
+
+  <div class="govuk-grid-column-one-third">
+    <details class="govuk-details" data-module="govuk-details">
+ 			 <summary class="govuk-details__summary">
+   			 <span class="govuk-details__summary-text">
+    		  Contacts for help
+  			  </span>
+  			</summary>
+  			<div class="govuk-details__text">
+   			 Ask a question or get any help in any language
+   			 <p class="govuk-body govuk-!-font-weight-bold">Telephone</p>
+
+   			 <p class="govuk-body govuk-!-font-weight-regular">0300 303 0742</p>
+   			 <p class="govuk-body govuk-!-font-weight-regular">Monday to Friday, 8am to 8pm</p>
+   			 <a href="#" class="govuk-link">Find out about call charges</a>
+   			 <p class="govuk-body govuk-!-font-weight-regular">(opens in a new window)</p>
+			  </div>
+			</details>
+    </div>
+</div>
+
+
+
+{% endblock %}

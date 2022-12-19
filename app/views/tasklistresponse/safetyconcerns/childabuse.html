@@ -1,0 +1,214 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Child arrangement respondent
+{% endblock %}
+
+{% block header %}
+  <!-- Blank header with no service name for the start page -->
+
+{{ govukHeader({
+    homepageUrl: "/",
+    serviceName: serviceName,
+    serviceUrl: "/",
+    containerClasses: "govuk-width-container"
+}) }}
+
+{% endblock %}
+
+{% block content %}
+<div class="govuk-grid-row">
+   <div class="govuk-grid-column-two-thirds">
+     <div class="govuk-width-container">
+       <a href="#" onclick="history.back(-1)" class="govuk-back-link">Back</a>
+
+       <main class="govuk-main-wrapper " id="main-content" role="main">
+
+         <form action="childabuse-answer" method="post" novalidate>
+
+           <fieldset class="govuk-fieldset">
+             <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl">
+               <span class="govuk-caption-l">Safety concerns</span>
+               <h1 class="govuk-fieldset__heading">
+                 What type of behaviour have the children experienced or are at risk of experiencing?
+               </h1>
+             </legend>
+             <div class="govuk-!-padding-bottom-4"></div>
+
+             <p class="govuk-body">See the National Society for Prevention of Cruelty to Children (NSPCC) guidance on <a href="https://www.nspcc.org.uk/what-is-child-abuse/types-of-abuse/" class="govuk-link govuk-link a" rel="external" target="_blank">spotting the signs of child abuse</a>.
+             </p>
+
+             <div class="govuk-!-padding-bottom-2"></div>
+
+
+            <div id="reasonable-adjustments-hint" class="govuk-hint">Select any options that are relevant to your situation.
+            </div>
+             <div class="govuk-form-group">
+               <fieldset class="govuk-fieldset"
+               <div class="govuk-checkboxes" data-module="govuk-checkboxes">
+                  <div class="govuk-checkboxes__item">
+                    <input class="govuk-checkboxes__input" id="physicalabuse" name="childabuse" type="checkbox" value="Physical abuse">
+                    <label class="govuk-label govuk-checkboxes__label" for="physicalabuse">
+                      Physical abuse
+                    </label>
+                    <div id="physicalabuse-hint" class="govuk-hint govuk-!-margin-left-3">
+                             Behaviour such as punching, choking, kicking or hitting with an object
+
+                    </div>
+                  </div>
+
+                  <div class="govuk-checkboxes__item">
+                    <input class="govuk-checkboxes__input" id="psychologicalabuse" name="childabuse" type="checkbox" value="Psychological abuse">
+                    <label class="govuk-label govuk-checkboxes__label" for="psychologicalabuse">
+                      Psychological abuse
+                    </label>
+                    <div id="physicalabuse-hint" class="govuk-hint govuk-!-margin-left-3">
+                      Being subjected to a situation that leads to anxiety, depression, or post-traumatic stress disorder
+
+                    </div>
+                  </div>
+
+
+                  <div class="govuk-checkboxes__item">
+                    <input class="govuk-checkboxes__input" id="emotionalalabuse" name="childabuse" type="checkbox" value="Emotional abuse">
+                    <label class="govuk-label govuk-checkboxes__label" for="emotionalalabuse">
+                      Emotional abuse
+                    </label>
+                    <div id="physicalabuse-hint" class="govuk-hint govuk-!-margin-left-3">
+                      Making a child feel unloved, worthless, humiliated or ignored
+                    </div>
+                  </div>
+
+                  <div class="govuk-checkboxes__item">
+                    <input class="govuk-checkboxes__input" id="sexualabuse" name="childabuse" type="checkbox" value="Sexual abuse">
+                    <label class="govuk-label govuk-checkboxes__label" for="sexualabuse">
+                      Sexual abuse
+                    </label>
+                    <div id="physicalabuse-hint" class="govuk-hint govuk-!-margin-left-3">
+                      A child being forced or persuaded to take part in sexual activities, including online. It can be without contact, for example grooming or exploitation
+                    </div>
+                  </div>
+
+                  <div class="govuk-checkboxes__item">
+                    <input class="govuk-checkboxes__input" id="financialabuse" name="childabuse" type="checkbox" value="Financial abuse">
+                    <label class="govuk-label govuk-checkboxes__label" for="financialabuse">
+                      Financial abuse
+                    </label>
+                    <div id="physicalabuse-hint" class="govuk-hint govuk-!-margin-left-3">
+                      Stealing and exploiting a child's money, or using their personal information to obtain funds
+                    </div>
+                  </div>
+
+                  <div class="govuk-checkboxes__item">
+                    <input class="govuk-checkboxes__input" id="abduction" name="childabuse" type="checkbox" value="Abduction">
+                    <label class="govuk-label govuk-checkboxes__label" for="abduction">
+                      Witnessing domestic abuse
+                    </label>
+                    <div id="physicalabuse-hint" class="govuk-hint govuk-!-margin-left-3">
+                      The child's emotional and mental wellbeing being impacted by domestic abuse in the home
+                    </div>
+                  </div>
+
+                  <div class="govuk-checkboxes__item">
+                    <input class="govuk-checkboxes__input" id="abduction" name="childabuse" type="checkbox" value="Abduction">
+                    <label class="govuk-label govuk-checkboxes__label" for="abduction">
+                      Abduction
+                    </label>
+                    <div id="physicalabuse-hint" class="govuk-hint govuk-!-margin-left-3">
+                      A risk of the children being taken away from their caregivers, especially if they are kept abroad
+                    </div>
+                  </div>
+
+                  <div class="govuk-checkboxes__item">
+                    <input class="govuk-checkboxes__input" id="abduction" name="childabuse" type="checkbox" value="Abduction">
+                    <label class="govuk-label govuk-checkboxes__label" for="abduction">
+                      Something else
+                    </label>
+                    <div id="physicalabuse-hint" class="govuk-hint govuk-!-margin-left-3">
+                      Any concerns you have that do not fit into the above categories
+                    </div>
+                  </div>
+
+               </div>
+
+
+
+
+
+
+
+               <div class="govuk-button-group govuk-!-margin-top-6">
+                 <button class="govuk-button" data-module="govuk-button">
+                   Save and continue
+                 </button>
+               </div>
+
+
+
+
+
+         </form>
+
+       </main>
+     </div>
+   </div>
+
+   <div class="govuk-grid-column-one-third">
+    <div class="govuk-form-group">
+
+         <ul class="govuk-list">
+           <li><a href="https://www.gov.uk/injunction-domestic-violence" class="govuk-link" rel="external" target="_blank">Apply for an injunction</a></li>
+         </ul>
+
+           <h2 class="govuk-heading-m">Report an incident</h2>
+
+           <p class="govuk-body">
+             Always call 999 if there’s an emergency or if you think a child’s in danger.
+           </p>
+
+           <ul class="govuk-list">
+             <li><a href="https://www.gov.uk/report-child-abuse" class="govuk-link" rel="external" target="_blank">How to report child abuse</a></li>
+          </ul>
+
+
+         <h2 class="govuk-heading-m">Get support</h2>
+
+
+         <ul class="govuk-list">
+           <li><a href="https://www.nspcc.org.uk" class="govuk-link" rel="external" target="_blank">NSPCC: National Society for the Prevention of Cruelty to Children</a></li>
+           <li><a href="https://www.childline.org.uk" class="govuk-link" rel="external" target="_blank">Childline</a></li>
+          <li><a href="https://www.gov.uk/guidance/domestic-abuse-how-to-get-help" class="govuk-link" rel="external" target="_blank">GOV.UK Support directory</a></li>
+          <li><a href="https://supportnav.org.uk/" class="govuk-link" rel="external" target="_blank">SupportNav</a></li>
+         </ul>
+
+    </div>
+
+       <details class="govuk-details" data-module="govuk-details">
+        <summary class="govuk-details__summary">
+          <span class="govuk-details__summary-text">
+           Contacts for help
+           </span>
+         </summary>
+         <div class="govuk-details__text">
+          Ask a question or get any help in any language
+          <p class="govuk-body govuk-!-font-weight-bold">Telephone</p>
+
+          <p class="govuk-body govuk-!-font-weight-regular">0300 303 0742</p>
+          <p class="govuk-body govuk-!-font-weight-regular">Monday to Friday, 8am to 8pm</p>
+          <a href="#" class="govuk-link">Find out about call charges</a>
+          <p class="govuk-body govuk-!-font-weight-regular">(opens in a new window)</p>
+
+         </div>
+     </details>
+   </div>
+
+</div>
+
+
+
+
+
+
+
+
+{% endblock %}

@@ -1,0 +1,152 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Child arrangement respondent
+{% endblock %}
+
+{% block header %}
+  <!-- Blank header with no service name for the start page -->
+
+{{ govukHeader({
+    homepageUrl: "/",
+    serviceName: serviceName,
+    serviceUrl: "/",
+    containerClasses: "govuk-width-container"
+}) }}
+
+{% endblock %}
+
+{% block content %}
+<div class="govuk-grid-row">
+   <div class="govuk-grid-column-two-thirds">
+    <div class="govuk-width-container">
+     <a href="#" onclick="history.back(-1)" class="govuk-back-link">Back</a>
+
+     <main class="govuk-main-wrapper app-main-class" id="main-content" role="main">
+         <form action="legalrepresentationcontact" method="post" novalidate>
+           <div class="govuk-error-summary" aria-labelledby="error-summary-title" role="alert" data-module="govuk-error-summary">
+             <h2 class="govuk-error-summary__title" id="error-summary-title">
+               There is a problem
+             </h2>
+             <div class="govuk-error-summary__body">
+               <ul class="govuk-list govuk-error-summary__list">
+                 <li>
+                   <a href="#solicitor">Enter the first line of the address of solicitor</a>
+                 </li>
+                 <li>
+                   <a href="#solicitor">Enter the town or city of solicitor</a>
+                 </li>
+                 <li>
+                   <a href="#solicitor">Enter the country of solicitor</a>
+                 </li>
+                 <li>
+                   <a href="#solicitor">Enter the postcode of solicitor</a>
+                 </li>
+               </ul>
+             </div>
+           </div>
+
+               <h1 class="govuk-heading-xl">
+                 Address details of solicitor
+               </h1>
+
+               <form class="edit_steps_solicitor_address_details_form" id="new_steps_solicitor_address_details_form" action="/steps/solicitor/address_details" accept-charset="UTF-8" method="post">
+                 <input name="utf8" type="hidden" value="✓">
+                 <input type="hidden" name="_method" value="put">
+                 <input type="hidden" name="authenticity_token" value="W7tBbKHg1TZotRWv80SDddfYhV3m+aJbLUsqiTPgW4vR9auU3AcWIMds53CwwCrrgkulfX8ihqClSmhecwYpjA==">
+                 <div class="govuk-form-group govuk-form-group--error">
+
+                   <label for="steps-solicitor-address-details-form-address-line-1-field" class="govuk-label">
+                     Building and street
+                   </label>
+                   <p id="where-do-you-live-error" class="govuk-error-message">
+                     <span class="govuk-visually-hidden">Error:</span>Enter the first line of the address of solicitor
+                   </p>
+                   <input id="steps-solicitor-address-details-form-address-line-1-field" class="govuk-input" type="text" value="" name="steps_solicitor_address_details_form[address_line_1]">
+                 </div>
+                 <div class="govuk-form-group">
+                   <label for="steps-solicitor-address-details-form-address-line-2-field" class="govuk-label">
+                     <span class="govuk-visually-hidden">
+                       Building and street line 2
+                     </span>
+                   </label>
+                   <input id="steps-solicitor-address-details-form-address-line-2-field" class="govuk-input" type="text" value="" name="steps_solicitor_address_details_form[address_line_2]">
+                 </div>
+                 <div class="govuk-form-group">
+                   <label for="steps-solicitor-address-details-form-address-line-3-field" class="govuk-label">
+                     <span class="govuk-visually-hidden">
+                       Building and street line 3
+                     </span>
+                   </label>
+                   <input id="steps-solicitor-address-details-form-address-line-3-field" class="govuk-input" type="text" value="" name="steps_solicitor_address_details_form[address_line_3]">
+                 </div>
+                 <div class="govuk-form-group govuk-form-group--error">
+                   <label for="steps-solicitor-address-details-form-town-field" class="govuk-label">
+                     Town or city
+                   </label>
+                   <p id="where-do-you-live-error" class="govuk-error-message">
+                     <span class="govuk-visually-hidden">Error:</span>Enter the town or city of solicitor
+                   </p>
+                   <input id="steps-solicitor-address-details-form-town-field" class="govuk-input govuk-!-width-one-half" type="text" value="" name="steps_solicitor_address_details_form[town]">
+                 </div>
+                  <div class="govuk-form-group govuk-form-group--error">
+                   <label for="steps-solicitor-address-details-form-country-field" class="govuk-label">
+                     Country
+                   </label>
+                   <p id="where-do-you-live-error" class="govuk-error-message">
+                     <span class="govuk-visually-hidden">Error:</span>Enter the country of solicitor
+                   </p>
+                   <input id="steps-solicitor-address-details-form-country-field" class="govuk-input govuk-!-width-one-half" type="text" value="" name="steps_solicitor_address_details_form[country]">
+                 </div>
+                  <div class="govuk-form-group govuk-form-group--error">
+                   <label for="steps-solicitor-address-details-form-postcode-field" class="govuk-label">
+                     Postcode
+                   </label>
+                   <p id="where-do-you-live-error" class="govuk-error-message">
+                     <span class="govuk-visually-hidden">Error:</span>Enter the postcode of solicitor
+                   </p>
+                   <input id="steps-solicitor-address-details-form-postcode-field" class="govuk-input govuk-!-width-one-third" type="text" value="" name="steps_solicitor_address_details_form[postcode]">
+                 </div>
+
+
+            <div class="govuk-button-group govuk-!-margin-top-6">
+              <button class="govuk-button" data-module="govuk-button">
+                Continue
+              </button>
+              <a class="govuk-button govuk-button--secondary" href="../../applicanttasklist/inprogress"  data-module="govuk-button">
+                Save and come back later
+              </a>
+
+            </div>
+          </form>
+
+
+       </main>
+
+
+    </div>
+  </div>
+
+  <div class="govuk-grid-column-one-third">
+    <details class="govuk-details" data-module="govuk-details">
+ 			 <summary class="govuk-details__summary">
+   			 <span class="govuk-details__summary-text">
+    		  Contacts for help
+  			  </span>
+  			</summary>
+  			<div class="govuk-details__text">
+   			 Ask a question or get any help in any language
+   			 <p class="govuk-body govuk-!-font-weight-bold">Telephone</p>
+
+   			 <p class="govuk-body govuk-!-font-weight-regular">0300 303 0742</p>
+   			 <p class="govuk-body govuk-!-font-weight-regular">Monday to Friday, 8am to 8pm</p>
+   			 <a href="#" class="govuk-link">Find out about call charges</a>
+   			 <p class="govuk-body govuk-!-font-weight-regular">(opens in a new window)</p>
+			  </div>
+			</details>
+    </div>
+</div>
+
+
+
+{% endblock %}

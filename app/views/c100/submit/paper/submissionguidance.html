@@ -1,0 +1,150 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+Child arrangement respondent
+{% endblock %}
+
+{% block header %}
+<!-- Blank header with no service name for the start page -->
+
+{{ govukHeader({
+  homepageUrl: "/",
+  serviceName: serviceName,
+  serviceUrl: "/",
+  containerClasses: "govuk-width-container"
+}) }}
+
+{% endblock %}
+
+{% block content %}
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <div class="govuk-width-container">
+
+    <a href="#" onclick="history.back(-1)" class="govuk-back-link">Back</a>
+
+    <main class="govuk-main-wrapper govuk-main-wrapper--l" id="main-content" role="main">
+
+
+          <div class="govuk-notification-banner govuk-notification-banner--success" role="alert" aria-labelledby="govuk-notification-banner-title" data-module="govuk-notification-banner">
+            <div class="govuk-notification-banner__header">
+              <h1 class="govuk-notification-banner__title" id="govuk-notification-banner-title">
+                Success
+              </h1>
+            </div>
+            <div class="govuk-notification-banner__content">
+              <h2 class="govuk-notification-banner__heading">
+                You can now submit your application
+              </h2>
+              <p class="govuk-body">Your case number is <strong>A162527378</strong></p>
+            </div>
+          </div>
+
+          <h2 class="govuk-heading-xl">
+            How to submit your application
+          </h2>
+
+          <div class="govuk-warning-text">
+            <span class="govuk-warning-text__icon" aria-hidden="true">!</span>
+            <strong class="govuk-warning-text__text">
+              <span class="govuk-warning-text__assistive">Warning</span>
+              <div style=" margin-left: 10px;">The court will not receive your application until you complete these steps.</div>
+            </strong>
+          </div>
+
+
+          <h2 class="app-task-list__section govuk-heading-l">
+            <span class="app-task-list__section-number">1. </span> Download your application
+          </h2>
+
+          <p class="govuk-body">If you have uploaded any documents, they have been attached to your application.<p>
+
+
+            <div class="govuk-details__text govuk-!-margin-bottom-6">
+                <p class="govuk-body">
+                  If you cannot open the PDF file after downloading, install
+                  <a href="https://get.adobe.com/uk/reader/" class="govuk-link" rel="external" target="_blank">Adobe Acrobat Reader</a> and try again.
+                </p>
+              </div>
+
+
+              <div class="govuk-button-group">
+                <a class="govuk-button ga-pageLink govuk-button--primary" role="button" draggable="false" data-module="govuk-button" data-ga-category="check your answers" data-ga-label="download draft" download="" href="/steps/completion/summary.pdf">Download your application</a>
+
+              </div>
+
+              <h2 class="app-task-list__section govuk-heading-l">
+                <span class="app-task-list__section-number">2. </span> Print your application and any attached documents
+              </h2>
+
+              <p class="govuk-body">Print 3 copies of your entire application on A4 paper, single sided. The court will send one copy to the other people in the case, keep a copy, and return one copy to you.<p>
+
+                  <p class="govuk-body">Any attached documents must be included in full as part of each copy of the application.<p>
+
+                    <h2 class="app-task-list__section govuk-heading-l">
+                      <span class="app-task-list__section-number">3. </span> Post it to the court
+                    </h2>
+
+                    <p class="govuk-body">Post all 3 printed copies of your application to:<p>
+
+                      <div class="govuk-details__text govuk-!-margin-bottom-8" >
+                        <p class="govuk-body">C100 Applications
+                          <br>Private Law Digital Services
+                          <br>PO BOX 13235
+                          <br>Harlow
+                          <br>CM20 9TT</p>
+                      </div>
+
+                      <h2 class="app-task-list__section govuk-heading-l">
+                        <span class="app-task-list__section-number">4. </span> Pay the application fee
+                      </h2>
+                      <p class="govuk-body">You need to pay the £232 court fee. Post a cheque made out to 'HM Courts and Tribunals Service'. Write your case number, last name, and 'c100' on the back of your cheque.<p>
+
+                        <div class="govuk-details__text govuk-!-margin-bottom-4" >
+                          <p class="govuk-body">Your case number is: <i> add case number</i></p>
+                        </div>
+                        <p class="govuk-body">You may also pay in person at the court by cheque or cash.<p>
+                          <p class="govuk-body">Send your cheque or pay in person within 3 working days. The court will not be able to process your application until payment has been received.<p>
+
+            <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
+          <h3 class="govuk-heading-m">You can also:</h3>
+
+          <ul class="govuk-list govuk-list--bullet govuk-!-margin-bottom-9">
+
+            <li><a href="https://helpwithchildarrangements.service.justice.gov.uk/" class="govuk-link">Read more about child arrangements</a></li>
+            <li><a href="https://www.gov.uk/find-legal-advice/find-legal-adviser" class="govuk-link">Find an organisation that will help you with your case</a></li>
+            <li><a href="https://www.gov.uk/legal-aid" class="govuk-link">Find legal aid</a></li>
+          </ul>
+
+        </main>
+      </div>
+    </div>
+
+        <div class="govuk-grid-column-one-third">
+
+    		<details class="govuk-details" data-module="govuk-details">
+ 			 <summary class="govuk-details__summary">
+   			 <span class="govuk-details__summary-text">
+    		  Contacts for help
+  			  </span>
+  			</summary>
+  			<div class="govuk-details__text">
+   			 Ask a question or get any help in any language
+   			 <p class="govuk-body govuk-!-font-weight-bold">Telephone</p>
+
+   			 <p class="govuk-body govuk-!-font-weight-regular">0300 303 0742</p>
+   			 <p class="govuk-body govuk-!-font-weight-regular">Monday to Friday, 8am to 8pm</p>
+   			 <a href="#" class="govuk-link">Find out about call charges</a>
+   			 <p class="govuk-body govuk-!-font-weight-regular">(opens in a new window)</p>
+
+			  </div>
+			</details>
+
+
+
+  </div>
+
+</div>
+
+
+{% endblock %}

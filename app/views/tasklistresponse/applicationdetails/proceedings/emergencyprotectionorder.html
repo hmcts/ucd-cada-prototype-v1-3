@@ -1,0 +1,248 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Page title
+{% endblock %}
+
+{% block header %}
+  <!-- Blank header with no service name for the start page -->
+
+{{ govukHeader({
+    homepageUrl: "/",
+    serviceName: serviceName,
+    serviceUrl: "/",
+    containerClasses: "govuk-width-container"
+}) }}
+
+{% endblock %}
+
+{% block content %}
+ <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+<div class="govuk-width-container">
+  <a href="#" onclick="history.back(-1)" class="govuk-back-link">Back</a>
+
+  <main class="govuk-main-wrapper " id="main-content" role="main">
+    <form action="emergencyprotectionorder-answer" method="post" novalidate>
+
+
+
+      <div class="govuk-form-group">
+        <fieldset class="govuk-fieldset">
+          <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+
+            <h1 class="govuk-heading-xl">Provide details of court cases you or the children have been involved in</h1>
+
+          </legend>
+
+
+          <p class="govuk-body">If you do not have the specific details, you can skip this section and proceed with the application.</p>
+
+          <div class="uploadcomponent">
+              <div class="govuk-!-padding-bottom-2"></div>
+            <div class="govuk-form-group">
+              <fieldset class="govuk-fieldset">
+                <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+                  <span class="govuk-fieldset__heading">Emergency Protection Order 1</span>
+                  </legend>
+
+                  <div class="govuk-form-group">
+                    <label for="steps-court-orders-details-form-undertaking-court-name-field" class="govuk-label govuk-label--s">Which court issued the order? <span style="font-weight:normal">(optional) </span>
+                    </label>
+                    <input id="courtnametextarea" class="govuk-input" type="text" name="courtnametextarea">
+                  </div>
+
+
+
+                      <div class="govuk-form-group">
+                        <label for="casenumber" class="govuk-label govuk-label--s">Case number <span style="font-weight:normal">(optional) </span>
+                        </label>
+                        <div id="event-name-hint" class="govuk-hint"id="casenumber-hint">For example, BS19F99999</div>
+                        <input id="casenumber-field" class="govuk-input govuk-!-width-one-half" type="text" name="casenumber">
+                      </div>
+
+                      <div class="govuk-form-group">
+                        <fieldset class="govuk-fieldset" aria-describedby="courtdate-hint">
+                          <legend class="govuk-fieldset__legend govuk-fieldset__legend--s">
+                            <span class="govuk-fieldset__heading">What date was it made? <span style="font-weight:normal">(optional) </span>
+                            </span>
+                          </legend>
+                          <span class="govuk-hint" id="courtdate-hint">For example, 31 3 2015</span>
+                          <div class="govuk-!-padding-bottom-2"></div>
+                          <div class="govuk-date-input">
+                            <div class="govuk-date-input__item">
+                              <div class="govuk-form-group">
+                              <label class="govuk-label govuk-date-input__label" for="courtdate-day">Day
+                              </label>
+                              <input id="courtdate-da" class="govuk-input govuk-date-input__input govuk-input--width-2" name="courtdate" type="text" pattern="[0-9]*" inputmode="numeric">
+                            </div>
+                          </div>
+                          <div class="govuk-date-input__item">
+                            <div class="govuk-form-group">
+                              <label class="govuk-label govuk-date-input__label" for="courtdate-month">Month
+                              </label>
+                              <input id="courtdate-month" class="govuk-input govuk-date-input__input govuk-input--width-2" name="courtdate" type="text" pattern="[0-9]*" inputmode="numeric">
+                            </div>
+                          </div>
+                          <div class="govuk-date-input__item">
+                            <div class="govuk-form-group">
+                              <label class="govuk-label govuk-date-input__label" for="scourtdate-year">Year
+                              </label>
+                              <input id="courtdate-year" class="govuk-input govuk-date-input__input govuk-input--width-4" name="courtdate" type="text" pattern="[0-9]*" inputmode="numeric">
+                            </div>
+                          </div>
+                        </div>
+                      </fieldset>
+                    </div>
+
+                    <div class="govuk-form-group">
+                      <fieldset class="govuk-fieldset">
+                        <legend class="govuk-fieldset__legend govuk-fieldset__legend--s">
+                          <span class="govuk-fieldset__heading">Is this a current order? <span style="font-weight:normal">(optional) </span></span>
+                        </legend>
+
+                        <div class="govuk-radios govuk-radios--inline" data-module="govuk-radios">
+                          <div class="govuk-radios__item">
+                            <input id="ordercurrent-yes" class="govuk-radios__input" type="radio" value="yes" name="ordercurrent">
+                            <label for="ordercurrent-yes" class="govuk-label govuk-radios__label">Yes
+                            </label>
+                          </div>
+                          <div class="govuk-radios__item">
+                            <input id="ordercurrent-no" class="govuk-radios__input" type="radio" value="no" name="ordercurrent">
+                            <label for="ordercurrent-no" class="govuk-label govuk-radios__label">No
+                            </label>
+                          </div>
+                        </div>
+
+
+                      </fieldset>
+                    </div>
+
+                    <div class="govuk-form-group">
+                      <fieldset class="govuk-fieldset" aria-describedby="courtdate-hint">
+                        <legend class="govuk-fieldset__legend govuk-fieldset__legend--s">
+                          <span class="govuk-fieldset__heading">What date did it end? <span style="font-weight:normal">(optional) </span>
+                          </span>
+                        </legend>
+                        <span class="govuk-hint" id="courtdate-hint">For example, 31 3 2015</span>
+                        <div class="govuk-!-padding-bottom-2"></div>
+                        <div class="govuk-date-input">
+                          <div class="govuk-date-input__item">
+                            <div class="govuk-form-group">
+                            <label class="govuk-label govuk-date-input__label" for="courtdate-day">Day
+                            </label>
+                            <input id="courtdate-da" class="govuk-input govuk-date-input__input govuk-input--width-2" name="courtdate" type="text" pattern="[0-9]*" inputmode="numeric">
+                          </div>
+                        </div>
+                        <div class="govuk-date-input__item">
+                          <div class="govuk-form-group">
+                            <label class="govuk-label govuk-date-input__label" for="courtdate-month">Month
+                            </label>
+                            <input id="courtdate-month" class="govuk-input govuk-date-input__input govuk-input--width-2" name="courtdate" type="text" pattern="[0-9]*" inputmode="numeric">
+                          </div>
+                        </div>
+                        <div class="govuk-date-input__item">
+                          <div class="govuk-form-group">
+                            <label class="govuk-label govuk-date-input__label" for="scourtdate-year">Year
+                            </label>
+                            <input id="courtdate-year" class="govuk-input govuk-date-input__input govuk-input--width-4" name="courtdate" type="text" pattern="[0-9]*" inputmode="numeric">
+                          </div>
+                        </div>
+                      </div>
+                    </fieldset>
+                  </div>
+
+                  <div class="govuk-form-group">
+                            <fieldset class="govuk-fieldset">
+                              <legend class="govuk-fieldset__legend govuk-fieldset__legend--s">
+                                <span class="govuk-fieldset__heading">Do you have a copy of the order? <span style="font-weight:normal">(optional) </span></span>
+                              </legend>
+
+                              <div class="govuk-radios govuk-radios--inline" data-module="govuk-radios">
+                                <div class="govuk-radios__item">
+                                  <input id="ordercopy-yes" class="govuk-radios__input" type="radio" value="yes" name="ordercopy">
+                                  <label for="ordercopy-yes" class="govuk-label govuk-radios__label">Yes
+                                  </label>
+                                </div>
+                                <div class="govuk-radios__item">
+                                  <input id="ordercopy-no" class="govuk-radios__input" type="radio" value="no" name="ordercopy">
+                                  <label for="ordercopy-no" class="govuk-label govuk-radios__label">No
+                                  </label>
+                                </div>
+                              </div>
+
+
+
+
+                    </fieldset>
+                  </div>
+
+            </div>
+            </div>
+            <div class="govuk-!-padding-bottom-4"></div>
+
+          <a class="govuk-button govuk-button--secondary upload-addnew " href="#" data-module="govuk-button">
+                    Add another order
+              </a>
+
+
+              </div>
+
+
+
+              <div class="govuk-button-group govuk-!-margin-top-6">
+                <button class="govuk-button" data-module="govuk-button">
+                  Save and continue
+                </button>
+              </div>
+
+
+
+
+</form>
+  </main>
+</div>
+    </div>
+    <div class="govuk-grid-column-one-third">
+
+    		<details class="govuk-details" data-module="govuk-details">
+ 			 <summary class="govuk-details__summary">
+   			 <span class="govuk-details__summary-text">
+    		  Contacts for help
+  			  </span>
+  			</summary>
+  			<div class="govuk-details__text">
+   			 Ask a question or get any help in any language
+   			 <p class="govuk-body govuk-!-font-weight-bold">Telephone</p>
+
+   			 <p class="govuk-body govuk-!-font-weight-regular">0300 303 0742</p>
+   			 <p class="govuk-body govuk-!-font-weight-regular">Monday to Friday, 8am to 8pm</p>
+   			 <a href="#" class="govuk-link">Find out about call charges</a>
+   			 <p class="govuk-body govuk-!-font-weight-regular">(opens in a new window)</p>
+
+			  </div>
+			</details>
+
+    </div>
+  </div>
+
+  <script
+    src="https://code.jquery.com/jquery-3.6.0.js"
+    integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
+    crossorigin="anonymous"></script>
+  <script type="text/javascript">
+  $( document ).ready(function() {
+
+    $(".upload-addnew").on('click', function(){
+      var newel = $('.uploadcomponent:last').clone();
+      $(newel).insertAfter(".uploadcomponent:last");
+    });
+    $('body').on('click','.remove-button', function() {
+        $(this).closest('.uploadcomponent').remove();
+    });
+
+
+  });
+  </script>
+
+{% endblock %}

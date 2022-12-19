@@ -1,0 +1,110 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Child arrangement respondent
+{% endblock %}
+
+{% block header %}
+  <!-- Blank header with no service name for the start page -->
+
+{{ govukHeader({
+    homepageUrl: "/",
+    serviceName: serviceName,
+    serviceUrl: "/",
+    containerClasses: "govuk-width-container"
+}) }}
+
+{% endblock %}
+
+{% block content %}
+<div class="govuk-grid-row">
+   <div class="govuk-grid-column-two-thirds">
+    <div class="govuk-width-container">
+     <a href="#" onclick="history.back(-1)" class="govuk-back-link">Back</a>
+
+     <main class="govuk-main-wrapper app-main-class" id="main-content" role="main">
+         <form action="permissions" method="post" novalidate>
+
+
+
+
+
+
+       <h1 class="govuk-heading-xl">
+         Contact details of solicitor
+       </h1>
+
+       <form class="edit_steps_solicitor_contact_details_form" id="new_steps_solicitor_contact_details_form" action="/steps/solicitor/contact_details" accept-charset="UTF-8" method="post">
+         <input name="utf8" type="hidden" value="✓">
+         <input type="hidden" name="_method" value="put">
+         <input type="hidden" name="authenticity_token" value="qBX9cuMOO+tuZA4HtqwHp7ptk8SVXhNo6U6PngJtA1IiWxeKnun4/cG9/Nj1KK457/6z5AyFN5NhT81JQotxVQ==">
+         <div class="govuk-form-group">
+           <label for="steps-solicitor-contact-details-form-email-field" class="govuk-label">
+             Email address
+           </label>
+           <input id="steps-solicitor-contact-details-form-email-field" class="govuk-input" type="email" value="" name="steps_solicitor_contact_details_form[email]">
+         </div>
+
+         <div class="govuk-form-group">
+           <label for="steps-solicitor-contact-details-form-phone-number-field" class="govuk-label">
+             Phone number
+           </label>
+           <input id="steps-solicitor-contact-details-form-phone-number-field" class="govuk-input govuk-!-width-one-half" type="tel" value="" name="steps_solicitor_contact_details_form[phone_number]">
+         </div>
+        
+
+         <div class="govuk-form-group">
+           <label for="steps-solicitor-contact-details-form-dx-number-field" class="govuk-label">
+             DX number
+           </label>
+           <span class="govuk-hint" id="steps-solicitor-contact-details-form-dx-number-hint">
+             This is a secure document exchange system used by the legal profession
+           </span>
+           <input id="steps-solicitor-contact-details-form-dx-number-field" class="govuk-input govuk-!-width-one-half" aria-describedby="steps-solicitor-contact-details-form-dx-number-hint" type="text" value="" name="steps_solicitor_contact_details_form[dx_number]">
+         </div>
+
+
+
+
+
+
+            <div class="govuk-button-group govuk-!-margin-top-6">
+              <button class="govuk-button" data-module="govuk-button">
+                Continue
+              </button>
+              <a class="govuk-button govuk-button--secondary" href="../../applicanttasklist/inprogress"  data-module="govuk-button">
+                Save and come back later
+              </a>
+
+            </div>
+
+
+       </main>
+
+
+    </div>
+  </div>
+
+  <div class="govuk-grid-column-one-third">
+    <details class="govuk-details" data-module="govuk-details">
+ 			 <summary class="govuk-details__summary">
+   			 <span class="govuk-details__summary-text">
+    		  Contacts for help
+  			  </span>
+  			</summary>
+  			<div class="govuk-details__text">
+   			 Ask a question or get any help in any language
+   			 <p class="govuk-body govuk-!-font-weight-bold">Telephone</p>
+
+   			 <p class="govuk-body govuk-!-font-weight-regular">0300 303 0742</p>
+   			 <p class="govuk-body govuk-!-font-weight-regular">Monday to Friday, 8am to 8pm</p>
+   			 <a href="#" class="govuk-link">Find out about call charges</a>
+   			 <p class="govuk-body govuk-!-font-weight-regular">(opens in a new window)</p>
+			  </div>
+			</details>
+    </div>
+</div>
+
+
+
+{% endblock %}

@@ -1,0 +1,101 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Child arrangement respondent
+{% endblock %}
+
+{% block header %}
+  <!-- Blank header with no service name for the start page -->
+
+{{ govukHeader({
+    homepageUrl: "/",
+    serviceName: serviceName,
+    serviceUrl: "/",
+    containerClasses: "govuk-width-container"
+}) }}
+
+{% endblock %}
+
+{% block content %}
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <div class="govuk-width-container">
+     <a href="#" onclick="history.back(-1)" class="govuk-back-link">Back</a>
+
+      <main class="govuk-main-wrapper app-main-class" id="main-content" role="main">
+          <form action="withoutnotice-answer" method="post" novalidate>
+
+
+                  <div class="govuk-form-group">
+                    <fieldset class="govuk-fieldset" aria-describedby="steps-application-without-notice-form-without-notice-supplemental">
+                      <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl">
+                        <h1 class="govuk-fieldset__heading">Are you asking for a without notice hearing?</h1>
+                      </legend>
+                      <div id="withoutnotice-info">
+                        <p class="govuk-body">Hearings which take place without notice to the other people will only be justified where your case is exceptionally urgent, or there is good reason not to tell the other people about your application (either because they could take steps to obstruct the application or because doing so may expose you or the children to a risk of harm).</p>
+
+                        <div class="govuk-warning-text">
+                          <span class="govuk-warning-text__icon" aria-hidden="true">!</span>
+                          <strong class="govuk-warning-text__text">
+                            <span class="govuk-warning-text__assistive">Warning</span>
+                            If you ask for a without notice hearing, the court may require you to attend on the same day as you submit your application. They will contact you to tell you when you need to go to the court.
+                          </strong>
+                        </div>
+                      </div>
+
+                      <div class="govuk-radios" data-module="govuk-radios">
+                        <div class="govuk-radios__item">
+                          <input id="withoutnotice-yes" class="govuk-radios__input" type="radio" value="yes" name="withoutnotice">
+                          <label for="withoutnotice-yes" class="govuk-label govuk-radios__label">Yes</label>
+                        </div>
+                        <div class="govuk-radios__item">
+                          <input id="withoutnotice-no" class="govuk-radios__input" type="radio" value="no" name="withoutnotice">
+                          <label for="withoutnotice-no" class="govuk-label govuk-radios__label">No</label>
+                        </div>
+                      </div>
+                    </fieldset>
+                  </div>
+
+
+                  <div class="govuk-button-group govuk-!-margin-top-6">
+                    <button class="govuk-button" data-module="govuk-button">
+                      Continue
+                    </button>
+                    <a class="govuk-button govuk-button--secondary" href="../../applicanttasklist/inprogress"  data-module="govuk-button">
+                      Save and come back later
+                    </a>
+
+                  </div>
+
+
+
+        </form>
+      </main>
+
+
+    </div>
+  </div>
+
+  <div class="govuk-grid-column-one-third">
+    <details class="govuk-details" data-module="govuk-details">
+			 <summary class="govuk-details__summary">
+ 			 <span class="govuk-details__summary-text">
+  		  Contacts for help
+			  </span>
+			</summary>
+			<div class="govuk-details__text">
+ 			 Ask a question or get any help in any language
+ 			 <p class="govuk-body govuk-!-font-weight-bold">Telephone</p>
+
+ 			 <p class="govuk-body govuk-!-font-weight-regular">0300 303 0742</p>
+ 			 <p class="govuk-body govuk-!-font-weight-regular">Monday to Friday, 8am to 8pm</p>
+ 			 <a href="#" class="govuk-link">Find out about call charges</a>
+ 			 <p class="govuk-body govuk-!-font-weight-regular">(opens in a new window)</p>
+		  </div>
+		</details>
+  </div>
+</div>
+
+
+
+{% endblock %}

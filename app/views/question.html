@@ -1,0 +1,94 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Question page
+{% endblock %}
+
+{% block beforeContent %}
+  <a class="govuk-back-link" href="javascript:window.history.back()">Back</a>
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+
+      <form class="form" action="/question1-answer" method="post">
+
+        {% from "govuk/components/radios/macro.njk" import govukRadios %}
+
+        {{ govukRadios({
+          idPrefix: "how-many",
+          name: "how-many",
+          fieldset: {
+            legend: {
+              text: "How many?",
+              isPageHeading: true,
+              classes: "govuk-fieldset__legend--l"
+            }
+          },
+          items: [
+            {
+              value: "england",
+              text: "England",
+              checked: checked("how-many", "england")
+            },
+            {
+              value: "scotland",
+              text: "Scotland",
+              checked: checked("how-many", "scotland")
+            },
+            {
+              value: "wales",
+              text: "Wales",
+              checked: checked("how-many", "wales")
+            },
+            {
+              value: "ineligible",
+              text: "Ineligible",
+              checked: checked("how-many", "ineligible")
+            }
+          ]
+        }) }}
+
+        <button class="govuk-button" data-module="govuk-button">Continue</button>
+
+
+        <div class="hmcts-progress-bar">
+          <ol class="hmcts-progress-bar__list">
+          
+          <li class="hmcts-progress-bar__list-item">
+            <span class="hmcts-progress-bar__icon hmcts-progress-bar__icon--complete"></span>
+            <span class="hmcts-progress-bar__label">You apply</span>
+          </li>
+          
+          <li class="hmcts-progress-bar__list-item" aria-current="step">
+            <span class="hmcts-progress-bar__icon"></span>
+            <span class="hmcts-progress-bar__label">Your husband/wife responds</span>
+          </li>
+          
+          <li class="hmcts-progress-bar__list-item">
+            <span class="hmcts-progress-bar__icon"></span>
+            <span class="hmcts-progress-bar__label">The court decides</span>
+          </li>
+          
+          <li class="hmcts-progress-bar__list-item">
+            <span class="hmcts-progress-bar__icon"></span>
+            <span class="hmcts-progress-bar__label">Divorce finalised</span>
+          </li>
+          
+          </ol>
+          </div> 
+
+
+
+
+
+
+      </form>
+
+    </div>
+  </div>
+
+{% endblock %}

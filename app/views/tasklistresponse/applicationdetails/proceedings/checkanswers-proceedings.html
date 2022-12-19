@@ -1,0 +1,311 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Child arrangement respondent
+{% endblock %}
+
+{% block header %}
+  <!-- Blank header with no service name for the start page -->
+
+{{ govukHeader({
+    homepageUrl: "/",
+    serviceName: serviceName,
+    serviceUrl: "/",
+    containerClasses: "govuk-width-container"
+}) }}
+
+{% endblock %}
+
+{% block content %}
+<div class="govuk-grid-row">
+     <div class="govuk-grid-column-two-thirds">
+    <div class="govuk-width-container">
+     <a href="#" onclick="history.back(-1)" class="govuk-back-link">Back</a>
+
+      <main class="govuk-main-wrapper " id="main-content" role="main">
+
+           <h1 class="govuk-heading-xl">Check your answers </h1>
+
+           <h2 class="govuk-heading-l">Current or previous proceedings</h2>
+
+
+           <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+
+             <div class="govuk-summary-list__row">
+               <dt class="govuk-summary-list__key govuk-!-width-one-third">
+                 Have the children been involved in a court case?
+               </dt>
+               <dd class="govuk-summary-list__value">
+                   {{ data['childrenorders'] }}
+               </dd>
+               <dd class="govuk-summary-list__actions">
+                 <a class="govuk-link" href="#">
+                   Edit<span class="govuk-visually-hidden">Legal</span>
+                 </a>
+               </dd>
+             </div>
+
+
+               <div class="govuk-summary-list__row app-cya--answers-group" id="language_interpreter">
+                   <dt class="govuk-summary-list__key govuk-!-width-one-third app-cya--answers-group__key">
+                     Have you had a court order made for your protection?
+                   </dt>
+                   <dd class="govuk-summary-list__value">
+                           {{ data['protection'] }}
+                   </dd>
+                   <dd class="govuk-summary-list__actions">
+                     <a class="govuk-link" href="#">
+                       Edit<span class="govuk-visually-hidden">Legal</span>
+                     </a>
+                   </dd>
+                 </div>
+
+                 <div class="govuk-summary-list__row app-cya--answers-group" id="language_interpreter">
+                     <dt class="govuk-summary-list__key govuk-!-width-one-third app-cya--answers-group__key">
+                       Provide details of court cases you or the children have been involved in
+                     </dt>
+                     <dd class="govuk-summary-list__value">
+                       <ul class="govuk-list govuk-list--bullet">
+                         <li>Emergency Protection Order</li>
+                         <li>Other Order</li>
+
+                       </ul>
+                     </dd>
+                     <dd class="govuk-summary-list__actions">
+                       <a class="govuk-link" href="#">
+                         Edit<span class="govuk-visually-hidden">Legal</span>
+                       </a>
+                     </dd>
+                   </div>
+
+                   <div class="govuk-summary-list__row app-cya--answers-group" id="language_interpreter">
+                     <dt class="govuk-summary-list__key govuk-!-width-one-third app-cya--answers-group__key">
+                     Emergency Protection Order
+                     </dt>
+                     <dd class="govuk-summary-list__value">
+                         <dl class="govuk-summary-list">
+
+
+                           <div class="govuk-summary-list__row" id="urgent_hearing_when" style="border-bottom:1px solid #fff">
+                             <dt class="govuk-summary-list__key">
+                               Which court issued the order?
+                             </dt>
+                           </div>
+                           <div class="govuk-summary-list__row" >
+                             <dd class="govuk-summary-list__value">
+                               No
+                             </dd>
+                           </div>
+                           <div class="govuk-summary-list__row" style="border-bottom:1px solid #fff" >
+                             <dt class="govuk-summary-list__key">
+                           Case number
+                             </dt>
+                           </div>
+                           <div class="govuk-summary-list__row" >
+                             <dd class="govuk-summary-list__value">
+                               Yes
+
+
+                             </dd>
+                           </div>
+                           <div class="govuk-summary-list__row" style="border-bottom:1px solid #fff" >
+                             <dt class="govuk-summary-list__key">
+                             What date was it made?
+                             </dt>
+                           </div>
+                           <div class="govuk-summary-list__row" >
+                             <dd class="govuk-summary-list__value">
+                               Yes
+
+                             </dd>
+                           </div>
+                           <div class="govuk-summary-list__row" style="border-bottom:1px solid #fff" >
+                             <dt class="govuk-summary-list__key">
+                             How long was the order for?
+                             </dt>
+                           </div>
+                           <div class="govuk-summary-list__row" >
+                             <dd class="govuk-summary-list__value">
+                               Yes
+
+                             </dd>
+                           </div>
+                           <div class="govuk-summary-list__row" style="border-bottom:1px solid #fff" >
+                             <dt class="govuk-summary-list__key">
+                             Is this a current order?
+                             </dt>
+                           </div>
+                           <div class="govuk-summary-list__row" >
+                             <dd class="govuk-summary-list__value">
+                               Yes
+
+                             </dd>
+                           </div>
+                           <div class="govuk-summary-list__row" style="border-bottom:1px solid #fff" >
+                             <dt class="govuk-summary-list__key">
+                             Do you have a copy of the order
+                             </dt>
+                           </div>
+                           <div class="govuk-summary-list__row"  >
+                             <dd class="govuk-summary-list__value">
+                               Yes
+
+                             </dd>
+                           </div>
+                           <div class="govuk-summary-list__row" style="border-bottom:1px solid #fff" >
+                             <dt class="govuk-summary-list__key">
+                             Copy uploaded?
+                             </dt>
+                           </div>
+                           <div class="govuk-summary-list__row" style="border-bottom:1px solid #fff" >
+                             <dd class="govuk-summary-list__value">
+                               Yes
+
+                             </dd>
+                           </div>
+                         </dl>
+                     </dd>
+                     <dd class="govuk-summary-list__actions">
+
+                       <a class="govuk-link govuk-link--no-visited-state ga-pageLink" data-ga-category="check your answers" data-ga-label="change link: urgent_hearing_details" href="/steps/application/urgent_hearing_details">
+                         Edit <span class="govuk-visually-hidden">your answer to, Urgent hearing details</span>
+                       </a>
+                     </dd>
+                   </div>
+                   <div class="govuk-summary-list__row app-cya--answers-group" id="language_interpreter">
+                     <dt class="govuk-summary-list__key govuk-!-width-one-third app-cya--answers-group__key">
+                       Other Orders
+                     </dt>
+                     <dd class="govuk-summary-list__value">
+                         <dl class="govuk-summary-list">
+
+
+                           <div class="govuk-summary-list__row" id="urgent_hearing_when" style="border-bottom:1px solid #fff">
+                             <dt class="govuk-summary-list__key">
+                               Which court issued the order?
+                             </dt>
+                           </div>
+                           <div class="govuk-summary-list__row" >
+                             <dd class="govuk-summary-list__value">
+                               No
+                             </dd>
+                           </div>
+                           <div class="govuk-summary-list__row" style="border-bottom:1px solid #fff" >
+                             <dt class="govuk-summary-list__key">
+                           Case number
+                             </dt>
+                           </div>
+                           <div class="govuk-summary-list__row" >
+                             <dd class="govuk-summary-list__value">
+                               Yes
+
+
+                             </dd>
+                           </div>
+                           <div class="govuk-summary-list__row" style="border-bottom:1px solid #fff" >
+                             <dt class="govuk-summary-list__key">
+                             What date was it made?
+                             </dt>
+                           </div>
+                           <div class="govuk-summary-list__row" >
+                             <dd class="govuk-summary-list__value">
+                               Yes
+
+                             </dd>
+                           </div>
+                           <div class="govuk-summary-list__row" style="border-bottom:1px solid #fff" >
+                             <dt class="govuk-summary-list__key">
+                             How long was the order for?
+                             </dt>
+                           </div>
+                           <div class="govuk-summary-list__row" >
+                             <dd class="govuk-summary-list__value">
+                               Yes
+
+                             </dd>
+                           </div>
+                           <div class="govuk-summary-list__row" style="border-bottom:1px solid #fff" >
+                             <dt class="govuk-summary-list__key">
+                             Is this a current order?
+                             </dt>
+                           </div>
+                           <div class="govuk-summary-list__row" >
+                             <dd class="govuk-summary-list__value">
+                               Yes
+
+                             </dd>
+                           </div>
+                           <div class="govuk-summary-list__row" style="border-bottom:1px solid #fff" >
+                             <dt class="govuk-summary-list__key">
+                             Do you have a copy of the order
+                             </dt>
+                           </div>
+                           <div class="govuk-summary-list__row"  >
+                             <dd class="govuk-summary-list__value">
+                               Yes
+
+                             </dd>
+                           </div>
+                           <div class="govuk-summary-list__row" style="border-bottom:1px solid #fff" >
+                             <dt class="govuk-summary-list__key">
+                             Copy uploaded?
+                             </dt>
+                           </div>
+                           <div class="govuk-summary-list__row" style="border-bottom:1px solid #fff" >
+                             <dd class="govuk-summary-list__value">
+                               Yes
+
+                             </dd>
+                           </div>
+                         </dl>
+                     </dd>
+                     <dd class="govuk-summary-list__actions">
+
+                       <a class="govuk-link govuk-link--no-visited-state ga-pageLink" data-ga-category="check your answers" data-ga-label="change link: urgent_hearing_details" href="/steps/application/urgent_hearing_details">
+                         Edit <span class="govuk-visually-hidden">your answer to, Urgent hearing details</span>
+                       </a>
+                     </dd>
+                   </div>
+           </dl>
+
+
+         <div>
+
+
+       <form action="/tasklistresponse/start" method="post" novalidate>
+
+         <input type="hidden" name="answers-checked" value="true">
+
+         <button class="govuk-button" data-module="govuk-button">
+           Save and continue
+         </button>
+
+       </form>
+
+     </div>
+      </main>
+    </div>
+  </div>
+  <div class="govuk-grid-column-one-third">
+    <details class="govuk-details" data-module="govuk-details">
+ 			 <summary class="govuk-details__summary">
+   			 <span class="govuk-details__summary-text">
+    		  Contacts for help
+  			  </span>
+  			</summary>
+  			<div class="govuk-details__text">
+   			 Ask a question or get any help in any language
+   			 <p class="govuk-body govuk-!-font-weight-bold">Telephone</p>
+
+   			 <p class="govuk-body govuk-!-font-weight-regular">0300 303 0742</p>
+   			 <p class="govuk-body govuk-!-font-weight-regular">Monday to Friday, 8am to 8pm</p>
+   			 <a href="#" class="govuk-link">Find out about call charges</a>
+   			 <p class="govuk-body govuk-!-font-weight-regular">(opens in a new window)</p>
+			  </div>
+			</details>
+    </div>
+
+</div>
+
+
+{% endblock %}

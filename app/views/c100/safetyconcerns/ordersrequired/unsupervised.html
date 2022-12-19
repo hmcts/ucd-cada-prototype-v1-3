@@ -1,0 +1,119 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Child arrangement respondent
+{% endblock %}
+
+{% block header %}
+  <!-- Blank header with no service name for the start page -->
+
+{{ govukHeader({
+    homepageUrl: "/",
+    serviceName: serviceName,
+    serviceUrl: "/",
+    containerClasses: "govuk-width-container"
+}) }}
+
+{% endblock %}
+
+{% block content %}
+<div class="govuk-grid-row">
+   <div class="govuk-grid-column-two-thirds">
+    <div class="govuk-width-container">
+     <a href="#" onclick="history.back(-1)" class="govuk-back-link">Back</a>
+
+     <main class="govuk-main-wrapper app-main-class" id="main-content" role="main">
+        <form action="../../internationalelement/start" method="post" novalidate>
+         <span class="govuk-caption-xl">Safety concerns</span>
+         <h1 class="govuk-heading-xl">Contact between the children and the other people in this application</h1>
+
+         <p class="govuk-body">The court will presume it is good for the children's welfare to have both of their parents involved in their lives, unless there is evidence showing that this would cause harm to the children.</p>
+
+
+           <div class="govuk-form-group">
+             <fieldset class="govuk-fieldset">
+               <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+                 <span class="govuk-fieldset__heading">Do you agree to the children spending time with the other people in this application?</span>
+               </legend>
+               <input value="" type="hidden" name="steps_abuse_concerns_contact_form[concerns_contact_type]" id="steps_abuse_concerns_contact_form_concerns_contact_type">
+               <div class="govuk-radios" data-module="govuk-radios">
+                 <div class="govuk-radios__item">
+                   <input id="unsupervised" class="govuk-radios__input" type="radio" value="unsupervised" name="steps_abuse_concerns_contact_form[concerns_contact_type]">
+                   <label for="steps-abuse-concerns-contact-form-concerns-contact-type-unsupervised-field" class="govuk-label govuk-radios__label">Yes
+                   </label>
+                 </div>
+                 <div class="govuk-radios__item">
+                   <input id="supervised" class="govuk-radios__input" type="radio" value="supervised" name="steps_abuse_concerns_contact_form[concerns_contact_type]">
+                   <label for="steps-abuse-concerns-contact-form-concerns-contact-type-supervised-field" class="govuk-label govuk-radios__label">Yes, but I prefer that it is supervised
+                   </label>
+                 </div>
+                 <div class="govuk-radios__item">
+                   <input id="none" class="govuk-radios__input" type="radio" value="none" name="steps_abuse_concerns_contact_form[concerns_contact_type]">
+                   <label for="steps-abuse-concerns-contact-form-concerns-contact-type-none-field" class="govuk-label govuk-radios__label">No, I would prefer the other people do not spend time with the children
+                   </label>
+                 </div>
+               </div>
+             </fieldset>
+           </div>
+
+           <div class="govuk-form-group">
+             <fieldset class="govuk-fieldset" aria-describedby="steps-abuse-concerns-contact-form-concerns-contact-other-hint">
+               <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+                 <span class="govuk-fieldset__heading">Do you agree to the other people in this application being in touch with the children in other ways?
+                 </span>
+               </legend>
+               <input value="" type="hidden" name="steps_abuse_concerns_contact_form[concerns_contact_other]" id="steps_abuse_concerns_contact_form_concerns_contact_other">
+               <span class="govuk-hint" id="steps-abuse-concerns-contact-form-concerns-contact-other-hint">For example, by phone, text or email</span>
+               <div class="govuk-radios" data-module="govuk-radios">
+                 <div class="govuk-radios__item">
+                   <input id="yescontact" class="govuk-radios__input" type="radio" value="yes" name="steps_abuse_concerns_contact_form[concerns_contact_other]">
+                   <label for="steps-abuse-concerns-contact-form-concerns-contact-other-yes-field" class="govuk-label govuk-radios__label">Yes
+                   </label>
+                 </div>
+                 <div class="govuk-radios__item">
+                   <input id="nocontact" class="govuk-radios__input" type="radio" value="no"  name="steps_abuse_concerns_contact_form[concerns_contact_other]">
+                   <label for="steps-abuse-concerns-contact-form-concerns-contact-other-no-field" class="govuk-label govuk-radios__label">No
+                   </label>
+                 </div>
+               </div>
+             </fieldset>
+           </div>
+
+           <div class="govuk-button-group govuk-!-margin-top-6">
+             <button class="govuk-button" data-module="govuk-button">
+               Continue
+             </button>
+             <a class="govuk-button govuk-button--secondary" href="../../../applicanttasklist/inprogress"  data-module="govuk-button">
+               Save and come back later
+             </a>
+
+           </div>
+
+         </form>
+       </main>
+    </div>
+  </div>
+
+  <div class="govuk-grid-column-one-third">
+    <details class="govuk-details" data-module="govuk-details">
+ 			 <summary class="govuk-details__summary">
+   			 <span class="govuk-details__summary-text">
+    		  Contacts for help
+  			  </span>
+  			</summary>
+  			<div class="govuk-details__text">
+   			 Ask a question or get any help in any language
+   			 <p class="govuk-body govuk-!-font-weight-bold">Telephone</p>
+
+   			 <p class="govuk-body govuk-!-font-weight-regular">0300 303 0742</p>
+   			 <p class="govuk-body govuk-!-font-weight-regular">Monday to Friday, 8am to 8pm</p>
+   			 <a href="#" class="govuk-link">Find out about call charges</a>
+   			 <p class="govuk-body govuk-!-font-weight-regular">(opens in a new window)</p>
+			  </div>
+			</details>
+    </div>
+</div>
+
+
+
+{% endblock %}

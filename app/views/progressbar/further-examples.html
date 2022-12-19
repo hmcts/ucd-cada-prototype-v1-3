@@ -1,0 +1,257 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Progress bars
+{% endblock %}
+
+{% block header %}
+  <!-- Blank header with no service name for the start page -->
+
+{{ govukHeader({
+    homepageUrl: "/",
+    serviceName: serviceName,
+    serviceUrl: "/",
+    containerClasses: "govuk-width-container"
+}) }}
+
+{% endblock %}
+
+{% block content %}
+<style>
+  @media screen and (min-width:1201px) {
+    .hmcts-progress-bar-vertical .hmcts-progress-bar__list-item  { width:100px; display:inline-block }
+  }
+  .hmcts-progress-bar-vertical .hmcts-progress-bar__list-item[aria-current=step] span.hmcts-progress-bar__icon {  background-color:#1D70B8; border:4px solid #1D70B8 }
+
+
+  pre {
+    display: block;
+    padding: 9.5px;
+    margin: 0 0 10px;
+    font-size: 13px;
+    line-height: 1.42857143;
+    color: #333;
+    word-break: break-all;
+    word-wrap: break-word;
+    background-color: #f5f5f5;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+pre code {
+    padding: 0;
+    font-size: inherit;
+    color: inherit;
+    white-space: pre-wrap;
+    background-color: transparent;
+    border-radius: 0;
+}
+</style>
+
+  <div class="govuk-grid-row">
+
+    <div class="govuk-grid-column-two-thirds">
+
+      <h1 class="govuk-heading-l">Progress bar - further examples and installation instructions</h1>
+
+      <h2 class="govuk-heading-m">
+       Responsive mode: vertical 6 stops
+      </h2>
+
+        <!-- start components here -->
+
+        <div class="hmcts-progress-bar-vertical" role="progressbar">
+          <ol class="hmcts-progress-bar__list">
+          
+          <li class="hmcts-progress-bar__list-item">
+            <span class="hmcts-progress-bar__icon hmcts-progress-bar__icon--complete"></span>
+            <span class="hmcts-progress-bar__label"><span class="govuk-visually-hidden">Step 1: </span>Application issued</span>
+          </li>
+          
+          <li class="hmcts-progress-bar__list-item" aria-current="step">
+            <span class="hmcts-progress-bar__icon"></span>
+            <span class="hmcts-progress-bar__label"><span class="govuk-visually-hidden">Current Step 2: </span>Response submitted</span>
+          </li>
+          
+          <li class="hmcts-progress-bar__list-item">
+            <span class="hmcts-progress-bar__icon"></span>
+            <span class="hmcts-progress-bar__label"><span class="govuk-visually-hidden">Step 3: </span>Hearing</span>
+          </li>
+          
+          <li class="hmcts-progress-bar__list-item">
+            <span class="hmcts-progress-bar__icon"></span>
+            <span class="hmcts-progress-bar__label"><span class="govuk-visually-hidden">Step 4: </span>Order</span>
+          </li>
+
+
+          <li class="hmcts-progress-bar__list-item">
+            <span class="hmcts-progress-bar__icon"></span>
+            <span class="hmcts-progress-bar__label"><span class="govuk-visually-hidden">Step 5: </span>Final order</span>
+          </li>
+
+          <li class="hmcts-progress-bar__list-item">
+            <span class="hmcts-progress-bar__icon"></span>
+            <span class="hmcts-progress-bar__label"><span class="govuk-visually-hidden">Step 6: </span>Case reopened</span>
+          </li>
+
+
+          </ol>
+        </div> 
+
+        <br>
+
+        <br><br><br>
+
+
+
+        <h2 class="govuk-heading-m">
+            Responsive mode: vertical 5 stops
+           </h2>
+     
+             <!-- start components here -->
+     
+             <div class="hmcts-progress-bar-vertical" role="progressbar">
+               <ol class="hmcts-progress-bar__list">
+               
+               <li class="hmcts-progress-bar__list-item">
+                 <span class="hmcts-progress-bar__icon hmcts-progress-bar__icon--complete"></span>
+                 <span class="hmcts-progress-bar__label"><span class="govuk-visually-hidden">Step 1: </span>Application issued</span>
+               </li>
+               
+               <li class="hmcts-progress-bar__list-item" aria-current="step">
+                 <span class="hmcts-progress-bar__icon"></span>
+                 <span class="hmcts-progress-bar__label"><span class="govuk-visually-hidden">Current Step 2: </span>Response submitted</span>
+               </li>
+               
+               <li class="hmcts-progress-bar__list-item">
+                 <span class="hmcts-progress-bar__icon"></span>
+                 <span class="hmcts-progress-bar__label"><span class="govuk-visually-hidden">Step 3: </span>Hearing</span>
+               </li>
+               
+               <li class="hmcts-progress-bar__list-item">
+                 <span class="hmcts-progress-bar__icon"></span>
+                 <span class="hmcts-progress-bar__label"><span class="govuk-visually-hidden">Step 4: </span>Order</span>
+               </li>
+     
+     
+               <li class="hmcts-progress-bar__list-item">
+                 <span class="hmcts-progress-bar__icon"></span>
+                 <span class="hmcts-progress-bar__label"><span class="govuk-visually-hidden">Step 5: </span>Final order</span>
+               </li>
+     
+               </ol>
+             </div> 
+     
+             <br>
+     
+             <br><br><br>
+
+
+
+             <h2 class="govuk-heading-m">
+                Responsive mode: vertical 4 stops
+               </h2>
+         
+                 <!-- start components here -->
+         
+                 <div class="hmcts-progress-bar-vertical vertical--4stop" role="progressbar">
+                   <ol class="hmcts-progress-bar__list">
+                   
+                   <li class="hmcts-progress-bar__list-item">
+                     <span class="hmcts-progress-bar__icon hmcts-progress-bar__icon--complete"></span>
+                     <span class="hmcts-progress-bar__label"><span class="govuk-visually-hidden">Step 1: </span>Application issued</span>
+                   </li>
+                   
+                   <li class="hmcts-progress-bar__list-item" aria-current="step">
+                     <span class="hmcts-progress-bar__icon"></span>
+                     <span class="hmcts-progress-bar__label"><span class="govuk-visually-hidden">Current Step 2: </span>Response submitted</span>
+                   </li>
+                   
+                   <li class="hmcts-progress-bar__list-item">
+                     <span class="hmcts-progress-bar__icon"></span>
+                     <span class="hmcts-progress-bar__label"><span class="govuk-visually-hidden">Step 3: </span>Hearing</span>
+                   </li>
+                   
+                   <li class="hmcts-progress-bar__list-item">
+                     <span class="hmcts-progress-bar__icon"></span>
+                     <span class="hmcts-progress-bar__label"><span class="govuk-visually-hidden">Step 4: </span>Order</span>
+                   </li>
+         
+                   </ol>
+                 </div> 
+         
+                 <br>
+         
+                 <br><br><br>
+
+       
+
+                 <h2 class="govuk-heading-m">
+                    Responsive mode: vertical 3 stops
+                   </h2>
+             
+                     <!-- start components here -->
+             
+                     <div class="hmcts-progress-bar-vertical" role="progressbar">
+                       <ol class="hmcts-progress-bar__list">
+                       
+                       <li class="hmcts-progress-bar__list-item">
+                         <span class="hmcts-progress-bar__icon hmcts-progress-bar__icon--complete"></span>
+                         <span class="hmcts-progress-bar__label"><span class="govuk-visually-hidden">Step 1: </span>Application issued</span>
+                       </li>
+                       
+                       <li class="hmcts-progress-bar__list-item" aria-current="step">
+                         <span class="hmcts-progress-bar__icon"></span>
+                         <span class="hmcts-progress-bar__label"><span class="govuk-visually-hidden">Current Step 2: </span>Response submitted</span>
+                       </li>
+                       
+                       <li class="hmcts-progress-bar__list-item">
+                         <span class="hmcts-progress-bar__icon"></span>
+                         <span class="hmcts-progress-bar__label"><span class="govuk-visually-hidden">Step 3: </span>Hearing</span>
+                       </li>
+             
+                       </ol>
+                     </div> 
+             
+                     <br>
+             
+                     <br><br><br> 
+
+                     <h2 class="govuk-heading-m">
+                      html code snippet
+                     </h2>
+
+
+                     <pre><code>
+&lt;div class=&#34;hmcts-progress-bar-vertical&#34; role=&#34;progressbar&#34;&gt;&#10;          &lt;ol class=&#34;hmcts-progress-bar__list&#34;&gt;&#10;          &#10;          &lt;li class=&#34;hmcts-progress-bar__list-item&#34;&gt;&#10;            &lt;span class=&#34;hmcts-progress-bar__icon hmcts-progress-bar__icon--complete&#34;&gt;&lt;/span&gt;&#10;            &lt;span class=&#34;hmcts-progress-bar__label&#34;&gt;&lt;span class=&#34;govuk-visually-hidden&#34;&gt;Step 1: &lt;/span&gt;Application issued&lt;/span&gt;&#10;          &lt;/li&gt;&#10;          &#10;          &lt;li class=&#34;hmcts-progress-bar__list-item&#34; aria-current=&#34;step&#34;&gt;&#10;            &lt;span class=&#34;hmcts-progress-bar__icon&#34;&gt;&lt;/span&gt;&#10;            &lt;span class=&#34;hmcts-progress-bar__label&#34;&gt;&lt;span class=&#34;govuk-visually-hidden&#34;&gt;Current Step 2: &lt;/span&gt;Response submitted&lt;/span&gt;&#10;          &lt;/li&gt;&#10;          &#10;          &lt;li class=&#34;hmcts-progress-bar__list-item&#34;&gt;&#10;            &lt;span class=&#34;hmcts-progress-bar__icon&#34;&gt;&lt;/span&gt;&#10;            &lt;span class=&#34;hmcts-progress-bar__label&#34;&gt;&lt;span class=&#34;govuk-visually-hidden&#34;&gt;Step 3: &lt;/span&gt;Hearing&lt;/span&gt;&#10;          &lt;/li&gt;&#10;          &#10;          &lt;li class=&#34;hmcts-progress-bar__list-item&#34;&gt;&#10;            &lt;span class=&#34;hmcts-progress-bar__icon&#34;&gt;&lt;/span&gt;&#10;            &lt;span class=&#34;hmcts-progress-bar__label&#34;&gt;&lt;span class=&#34;govuk-visually-hidden&#34;&gt;Step 4: &lt;/span&gt;Order&lt;/span&gt;&#10;          &lt;/li&gt;&#10;&#10;&#10;          &lt;li class=&#34;hmcts-progress-bar__list-item&#34;&gt;&#10;            &lt;span class=&#34;hmcts-progress-bar__icon&#34;&gt;&lt;/span&gt;&#10;            &lt;span class=&#34;hmcts-progress-bar__label&#34;&gt;&lt;span class=&#34;govuk-visually-hidden&#34;&gt;Step 5: &lt;/span&gt;Final order&lt;/span&gt;&#10;          &lt;/li&gt;&#10;&#10;          &lt;li class=&#34;hmcts-progress-bar__list-item&#34;&gt;&#10;            &lt;span class=&#34;hmcts-progress-bar__icon&#34;&gt;&lt;/span&gt;&#10;            &lt;span class=&#34;hmcts-progress-bar__label&#34;&gt;&lt;span class=&#34;govuk-visually-hidden&#34;&gt;Step 6: &lt;/span&gt;Case reopened&lt;/span&gt;&#10;          &lt;/li&gt;&#10;&#10;&#10;          &lt;/ol&gt;&#10;        &lt;/div&gt;
+                      </code></pre>
+
+
+
+        </div>
+
+
+        <div class="govuk-grid-column-one-third">
+
+          <h3 class="govuk-heading-m">Notes:</h3>
+          <p class="govuk-body">This progress bar (vertical responsive) is an "extended" version of the HMCTS progress bar component</p>
+          <p class="govuk-body">HMCTS design system component reference: <a href="https://hmcts-design-system.herokuapp.com/components/progress-bar" target="_blank">HMCTS Progress bar</a></p>
+          
+          <h3 class="govuk-heading-m">Steps to install:</h3>
+          <p class="govuk-body-s">1. Add the @hmcts module to your local node_modules folder if you do not already have this: <a href="http://hmcts-design-system.herokuapp.com/get-started/prototyping" target="_blank">Add @hmcts module</a>. On compiling, it should appear in your local node_modules folder as @hmcts.</p>
+          <p class="govuk-body-s">2. In file \app\assets\sass\application.scss add the progress bar component path: <strong><i>@import "components/progress-bar";</i></strong></p>
+          <p class="govuk-body-s">3. In folder \app\assets\sass\ create a folder called "components".</p>
+          <p class="govuk-body-s">4. Download <a href="/public/progressbar-tick.zip">progressbar sass and tick png</a>.</p>
+          <p class="govuk-body-s">5. In folder \app\assets\sass\components\ add the scss file ( _progress-bar.scss ).</p>
+          <p class="govuk-body-s">6. In folder \app\assets\images\ add the image ( icon-progress-tick.png ).</p>
+          <p class="govuk-body-s">7. Copy the html code snippet ( opposite ) into your page, and customise as required.</p>
+          <p class="govuk-body-s">8. Customise the _progress-bar.scss file as required.</a> </p>
+
+        </div>
+
+
+</div>
+
+
+
+{% endblock %}

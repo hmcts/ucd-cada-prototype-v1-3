@@ -1,0 +1,228 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Child arrangement respondent
+{% endblock %}
+
+{% block header %}
+  <!-- Blank header with no service name for the start page -->
+
+{{ govukHeader({
+    homepageUrl: "/",
+    serviceName: serviceName,
+    serviceUrl: "/",
+    containerClasses: "govuk-width-container"
+}) }}
+
+{% endblock %}
+
+{% block content %}
+
+
+ <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <div class="govuk-width-container">
+
+        <a href="#" onclick="history.back(-1)" class="govuk-back-link">Back</a>
+
+        <main class="govuk-main-wrapper govuk-main-wrapper--auto-spacing" id="main-content" role="main">
+
+               <form action="miamother" method="post" novalidate>
+                 <div class="govuk-error-summary" aria-labelledby="error-summary-title" role="alert" data-module="govuk-error-summary">
+                   <h2 class="govuk-error-summary__title" id="error-summary-title">
+                     There is a problem
+                   </h2>
+                   <div class="govuk-error-summary__body">
+                     <ul class="govuk-list govuk-error-summary__list">
+                       <li>
+                         <a href="#solicitor">Confirm if you previously attended a MIAM, or had a valid reason not to attend</a>
+                       </li>
+                     </ul>
+                   </div>
+                 </div>
+
+                 <span class="govuk-caption-l">MIAM exemptions</span>
+                 <h1 class="govuk-heading-xl">Can you confirm that you previously attended a MIAM, or had a valid reason not to attend?</h1>
+
+                 <div class="govuk-inset-text">
+                  <p class="govuk-body">If you are seeking a MIAM exemption, you will need to give more details. </p>
+
+                   <p class="govuk-body">The court needs this information to decide if you need to attend a MIAM.</p>
+                 </div>
+
+               <div class="govuk-form-group">
+                 <fieldset class="govuk-fieldset" aria-describedby="steps-miam-exemptions-domestic-form-domestic-hint">
+                   <div id="da-hint" class="govuk-hint">
+                     Select all that apply to you
+                   </div>
+                   <div class="govuk-form-group govuk-form-group--error">
+                     <p id="where-do-you-live-error" class="govuk-error-message">
+                       <span class="govuk-visually-hidden">Error:</span>Confirm if you previously attended a MIAM, or had a valid reason not to attend
+                     </p>
+                   <div class="govuk-checkboxes" data-module="govuk-checkboxes">
+                       <div class="govuk-checkboxes__item police-involvement">
+                         <input id="previousmiam" class="govuk-checkboxes__input" type="checkbox" value="group_police" name="previousattendance">
+                           <label for="previousmiam" class="govuk-label govuk-checkboxes__label">
+                             In the 4 months prior to making the application, you attended a MIAM or participated in another form of non-court dispute resolution relating to the same or substantially the same dispute
+
+                          </label>
+                       </div>
+
+
+                       <div class="govuk-checkboxes__item">
+                         <input id="alternativeresolution" class="govuk-checkboxes__input" type="checkbox" value="group_court" name="previousattendance">
+                         <label for="alternativeresolution" class="govuk-label govuk-checkboxes__label">
+                           At the time of making the application, you are participating in another form of non-court dispute resolution relating to the same or substantially the same dispute
+
+                         </label>
+                       </div>
+
+
+                       <div class="govuk-checkboxes__item">
+                         <input id="existingproceedings" class="govuk-checkboxes__input" type="checkbox" value="group_specialist" name="previousattendance">
+                         <label for="existingproceedings" class="govuk-label govuk-checkboxes__label">
+                          This application would be made in existing proceedings which are continuing and you attended a MIAM before initiating those proceedings
+
+                         </label>
+                       </div>
+
+                       <div class="govuk-checkboxes__item">
+                         <input id="exemptionapplied" class="govuk-checkboxes__input" type="checkbox" value="group_local_authority" name="previousattendance" >
+                         <label for="exemptionapplied" class="govuk-label govuk-checkboxes__label">
+                          In the 4 months prior to making the application, you filed a relevant family application confirming that a MIAM exemption applied and that application related to the same or substantially the same dispute
+                         </label>
+                       </div>
+
+
+
+                       <div class="govuk-checkboxes__item">
+                         <input id="currentproceedings" class="govuk-checkboxes__input" type="checkbox" value="group_da_service" name="previousattendance">
+                         <label for="currentproceedings" class="govuk-label govuk-checkboxes__label">
+                           The application would be made in existing proceedings which are continuing and a MIAM exemption applied to the application for those proceedings
+
+                         </label>
+                       </div>
+
+
+
+
+
+                       <div class="govuk-checkboxes__divider">or</div>
+
+                       <div class="govuk-checkboxes__item">
+                         <input class="govuk-checkboxes__input" id="none" name="previousattendance" type="checkbox" value="No" data-behaviour="exclusive">
+                         <label class="govuk-label govuk-checkboxes__label" for="reasonable-adjustments-none">
+                           None of the above
+                         </label>
+                       </div>
+                  </div>
+
+             </fieldset>
+           </div>
+
+
+
+
+
+           <div class="govuk-button-group govuk-!-margin-top-6">
+             <button class="govuk-button" data-module="govuk-button">
+               Continue
+             </button>
+             <a class="govuk-button govuk-button--secondary" href="../../applicanttasklist/inprogress"  data-module="govuk-button">
+               Save and come back later
+             </a>
+
+           </div>
+
+
+
+
+
+              </form>
+        </main>
+      </div>
+
+
+
+
+    </div>
+    <div class="govuk-grid-column-one-third">
+
+    		<details class="govuk-details" data-module="govuk-details">
+ 			      <summary class="govuk-details__summary">
+       			 <span class="govuk-details__summary-text">
+        		  Contacts for help
+      			  </span>
+  			    </summary>
+  			<div class="govuk-details__text">
+   			 Ask a question or get any help in any language
+   			 <p class="govuk-body govuk-!-font-weight-bold">Telephone</p>
+
+   			 <p class="govuk-body govuk-!-font-weight-regular">0300 303 0742</p>
+   			 <p class="govuk-body govuk-!-font-weight-regular">Monday to Friday, 8am to 8pm</p>
+   			 <a href="#" class="govuk-link">Find out about call charges</a>
+   			 <p class="govuk-body govuk-!-font-weight-regular">(opens in a new window)</p>
+
+			  </div>
+			</details>
+    </div>
+
+</div>
+
+
+<script src="https://code.jquery.com/jquery-3.6.0.js"  crossorigin="anonymous"></script>
+<script type="text/javascript">
+  $(document).ready(function(){
+      $('input[id="policeinvolvement"]').click(function(){
+          if($(this).prop("checked") == true){
+          }
+          else if($(this).prop("checked") == false){
+              $("input[name='miampoliceinvolvement']").prop( "checked", false );
+
+          }
+      });
+
+      $('input[id="courtinvolvement"]').click(function(){
+          if($(this).prop("checked") == true){
+          }
+          else if($(this).prop("checked") == false){
+              $("input[name='miamcourtinvolvement']").prop( "checked", false );
+
+          }
+      });
+
+
+      $('input[id="letterconfirmation"]').click(function(){
+          if($(this).prop("checked") == true){
+          }
+          else if($(this).prop("checked") == false){
+              $("input[name='miamletterconfirmation']").prop( "checked", false );
+
+          }
+      });
+
+      $('input[id="authorityletter"]').click(function(){
+          if($(this).prop("checked") == true){
+          }
+          else if($(this).prop("checked") == false){
+              $("input[name='miamauthorityletter']").prop( "checked", false );
+
+          }
+      });
+
+      $('input[id="organisationletter"]').click(function(){
+          if($(this).prop("checked") == true){
+          }
+          else if($(this).prop("checked") == false){
+              $("input[name='miamorganisationletter']").prop( "checked", false );
+
+          }
+      });
+
+  });
+</script>
+
+
+
+{% endblock %}

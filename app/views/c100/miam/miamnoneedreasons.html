@@ -1,0 +1,98 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Child arrangement respondent
+{% endblock %}
+
+{% block header %}
+  <!-- Blank header with no service name for the start page -->
+
+{{ govukHeader({
+    homepageUrl: "/",
+    serviceName: serviceName,
+    serviceUrl: "/",
+    containerClasses: "govuk-width-container"
+}) }}
+
+{% endblock %}
+
+{% block content %}
+<div class="govuk-grid-row">
+   <div class="govuk-grid-column-two-thirds">
+    <div class="govuk-width-container">
+     <a href="#" onclick="history.back(-1)" class="govuk-back-link">Back</a>
+
+     <main class="govuk-main-wrapper app-main-class" id="main-content" role="main">
+         <form action="../typeoforder/courtorder" method="post" novalidate>
+
+
+
+
+         <h1 class="govuk-heading-xl">You do not have to attend a MIAM</h1>
+
+
+           <p class="govuk-body-l">
+             You’ve said you have a valid reason for not attending a MIAM.</p>
+
+         <div class="govuk-!-padding-bottom-4"></div>
+         <p class="govuk-body">
+          The reasons you've given are:
+        </p>
+
+         <h2 class="govuk-heading-m">Child protection concerns</h2>
+
+         <ul class="govuk-list govuk-list--bullet">
+            <li>A local authority is carrying out enquiries or assessment about any of the children in this application, or other child in the household</li>
+            <li>Any of the children in this application, or other child in the household, is the subject of a child protection plan</li>
+        </ul>
+
+        <div class="govuk-inset-text">
+          You'll be asked to give more information about your circumstances at the first court hearing. If the court is not satisfied that you're exempt, you may be directed to attend a MIAM.
+        </div>
+
+
+
+
+
+        <div class="govuk-button-group govuk-!-margin-top-6">
+          <button class="govuk-button" data-module="govuk-button">
+            Continue
+          </button>
+          <a class="govuk-button govuk-button--secondary" href="../../applicanttasklist/inprogress"  data-module="govuk-button">
+            Save and come back later
+          </a>
+
+        </div>
+
+
+
+
+       </main>
+
+
+    </div>
+  </div>
+
+  <div class="govuk-grid-column-one-third">
+    <details class="govuk-details" data-module="govuk-details">
+ 			 <summary class="govuk-details__summary">
+   			 <span class="govuk-details__summary-text">
+    		  Contacts for help
+  			  </span>
+  			</summary>
+  			<div class="govuk-details__text">
+   			 Ask a question or get any help in any language
+   			 <p class="govuk-body govuk-!-font-weight-bold">Telephone</p>
+
+   			 <p class="govuk-body govuk-!-font-weight-regular">0300 303 0742</p>
+   			 <p class="govuk-body govuk-!-font-weight-regular">Monday to Friday, 8am to 8pm</p>
+   			 <a href="#" class="govuk-link">Find out about call charges</a>
+   			 <p class="govuk-body govuk-!-font-weight-regular">(opens in a new window)</p>
+			  </div>
+			</details>
+    </div>
+</div>
+
+
+
+{% endblock %}

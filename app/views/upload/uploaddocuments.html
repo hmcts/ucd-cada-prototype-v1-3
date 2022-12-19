@@ -1,0 +1,115 @@
+{% extends "layout.html" %}
+{% block pageTitle %}
+  Upload documents
+{% endblock %}
+{% block header %}
+  <!-- Blank header with no service name for the start page -->
+{{ govukHeader({
+    homepageUrl: "/",
+    serviceName: serviceName,
+    serviceUrl: "/",
+    containerClasses: "govuk-width-container"
+}) }}
+{% endblock %}
+{% block content %}
+<a href="/respondenttasklist/yourdocuments/uploaddocuments" class="govuk-back-link">Back</a>
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      <h1 class="govuk-heading-l">Upload documents</h1>
+      <h3 class="govuk-heading-s">Upload any supporting documents that support this application</h3>
+      <details class="govuk-details" data-module="govuk-details">
+              <summary class="govuk-details__summary">
+                <span class="govuk-details__summary-text">
+                  You can take a picture with your phone and upload it
+                </span>
+              </summary>
+              <div class="govuk-details__text">
+                <ol class="govuk-list govuk-list--number">
+                  <li>Place your document on a flat service in a well-lit room. Use a flash if you need to.</li>
+                  <li>Take a picture of the whole document. You should be able to see its edges.</li>
+                  <li>Check you can read all the writing, including the handwriting.</li>
+                  <li>Email or send the photo or scan to the device you are using now.</li>
+                  <li>Upload it using the method below.</li>
+                </ol>
+              </div>
+            </details>
+      <p class="govuk-body">Files should be:</p>
+        <ul class="govuk-list govuk-list--bullet govuk-!-padding-bottom-4">
+          <li>a maximum of 100MB in size (larger files must be split)</li>
+          <li>labelled clearly, e.g. Draft_Order.pdf</li>
+          <li>The selected file must be a JPG, BMP, PNG, TIF, Word or PDF format</li>
+        </ul>
+        <!-- start components here -->
+        <div class="uploadcomponent">
+
+          <div class="govuk-form-group govuk-!-margin-top-6" style="display:inline-block">
+            <label class="govuk-label govuk-!-font-size-19" for="sort">
+              Type of document
+            </label>
+            <select class="govuk-select" id="sort" name="sort">
+              <option value="published"selected>Preliminary Documents</option>
+              <option value="updated">Applications</option>
+              <option value="views">Orders</option>
+              <option value="comments">Witness statments and evidence</option>
+              <option value="comments">CAFCASS reports and guardians</option>
+              <option value="comments">Expert reports</option>
+              <option value="comments">Correspondence to/from the court</option>
+            </select>
+          </div>
+
+          <div class="govuk-grid-column-three-quarters govuk-!-margin-bottom-3">
+            <label class="govuk-label govuk-!-font-weight-bold" for="file-upload-1">
+            Document:
+            </label>
+            <div class="file-upload--border govuk-!-margin-bottom-6">
+              <input class="govuk-file-upload govuk-!-font-size-16" id="file-upload-1" name="file-upload-1" type="file">
+            </div>
+
+              <div class="govuk-warning-text govuk-!-margin-bottom-1">
+                <span class="govuk-warning-text__icon" aria-hidden="true">!</span>
+                <strong class="govuk-warning-text__text govuk-!-font-size-16">
+                  <span class="govuk-warning-text__assistive">Warning</span>
+                  Check the box below if you wish the documents and its contents to be marked as confidential and not to be shared with the other party
+                </strong>
+              </div>
+              <div class="govuk-inset-text govuk-!-margin-top-1 govuk-!-margin-left-1">
+              <div class="govuk-form-group">
+                <fieldset class="govuk-fieldset">
+                  <div class="govuk-checkboxes" data-module="govuk-checkboxes">
+                    <div class="govuk-checkboxes__item">
+                      <input class="govuk-checkboxes__input" id="waste" name="waste" type="checkbox" value="carcasses">
+                      <label class="govuk-label govuk-checkboxes__label govuk-!-font-size-16" for="waste">
+                        Tick to restrict access to only Cafcass and HMCTS staff (Optional)
+                      </label>
+                    </div>
+                  </div>
+                </fieldset>
+              </div>
+            </div>
+          </div>
+          <div class="govuk-grid-column-one-quarter">
+            <button class="govuk-button govuk-button--secondary govuk-!-font-size-16 remove-button" data-module="govuk-button">
+              Remove
+            </button>
+          </div>
+        </div>
+        <div class="govuk-grid-column-full">
+          <button class="govuk-button upload-addnew govuk-button--secondary" data-module="govuk-button">
+            Add another document
+          </button>
+          <br>
+        </div>
+        <!-- end components here -->
+        </div>
+        <div class="govuk-grid-column-one-third">
+        </div>
+</div>
+<br><br><br><br>
+<div class="govuk-button-group">
+<form action="uploadsuccess" method="post" novalidate>
+  <button class="govuk-button" data-module="govuk-button">
+    Upload Documents
+  </button>
+</form>
+</div>
+{% endblock %}

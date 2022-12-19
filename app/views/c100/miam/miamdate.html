@@ -1,0 +1,124 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Child arrangement respondent
+{% endblock %}
+
+{% block header %}
+  <!-- Blank header with no service name for the start page -->
+
+{{ govukHeader({
+    homepageUrl: "/",
+    serviceName: serviceName,
+    serviceUrl: "/",
+    containerClasses: "govuk-width-container"
+}) }}
+
+{% endblock %}
+
+{% block content %}
+ <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      <div class="govuk-width-container">
+        <a href="#" onclick="history.back(-1)" class="govuk-back-link">Back</a>
+
+        <main class="govuk-main-wrapper " id="main-content" role="main">
+
+          <form action="miamupload" method="post" novalidate>
+
+            <fieldset class="govuk-fieldset">
+              <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl">
+                <h1 class="govuk-fieldset__heading">
+                  When did you meet with the mediator?
+                </h1>
+              </legend>
+              <p class="govuk-body">
+              You can usually find this date on the document from the mediator.</p>
+              <div class="govuk-!-padding-bottom-4"></div>
+
+              <div class="govuk-form-group">
+                <fieldset class="govuk-fieldset" role="group" aria-describedby="passport-issued-hint">
+                  <div id="passport-issued-hint" class="govuk-hint">
+                     For example, 31 3 2020
+                   </div>
+                  <div class="govuk-date-input" id="miamdate">
+                    <div class="govuk-date-input__item">
+                      <div class="govuk-form-group">
+                        <label class="govuk-label govuk-date-input__label" for="miamdate-day">
+                          Day
+                        </label>
+                        <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="miamdate-day" name="miamdate-day" type="text" inputmode="numeric">
+                      </div>
+                    </div>
+                    <div class="govuk-date-input__item">
+                      <div class="govuk-form-group">
+                        <label class="govuk-label govuk-date-input__label" for="miamdate-month">
+                          Month
+                        </label>
+                        <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="miamdate-month" name="miamdate-month" type="text" inputmode="numeric">
+                      </div>
+                    </div>
+                    <div class="govuk-date-input__item">
+                      <div class="govuk-form-group">
+                        <label class="govuk-label govuk-date-input__label" for="miamdate-year">
+                          Year
+                        </label>
+                        <input class="govuk-input govuk-date-input__input govuk-input--width-4" id="miamdate-year" name="miamdate-year" type="text" inputmode="numeric">
+                      </div>
+                    </div>
+                  </div>
+
+                </fieldset>
+              </div>
+
+
+
+
+
+              <div class="govuk-button-group govuk-!-margin-top-6">
+                <button class="govuk-button" data-module="govuk-button">
+                  Continue
+                </button>
+                <a class="govuk-button govuk-button--secondary" href="../../applicanttasklist/inprogress"  data-module="govuk-button">
+                  Save and come back later
+                </a>
+
+              </div>
+
+
+
+
+
+
+          </form>
+
+        </main>
+      </div>
+    </div>
+
+    <div class="govuk-grid-column-one-third">
+
+    		<details class="govuk-details" data-module="govuk-details">
+   			 <summary class="govuk-details__summary">
+     			 <span class="govuk-details__summary-text">
+      		  Contacts for help
+    			  </span>
+    			</summary>
+    			<div class="govuk-details__text">
+     			 Ask a question or get any help in any language
+     			 <p class="govuk-body govuk-!-font-weight-bold">Telephone</p>
+
+     			 <p class="govuk-body govuk-!-font-weight-regular">0300 303 0742</p>
+     			 <p class="govuk-body govuk-!-font-weight-regular">Monday to Friday, 8am to 8pm</p>
+     			 <a href="#" class="govuk-link">Find out about call charges</a>
+     			 <p class="govuk-body govuk-!-font-weight-regular">(opens in a new window)</p>
+
+  			  </div>
+			</details>
+    </div>
+
+</div>
+
+
+
+{% endblock %}

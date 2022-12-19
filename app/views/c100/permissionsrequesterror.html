@@ -1,0 +1,102 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Child arrangement respondent
+{% endblock %}
+
+{% block header %}
+  <!-- Blank header with no service name for the start page -->
+
+{{ govukHeader({
+    homepageUrl: "/",
+    serviceName: serviceName,
+    serviceUrl: "/",
+    containerClasses: "govuk-width-container"
+}) }}
+
+{% endblock %}
+
+{% block content %}
+<div class="govuk-grid-row">
+   <div class="govuk-grid-column-two-thirds">
+    <div class="govuk-width-container">
+     <a href="#" onclick="history.back(-1)" class="govuk-back-link">Back</a>
+
+     <main class="govuk-main-wrapper app-main-class" id="main-content" role="main">
+         <form action="miam/miamotherproceedings" method="post" novalidate>
+           <div class="govuk-error-summary" aria-labelledby="error-summary-title" role="alert" data-module="govuk-error-summary">
+             <h2 class="govuk-error-summary__title" id="error-summary-title">
+               There is a problem
+             </h2>
+             <div class="govuk-error-summary__body">
+               <ul class="govuk-list govuk-error-summary__list">
+                 <li>
+                   <a href="#solicitor">Explain why the court should grant you permission to submit this application</a>
+                 </li>
+               </ul>
+             </div>
+           </div>
+
+
+
+
+         <h1 class="govuk-heading-xl">Explain why the court should grant you permission to submit this application</h1>
+
+
+         <div class="govuk-!-padding-bottom-2"></div>
+         <p class="govuk-body">
+               Give your answer in bullet points and short sentences. Explain your relationship to the children in the case and why you should be allowed to make the application.</p>
+
+
+
+
+                        <div class="govuk-form-group govuk-form-group--error">
+
+                            <p id="where-do-you-live-error" class="govuk-error-message">
+                              <span class="govuk-visually-hidden">Error:</span>Explain why the court should grant you permission to submit this application
+                            </p><textarea class="govuk-textarea" id="more-detail" name="more-detail" rows="10" aria-describedby="more-detail-hint"></textarea>
+                            </div>
+
+          <form action="legalerror" method="post" novalidate>
+            <div class="govuk-button-group govuk-!-margin-top-6">
+              <button class="govuk-button" data-module="govuk-button">
+                Continue
+              </button>
+              <a class="govuk-button govuk-button--secondary" href="../../applicanttasklist/inprogress"  data-module="govuk-button">
+                Save and come back later
+              </a>
+
+            </div>
+          </form>
+
+
+
+       </main>
+
+
+    </div>
+  </div>
+
+  <div class="govuk-grid-column-one-third">
+    <details class="govuk-details" data-module="govuk-details">
+ 			 <summary class="govuk-details__summary">
+   			 <span class="govuk-details__summary-text">
+    		  Contacts for help
+  			  </span>
+  			</summary>
+  			<div class="govuk-details__text">
+   			 Ask a question or get any help in any language
+   			 <p class="govuk-body govuk-!-font-weight-bold">Telephone</p>
+
+   			 <p class="govuk-body govuk-!-font-weight-regular">0300 303 0742</p>
+   			 <p class="govuk-body govuk-!-font-weight-regular">Monday to Friday, 8am to 8pm</p>
+   			 <a href="#" class="govuk-link">Find out about call charges</a>
+   			 <p class="govuk-body govuk-!-font-weight-regular">(opens in a new window)</p>
+			  </div>
+			</details>
+    </div>
+</div>
+
+
+
+{% endblock %}

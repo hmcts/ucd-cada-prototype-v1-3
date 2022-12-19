@@ -1,0 +1,90 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Child arrangement respondent
+{% endblock %}
+
+{% block header %}
+  <!-- Blank header with no service name for the start page -->
+
+{{ govukHeader({
+    homepageUrl: "/",
+    serviceName: serviceName,
+    serviceUrl: "/",
+    containerClasses: "govuk-width-container"
+}) }}
+
+{% endblock %}
+
+{% block content %}
+ <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      <div class="govuk-width-container">
+        <a href="#" onclick="history.back(-1)" class="govuk-back-link">Back</a>
+
+        <main class="govuk-main-wrapper " id="main-content" role="main">
+
+          <h1 class="govuk-heading-xl">Check your answers</h1>
+
+          <h2 class="govuk-heading-l">Check answers for the whole safety concerns and information they'll go back to c100</h2>
+
+          <form action="/tasklistresponse/start" method="post" novalidate>
+
+            <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+              <div class="govuk-summary-list__row">
+                <dt class="govuk-summary-list__key govuk-!-width-one-half">
+                  What do you want the court to do to keep you and the children safe?
+                </dt>
+                <dd class="govuk-summary-list__value">
+                  {{ data['what-order'] }}
+                </dd>
+                <dd class="govuk-summary-list__actions">
+                  <a class="govuk-link" href="ordersrequired">
+                    Edit<span class="govuk-visually-hidden">orders</span>
+                  </a>
+                </dd>
+              </div>
+              <div class="govuk-summary-list__row">
+                <dt class="govuk-summary-list__key govuk-!-width-one-half">
+                 Do you agree to the children spending time with the other people in this application?
+                </dt>
+                <dd class="govuk-summary-list__value">
+                  {{ data['supervised'] }}{{ data['unsupervised'] }}{{ data['none'] }}
+                </dd>
+                <dd class="govuk-summary-list__actions govuk-!-width-one-half">
+                  <a class="govuk-link" href="unsupervised">
+                    Edit<span class="govuk-visually-hidden">spendtime</span>
+                  </a>
+                </dd>
+              </div>
+              <div class="govuk-summary-list__row">
+                <dt class="govuk-summary-list__key govuk-!-width-one-half">
+                 Do you agree to the other people in this application being in touch with the children in other ways?
+                </dt>
+                <dd class="govuk-summary-list__value">
+                  {{ data['yescontact'] }}{{ data['nocontact'] }}
+                </dd>
+                <dd class="govuk-summary-list__actions govuk-!-width-one-half">
+                  <a class="govuk-link" href="unsupervised">
+                    Edit<span class="govuk-visually-hidden">contact</span>
+                  </a>
+                </dd>
+              </div>
+            </dl>
+
+
+
+
+            <button class="govuk-button" data-module="govuk-button">
+              Save and continue
+            </button>
+
+          </form>
+
+
+        </main>
+      </div>
+    </div>
+</div>
+
+{% endblock %}

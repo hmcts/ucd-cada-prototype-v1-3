@@ -1,0 +1,208 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Progress bars
+{% endblock %}
+
+{% block header %}
+  <!-- Blank header with no service name for the start page -->
+
+{{ govukHeader({
+    homepageUrl: "/",
+    serviceName: serviceName,
+    serviceUrl: "/",
+    containerClasses: "govuk-width-container"
+}) }}
+
+{% endblock %}
+
+{% block content %}
+<style>
+  @media screen and (min-width:1201px) {
+    .hmcts-progress-bar-vertical .hmcts-progress-bar__list-item  { width:100px; display:inline-block }
+  }
+</style>
+
+  <div class="govuk-grid-row">
+
+    <div class="govuk-grid-column-two-thirds">
+
+      <h1 class="govuk-heading-l">Progess bar proof of concept</h1>
+
+
+      <h2 class="govuk-heading-m">
+        POC 1: default HMCTS component
+      </h2>
+
+        <!-- start components here -->
+
+        <div class="hmcts-progress-bar" role="progressbar">
+          <ol class="hmcts-progress-bar__list">
+          
+          <li class="hmcts-progress-bar__list-item">
+            <span class="hmcts-progress-bar__icon hmcts-progress-bar__icon--complete"></span>
+            <span class="hmcts-progress-bar__label">Application issued</span>
+          </li>
+          
+          <li class="hmcts-progress-bar__list-item" aria-current="step">
+            <span class="hmcts-progress-bar__icon"></span>
+            <span class="hmcts-progress-bar__label">Response submitted</span>
+          </li>
+          
+          <li class="hmcts-progress-bar__list-item">
+            <span class="hmcts-progress-bar__icon"></span>
+            <span class="hmcts-progress-bar__label">Hearing</span>
+          </li>
+          
+          <li class="hmcts-progress-bar__list-item">
+            <span class="hmcts-progress-bar__icon"></span>
+            <span class="hmcts-progress-bar__label">Order</span>
+          </li>
+
+
+          <li class="hmcts-progress-bar__list-item">
+            <span class="hmcts-progress-bar__icon"></span>
+            <span class="hmcts-progress-bar__label">Final order</span>
+          </li>
+
+          <li class="hmcts-progress-bar__list-item">
+            <span class="hmcts-progress-bar__icon"></span>
+            <span class="hmcts-progress-bar__label">Case reopened</span>
+          </li>
+
+
+          </ol>
+        </div> 
+
+
+      <h2 class="govuk-heading-m">
+        POC 2: Responsive mode - vertical
+      </h2>
+
+        <!-- start components here -->
+
+        <div class="hmcts-progress-bar-vertical" role="progressbar">
+          <ol class="hmcts-progress-bar__list">
+          
+          <li class="hmcts-progress-bar__list-item">
+            <span class="hmcts-progress-bar__icon hmcts-progress-bar__icon--complete"></span>
+            <span class="hmcts-progress-bar__label"><span class="govuk-visually-hidden">Step 1: </span>Application issued</span>
+          </li>
+          
+          <li class="hmcts-progress-bar__list-item" aria-current="step">
+            <span class="hmcts-progress-bar__icon"></span>
+            <span class="hmcts-progress-bar__label"><span class="govuk-visually-hidden">Current Step 2: </span>Response submitted</span>
+          </li>
+          
+          <li class="hmcts-progress-bar__list-item">
+            <span class="hmcts-progress-bar__icon"></span>
+            <span class="hmcts-progress-bar__label"><span class="govuk-visually-hidden">Step 3: </span>Hearing</span>
+          </li>
+          
+          <li class="hmcts-progress-bar__list-item">
+            <span class="hmcts-progress-bar__icon"></span>
+            <span class="hmcts-progress-bar__label"><span class="govuk-visually-hidden">Step 4: </span>Order</span>
+          </li>
+
+
+          <li class="hmcts-progress-bar__list-item">
+            <span class="hmcts-progress-bar__icon"></span>
+            <span class="hmcts-progress-bar__label"><span class="govuk-visually-hidden">Step 5: </span>Final order</span>
+          </li>
+
+          <li class="hmcts-progress-bar__list-item">
+            <span class="hmcts-progress-bar__icon"></span>
+            <span class="hmcts-progress-bar__label"><span class="govuk-visually-hidden">Step 6: </span>Case reopened</span>
+          </li>
+
+
+          </ol>
+        </div> 
+
+        <br>
+
+        <a href="further-examples">Further examples of POC 2 and installation instructions</a>
+
+        <br><br><br>
+
+
+        <h2 class="govuk-heading-m">
+          POC 3: Responsive mode - active only
+        </h2>
+
+
+        <div class="hmcts-progress-bar-active" role="progressbar" >
+            <ol class="hmcts-progress-bar__list">
+            
+            <li class="hmcts-progress-bar__list-item">
+              <span class="hmcts-progress-bar__icon hmcts-progress-bar__icon--complete"></span>
+              <span class="hmcts-progress-bar__label"><span class="govuk-visually-hidden">Step 1: </span>You apply</span>
+              <span class="govuk-visually-hidden">Step 1: You apply</span>
+            </li>
+            
+            <li class="hmcts-progress-bar__list-item" aria-current="step">
+              <span class="hmcts-progress-bar__icon"></span>
+              <span class="hmcts-progress-bar__label"><span class="govuk-visually-hidden">Current step 2: </span>Response submitted</span>
+            </li>
+            
+            <li class="hmcts-progress-bar__list-item">
+              <span class="hmcts-progress-bar__icon"></span>
+              <span class="hmcts-progress-bar__label"><span class="govuk-visually-hidden">Step 3: </span>The court decides</span>
+            </li>
+            
+            <li class="hmcts-progress-bar__list-item">
+              <span class="hmcts-progress-bar__icon"></span>
+              <span class="hmcts-progress-bar__label"><span class="govuk-visually-hidden">Step 4: </span>Order</span>
+            </li>
+          
+          
+            <li class="hmcts-progress-bar__list-item">
+              <span class="hmcts-progress-bar__icon"></span>
+              <span class="hmcts-progress-bar__label"><span class="govuk-visually-hidden">Step 5: </span>Final order</span>
+            </li>
+          
+            <li class="hmcts-progress-bar__list-item">
+              <span class="hmcts-progress-bar__icon"></span>
+              <span class="hmcts-progress-bar__label"><span class="govuk-visually-hidden">Step 6: </span>Case reopened</span>
+            </li>
+            
+            </ol>
+          </div> 
+
+          
+          <br><br><br>
+
+
+
+          <h2 class="govuk-heading-m">
+            POC 4: Progress bar as an image (PNG), with alt text for screenreaders       
+          </h2>
+      
+          <img src="../public/images/pngImage.png" width="100%" alt="Progress stage: Response submitted">
+
+          <!-- end components here -->
+
+        </div>
+
+
+        <div class="govuk-grid-column-one-third">
+          <h3 class="govuk-heading-m">
+            Notes:
+          </h3>
+            <p class="govuk-body">1.  Default progress bar (example 1) is part of the current HMCTS design system component library:<br><a href="https://hmcts-design-system.herokuapp.com/components/progress-bar" target="_blank">HMCTS Progress bar</a></p>
+            <p class="govuk-body govuk govuk-!-margin-bottom-0">2. Progress bar (example 2) vertical responsive, is an "extended" version of the HMCTS progress bar component.</p>
+            <p class="govuk-body-s"><strong>nb:</strong> this component may require some css overrides depending on the number of steps in the progress bar.</p>
+            <p class="govuk-body govuk govuk-!-margin-bottom-0">3. Progress bar (example 3) active responsive, is an "extended" version of the HMCTS progress bar component.</p>
+            <p class="govuk-body-s"><strong>nb:</strong> this component may require some css overrides depending on the number of steps in the progress bar.</p>
+            <p class="govuk-body">
+              4.  SVGs (as images or inline) screenreader compatibility:
+              <a href="https://a11y-101.com/development/svg" target="_blank">Reference</a>
+            </p>
+        </div>
+
+
+</div>
+
+
+
+{% endblock %}

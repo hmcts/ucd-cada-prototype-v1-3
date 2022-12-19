@@ -1,0 +1,92 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+Child arrangement respondent
+{% endblock %}
+
+{% block header %}
+<!-- Blank header with no service name for the start page -->
+
+{{ govukHeader({
+  homepageUrl: "/",
+  serviceName: serviceName,
+  serviceUrl: "/",
+  containerClasses: "govuk-width-container"
+}) }}
+
+{% endblock %}
+
+{% block content %}
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-full">
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-two-thirds">
+    <a href="#" onclick="history.back(-1)" class="govuk-back-link">Back</a>
+
+    <main class="govuk-main-wrapper govuk-main-wrapper--l" id="main-content" role="main">
+
+          <div class="govuk-panel govuk-panel--confirmation govuk-!-margin-bottom-6">
+            <h1 class="govuk-panel__title">
+              Your withdrawal request has been submitted
+            </h1>
+            <div class="govuk-panel__body">
+              Case number <br><strong>A162527378</strong>
+            </div>
+          </div>
+          <p class="govuk-body-l">The court will consider your request to withdraw the application, and will let you know if it is granted.</p>
+          <p class="govuk-body">Your child arrangements application will not be issued to the other parties, while the court is considering your request.</p>
+
+
+
+
+
+
+
+
+          <div class="govuk-button-group">
+
+
+
+              <input type="hidden" name="answers-checked" value="true">
+
+
+                <a class="govuk-button govuk-button--secondary" href="../withdrawalreq" data-module="govuk-button">
+                  Return to your dashboard
+                </a>
+
+          </div>
+
+
+        </div>
+
+        <div class="govuk-grid-column-one-third">
+
+    		<details class="govuk-details" data-module="govuk-details">
+ 			 <summary class="govuk-details__summary">
+   			 <span class="govuk-details__summary-text">
+    		  Contacts for help
+  			  </span>
+  			</summary>
+  			<div class="govuk-details__text">
+   			 Ask a question or get any help in any language
+   			 <p class="govuk-body govuk-!-font-weight-bold">Telephone</p>
+
+   			 <p class="govuk-body govuk-!-font-weight-regular">0300 303 0742</p>
+   			 <p class="govuk-body govuk-!-font-weight-regular">Monday to Friday, 8am to 8pm</p>
+   			 <a href="#" class="govuk-link">Find out about call charges</a>
+   			 <p class="govuk-body govuk-!-font-weight-regular">(opens in a new window)</p>
+
+			  </div>
+			</details>
+
+
+    </main>
+
+
+    </div>
+  </div>
+
+</div>
+
+
+{% endblock %}

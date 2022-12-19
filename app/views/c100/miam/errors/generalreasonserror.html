@@ -1,0 +1,168 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Child arrangement respondent
+{% endblock %}
+
+{% block header %}
+  <!-- Blank header with no service name for the start page -->
+
+{{ govukHeader({
+    homepageUrl: "/",
+    serviceName: serviceName,
+    serviceUrl: "/",
+    containerClasses: "govuk-width-container"
+}) }}
+
+{% endblock %}
+
+{% block content %}
+ <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <div class="govuk-width-container">
+
+        <a href="#" onclick="history.back(-1)" class="govuk-back-link">Back</a>
+
+        <main class="govuk-main-wrapper govuk-main-wrapper--auto-spacing" id="main-content" role="main">
+
+               <form action="generalreasons-answer" method="post" novalidate>
+                 <div class="govuk-error-summary" aria-labelledby="error-summary-title" role="alert" data-module="govuk-error-summary">
+                   <h2 class="govuk-error-summary__title" id="error-summary-title">
+                     There is a problem
+                   </h2>
+                   <div class="govuk-error-summary__body">
+                     <ul class="govuk-list govuk-error-summary__list">
+                       <li>
+                         <a href="#solicitor">Select your valid reasons for not attending a MIAM</a>
+                       </li>
+                     </ul>
+                   </div>
+                 </div>
+                 <span class="govuk-caption-l">MIAM exemptions</span>
+                 <h1 class="govuk-heading-xl">What are your valid reasons for not attending a MIAM?</h1>
+
+                 <div class="govuk-body">
+                   The court needs more information to assess if your reasons are valid. If you cannot provide enough supporting information, you will be asked to attend a MIAM.
+                 </div>
+
+
+
+                 <div class="govuk-form-group ">
+
+                 <fieldset class="govuk-fieldset" aria-describedby="reasonable-adjustments-hint">
+                   <div id="reasonable-adjustments-hint" class="govuk-hint">
+                     Select all that apply to you - specific evidence can be give next
+                   </div>
+                   <div class="govuk-form-group govuk-form-group--error">
+                     <p id="where-do-you-live-error" class="govuk-error-message">
+                       <span class="govuk-visually-hidden">Error:</span>Select your valid reasons for not attending a MIAM
+                     </p>
+                   <div class="govuk-checkboxes" data-module="govuk-checkboxes">
+                     <div class="govuk-checkboxes__item">
+                       <input class="govuk-checkboxes__input" id="domesticabuse" name="exemptionreasons" type="checkbox" value="Domestic abuse">
+                       <label class="govuk-label govuk-checkboxes__label" for="domesticabuse">
+                         I have evidence of domestic abuse
+                         <div id="reasonable-adjustments-1-hint" class="govuk-hint">
+                           For example, the police have been involved, there have been court proceedings, or there has been an official letter of confirmation
+                         </div>
+                       </label>
+                     </div>
+                     <div class="govuk-checkboxes__item">
+                       <input class="govuk-checkboxes__input" id="protectionconcerns" name="exemptionreasons" type="checkbox" value="Child protection concerns">
+                       <label class="govuk-label govuk-checkboxes__label" for="protectionconcerns">
+                         I am concerned about the child's safety
+                         <div id="reasonable-adjustments-2-hint" class="govuk-hint">
+                           For example, the children are subject to a child protection plan
+                         </div>
+                       </label>
+                     </div>
+                     <div class="govuk-checkboxes__item">
+                       <input class="govuk-checkboxes__input" id="urgency" name="exemptionreasons" type="checkbox" value="Urgency">
+                       <label class="govuk-label govuk-checkboxes__label" for="urgency">
+                         I have a valid reason for an urgent first hearing
+                         <div id="reasonable-adjustments-3-hint" class="govuk-hint">
+                           For example, your safety or the children's safety is at serious risk
+                         </div>
+                       </label>
+                     </div>
+                     <div class="govuk-checkboxes__item">
+                       <input class="govuk-checkboxes__input" id="previousmiam" name="exemptionreasons" type="checkbox" value="Previous MIAM attendance">
+                       <label class="govuk-label govuk-checkboxes__label" for="previousmiam">
+                         I have previously attended a MIAM, or already have a court confirmed exemption
+                         <div id="reasonable-adjustments-4-hint" class="govuk-hint">
+                           For example, you attended a MIAM or another dispute resolution meeting in the past 4 months
+                         </div>
+                       </label>
+                     </div>
+                     <div class="govuk-checkboxes__item">
+                       <input class="govuk-checkboxes__input" id="other" name="exemptionreasons" type="checkbox" value="Other">
+                       <label class="govuk-label govuk-checkboxes__label" for="other">
+                         I have other valid reasons to be exempt from a MIAM
+                         <div id="reasonable-adjustments-5-hint" class="govuk-hint">
+                           For example, you do not have the contact details for the other people in the application, or some of those people are in prison or another institution
+                         </div>
+                       </label>
+                     </div>
+
+                     <div class="govuk-checkboxes__divider">or</div>
+                     <div class="govuk-checkboxes__item">
+                       <input class="govuk-checkboxes__input" id="none" name="exemptionreasons" type="checkbox" value="None" data-behaviour="exclusive">
+                       <label class="govuk-label govuk-checkboxes__label" for="one">
+                         None of the above
+                       </label>
+                     </div>
+                   </div>
+
+                 </fieldset>
+               </div>
+
+
+               <div class="govuk-button-group govuk-!-margin-top-6">
+                 <button class="govuk-button" data-module="govuk-button">
+                   Continue
+                 </button>
+                 <a class="govuk-button govuk-button--secondary" href="../../applicanttasklist/inprogress"  data-module="govuk-button">
+                   Save and come back later
+                 </a>
+
+               </div>
+
+
+
+
+
+              </form>
+        </main>
+      </div>
+
+
+
+
+    </div>
+    <div class="govuk-grid-column-one-third">
+
+    		<details class="govuk-details" data-module="govuk-details">
+ 			      <summary class="govuk-details__summary">
+       			 <span class="govuk-details__summary-text">
+        		  Contacts for help
+      			  </span>
+  			    </summary>
+  			<div class="govuk-details__text">
+   			 Ask a question or get any help in any language
+   			 <p class="govuk-body govuk-!-font-weight-bold">Telephone</p>
+
+   			 <p class="govuk-body govuk-!-font-weight-regular">0300 303 0742</p>
+   			 <p class="govuk-body govuk-!-font-weight-regular">Monday to Friday, 8am to 8pm</p>
+   			 <a href="#" class="govuk-link">Find out about call charges</a>
+   			 <p class="govuk-body govuk-!-font-weight-regular">(opens in a new window)</p>
+
+			  </div>
+			</details>
+    </div>
+
+</div>
+
+
+
+{% endblock %}

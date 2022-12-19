@@ -1,0 +1,136 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Child arrangement respondent
+{% endblock %}
+
+{% block header %}
+  <!-- Blank header with no service name for the start page -->
+
+{{ govukHeader({
+    homepageUrl: "/",
+    serviceName: serviceName,
+    serviceUrl: "/",
+    containerClasses: "govuk-width-container"
+}) }}
+
+{% endblock %}
+
+{% block content %}
+ <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <div class="govuk-width-container">
+
+        <a href="#" onclick="history.back(-1)" class="govuk-back-link">Back</a>
+
+        <main class="govuk-main-wrapper " id="main-content" role="main">
+
+              <form action="checkanswers" method="post" novalidate>
+                <div class="govuk-form-group">
+                  <fieldset class="govuk-fieldset">
+                    <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+                      <h1 class="govuk-fieldset__heading">
+                        Keeping your contact details private
+                      </h1>
+                    </legend>
+                      <p class="govuk-body-l">A copy of your response will be sent to the other people named in this application (the applicants). This will include your contact details.</p>
+                      <p class="govuk-body-m">If you believe the other people in the case pose a risk to you or the children, you can ask the court to keep your contact details private.</p>
+
+                      <h3 class="govuk-heading-s">Check your documents</h3>
+                        <p>You must make sure that documents used in the case do not contain the information you want to keep private.</p>
+
+                        <p>This includes documents you are filling in now, and documents completed in the future.</p>
+
+                          <p>You must also check documents that are received from other people - for example, medical reports or financial statements. The court staff will not be able to check the documents for you.</p>
+
+
+                    <div class="govuk-form-group">
+                      <fieldset class="govuk-fieldset">
+                        <legend class="govuk-fieldset__legend">
+                            <b>Do you want to keep your contact details private from the other people named in the application (the applicants)? </b>
+                        </legend>
+                        <div class="govuk-radios" data-module="govuk-radios">
+                          <div class="govuk-radios__item">
+                            <input class="govuk-radios__input" id="confidential-yes" name="confidential" type="radio" value="yes" data-aria-controls="conditional-confidential">
+                            <label class="govuk-label govuk-radios__label" for="confidential-yes">
+                              Yes
+                            </label>
+                          </div>
+                          <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-confidential">
+                            <div class="govuk-form-group">
+                              <label class="govuk-label" for="privatedetails">Which contact details do you want to keep private?</label>
+                                  <fieldset class="govuk-fieldset">
+                                    <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+                                    <div class="govuk-checkboxes" data-module="govuk-checkboxes">
+                                      <div class="govuk-checkboxes__item">
+                                        <input class="govuk-checkboxes__input" id="private-address" name="private" type="checkbox" value="address">
+                                        <label class="govuk-label govuk-checkboxes__label" for="private-address">
+                                          Address
+                                        </label>
+                                      </div>
+                                      <div class="govuk-checkboxes__item">
+                                        <input class="govuk-checkboxes__input" id="private-number" name="private" type="checkbox" value="number">
+                                        <label class="govuk-label govuk-checkboxes__label" for="private-number">
+                                          Phone number
+                                        </label>
+                                      </div>
+                                      <div class="govuk-checkboxes__item">
+                                        <input class="govuk-checkboxes__input" id="private-email" name="private" type="checkbox" value="e-mail">
+                                        <label class="govuk-label govuk-checkboxes__label" for="private-email">
+                                          E-mail
+                                        </label>
+                                      </div>
+                                    </div>
+                                  </fieldset>
+                              </div>
+                            </div>
+
+                          <div class="govuk-radios__item">
+                            <input class="govuk-radios__input" id="confidential-no" name="confidential" type="radio" value="no">
+                            <label class="govuk-label govuk-radios__label" for="confidential-no">
+                              No
+                            </label>
+                          </div>
+                        </div>
+                      </fieldset>
+                    </div>
+
+                  </fieldset>
+                </div>
+
+                <button class="govuk-button" data-module="govuk-button">
+                  Save and continue
+                </button>
+              </form>
+
+        </main>
+      </div>
+
+    </div>
+    <div class="govuk-grid-column-one-third">
+
+    		<details class="govuk-details" data-module="govuk-details">
+ 			      <summary class="govuk-details__summary">
+       			 <span class="govuk-details__summary-text">
+        		  Contacts for help
+      			  </span>
+  			    </summary>
+  			<div class="govuk-details__text">
+   			 Ask a question or get any help in any language
+   			 <p class="govuk-body govuk-!-font-weight-bold">Telephone</p>
+
+   			 <p class="govuk-body govuk-!-font-weight-regular">0300 303 0742</p>
+   			 <p class="govuk-body govuk-!-font-weight-regular">Monday to Friday, 8am to 8pm</p>
+   			 <a href="#" class="govuk-link">Find out about call charges</a>
+   			 <p class="govuk-body govuk-!-font-weight-regular">(opens in a new window)</p>
+
+			  </div>
+			</details>
+    </div>
+
+</div>
+
+
+
+{% endblock %}

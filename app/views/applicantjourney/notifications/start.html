@@ -1,0 +1,48 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+ Applicant tasklist
+{% endblock %}
+
+{% block header %}
+  <!-- Blank header with no service name for the start page -->
+
+{{ govukHeader({
+    homepageUrl: "/",
+    serviceName: "Family injunctions",
+    serviceUrl: "/",
+    containerClasses: "govuk-width-container"
+}) }}
+
+{% endblock %}
+
+{% block content %}
+
+
+<div class="govuk-grid-row">
+
+  <div class="govuk-grid-column-full">
+     
+          <h2 class="govuk-heading-m">Notification pages for applicant journey (DA)</h2>
+            <p><a href="application-reviewed">Application reviewed</a></p>
+            <p><a href="case-hearing">Case will go to a hearing</a></p>
+            <p><a href="date-hearing">Date booked for a hearing</a></p>
+            <p><a href="attend-hearing">Attended a hearing</a></p>
+            <p><a href="order-issued">New order has been issued</a></p>
+            <p><a href="final-order">Sent a final order</a></p>
+            <p><a href="case-closed">Case closed</a></p>
+
+
+  </div>
+
+</div>
+
+
+
+
+
+
+
+
+
+{% endblock %}

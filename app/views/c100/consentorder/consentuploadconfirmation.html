@@ -1,0 +1,107 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Child arrangement respondent
+{% endblock %}
+
+{% block header %}
+  <!-- Blank header with no service name for the start page -->
+
+{{ govukHeader({
+    homepageUrl: "/",
+    serviceName: serviceName,
+    serviceUrl: "/",
+    containerClasses: "govuk-width-container"
+}) }}
+
+{% endblock %}
+
+{% block content %}
+<div class="govuk-grid-row">
+   <div class="govuk-grid-column-two-thirds">
+    <div class="govuk-width-container">
+     <a href="#" onclick="history.back(-1)" class="govuk-back-link">Back</a>
+
+     <main class="govuk-main-wrapper app-main-class" id="main-content" role="main">
+         <form action="typeofhearing/urgent" method="post" novalidate>
+              <h1 class="govuk-heading-xl">Upload the draft of your consent agreement</h1>
+
+              <div class="govuk-notification-banner govuk-notification-banner--success govuk-!-margin-bottom-29" role="alert" aria-labelledby="govuk-notification-banner-title" data-module="govuk-notification-banner">
+                <div class="govuk-notification-banner__header">
+                  <h2 class="govuk-notification-banner__title" id="govuk-notification-banner-title">
+                    Success
+                  </h2>
+                </div>
+                <div class="govuk-notification-banner__content">
+                  <h2 class="govuk-notification-banner__heading">
+                    Your consent agreement draft has been uploaded
+                  </h2>
+                </div>
+              </div>
+              <h2 class="app-task-list__section govuk-!-margin-bottom-4">Your documents for Consent order</h2>
+
+
+                <dl class="govuk-summary-list">
+
+                    <div class="govuk-summary-list__row">
+                      <dt class="govuk-summary-list__value">
+                        sam_richards__consent_order_draft__date_submitted.pdf
+                      </dt>
+
+
+                    </div>
+
+
+
+                  </dl>
+
+
+
+         <div class="govuk-!-padding-bottom-4"></div>
+
+
+
+
+
+         <div class="govuk-button-group govuk-!-margin-top-6">
+           <button class="govuk-button" data-module="govuk-button">
+             Continue
+           </button>
+           <a class="govuk-button govuk-button--secondary" href="../../applicanttasklist/inprogress"  data-module="govuk-button">
+             Save and come back later
+           </a>
+
+         </div>
+
+
+
+
+       </main>
+
+
+    </div>
+  </div>
+
+    <div class="govuk-grid-column-one-third">
+    <details class="govuk-details" data-module="govuk-details">
+ 			 <summary class="govuk-details__summary">
+   			 <span class="govuk-details__summary-text">
+    		  Contacts for help
+  			  </span>
+  			</summary>
+  			<div class="govuk-details__text">
+   			 Ask a question or get any help in any language
+   			 <p class="govuk-body govuk-!-font-weight-bold">Telephone</p>
+
+   			 <p class="govuk-body govuk-!-font-weight-regular">0300 303 0742</p>
+   			 <p class="govuk-body govuk-!-font-weight-regular">Monday to Friday, 8am to 8pm</p>
+   			 <a href="#" class="govuk-link">Find out about call charges</a>
+   			 <p class="govuk-body govuk-!-font-weight-regular">(opens in a new window)</p>
+			  </div>
+			</details>
+    </div>
+</div>
+
+
+
+{% endblock %}

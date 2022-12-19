@@ -1,0 +1,217 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Child arrangement respondent
+{% endblock %}
+
+{% block header %}
+  <!-- Blank header with no service name for the start page -->
+
+{{ govukHeader({
+    homepageUrl: "/",
+    serviceName: serviceName,
+    serviceUrl: "/",
+    containerClasses: "govuk-width-container"
+}) }}
+
+{% endblock %}
+
+{% block content %}
+<div class="govuk-grid-row">
+   <div class="govuk-grid-column-two-thirds">
+     <div class="govuk-width-container">
+       <a href="#" onclick="history.back(-1)" class="govuk-back-link">Back</a>
+
+       <main class="govuk-main-wrapper " id="main-content" role="main">
+
+         <form action="physicaldescriptionapplicant" method="post" novalidate>
+           <div class="govuk-error-summary" aria-labelledby="error-summary-title" role="alert" data-module="govuk-error-summary">
+             <h2 class="govuk-error-summary__title" id="error-summary-title">
+               There is a problem
+             </h2>
+             <div class="govuk-error-summary__body">
+               <ul class="govuk-list govuk-error-summary__list">
+                 <li>
+                   <a href="#solicitor">Specify the type of behaviour you have experienced or are at risk of experiencing</a>
+                 </li>
+               </ul>
+             </div>
+           </div>
+
+           <fieldset class="govuk-fieldset">
+             <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl">
+               <span class="govuk-caption-l">Safety concerns</span>
+               <h1 class="govuk-fieldset__heading">
+                 What type of behaviour have you experienced or are at risk of experiencing?
+               </h1>
+             </legend> <div class="govuk-!-padding-bottom-4"></div>
+             <p class="govuk-body">Describe the abusive behaviour that you are concerned about. If you are not sure that the behaviour is abusive, <a href="https://www.gov.uk/government/publications/domestic-abuse-recognise-the-signs/domestic-abuse-recognise-the-signs#how-to-recognise-domestic-abuse-in-a-relationship" class="govuk-link govuk-link a" rel="external" target="_blank">see the guidance</a>.</p>
+
+
+
+             <div class="govuk-!-padding-bottom-2"></div>
+             <div id="contact-hint" class="govuk-hint">
+                Select all options that are relevant to your situation.
+             </div>
+             <div class="govuk-form-group govuk-form-group--error">
+               <p id="where-do-you-live-error" class="govuk-error-message">
+                 <span class="govuk-visually-hidden">Error:</span>Specify the type of behaviour you have experienced or are at risk of experiencing
+               </p>
+               <fieldset class="govuk-fieldset"
+               <div class="govuk-checkboxes" data-module="govuk-checkboxes">
+                  <div class="govuk-checkboxes__item">
+                    <input class="govuk-checkboxes__input" id="physicalabuse" name="childabuse" type="checkbox" value="Physical abuse">
+                    <label class="govuk-label govuk-checkboxes__label" for="physicalabuse">
+                      Physical abuse
+                    </label>
+                    <div id="physicalabuse-hint" class="govuk-hint govuk-!-margin-left-3">
+                            Behaviour such as punching, choking, kicking or hitting with an object
+
+                    </div>
+                  </div>
+
+                  <div class="govuk-checkboxes__item">
+                    <input class="govuk-checkboxes__input" id="psychologicalabuse" name="childabuse" type="checkbox" value="Psychological abuse">
+                    <label class="govuk-label govuk-checkboxes__label" for="psychologicalabuse">
+                      Psychological abuse
+                    </label>
+                    <div id="physicalabuse-hint" class="govuk-hint govuk-!-margin-left-3">
+                      Being subjected to a situation that leads to anxiety, depression, or post-traumatic stress disorder
+
+                    </div>
+                  </div>
+
+
+                  <div class="govuk-checkboxes__item">
+                    <input class="govuk-checkboxes__input" id="emotionalalabuse" name="childabuse" type="checkbox" value="Emotional abuse">
+                    <label class="govuk-label govuk-checkboxes__label" for="emotionalalabuse">
+                      Emotional abuse
+                    </label>
+                    <div id="physicalabuse-hint" class="govuk-hint govuk-!-margin-left-3">
+                      Emotional abuse could be spoken (verbal) or not involving words or speech (non-verbal). Examples may include name calling, constant criticism, controlling behaviour, not letting you have an opinion
+                    </div>
+                  </div>
+
+                  <div class="govuk-checkboxes__item">
+                    <input class="govuk-checkboxes__input" id="sexualabuse" name="childabuse" type="checkbox" value="Sexual abuse">
+                    <label class="govuk-label govuk-checkboxes__label" for="sexualabuse">
+                      Sexual abuse
+                    </label>
+                    <div id="physicalabuse-hint" class="govuk-hint govuk-!-margin-left-3">
+                    Include being forced or pressured to have sex without consent, being threatened into an unwanted sexual activity, or unwanted touching or groping
+
+                    </div>
+                  </div>
+
+                  <div class="govuk-checkboxes__item">
+                    <input class="govuk-checkboxes__input" id="financialabuse" name="childabuse" type="checkbox" value="Financial abuse">
+                    <label class="govuk-label govuk-checkboxes__label" for="financialabuse">
+                      Financial abuse
+                    </label>
+                    <div id="physicalabuse-hint" class="govuk-hint govuk-!-margin-left-3">
+                    Examples of financial abuse can be not allowing a person to work, stopping someone saving their own money, or withholding money or credit cards
+
+                    </div>
+                  </div>
+                  <div class="govuk-checkboxes__item">
+                    <input class="govuk-checkboxes__input" id="abduction" name="childabuse" type="checkbox" value="Abduction">
+                    <label class="govuk-label govuk-checkboxes__label" for="abduction">
+                      Something else
+                    </label>
+                    <div id="physicalabuse-hint" class="govuk-hint govuk-!-margin-left-3">
+                      Any concerns you have that do not fit into the above categories
+                    </div>
+                  </div>
+
+
+
+               </div>
+
+
+
+
+
+
+
+               <div class="govuk-button-group govuk-!-margin-top-6">
+                 <button class="govuk-button" data-module="govuk-button">
+                   Continue
+                 </button>
+                 <a class="govuk-button govuk-button--secondary" href="../../../applicanttasklist/inprogress"  data-module="govuk-button">
+                   Save and come back later
+                 </a>
+
+               </div>
+
+
+
+
+
+         </form>
+
+       </main>
+     </div>
+   </div>
+
+   <div class="govuk-grid-column-one-third">
+     <div class="govuk-form-group">
+
+          <ul class="govuk-list">
+            <li><a href="https://www.gov.uk/injunction-domestic-violence" class="govuk-link" rel="external" target="_blank">Apply for an injunction</a></li>
+            <li><a href="https://www.gov.uk/guidance/domestic-abuse-how-to-get-help" class="govuk-link" rel="external" target="_blank">Guidance to get help</a></li>
+          </ul>
+
+            <h2 class="govuk-heading-m">Report an incident</h2>
+
+            <p class="govuk-body">
+              Always call 999 if there’s an emergency or if you think you are in danger.
+            </p>
+            <ul class="govuk-list">
+              <li><a href="https://www.gov.uk/report-domestic-abuse" class="govuk-link" rel="external" target="_blank">How to report domestic abuse</a></li>
+           </ul>
+
+
+
+
+
+          <h2 class="govuk-heading-m">Get support</h2>
+
+
+          <ul class="govuk-list">
+            <li><a href="https://www.flows.org.uk/" class="govuk-link" rel="external" target="_blank">FLOWS: Finding Legal Options for Women Survivors</a></li>
+            <li><a href="https://www.womensaid.org.uk/" class="govuk-link" rel="external" target="_blank">Women's Aid</a></li>
+           <li><a href="https://www.nationaldahelpline.org.uk/" class="govuk-link" rel="external" target="_blank">National Domestic Violence Helpline</a></li>
+           <li><a href="https://mensadviceline.org.uk/" class="govuk-link" rel="external" target="_blank">Men's Advice Line</a></li>
+          </ul>
+
+     </div>
+
+       <details class="govuk-details" data-module="govuk-details">
+        <summary class="govuk-details__summary">
+          <span class="govuk-details__summary-text">
+           Contacts for help
+           </span>
+         </summary>
+         <div class="govuk-details__text">
+          Ask a question or get any help in any language
+          <p class="govuk-body govuk-!-font-weight-bold">Telephone</p>
+
+          <p class="govuk-body govuk-!-font-weight-regular">0300 303 0742</p>
+          <p class="govuk-body govuk-!-font-weight-regular">Monday to Friday, 8am to 8pm</p>
+          <a href="#" class="govuk-link">Find out about call charges</a>
+          <p class="govuk-body govuk-!-font-weight-regular">(opens in a new window)</p>
+
+         </div>
+     </details>
+   </div>
+
+</div>
+
+
+
+
+
+
+
+
+{% endblock %}

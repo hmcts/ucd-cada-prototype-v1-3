@@ -1,0 +1,196 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Tasklist
+{% endblock %}
+
+{% block header %}
+  <!-- Blank header with no service name for the start page -->
+
+{{ govukHeader({
+    homepageUrl: "/",
+    serviceName: serviceName,
+    serviceUrl: "/",
+    containerClasses: "govuk-width-container"
+}) }}
+
+{% endblock %}
+
+{% block content %}
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-full">
+    <div class="govuk-width-container">
+     <a href="#" onclick="history.back(-1)" class="govuk-back-link">Back</a>
+     <main class="govuk-main-wrapper app-main-class" id="main-content" role="main">
+
+        <div class="govuk-grid-row">
+          <div class="govuk-grid-column-full">
+            <h1 class="govuk-heading-xl ">Privacy Policy</h1>
+              <h2 class="govuk-heading-l">Overview<h2>
+            <p class="govuk-body ">
+            This privacy policy explains why we collect personal data and what we do with it. It also explains the rights which you and your client have, and how to enforce them.
+            </p>
+
+            <h2 class="govuk-heading-l">Who manages this service<h2>
+
+            <p class="govuk-body">
+              This service is managed by HM Courts & Tribunals Service (HMCTS), which is an executive agency of the Ministry of Justice (MoJ).
+            </p>
+            <p class="govuk-body">
+              The MoJ is known as the data controller for data protection purposes. The <a href="https://www.gov.uk/government/organisations/ministry-of-justice/about/personal-information-charter" class="govuk-link govuk-link" rel="external" target="_blank">MoJ personal information charter</a> explains how the MoJ processes personal data.
+            </p>
+            <p class="govuk-body">
+              As part of the MoJ, HMCTS is responsible for deciding how personal data is used and for protecting the personal data you provide.
+            </p>
+            <p class="govuk-body">
+              More information about using this service is in the <a href="termsandconditions" class="govuk-link govuk-link" rel="external" target="_blank">terms and conditions</a>.
+            </p>
+
+            <h2 class="govuk-heading-l">Why we collect personal data<h2>
+
+              <p class="govuk-body">
+                We collect personal data to:
+              </p>
+
+              <ul class="govuk-list govuk-list--bullet">
+                <li>enable us to process your client's application</li>
+                <li>meet legal requirements</li>
+                <li>make improvements to this service</li>
+              </ul>
+
+                <p class="govuk-body">
+                  Our staff use personal data to process your client's application. They work in the UK and your data is stored in the UK.
+                </p>
+
+                <h2 class="govuk-heading-l">Types of personal data we collect<h2>
+
+                  <p class="govuk-body">
+                  The personal data we collect includes:
+                  </p>
+                  <ul class="govuk-list govuk-list--bullet">
+                    <li>your name, address and contact details</li>
+                    <li>your email and password (if you create an account)</li>
+                    <li>other personal information you provide in your claim or application</li>
+                    <li>your client’s personal data - including their name, address and contact details</li>
+                  </ul>
+
+                  <p class="govuk-body">
+                  We collect more personal data for some types of application
+                  </p>
+
+                  <h2 class="govuk-heading-l">Using your data<h2>
+
+                    <p class="govuk-body">
+                      As part of your application you’ll be asked to use your email address to set up an account. You will be able to use this email and password to sign into other HMCTS services.
+                    </p>
+
+                    <p class="govuk-body">
+                      We may ask for your permission to use your email address to send you emails using GOV.UK Notify. This system processes emails only within the European Economic Area until the point where emails are handed over to the email provider you use.
+                    </p>
+
+                      <p class="govuk-body">
+                      We use cookies to collect data that tells us about how you’re using this service, including:
+                    </p>
+
+                <ul class="govuk-list govuk-list--bullet">
+                  <li>if you open an email from us or click on a link in an email</li>
+                  <li>your computer, phone or tablet’s IP address</li>
+                  <li>the region or town where you are using your computer, phone or tablet</li>
+                  <li>the web browser you use</li>
+                </ul>
+
+                <h2 class="govuk-heading-l">Storing your data<h2>
+
+                <p class="govuk-body">
+                  When you make an application we store the data you have provided. The amount of time that your data is kept for depends on what you're applying for.
+                </p>
+
+                <h2 class="govuk-heading-l">Sharing your data<h2>
+
+                <p class="govuk-body">
+                While processing your application, another government department, agency or organisation might be involved and we may share your data with them.
+                </p>
+                <p class="govuk-body">
+                In some circumstances we may share your data, for example to prevent or detect crime, or to produce anonymised statistics.
+                </p>
+                <p class="govuk-body">
+                  We use Google Analytics to collect data about how a website is used. This anonymous data is shared with Google. Find out about this in our terms an conditions.
+                </p>
+
+                <h2 class="govuk-heading-l">Storing and sharing your data internationally<h2>
+
+                <p class="govuk-body">
+                  Sometimes we need to send your personal information outside of the UK. When we do this we comply with data protection law.
+                </p>
+
+                  <h2 class="govuk-heading-l">Your rights<h2>
+
+                <p class="govuk-body">
+                  You can ask:
+                </p>
+
+                <ul class="govuk-list govuk-list--bullet">
+                  <li>to see the personal data that we hold on you</li>
+                  <li>to have the personal data corrected</li>
+                  <li>to have the personal data removed or deleted (this will depend on the circumstances, for example if you decide not to continue your claim or application)</li>
+                  <li>that access to the personal data is restricted (for example, you can ask to have your data stored for longer and not automatically deleted)</li>
+                </ul>
+
+
+                <p class="govuk-body">
+                If you want to see the personal data that we hold on you, you can:
+              </p>
+
+                <ul class="govuk-list govuk-list--bullet">
+                  <li>complete a form to <a href="https://www.gov.uk/government/organisations/ministry-of-justice/about/personal-information-charter" class="govuk-link govuk-link" rel="external" target="_blank">make a subject access request</a> - your request goes to the MoJ as data controller</li>
+                  <li>write to us: Disclosure Team, Post point 10.24, 102 Petty France, London, SW1H 9AJ</li>
+                  <li>email us: <a href="mailto:data.access@justice.gov.uk" class="govuk-link govuk-link" rel="external" target="_blank">data.access@justice.gov.uk</a></li>
+                </ul>
+
+
+                <p class="govuk-body">
+              You can ask for more information about:
+              </p>
+
+                <ul class="govuk-list govuk-list--bullet">
+                  <li>agreements we have on sharing information with other organisations</li>
+                  <li>when we are allowed to pass on personal information without telling you</li>
+                  <li>our instructions to staff on how to collect, use or delete your personal information</li>
+                  <li>how we check that the information we hold is accurate and up-to-date</li>
+                </ul>
+
+                <p class="govuk-body">
+              You can contact the MoJ data protection officer by:
+              </p>
+
+                <ul class="govuk-list govuk-list--bullet">
+                  <li>writing to us: The Data Protection Officer, Ministry of Justice, 3rd Floor, Post Point 3.20, 10 South Colonnades, Canary Wharf, London, E14 4PU</li>
+                  <li>emailing: <a href="mailto:DPO@justice.gov.uk" class="govuk-link govuk-link" rel="external" target="_blank">DPO@justice.gov.uk</a></li>
+
+                </ul>
+
+                  <h2 class="govuk-heading-l">How to complain<h2>
+
+                <p class="govuk-body">
+                  See our <a href="https://www.gov.uk/government/organisations/hm-courts-and-tribunals-service/about/complaints-procedure" class="govuk-link govuk-link" rel="external" target="_blank">complaints procedure</a> if you want to complain about how we've handled your personal data.
+                </p>
+                <p class="govuk-body">
+                Write to: Post point 10.38, 102 Petty France, London, SW1H 9AJ
+                </p>
+
+                <p class="govuk-body">
+                  Email: <a href="mailto:privacy@justice.gov.uk" class="govuk-link govuk-link" rel="external" target="_blank">privacy@justice.gov.uk</a>
+                </p>
+
+                <p class="govuk-body">
+                  You can also complain to the <a href="https://ico.org.uk/global/contact-us" class="govuk-link govuk-link" rel="external" target="_blank">Information Commissioner’s Office</a> if you’re not satisfied with our response or believe we are not processing your personal data lawfully.
+                </p>
+
+    </main>
+  </div>
+</div>
+
+</div>
+
+
+{% endblock %}

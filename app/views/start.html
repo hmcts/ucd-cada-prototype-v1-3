@@ -1,0 +1,79 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Child arrangement respondent
+{% endblock %}
+
+{% block header %}
+  <!-- Blank header with no service name for the start page -->
+
+{{ govukHeader({
+    homepageUrl: "/",
+    serviceName: serviceName,
+    serviceUrl: "/",
+    containerClasses: "govuk-width-container"
+}) }}
+
+{% endblock %}
+
+{% block content %}
+
+<main class="govuk-main-wrapper app-main-class" id="main-content" role="main">
+    <form action="childaddress" method="post" novalidate>
+<div class="govuk-grid-row app-inverted--card app-inverted-text">
+<div class="govuk-grid-column-full">
+<span class="govuk-caption-xl app-inverted-text">Getting started</span>
+<h1 class="govuk-heading-xl app-inverted-text">What you’ll need to complete your application</h1>
+<p class="govuk-body app-inverted-text">You will need to have:
+</p>
+<ul class="govuk-list govuk-list--bullet app-inverted-text app-inverted-narrow-width">
+  <li>details of the other people in the case (the respondents), including their contact details, address and date of birth</li>
+  <li>the children's details, including date of birth</li>
+  <li>details of any previous family court cases</li>
+  <li>a signed document confirming your mediation information and assessment meeting (MIAM) attendance (unless you are exempt)</li>
+</ul>
+<p class="govuk-body app-inverted-text">You may also need:
+</p>
+<ul class="govuk-list govuk-list--bullet app-inverted-text app-inverted-narrow-width">
+  <li>a written agreement for the court to formalise, if you are applying for a consent order</li>
+  <li>documentation for the <a href="https://www.gov.uk/litigation-friend/apply" class="govuk-link app-link--inverted" target="_blank" rel="external">litigation friend</a> if any of the people making the application are under 18 years old</li>
+
+</ul>
+
+<div class="govuk-grid-row ">
+  <div class="govuk-grid-column-full">
+    <p class="app-inverted-text">If you are applying for an order to formalise an arrangement (a consent order) make sure  that you have a written and signed agreement with the respondent in place, before you start the application.
+    </p>
+    <p class="app-inverted-text">You can still complete the application if you do not have all of the details - but it will likely take longer to process.
+    </p>
+
+    <p class="app-inverted-text">If you are currently involved in Child Arrangements, Prohibited Steps or Specific Issue Order proceedings for the same child or children, you can apply to the same court using the shorter form C2. Please make sure you state the case number when you submit the form.
+    </p>
+
+  </div>
+</div>
+<div class="govuk-inset-text app-inset-text--inverted app-inverted-narrow-width">
+  <p class="app-inverted-text">You will need to pay the court fee of £232 before your application can be processed. You may be able to get help with making this payment. See the guidance on <a href="https://www.gov.uk/get-help-with-court-fees" class="govuk-link app-link--inverted" target="_blank" rel="external">help with fees</a>.</p>
+
+
+
+</div>
+<div class="govuk-button-group govuk-!-margin-top-6">
+  <div class="govuk-button-group govuk-!-margin-top-6">
+    <a class="govuk-button app-button--l app-button--inverted" role="button" draggable="false" data-module="govuk-button" href="childaddress">Continue</a>
+    <a href="#" onclick="history.back(-1)" class="govuk-link app-link--inverted">
+      Go back
+    </a>
+
+  </div>
+
+
+</div>
+</div>
+</div>
+</form>
+</main>
+
+
+
+{% endblock %}

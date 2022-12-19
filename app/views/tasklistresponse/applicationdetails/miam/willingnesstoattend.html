@@ -1,0 +1,129 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Child arrangement respondent
+{% endblock %}
+
+{% block header %}
+  <!-- Blank header with no service name for the start page -->
+
+{{ govukHeader({
+    homepageUrl: "/",
+    serviceName: serviceName,
+    serviceUrl: "/",
+    containerClasses: "govuk-width-container"
+}) }}
+
+{% endblock %}
+
+{% block content %}
+<div class="govuk-grid-row">
+   <div class="govuk-grid-column-two-thirds">
+    <div class="govuk-width-container">
+     <a href="#" onclick="history.back(-1)" class="govuk-back-link">Back</a>
+
+     <main class="govuk-main-wrapper " id="main-content" role="main">
+
+       <form action="willingnesstoattend-answer" method="post" novalidate>
+
+        <h1 class="govuk-heading-xl">Would you be willing to attend a MIAM?</h1>
+
+        <details class="govuk-details" data-module="govuk-details">
+          <summary class="govuk-details__summary">
+            <span class="govuk-details__summary-text">
+              Help with MIAM costs and exemptions
+            </span>
+          </summary>
+          <div class="govuk-details__text">
+
+            <p>The price of mediation will vary depending on:
+            <ul>
+              <li>where you live</li>
+              <li>how many sessions you attend</li>
+              <li>the type of issues you need to discuss</li>
+            </ul></p>
+            <p>You may be able to get legal aid if you are on a low income.</p>
+            <h3 class="govuk-heading-s">Family Mediation Voucher Scheme</h3>
+            <p>You may be eligible for the Family Mediation Voucher Scheme. This is a government scheme that provides up to £500 towards the cost of mediation for eligible cases.</p>
+            <p>At your MIAM, your mediator will explain the voucher scheme and you may be offered a voucher if your case meets the scheme's criteria. Not all cases qualify for a voucher.</p>
+            <p>See the <a href="https://www.gov.uk" class="govuk-link" rel="external" target="_blank">GOV.UK</a> guidance on the <a href="https://www.gov.uk/guidance/family-mediation-voucher-scheme" class="govuk-link" rel="external" target="_blank">Family Mediation Voucher Scheme</a> for more information.</p>
+            <p>The MIAM process works, with agreement reached in over 70% of cases.</p>
+            <h3 class="govuk-heading-s">Exemptions</h3>
+            <p>You don't need to attend a MIAM if you have a valid reason. For example, you or the children are at risk of harm.</p>
+            <p>Find out more about <a href="https://apply-to-court-about-child-arrangements.service.justice.gov.uk/about/miam_exemptions" class="govuk-link" rel="external" target="_blank">the reasons for a MIAM exemption</a>.</p>
+
+          </div>
+        </details>
+
+      <div class="govuk-form-group">
+        <fieldset class="govuk-fieldset" aria-describedby="proposal-hint">
+
+          <div class="govuk-radios" data-module="govuk-radios">
+            <div class="govuk-form-group">
+              <fieldset class="govuk-fieldset" aria-describedby="proposal-hint">
+                <div class="govuk-radios" data-module="govuk-radios">
+                      <div class="govuk-radios" data-module="govuk-radios">
+                        <div class="govuk-radios__item">
+                          <input class="govuk-radios__input" id="MIAM-willing-Yes" name="MIAM-willing" type="radio" value="yes" data-aria-controls="conditional-feedback">
+                            <label class="govuk-label govuk-radios__label" for="MIAM-willing-Yes">
+                              Yes
+                            </label>
+                            <div class="govuk-radios__conditional  govuk-radios__conditional--hidden" id="conditional-feedback">
+                              <p class="govuk-body">
+
+                                <a href="https://www.familymediationcouncil.org.uk/i-want-to-try-mediation-what-do-i-do/" class="govuk-link" rel="external" target="_blank">How to arrange a mediation?</a>
+                              </p>
+                            </div>
+                        </div>
+                        <div class="govuk-radios__item">
+                          <input class="govuk-radios__input" id="MIAM-willing-No" name="MIAM-willing" type="radio" value="no" data-aria-controls="conditional-explain">
+                            <label class="govuk-label govuk-radios__label" for="MIAM-willing-No">
+                              No
+                            </label>
+                            <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-explain">
+                              <div class="govuk-form-group">
+                                 <h1 class="govuk-label-wrapper"><label class="govuk-label govuk-label--s"	for="court-name">
+                                    Explain why
+                                  </label>
+                                </h1>
+                                 <textarea class="govuk-textarea" id="more-detail" name="more-detail" rows="3"></textarea>
+                              </div>
+                        </div>
+                      </div>
+
+                    </fieldset>
+                  </div>
+                </div>
+              </div>
+
+
+        <button class="govuk-button" data-module="govuk-button">
+          Save and continue
+        </button>
+      </main>
+    </div>
+  </div>
+
+  <div class="govuk-grid-column-one-third">
+    <details class="govuk-details" data-module="govuk-details">
+ 			 <summary class="govuk-details__summary">
+   			 <span class="govuk-details__summary-text">
+    		  Contacts for help
+  			  </span>
+  			</summary>
+  			<div class="govuk-details__text">
+   			 Ask a question or get any help in any language
+   			 <p class="govuk-body govuk-!-font-weight-bold">Telephone</p>
+
+   			 <p class="govuk-body govuk-!-font-weight-regular">0300 303 0742</p>
+   			 <p class="govuk-body govuk-!-font-weight-regular">Monday to Friday, 8am to 8pm</p>
+   			 <a href="#" class="govuk-link">Find out about call charges</a>
+   			 <p class="govuk-body govuk-!-font-weight-regular">(opens in a new window)</p>
+			  </div>
+			</details>
+    </div>
+</div>
+
+
+
+{% endblock %}

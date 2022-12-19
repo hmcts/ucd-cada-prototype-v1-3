@@ -1,0 +1,85 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Child arrangement respondent
+{% endblock %}
+
+{% block header %}
+  <!-- Blank header with no service name for the start page -->
+
+{{ govukHeader({
+    homepageUrl: "/",
+    serviceName: serviceName,
+    serviceUrl: "/",
+    containerClasses: "govuk-width-container"
+}) }}
+
+{% endblock %}
+
+{% block content %}
+<div class="govuk-grid-row">
+   <div class="govuk-grid-column-two-thirds">
+    <div class="govuk-width-container">
+     <a href="#" onclick="history.back(-1)" class="govuk-back-link">Back</a>
+
+     <main class="govuk-main-wrapper " id="main-content" role="main">
+
+       <form action="otherissues" method="post" novalidate>
+
+         <span class="govuk-caption-l">Safety concerns</span>
+         <h1 class="govuk-heading-xl">Do you have any concerns about drug, alcohol, or substance abuse?</h1>
+           <div id="more-detail-hint" class="govuk-hint">
+             For example, you think the children are affected by being in contact with someone who may have drug, alcohol, or substance problem.
+           </div>
+      <div class="govuk-form-group">
+        <fieldset class="govuk-fieldset" aria-describedby="proposal-hint">
+          <div class="govuk-radios" data-module="govuk-radios">
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="drugs-yes" name="drugs" type="radio" data-aria-controls="conditional-yes">
+                <label class="govuk-label govuk-radios__label" for="drugs-yes">Yes</label>
+            </div>
+
+            <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-yes">
+            <div class="govuk-form-group">
+              <label class="govuk-label" for="proposal-howmany">Give a short description of the drug, alcohol, or substance abuse</label>
+              <textarea class="govuk-textarea" id="drugs" name="ndrugs" rows="3" aria-describedby="non-molestation-date-issued"></textarea>
+
+              </div>
+            </div>
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="drugs-no" name="drugs" type="radio" value="no">
+                <label class="govuk-label govuk-radios__label" for="drugs-no">No</label>
+            </div>
+          </div>
+        </div>
+
+        <button class="govuk-button" data-module="govuk-button">
+          Save and continue
+        </button>
+      </main>
+    </div>
+  </div>
+
+  <div class="govuk-grid-column-one-third">
+    <details class="govuk-details" data-module="govuk-details">
+ 			 <summary class="govuk-details__summary">
+   			 <span class="govuk-details__summary-text">
+    		  Contacts for help
+  			  </span>
+  			</summary>
+  			<div class="govuk-details__text">
+   			 Ask a question or get any help in any language
+   			 <p class="govuk-body govuk-!-font-weight-bold">Telephone</p>
+
+   			 <p class="govuk-body govuk-!-font-weight-regular">0300 303 0742</p>
+   			 <p class="govuk-body govuk-!-font-weight-regular">Monday to Friday, 8am to 8pm</p>
+   			 <a href="#" class="govuk-link">Find out about call charges</a>
+   			 <p class="govuk-body govuk-!-font-weight-regular">(opens in a new window)</p>
+			  </div>
+			</details>
+    </div>
+</div>
+
+
+
+{% endblock %}
