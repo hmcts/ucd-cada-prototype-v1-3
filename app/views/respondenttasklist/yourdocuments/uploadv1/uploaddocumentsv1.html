@@ -16,6 +16,22 @@
 
 {% endblock %}
 
+{% block beforeContent %}
+
+<div class="govuk-breadcrumbs govuk-breadcrumbs--collapse-on-mobile">
+  <ol class="govuk-breadcrumbs__list">
+    <li class="govuk-breadcrumbs__list-item">
+      <a class="govuk-breadcrumbs__link" href="/accountdashboard.html">Home</a>
+    </li>
+    <li class="govuk-breadcrumbs__list-item">
+      <a class="govuk-breadcrumbs__link" href="/respondenttasklist/startreply">Case view</a>
+    </li>
+  </ol>
+</div>
+
+
+{% endblock %}
+
 {% block content %}
 
 
@@ -23,7 +39,6 @@
    <div class="govuk-grid-column-two-thirds">
 
     <div class="govuk-width-container">
-       <a href="/respondenttasklist/startreply"class="govuk-back-link">Back</a>
 
        <main class="govuk-main-wrapper " id="main-content" role="main">
          <form action="/respondenttasklist/startreply" method="post" novalidate>

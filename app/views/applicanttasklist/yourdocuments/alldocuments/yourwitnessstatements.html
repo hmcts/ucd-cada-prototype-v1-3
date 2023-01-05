@@ -16,13 +16,32 @@
 
 {% endblock %}
 
+{% block beforeContent %}
+
+<div class="govuk-breadcrumbs govuk-breadcrumbs--collapse-on-mobile">
+  <ol class="govuk-breadcrumbs__list">
+    <li class="govuk-breadcrumbs__list-item">
+      <a class="govuk-breadcrumbs__link" href="/accountdashboard.html">Home</a>
+    </li>
+    <li class="govuk-breadcrumbs__list-item">
+      <a class="govuk-breadcrumbs__link" href="/applicanttasklist/startreply">Case view</a>
+    </li>
+    <li class="govuk-breadcrumbs__list-item">
+      <a class="govuk-breadcrumbs__link" href="/applicanttasklist/yourdocuments/alldocuments/alldocuments">All documents</a>
+    </li>
+  </ol>
+</div>
+
+
+{% endblock %}
+
 {% block content %}
 
 <div class="govuk-grid-row">
    <div class="govuk-grid-column-two-thirds">
 
     <div class="govuk-width-container">
-       <a href="/applicanttasklist/yourdocuments/alldocuments/alldocuments" class="govuk-back-link">Back</a>
+
 
        <main class="govuk-main-wrapper " id="main-content" role="main">
 
