@@ -3273,10 +3273,10 @@ router.post('/idam/payonline', function (req, res) {
   // Check whether the variable matches a condition
   if (payonline == "yes"){
     // Send user to next page
-    res.redirect('/idam/newaccount')
+    res.redirect('/idam/legalrepresentation.html')
   } else {
     // Send user to ineligible page
-    res.redirect('/index')
+    res.redirect('/idam/paperform.html')
   }
 
 })
@@ -3340,5 +3340,39 @@ router.post('/respondenttasklist/aboutyou/Confidentiality/keepconfidential', fun
 
 })
 
+// Run this code when a form is submitted to 'juggling-balls-answer'
+router.post('/idam/legalrepresentation', function (req, res) {
+
+  // Make a variable and give it the value from 'how-many-balls'
+  var legalrepresentation = req.session.data['legalrepresentation']
+
+  // Check whether the variable matches a condition
+  if (legalrepresentation == "yes"){
+    // Send user to next page
+    res.redirect('/idam/fillapplication.html')
+  } else {
+    // Send user to ineligible page
+    res.redirect('/idam/signin.html')
+  }
+
+})
+
+
+// Run this code when a form is submitted to 'juggling-balls-answer'
+router.post('/idam/fillapplication', function (req, res) {
+
+  // Make a variable and give it the value from 'how-many-balls'
+  var fillapplication = req.session.data['fillapplication']
+
+  // Check whether the variable matches a condition
+  if (fillapplication == "yes"){
+    // Send user to next page
+    res.redirect('/idam/contactlr.html')
+  } else {
+    // Send user to ineligible page
+    res.redirect('/idam/signin.html')
+  }
+
+})
 
 module.exports = router

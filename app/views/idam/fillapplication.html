@@ -1,0 +1,132 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Child arrangement respondent
+{% endblock %}
+
+{% block header %}
+  <!-- Blank header with no service name for the start page -->
+
+{{ govukHeader({
+    homepageUrl: "/",
+    serviceName: serviceName,
+    serviceUrl: "/",
+    containerClasses: "govuk-width-container"
+}) }}
+
+{% endblock %}
+
+{% block beforeContent %}
+
+<div class="govuk-phase-banner">
+  <p class="govuk-phase-banner__content">
+    <strong class="govuk-tag govuk-phase-banner__content__tag">
+      alpha
+    </strong>
+    <span class="govuk-phase-banner__text">
+      This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.
+    </span>
+  </p>
+</div>
+
+<a href="#" class="govuk-back-link" onclick="history.back(-1)">Back</a>
+{% endblock %}
+
+{% block content %}
+
+         
+
+      <!-- https://design-system.service.gov.uk/styles/layout/-->
+      
+      <div class="govuk-width-container">
+        <main class="govuk-main-wrapper">
+      
+          <div class="govuk-grid-row">
+      <!-- Left column-->
+            <div class="govuk-grid-column-two-thirds">
+
+              <form action="fillapplication" method="post" novalidate>
+
+              <h1 class="govuk-heading-l">Do you want your legal representative to complete the application for you?</h1>
+
+
+
+              <div class="govuk-form-group">
+                <fieldset class="govuk-fieldset" aria-describedby="sign-in-hint">
+
+    
+                  <div class="govuk-radios" data-module="govuk-radios">
+                    <div class="govuk-radios__item">
+                      <input class="govuk-radios__input" id="fillapplicationyes" name="fillapplication" type="radio" value="yes" aria-describedby="fillapplication">
+                      <label class="govuk-label govuk-radios__label" for="fillapplicationyes">
+                        Yes
+                      </label>
+
+                    </div>
+                    <div class="govuk-radios__item">
+                      <input class="govuk-radios__input" id="fillapplicationno" name="fillapplication" type="radio" value="no" aria-describedby="sign-in-2-item-hint">
+                      <label class="govuk-label govuk-radios__label" for="fillapplicationno">
+                        No
+                      </label>
+
+                    </div>
+                  </div>
+                </fieldset>
+              </div>
+
+
+
+
+              <!-- https://design-system.service.gov.uk/components/button/ -->
+              
+              <!-- NB1- use this if you have ARE NOT using logic and delete the below -->
+
+              
+              <!-- NB2- use this if you have ARE using logic and delete the above -->
+              <div class="govuk-button-group govuk-!-margin-top-9">
+                <button class="govuk-button" data-module="govuk-button">
+                  Continue
+                </button>
+              
+                <a class="govuk-link" href="/index.html">Cancel</a>
+              </div>
+              
+              
+              
+              
+
+        </form>     
+      <!-- enter all content of the left column before the div below-->
+      </div>
+      
+      <!-- right column-->
+            <div class="govuk-grid-column-one-third">
+              <p class="govuk-body"><a href="https://www.gov.uk/find-legal-advice/find-legal-adviser" class="govuk-link" rel="external" target="_blank">Find legal representation</a></p>
+              <p class="govuk-body"><a href="https://www.gov.uk/legal-aid" class="govuk-link" rel="external" target="_blank">Do you need legal aid?</a></p>
+              <details class="govuk-details" data-module="govuk-details">
+                  <summary class="govuk-details__summary">
+                    <span class="govuk-details__summary-text">
+                    Contacts for help
+                    </span>
+                  </summary>
+                  <div class="govuk-details__text">
+                    Ask a question or get any help in any language
+                    <p class="govuk-body govuk-!-font-weight-bold">Telephone</p>
+          
+                    <p class="govuk-body govuk-!-font-weight-regular">0300 303 0742</p>
+                    <p class="govuk-body govuk-!-font-weight-regular">Monday to Friday, 8am to 8pm</p>
+                    <a href="#" class="govuk-link">Find out about call charges</a>
+                    <p class="govuk-body govuk-!-font-weight-regular">(opens in a new window)</p>
+                  </div>
+                </details>
+      
+      <!-- enter all content for the right column before the div below-->      
+      </div>
+          </div>
+      
+        </main>
+      </div>
+      
+
+
+{% endblock %}

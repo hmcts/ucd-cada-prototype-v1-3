@@ -39,48 +39,43 @@
 
   <main class="govuk-main-wrapper">
 
-    <form action="payonline" method="post" novalidate>
+
       
     <div class="govuk-grid-row">
       <div class="govuk-grid-column-two-thirds">
-        <h1 class="govuk-heading-l">Do you agree to pay the court fee online using a debit or credit card?</h1>
-        <p class="govuk-body">If you've applied for help with paying court fees, you'll be given a reference number. You can provide this at the end of the process instead of making a payment.</p>
+        <h1 class="govuk-heading-xl">Completing your application</h1>
+
+        <p class="govuk-body">You can complete this application online or by post.</p>
+        <p class="govuk-body">At the end of the application process you will need to pay a court fee of £232.</p>
+        <p class="govuk-body">The payment will be taken at the end of the process, when you submit your application.</p>
+
+        <!-- https://design-system.service.gov.uk/styles/typography/ -->
+        <h3 class="govuk-heading-s">Get help paying court fees</h3>
+
+        <p class="govuk-body">You may be able to get help with some or all of your court fees depending on your savings, income and benefits.</p>
+
+        <p class="govuk-body">If you apply for help with fees a payment will not be taken when you submit the application.</p>
+
+        <p class="govuk-body">Check the <a href="https://www.gov.uk/get-help-with-court-fees" class="govuk-link" rel="external" target="_blank"> help with fees guidance on GOV.UK </a>to find out if you meet the criteria and apply for support.</p>
+
 
 
 <!-- Radio buttons -->
 
-<div class="govuk-form-group">
-  <fieldset class="govuk-fieldset">
+<!-- https://design-system.service.gov.uk/components/button/ -->
 
-    </legend>
-    <div class="govuk-radios" data-module="govuk-radios">
-      <div class="govuk-radios__item">
-        <input class="govuk-radios__input" id="payonline-yes" name="payonline" type="radio" value="yes">
-        <label class="govuk-label govuk-radios__label" for="payonline-yes">
-          Yes
-        </label>
-      </div>
-      <div class="govuk-radios__item">
-        <input class="govuk-radios__input" id="payonline-no" name="payonline" type="radio" value="no">
-        <label class="govuk-label govuk-radios__label" for="payonline-no">
-          No
-        </label>
-      </div>
+<!-- NB1- use this if you have ARE NOT using logic and delete the below -->
+<div class="govuk-button-group govuk-!-margin-top-9">
 
+<a href="/idam/payonline.html" role="button" draggable="false" class="govuk-button" data-module="govuk-button">
+  Continue
+</a>
 
-  </fieldset>
-
-</div>
-</form>
-          
-<div class="govuk-button-group">
-  <button class="govuk-button" data-module="govuk-button">
-    Continue
-  </button>
-
-  <a class="govuk-link" href="/index">Cancel</a>
+<a class="govuk-link" href="/index.html">Cancel</a>
 </div>
 
+
+<!-- NB2- use this if you have ARE using logic and delete the above -->
 
       </div>
 
