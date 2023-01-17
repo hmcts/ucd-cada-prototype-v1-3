@@ -16,27 +16,43 @@
 
 {% endblock %}
 
+{% block beforeContent %}
+
+<a href="#" class="govuk-back-link" onclick="history.back(-1)">Back</a>
+{% endblock %}
+
+
 {% block content %}
  <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
       <div class="govuk-width-container">
-        <a href="#" onclick="history.back(-1)" class="govuk-back-link">Back</a>
 
         <main class="govuk-main-wrapper " id="main-content" role="main">
 
           <form action="checkanswers" method="post" novalidate>
 
             <fieldset class="govuk-fieldset">
-              <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl">
+              <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
                 <h1 class="govuk-fieldset__heading">
-                  Your address
+                  Your  address
                 </h1>
               </legend>
               <div class="govuk-!-padding-bottom-4"></div>
-              <p class="govuk-body govuk-!-font-weight-bold">
+
+
+              <!-- https://design-system.service.gov.uk/styles/typography/ -->
+              <h3 class="govuk-heading-s">Current address</h3>
+              <p class="govuk-body">
                 24 Happy Hill
               <br>Happy End
               <br>H24 HE</p>
+
+
+
+              <h3 class="govuk-heading-s">Other addresses in the past 5 years</h3>
+
+<p class="govuk-body">2018 to 2022 years ago: Rampant Horse St, Norwich NR2 1QR</p>
+
               <div class="govuk-!-padding-bottom-4"></div>
 
 

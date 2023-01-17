@@ -16,11 +16,17 @@
 
 {% endblock %}
 
+
+{% block beforeContent %}
+
+<a href="#" class="govuk-back-link" onclick="history.back(-1)">Back</a>
+{% endblock %}
+
 {% block content %}
  <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
       <div class="govuk-width-container">
-        <a href="#" onclick="history.back(-1)" class="govuk-back-link">Back</a>
+
 
         <main class="govuk-main-wrapper " id="main-content" role="main">
           <form action="addresshistory" method="post" novalidate>
