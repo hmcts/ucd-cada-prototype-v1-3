@@ -3373,6 +3373,61 @@ router.post('/idam/fillapplication', function (req, res) {
     res.redirect('/idam/signin.html')
   }
 
+  
+
+
+})
+
+// Run this code when a form is submitted to 'juggling-balls-answer'
+router.post('/screening/legalrepresentation', function (req, res) {
+
+  // Make a variable and give it the value from 'how-many-balls'
+  var legalrepresentation = req.session.data['legalrepresentation']
+
+  // Check whether the variable matches a condition
+  if (legalrepresentation == "yes"){
+    // Send user to next page
+    res.redirect('/screening/fillapplication.html')
+  } else {
+    // Send user to ineligible page
+    res.redirect('/applicanttasklist/presub.html')
+  }
+
+})
+
+
+// Run this code when a form is submitted to 'juggling-balls-answer'
+router.post('/screening/fillapplication', function (req, res) {
+
+  // Make a variable and give it the value from 'how-many-balls'
+  var fillapplication = req.session.data['fillapplication']
+
+  // Check whether the variable matches a condition
+  if (fillapplication == "yes"){
+    // Send user to next page
+    res.redirect('/screening/contactlr.html')
+  } else {
+    // Send user to ineligible page
+    res.redirect('/applicanttasklist/presub.html')
+  }
+
+})
+
+// Run this code when a form is submitted to 'juggling-balls-answer'
+router.post('/screening/payonline', function (req, res) {
+
+  // Make a variable and give it the value from 'how-many-balls'
+  var payonline = req.session.data['payonline']
+
+  // Check whether the variable matches a condition
+  if (payonline == "yes"){
+    // Send user to next page
+    res.redirect('/screening/legalrepresentation.html')
+  } else {
+    // Send user to ineligible page
+    res.redirect('/screening/paperform.html')
+  }
+
 })
 
 module.exports = router
