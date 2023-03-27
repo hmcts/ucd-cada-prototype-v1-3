@@ -102,22 +102,88 @@
             Important
           </h2>
         </div>
-        <div class="govuk-notification-banner__content">
+        <div class="govuk-notification-banner__content" id="notification1">
           <p class="govuk-notification-banner__heading">
-            You have not started your application
+            You need to respond to the court
           </p>
-          <p class="govuk-body">Once you have started your application, you have 28 days to submit it or your application will be deleted and you will need to start again. This is for security reasons.</p>
+          <p class="govuk-body">You need to provide information to the court before your application can continue. You can find out what the court requires by <a href="#" class="govuk-link">reading this letter.</a></p>
 
           <p class="govuk-notification-banner__heading">
-            <a class="govuk-notification-banner__link" href="../c100/start">Start the application</a>
+            <a class="govuk-notification-banner__link" href="#">Respond to the court</a>
+          </p>
+
+        </div>  
+ 
+        <style>
+
+  
+          #notification1 {
+            border-bottom: 4px solid #1D70B8;
+          }
+          
+          </style>
+
+
+        <div class="govuk-notification-banner__content">
+          <p class="govuk-notification-banner__heading">
+            There is a new document for you to view
+          </p>
+          <p class="govuk-body">A new document has been added to your case.</a></p>
+
+          <p class="govuk-notification-banner__heading">
+            <a class="govuk-notification-banner__link" href="../c100/start">View the document (PDF)</a>
           </p>
 
 
         </div>
+        
       </div>
 
+<!--       
 
-      
+      <ol class="app-task-list">
+        <li>
+          <h2 class="app-task-list__section">
+             About you
+          </h2>
+          <ul class="app-task-list__items">
+
+
+            <li class="app-task-list__item">
+              <span class="app-task-list__task-name">
+                <a href="aboutyou/confirmcontactdetails/checkanswers" aria-describedby="read-declaration-status">
+
+                <a href="aboutyou/editcontactdetails/checkanswers" aria-describedby="read-declaration-status">
+
+                  Confirm or edit your contact details
+                </a>
+              </span>
+              <strong class="govuk-tag app-task-list__tag govuk-tag govuk-tag--turquoise" id="eligibility-status">Submitted</strong>
+            </li>
+
+            <li class="app-task-list__item">
+              <span class="app-task-list__task-name">
+                <a href="/applicanttasklist/aboutyou/contactpreferences/contactpreferences.html" aria-describedby="eligibility-status">
+                  Contact preferences
+                </a>
+              </span>
+                <strong class="govuk-tag app-task-list__tag govuk-tag govuk-tag--turquoise" id="eligibility-status">Submitted</strong>
+            </li>
+
+            <li class="app-task-list__item">
+              <span class="app-task-list__task-name">
+                <a href="aboutyou/confidentiality/detailsknown" aria-describedby="eligibility-status">
+                  Keep your details private
+                </a>
+              </span>
+                <strong class="govuk-tag app-task-list__tag govuk-tag govuk-tag--turquoise" id="eligibility-status">Submitted</strong>
+            </li>
+            
+
+          </ul>
+        </li> -->
+
+
 
       <ol class="app-task-list">
 
@@ -129,11 +195,11 @@
           <ul class="app-task-list__items">
             <li class="app-task-list__item">
               <span class="app-task-list__task-name">
-                <a href="../c100/start" aria-describedby="company-information-status">
-                  Your child arrangements application
+                <a href="#" aria-describedby="company-information-status">
+                  Your application (PDF)
                 </a>
               </span>
-              <strong class="govuk-tag app-task-list__tag govuk-tag--red" id="company-information-status">Not started yet</strong>
+              <strong class="govuk-tag app-task-list__tag govuk-tag govuk-tag--turquoise" id="eligibility-status">Submitted</strong>
             </li>
 
 
@@ -156,11 +222,11 @@
 
             <li class="app-task-list__item">
               <span class="app-task-list__task-name">
-                <a href="yourdocuments/alldocuments/alldocuments" aria-describedby="risk-of-harm-or-violence">
+                <a href="yourdocuments/alldocuments/alldocuments" aria-describedby="all-documents">
                   View all documents
                 </a>
               </span>
-              <strong class="govuk-tag govuk-tag--grey app-task-list__tag govuk-tag--grey" id="submit-pay-status">Not available yet</strong>
+              <strong class="govuk-tag govuk-tag--grey app-task-list__tag govuk-tag--blue" id="submit-pay-status">Ready to view</strong>
             </li>
 
          </ul>
