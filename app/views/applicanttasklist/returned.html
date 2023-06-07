@@ -19,6 +19,17 @@
 
 {% block beforeContent %}
 
+<div class="govuk-phase-banner">
+  <p class="govuk-phase-banner__content">
+    <strong class="govuk-tag govuk-phase-banner__content__tag">
+      BETA
+    </strong>
+    <span class="govuk-phase-banner__text">
+      This is a new service – your <a class="govuk-link" href="https://www.smartsurvey.co.uk/s/C100_Feedback/?pageurl=X  " target="_blank">feedback</a> will help us to improve it.
+    </span>
+  </p>
+</div>
+
 
 <div class="govuk-breadcrumbs govuk-breadcrumbs--collapse-on-mobile">
   <ol class="govuk-breadcrumbs__list">
@@ -62,7 +73,7 @@
       <h1 class="govuk-heading-xl govuk-!-margin-bottom-4">
         Sam Richards
       </h1>
-
+      <p class="govuk-body">Case number #1636575673018538</p>
   </div>
 
 
@@ -73,7 +84,7 @@
       <div class="hmcts-progress-bar-vertical" role="progressbar">
         <ol class="hmcts-progress-bar__list">
           <li class="hmcts-progress-bar__list-item">
-            <span class="hmcts-progress-bar__icon"></span>
+            <span class="hmcts-progress-bar__icon hmcts-progress-bar__icon--complete"></span>
             <span class="hmcts-progress-bar__label"><span class="govuk-visually-hidden"> Step 1: </span>Application submitted</span>
           </li>
           <li class="hmcts-progress-bar__list-item">
@@ -106,83 +117,15 @@
           <p class="govuk-notification-banner__heading">
             You need to respond to the court
           </p>
-          <p class="govuk-body">You need to provide information to the court before your application can continue. You can find out what the court requires by <a href="#" class="govuk-link">reading this letter.</a></p>
+          <p class="govuk-body">You need to provide information to the court before your application can continue. </p>
 
           <p class="govuk-notification-banner__heading">
-            <a class="govuk-notification-banner__link" href="#">Respond to the court</a>
+            <a class="govuk-notification-banner__link" href="/applicanttasklist/returns/returnstart.html">Respond to the court</a>
           </p>
 
         </div>  
- 
-        <style>
-
-  
-          #notification1 {
-            border-bottom: 4px solid #1D70B8;
-          }
-          
-          </style>
-
-
-        <div class="govuk-notification-banner__content">
-          <p class="govuk-notification-banner__heading">
-            There is a new document for you to view
-          </p>
-          <p class="govuk-body">A new document has been added to your case.</a></p>
-
-          <p class="govuk-notification-banner__heading">
-            <a class="govuk-notification-banner__link" href="../c100/start">View the document (PDF)</a>
-          </p>
-
-
-        </div>
         
       </div>
-
-<!--       
-
-      <ol class="app-task-list">
-        <li>
-          <h2 class="app-task-list__section">
-             About you
-          </h2>
-          <ul class="app-task-list__items">
-
-
-            <li class="app-task-list__item">
-              <span class="app-task-list__task-name">
-                <a href="aboutyou/confirmcontactdetails/checkanswers" aria-describedby="read-declaration-status">
-
-                <a href="aboutyou/editcontactdetails/checkanswers" aria-describedby="read-declaration-status">
-
-                  Confirm or edit your contact details
-                </a>
-              </span>
-              <strong class="govuk-tag app-task-list__tag govuk-tag govuk-tag--turquoise" id="eligibility-status">Submitted</strong>
-            </li>
-
-            <li class="app-task-list__item">
-              <span class="app-task-list__task-name">
-                <a href="/applicanttasklist/aboutyou/contactpreferences/contactpreferences.html" aria-describedby="eligibility-status">
-                  Contact preferences
-                </a>
-              </span>
-                <strong class="govuk-tag app-task-list__tag govuk-tag govuk-tag--turquoise" id="eligibility-status">Submitted</strong>
-            </li>
-
-            <li class="app-task-list__item">
-              <span class="app-task-list__task-name">
-                <a href="aboutyou/confidentiality/detailsknown" aria-describedby="eligibility-status">
-                  Keep your details private
-                </a>
-              </span>
-                <strong class="govuk-tag app-task-list__tag govuk-tag govuk-tag--turquoise" id="eligibility-status">Submitted</strong>
-            </li>
-            
-
-          </ul>
-        </li> -->
-
 
 
       <ol class="app-task-list">
@@ -250,58 +193,71 @@
       <ul class="govuk-list">
 
 
+        <ul class="govuk-list">
 
-        <li>
-          <a class="govuk-link" href="https://helpwithchildarrangements.service.justice.gov.uk" target="_blank">Know more about child arrangements</a>
-          <div class="govuk-!-padding-bottom-2"></div>
-        </li>
-        <li>
-          <a class="govuk-link" href="https://helpwithchildarrangements.service.justice.gov.uk/going-to-court" target="_blank">Know more about attending court</a>
-          <div class="govuk-!-padding-bottom-2"></div>
-        </li>
-        <li>
-          <a class="govuk-link" href="https://www.familymediationcouncil.org.uk/family-mediation/assessment-meeting-miam/" target="_blank">Understand what a Mediation Information & Assessment Meeting (MIAM) is</a>
-          <div class="govuk-!-padding-bottom-2"></div>
-        </li>
-        <li>
-          <a class="govuk-link" href="https://www.gov.uk/check-legal-aid" target="_blank">Check if I am eligible for Legal Aid</a>
-          <div class="govuk-!-padding-bottom-2"></div>
-        </li>
-        <li>
-          <a class="govuk-link" href="https://www.gov.uk/get-help-with-court-fees" target="_blank">Check if I am eligible for Help with Fees</a>
-          <div class="govuk-!-padding-bottom-2"></div>
-        </li>
-        <li>
-          <a class="govuk-link" href="https://www.gov.uk/guidance/family-mediation-voucher-scheme" target="_blank">Find out about The Family Mediation Voucher scheme</a>
-          <div class="govuk-!-padding-bottom-2"></div>
-        </li>
-        <li>
-          <a class="govuk-link" href="https://www.gov.uk/find-legal-advice/find-legal-adviser" target="_blank">Find legal advice</a>
-          <div class="govuk-!-padding-bottom-2"></div>
-        </li>
-        <li>
-          <a class="govuk-link" href="https://www.gov.uk/represent-yourself-in-court" target="_blank">Read how to represent myself in court</a>
-          <div class="govuk-!-padding-bottom-2"></div>
-        </li>
-      </ul>
-
-      <details class="govuk-details" data-module="govuk-details">
-     <summary class="govuk-details__summary">
-       <span class="govuk-details__summary-text">
-        Contacts for help
-        </span>
-      </summary>
-      <div class="govuk-details__text">
-       Ask a question or get any help in any language
-       <p class="govuk-body govuk-!-font-weight-bold">Telephone</p>
-
-       <p class="govuk-body govuk-!-font-weight-regular">0300 303 0742</p>
-       <p class="govuk-body govuk-!-font-weight-regular">Monday to Friday, 8am to 8pm</p>
-       <a href="#" class="govuk-link">Find out about call charges</a>
-       <p class="govuk-body govuk-!-font-weight-regular">(opens in a new window)</p>
-
-      </div>
-    </details>
+          <li>
+            <a class="govuk-link" href="#" target="_blank">Add a legal representative</a>
+            <div class="govuk-!-padding-bottom-2"></div>
+          </li>
+  
+          <li>
+            <a class="govuk-link" href="#" target="_blank">Know more about child arrangements</a>
+            <div class="govuk-!-padding-bottom-2"></div>
+          </li>
+  
+          <li>
+            <a class="govuk-link" href="https://helpwithchildarrangements.service.justice.gov.uk/going-to-court" target="_blank">Know more about attending court</a>
+            <div class="govuk-!-padding-bottom-2"></div>
+          </li>
+          <li>
+            <a class="govuk-link" href="https://www.familymediationcouncil.org.uk/family-mediation/assessment-meeting-miam/" target="_blank">Understand what a Mediation Information & Assessment Meeting (MIAM) is</a>
+            <div class="govuk-!-padding-bottom-2"></div>
+          </li>
+          <li>
+            <a class="govuk-link" href="https://www.gov.uk/check-legal-aid" target="_blank">Check if I am eligible for Legal Aid</a>
+            <div class="govuk-!-padding-bottom-2"></div>
+          </li>
+          <li>
+            <a class="govuk-link" href="https://www.gov.uk/get-help-with-court-fees" target="_blank">Check if I am eligible for Help with Fees</a>
+            <div class="govuk-!-padding-bottom-2"></div>
+          </li>
+  
+          <li>
+            <a class="govuk-link" href="https://www.gov.uk/guidance/family-mediation-voucher-scheme" target="_blank">Find out about The Family Mediation Voucher scheme</a>
+            <div class="govuk-!-padding-bottom-2"></div>
+          </li>
+  
+          <li>
+            <a class="govuk-link" href="https://www.gov.uk/find-legal-advice/find-legal-adviser" target="_blank">Find legal advice</a>
+            <div class="govuk-!-padding-bottom-2"></div>
+          </li>
+          <li>
+            <a class="govuk-link" href="https://www.gov.uk/represent-yourself-in-court" target="_blank">Read how to represent myself in court</a>
+            <div class="govuk-!-padding-bottom-2"></div>
+          </li>
+        </ul>
+  
+        <details class="govuk-details" data-module="govuk-details">
+          <summary class="govuk-details__summary">
+            <span class="govuk-details__summary-text">
+             Contact us for help
+             </span>
+           </summary>
+           <div class="govuk-details__text">
+            
+     
+            <p class="govuk-body govuk-!-font-weight-regular">You can <a href="#" class="govuk-link">contact the relevant court</a> if you need to discuss your case.</p>
+  
+            <p class="govuk-body">They cannot give you legal advice or answer questions about applications submitted.</p>
+  
+            <p class="govuk-body govuk-!-font-weight-bold">Feedback</p>
+    
+            <p class="govuk-body govuk-!-font-weight-regular">If you would like to report a problem or have a suggestion to help improve this service, send an email to: <a href="#" class="govuk-link">C100applications@justice.gov.uk</a></p>
+           
+            <p class="govuk-body">This email should only be used for feedback on the digital service.</p>
+     
+           </div>
+         </details>
 
   </div>
   </div>

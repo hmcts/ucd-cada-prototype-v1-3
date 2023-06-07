@@ -17,6 +17,16 @@
 {% endblock %}
 
 {% block beforeContent %}
+<div class="govuk-phase-banner">
+  <p class="govuk-phase-banner__content">
+    <strong class="govuk-tag govuk-phase-banner__content__tag">
+      BETA
+    </strong>
+    <span class="govuk-phase-banner__text">
+      This is a new service – your <a class="govuk-link" href="https://www.smartsurvey.co.uk/s/C100_Feedback/?pageurl=X  " target="_blank">feedback</a> will help us to improve it.
+    </span>
+  </p>
+</div>
 
 <div class="govuk-breadcrumbs govuk-breadcrumbs--collapse-on-mobile">
   <ol class="govuk-breadcrumbs__list">
@@ -25,14 +35,15 @@
     </li>
   </ol>
 </div>
+
 {% endblock %}
 
 {% block content %}
 
 <style>
- .govuk-tag { text-transform:none }
+  .govuk-tag { text-transform:none }
 
- .hmcts-progress-bar-vertical .hmcts-progress-bar__icon {
+  .hmcts-progress-bar-vertical .hmcts-progress-bar__icon {
     height: 45px;
     width: 45px
     ;
@@ -53,21 +64,30 @@
 <div class="govuk-grid-row">
 
   <div class="govuk-grid-column-full">
+
       <h1 class="govuk-heading-xl govuk-!-margin-bottom-4">
         Sam Richards
       </h1>
-      <p class="govuk-body">Case number #1636575673018538</p>
+   
+      <!-- https://design-system.service.gov.uk/styles/typography/ -->
+      <p class="govuk-body-l">Case number #1636575673018538</p>
+
+
+
+
   </div>
+
 
   <div class="govuk-grid-column-two-thirds">
 
       <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
 
+
       <div class="hmcts-progress-bar-vertical" role="progressbar">
         <ol class="hmcts-progress-bar__list">
           <li class="hmcts-progress-bar__list-item">
             <span class="hmcts-progress-bar__icon hmcts-progress-bar__icon--complete"></span>
-            <span class="hmcts-progress-bar__label"><span class="govuk-visually-hidden"> Step 1: </span>Application submitted</span>
+            <span class="hmcts-progress-bar__label"><span class="govuk-visually-hidden"> Current Step 1: </span>Application submitted</span>
           </li>
           <li class="hmcts-progress-bar__list-item">
             <span class="hmcts-progress-bar__icon"></span>
@@ -97,9 +117,18 @@
         </div>
         <div class="govuk-notification-banner__content">
           <p class="govuk-notification-banner__heading">
-            Your response has been received.
+            The court has set a date for your hearing
           </p>
 
+          <!-- https://design-system.service.gov.uk/styles/typography/ -->
+          <p class="govuk-body">  <b>Date:</b>  21 June 2021 <br>
+          <b>Time:</b>  10am <br>
+         <b>Court address:</b>  Taylor House, Vauxhall, London SW1A 2PQ</p>
+          
+
+        <p class="govuk-notification-banner__heading">
+            <a class="govuk-notification-banner__link" href="/applicanttasklist/yourhearings/hearings">View all details of the hearing</a>
+          </p>
 
         </div>
       </div>
@@ -111,13 +140,27 @@
           </h2>
           <ul class="app-task-list__items">
 
+            <!-- <li class="app-task-list__item">
+              <span class="app-task-list__task-name">
+
+                <a href="aboutyou/confidentiality/detailsknown" aria-describedby="eligibility-status">
+                  Keep your details private
+                </a>
+              </span>
+                <strong class="govuk-tag app-task-list__tag govuk-tag govuk-tag--turquoise" id="eligibility-status">SUBMITTED</strong>
+            </li> -->
+
+
             <li class="app-task-list__item">
               <span class="app-task-list__task-name">
+                <a href="aboutyou/confirmcontactdetails/checkanswers" aria-describedby="read-declaration-status">
+
                 <a href="aboutyou/editcontactdetails/checkanswers" aria-describedby="read-declaration-status">
+
                   Confirm or edit your contact details
                 </a>
               </span>
-              <strong class="govuk-tag app-task-list__tag govuk-tag--turquoise" id="eligibility-status">Submitted</strong>
+              <strong class="govuk-tag app-task-list__tag govuk-tag govuk-tag--turquoise" id="eligibility-status">Submitted</strong>
             </li>
 
             <li class="app-task-list__item">
@@ -131,33 +174,33 @@
 
             <li class="app-task-list__item">
               <span class="app-task-list__task-name">
-                <a href="aboutyou/confirmcontactdetails/confidentiality/detailsknown.html" aria-describedby="eligibility-status">
+                <a href="aboutyou/confidentiality/detailsknown" aria-describedby="eligibility-status">
                   Keep your details private
                 </a>
               </span>
-              <strong class="govuk-tag app-task-list__tag govuk-tag govuk-tag--turquoise" id="eligibility-status">Submitted</strong>
+                <strong class="govuk-tag app-task-list__tag govuk-tag govuk-tag--turquoise" id="eligibility-status">Submitted</strong>
             </li>
-
+            
             <li class="app-task-list__item">
               <span class="app-task-list__task-name">
-                <a href="aboutyou/tellusyourhearingneeds/remotehearing" aria-describedby="read-declaration-status">
+                <a href="aboutyou/tellusyourhearingneeds/support-help.html" aria-describedby="read-declaration-status">
                 Support you need during your case
                 </a>
               </span>
-              <strong class="govuk-tag app-task-list__tag govuk-tag--turquoise" id="eligibility-status">Submitted</strong>
+              <strong class="govuk-tag app-task-list__tag govuk-tag govuk-tag--turquoise" id="eligibility-status">Submitted</strong>
             </li>
           </ul>
         </li>
 
         <li>
           <h2 class="app-task-list__section">
-             The application
+             Your application
           </h2>
           <ul class="app-task-list__items">
             <li class="app-task-list__item">
               <span class="app-task-list__task-name">
                 <a href="../public/pdf/C100FinalDocument.pdf" target="_blank" aria-describedby="company-information-status">
-                  Check the application (PDF)
+                  Your application  (PDF)
                 </a>
               </span>
               <strong class="govuk-tag app-task-list__tag govuk-tag--green" id="company-information-status">Completed</strong>
@@ -165,37 +208,45 @@
             <li class="app-task-list__item">
               <span class="app-task-list__task-name">
                 <a href="../public/pdf/C1ADocument.pdf" target="_blank" aria-describedby="company-information-status">
-                  Check the allegations of harm and violence (PDF)
+                  Your allegations of harm and violence (PDF)
                 </a>
               </span>
               <strong class="govuk-tag app-task-list__tag govuk-tag--green" id="company-information-status">Completed</strong>
             </li>
-
+            <!--<li class="app-task-list__item">
+              <span class="app-task-list__task-name">
+                <a href="../public/pdf/C1ADocument.pdf" target="_blank" aria-describedby="company-information-status">
+                  Respond to the other side's allegations of harm and violence
+                </a>
+              </span>
+              <strong class="govuk-tag app-task-list__tag govuk-tag--red" id="company-information-status">Not started yet</strong>
+            </li>!-->
 
           </ul>
         </li>
 
         <li>
           <h2 class="app-task-list__section">
-            Your response
+            The response
           </h2>
           <ul class="app-task-list__items">
             <li class="app-task-list__item">
               <span class="app-task-list__task-name">
-                <a href="../../../tasklistresponse/start" aria-describedby="company-information-status">
-                  Respond to the application
+                <a href="../public/pdf/C1ADocument.pdf" target="_blank" aria-describedby="company-information-status">
+                  The response to your application (PDF)
                 </a>
               </span>
-              <strong class="govuk-tag app-task-list__tag govuk-tag govuk-tag--green" id="eligibility-status">Completed</strong>
+              <strong class="govuk-tag app-task-list__tag govuk-tag govuk-tag--grey" id="eligibility-status">Not available yet</strong>
             </li>
-            <li class="app-task-list__item">
+
+          <!--  <li class="app-task-list__item">
               <span class="app-task-list__task-name">
-                <a href="applications/responsetoallegations/start" aria-describedby="company-information-status">
-                  Respond to the allegations of harm and violence
+                <a href="../public/pdf/C1ADocument.pdf" target="_blank" aria-describedby="company-information-status">
+                  Check the other side's allegations of harm and violence
                 </a>
               </span>
-              <strong class="govuk-tag app-task-list__tag govuk-tag govuk-tag--green" id="eligibility-status">Completed</strong>
-            </li>
+              <strong class="govuk-tag app-task-list__tag govuk-tag govuk-tag--red" id="eligibility-status">Not started yet</strong>
+            </li>!-->
 
           </ul>
         </li>
@@ -211,7 +262,7 @@
                   Check details of your court hearings
                 </a>
               </span>
-              <strong class="govuk-tag govuk-tag--grey app-task-list__tag " id="submit-pay-status">Cannot view yet</strong>
+              <strong class="govuk-tag govuk-tag--grey app-task-list__tag govuk-tag--grey" id="submit-pay-status">Not available yet</strong>
             </li>
 
 
@@ -229,7 +280,7 @@
             <li class="app-task-list__item">
               <span class="app-task-list__task-name">
                 <a href="yourdocuments/uploadv1/uploaddocumentsv1" aria-describedby="upload-document">
-                  Upload documents
+                  Upload documents, statements and applications
                 </a>
               </span>
               <strong class="govuk-tag govuk-tag--blue app-task-list__tag" id="submit-pay-status">Optional</strong>
@@ -241,7 +292,7 @@
                   View all documents
                 </a>
               </span>
-              <strong class="govuk-tag govuk-tag--blue app-task-list__tag " id="submit-pay-status">Ready to view</strong>
+              <strong class="govuk-tag govuk-tag--blue app-task-list__tag" id="submit-pay-status">Ready to view</strong>
             </li>
 
          </ul>
@@ -258,7 +309,7 @@
                   View all orders from the court
                 </a>
               </span>
-              <strong class="govuk-tag govuk-tag--grey app-task-list__tag" id="submit-pay-status">Cannot view yet</strong>
+              <strong class="govuk-tag govuk-tag--grey app-task-list__tag govuk-tag--grey" id="submit-pay-status">Not available yet</strong>
             </li>
 
           </ul>
@@ -280,25 +331,74 @@
       <ul class="govuk-list">
 
         <li>
-          <a class="govuk-link" href="#">Find my local court</a>
+          <a class="govuk-link" href="#" >Add a legal representative</a>
+          <div class="govuk-!-padding-bottom-2"></div>
+        </li> 
+
+        <li>
+          <a class="govuk-link" href="/applicanttasklist/makeapplication/makeapplication.html" >Make an application about your case</a>
+          <div class="govuk-!-padding-bottom-2"></div>
+        </li> 
+
+        <li>
+          <a class="govuk-link" href="https://helpwithchildarrangements.service.justice.gov.uk" target="_blank">Know more about child arrangements</a>
           <div class="govuk-!-padding-bottom-2"></div>
         </li>
         <li>
-          <a class="govuk-link" href="#">Find legal advice</a>
+          <a class="govuk-link" href="https://helpwithchildarrangements.service.justice.gov.uk/going-to-court" target="_blank">Know more about attending court</a>
+          <div class="govuk-!-padding-bottom-2"></div>
+        </li>
+
+        <li>
+          <a class="govuk-link" href="https://www.gov.uk/check-legal-aid" target="_blank">Check if I am eligible for Legal Aid</a>
+          <div class="govuk-!-padding-bottom-2"></div>
+        </li>
+
+        <li>
+          <a class="govuk-link" href="https://www.gov.uk/guidance/family-mediation-voucher-scheme" target="_blank">Find out about The Family Mediation Voucher scheme</a>
+          <div class="govuk-!-padding-bottom-2"></div>
+        </li>
+
+        <li>
+          <a class="govuk-link" href="https://www.gov.uk/find-legal-advice/find-legal-adviser" target="_blank">Find legal advice</a>
           <div class="govuk-!-padding-bottom-2"></div>
         </li>
         <li>
-          <a class="govuk-link" href="#">Know more about child arrangements</a>
+          <a class="govuk-link" href="https://www.gov.uk/represent-yourself-in-court" target="_blank">Read how to represent myself in court</a>
           <div class="govuk-!-padding-bottom-2"></div>
         </li>
         <li>
-          <a class="govuk-link" href="#">Know more about attending court</a>
+          <a class="govuk-link" href="https://www.gov.uk/find-court-tribunal" target="_blank">Find information about my court</a>
           <div class="govuk-!-padding-bottom-2"></div>
         </li>
       </ul>
 
+      <details class="govuk-details" data-module="govuk-details">
+        <summary class="govuk-details__summary">
+          <span class="govuk-details__summary-text">
+           Contact us for help
+           </span>
+         </summary>
+         <div class="govuk-details__text">
+          
+   
+          <p class="govuk-body govuk-!-font-weight-regular">You can <a href="#" class="govuk-link">contact the relevant court</a> if you need to discuss your case.</p>
+
+          <p class="govuk-body">They cannot give you legal advice or answer questions about applications submitted.</p>
+
+          <p class="govuk-body govuk-!-font-weight-bold">Feedback</p>
+  
+          <p class="govuk-body govuk-!-font-weight-regular">If you would like to report a problem or have a suggestion to help improve this service, send an email to: <a href="#" class="govuk-link">C100applications@justice.gov.uk</a></p>
+         
+          <p class="govuk-body">This email should only be used for feedback on the digital service.</p>
+   
+         </div>
+       </details>
+
+
   </div>
-</div>
+  </div>
+
 
 
 
