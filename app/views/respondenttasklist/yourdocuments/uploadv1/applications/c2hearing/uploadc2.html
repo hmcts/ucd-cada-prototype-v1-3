@@ -1,0 +1,184 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  HMCTS prototyping
+{% endblock %}
+
+
+{% block header %}
+  <!-- Blank header with no service name for the start page -->
+
+{{ govukHeader({
+    homepageUrl: "/",
+    serviceName: "Child arrangements and family injunction",
+    serviceUrl: "/",
+    containerClasses: "govuk-width-container"
+}) }}
+
+{% endblock %}
+
+{% block beforeContent %}
+
+<div class="govuk-phase-banner">
+  <p class="govuk-phase-banner__content">
+    <strong class="govuk-tag govuk-phase-banner__content__tag">
+      BETA
+    </strong>
+    <span class="govuk-phase-banner__text">
+      This is a new service – your <a class="govuk-link" href="https://www.smartsurvey.co.uk/s/C100_Feedback/?pageurl=X  " target="_blank">feedback (opens in a new tab) </a> will help us to improve it.
+    </span>
+  </p>
+</div>
+
+<a href="#" class="govuk-back-link" onclick="history.back(-1)">Back</a>
+
+
+
+{% endblock %}
+
+{% block content %}
+
+<!-- https://design-system.service.gov.uk/styles/layout/-->
+
+<div class="govuk-width-container">
+  <main class="govuk-main-wrapper">
+
+    <div class="govuk-grid-row">
+<!-- Left column-->
+      <div class="govuk-grid-column-two-thirds">
+<!-- https://design-system.service.gov.uk/styles/typography/ -->
+
+<!-- https://design-system.service.gov.uk/styles/typography/ -->
+<h1 class="govuk-heading-l"><span class="govuk-caption-l">Delay or cancel a hearing date</span>Upload your application </h1>
+
+
+
+
+<p class="govuk-body">Upload your application to the case. If you are uploading a paper copy of the application, make sure this has been scanned in clearly, and saved in a suitable file format such as PDF.</p>
+
+
+
+
+<div class="govuk-inset-text">
+
+
+
+
+
+
+  <div class="govuk-form-group">
+
+
+
+    <!-- https://design-system.service.gov.uk/styles/typography/ -->
+    <h3 class="govuk-heading-s">Upload documents</h3>
+
+    <div id="changed-name-hint" class="govuk-hint">
+      Give each document a file name that makes it clear what it is about. For example position-statement.docx. Files must end with JPG, JPEG, BMP, PNG, TIF, PDF, DOC or DOCX.
+    </div>
+
+
+    <table class="govuk-table">
+ 
+      <thead class="govuk-table__head">
+
+        <tr class="govuk-table__row">
+          <td scope="row" class="govuk-table__cell"></th>
+          <td class="govuk-table__cell"></td>
+        </tr>
+
+        <tr class="govuk-table__row">
+          <td scope="row" class="govuk-table__cell">No files uploaded</th>
+          <td class="govuk-table__cell"></td>
+        </tr>
+      </tbody>
+    </table>
+
+<!-- Please refer to: https://www.figma.com/file/OyX0VdF5o2wzv8UAmu1B9S/Document-management?node-id=613%3A153625&t=egke6HbEyhsjDI12-1 to see how the payload works and to see error messages. -->
+    <input class="govuk-file-upload" id="file-upload-1" name="file-upload-1" type="file">
+  </div>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+<details class="govuk-details" data-module="govuk-details">
+  <summary class="govuk-details__summary">
+    <span class="govuk-details__summary-text">
+      Take a picture of a document on your phone and upload it
+    </span>
+  </summary>
+  <div class="govuk-details__text">
+<!-- https://design-system.service.gov.uk/styles/typography/#lists-->
+<ol class="govuk-list govuk-list--number">
+  <li>Place your document on a flat service in a well-lit room. Use a flash if you need to.</li>
+  <li>Take a picture of the whole document. You should be able to see its edges.</li>
+  <li>Check you can read all the writing, including the handwriting.</li>
+  <li>Email or send the photo or scan to the device you are using now.</li>
+  <li>Upload it here.</li>
+</ol>
+
+  </div>
+</details>
+
+<div class="govuk-button-group govuk-!-margin-top-9">
+
+<a href="evidence.html" role="button" draggable="false" class="govuk-button" data-module="govuk-button">
+  Continue
+</a>
+
+<a class="govuk-link" href="/respondenttasklist/speakwithcafcass.html">Cancel</a>
+</div>
+
+
+
+
+
+
+
+
+      
+<!-- enter all content of the left column before the div below-->
+</div>
+
+<!-- right column-->
+      <div class="govuk-grid-column-one-third">
+               <details class="govuk-details" data-module="govuk-details">
+          <summary class="govuk-details__summary">
+            <span class="govuk-details__summary-text">
+             Contacts for help
+             </span>
+           </summary>
+           <div class="govuk-details__text">
+            
+     
+            <p class="govuk-body govuk-!-font-weight-regular">You can <a href="#" class="govuk-link">contact the relevant court</a> if you need to discuss your case.</p>
+  
+            <p class="govuk-body">They cannot give you legal advice or answer questions about applications submitted.</p>
+  
+            <p class="govuk-body govuk-!-font-weight-bold">Feedback</p>
+    
+            <p class="govuk-body govuk-!-font-weight-regular">If you would like to report a problem or have a suggestion to help improve this service, send an email to: <a href="#" class="govuk-link">C100applications@justice.gov.uk</a></p>
+           
+            <p class="govuk-body">This email should only be used for feedback on the digital service.</p>
+     
+           </div>
+         </details> 
+
+<!-- enter all content for the right column before the div below-->      
+</div>
+    </div>
+
+  </main>
+</div>
+
+{% endblock %}

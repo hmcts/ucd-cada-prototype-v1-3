@@ -1,0 +1,353 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Child arrangement respondent
+{% endblock %}
+
+{% block header %}
+  <!-- Blank header with no service name for the start page -->
+
+{{ govukHeader({
+    homepageUrl: "/",
+    serviceName: serviceName,
+    serviceUrl: "/",
+    containerClasses: "govuk-width-container"
+}) }}
+
+
+{% endblock %}
+
+{% block beforeContent %}
+
+<div class="govuk-phase-banner">
+  <p class="govuk-phase-banner__content">
+    <strong class="govuk-tag govuk-phase-banner__content__tag">
+      BETA
+    </strong>
+    <span class="govuk-phase-banner__text">
+      This is a new service – your <a class="govuk-link" href="https://www.smartsurvey.co.uk/s/C100_Feedback/?pageurl=X  " target="_blank">feedback (opens in a new tab)</a> will help us to improve it.
+    </span>
+  </p>
+</div>
+
+<a href="#" class="govuk-back-link" onclick="history.back(-1)">Back</a>
+{% endblock %}
+
+
+
+{% block content %}
+
+
+<!-- https://design-system.service.gov.uk/styles/layout/-->
+
+<div class="govuk-width-container">
+  <main class="govuk-main-wrapper">
+
+    <div class="govuk-grid-row">
+
+      <div class="govuk-grid-column-two-thirds">
+        <!-- Left column-->
+
+        <h1 class="govuk-heading-l">Support you need during your case</h1>
+
+        <!-- https://design-system.service.gov.uk/styles/typography/ -->
+        <p class="govuk-body-l">Case number #1636575673018538</p>
+        <!-- https://design-system.service.gov.uk/styles/typography/#lists-->
+        <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
+        
+        <p class="govuk-body">If you need support during the case, you can ask the court to make certain arrangements for you.</p>
+
+        <p class="govuk-body">You can ask for support while attending hearings, and when you are communicating with the court.</p>
+
+
+
+
+<!-- Accordion -->
+
+
+<div class="govuk-accordion govuk-!-margin-top-7" data-module="govuk-accordion" id="accordion-default">
+  <div class="govuk-accordion__section">
+    <div class="govuk-accordion__section-header">
+      <h2 class="govuk-accordion__section-heading">
+        <span class="govuk-accordion__section-button" id="accordion-default-heading-1">
+          Ask for documents to be provided in another format
+
+          <p class="govuk-body">Request formats such as braille or large print.</p>
+
+        </span>
+      </h2>
+    </div>
+    <div id="accordion-default-content-1" class="govuk-accordion__section-content" aria-labelledby="accordion-default-heading-1">
+      <p class='govuk-body'>You can request:</p>
+
+      <!-- https://design-system.service.gov.uk/styles/typography/#lists-->
+      <ul class="govuk-list govuk-list--bullet">
+        <li>documents in a specified colour</li>
+        <li>documents in easy read or large print format</li>
+        <li>braille documents</li>
+        <li>audio translation of documents</li>
+        <li>documents to be read aloud</li>
+      </ul>
+    </div>
+  </div>
+
+<!-- accordion section 2 -->
+
+
+  <div class="govuk-accordion__section">
+    <div class="govuk-accordion__section-header">
+      <h2 class="govuk-accordion__section-heading">
+        <span class="govuk-accordion__section-button" id="accordion-default-heading-2">
+          Ask for support with completing forms
+
+          <p class="govuk-body">Request more context or assistance when filling in forms.</p>
+        </span>
+      </h2>
+    </div>
+    <div id="accordion-default-content-2" class="govuk-accordion__section-content" aria-labelledby="accordion-default-heading-2">
+      <p class='govuk-body'>You can request:       </p>
+
+<!-- https://design-system.service.gov.uk/styles/typography/#lists-->
+<ul class="govuk-list govuk-list--bullet">
+  <li>guidance on how to complete forms</li>
+    <li>support with filling in the forms</li>
+</ul>
+    </div>
+  </div>
+
+<!-- accordion section 3 -->
+
+  <div class="govuk-accordion__section">
+    <div class="govuk-accordion__section-header">
+      <h2 class="govuk-accordion__section-heading">
+        <span class="govuk-accordion__section-button" id="accordion-default-heading-3">
+          Ask for adjustments to travel to and move around the court building
+          <p class="govuk-body">Request accommodations such as help using a lift.</p>
+        </span>
+      </h2>
+    </div>
+    <div id="accordion-default-content-3" class="govuk-accordion__section-content" aria-labelledby="accordion-default-heading-3">
+      <p class='govuk-body'>You can request:</p>
+
+<!-- https://design-system.service.gov.uk/styles/typography/#lists-->
+<ul class="govuk-list govuk-list--bullet">
+  <li>step free and wheelchair access</li>
+  <li>use of a wheelchair at the venue</li>
+  <li>a parking space close to the venue</li>
+  <li>use of an accessible toilet</li>
+  <li>help with using a lift</li>
+  <li>A different type of chair</li>
+  <li>someone to guide you around the building</li>
+
+</ul>
+    </div>
+  </div>
+
+
+<!-- accordion section 4 -->
+
+  <div class="govuk-accordion__section">
+    <div class="govuk-accordion__section-header">
+      <h2 class="govuk-accordion__section-heading">
+        <span class="govuk-accordion__section-button" id="accordion-default-heading-4">
+          Ask to have a source of support with you during a hearing
+          <p class="govuk-body">Request to bring another person with you, such as a family member.</p>
+        </span>
+      </h2>
+    </div>
+    <div id="accordion-default-content-4" class="govuk-accordion__section-content" aria-labelledby="accordion-default-heading-4">
+      <p class='govuk-body'>You can request:</p>
+
+      <!-- https://design-system.service.gov.uk/styles/typography/#lists-->
+      <ul class="govuk-list govuk-list--bullet">
+        <li>a support worker</li>
+        <li>a friend or family member</li>
+        <li>an assistance or guide dog</li>
+        <li>a therapy animal</li>
+      </ul>
+    </div>
+  </div>
+
+
+<!-- accordion section 5 -->
+
+<div class="govuk-accordion__section">
+  <div class="govuk-accordion__section-header">
+    <h2 class="govuk-accordion__section-heading">
+      <span class="govuk-accordion__section-button" id="accordion-default-heading-4">
+        Ask for something to make you feel more comfortable during the hearing
+        <p class="govuk-body">Request more space or privacy during the proceedings.</p>
+      </span>
+    </h2>
+  </div>
+  <div id="accordion-default-content-4" class="govuk-accordion__section-content" aria-labelledby="accordion-default-heading-4">
+    <p class='govuk-body'>You can ask for:</p>
+
+    <!-- https://design-system.service.gov.uk/styles/typography/#lists-->
+    <ul class="govuk-list govuk-list--bullet">
+      <li>appropriate lighting</li>
+      <li>regular breaks</li>
+      <li>space to be able to get up and move around</li>
+      <li>a private waiting area</li>
+    </ul>
+  </div>
+</div>
+
+
+<!-- accordion section 6 -->
+
+<div class="govuk-accordion__section">
+  <div class="govuk-accordion__section-header">
+    <h2 class="govuk-accordion__section-heading">
+      <span class="govuk-accordion__section-button" id="accordion-default-heading-4">
+        Ask for a specific type of hearing
+        <p class="govuk-body">Request for a hearing to be in person, or by video or phone.</p>
+      </span>
+    </h2>
+  </div>
+  <div id="accordion-default-content-4" class="govuk-accordion__section-content" aria-labelledby="accordion-default-heading-4">
+    <p class='govuk-body'>You can ask for:</p>
+
+    <!-- https://design-system.service.gov.uk/styles/typography/#lists-->
+    <ul class="govuk-list govuk-list--bullet">
+      <li>an in person hearing</li>
+      <li>a video hearing</li>
+      <li>a phone hearing</li>
+    </ul>
+  </div>
+</div>
+
+<!-- accordion section 7 -->
+
+<div class="govuk-accordion__section">
+  <div class="govuk-accordion__section-header">
+    <h2 class="govuk-accordion__section-heading">
+      <span class="govuk-accordion__section-button" id="accordion-default-heading-4">
+        Ask for help communicating and understanding during your case
+        <p class="govuk-body">Request help with having your say, and understanding the proceedings.</p>
+      </span>
+    </h2>
+  </div>
+  <div id="accordion-default-content-4" class="govuk-accordion__section-content" aria-labelledby="accordion-default-heading-4">
+    <p class='govuk-body'>You can ask for:</p>
+
+    <!-- https://design-system.service.gov.uk/styles/typography/#lists-->
+    <ul class="govuk-list govuk-list--bullet">
+      <li>extra time to think and explain yourself</li>
+      <li>an intermediary</li>
+      <li>a visit to the court building before the hearing</li>
+      <li>an explanation of the court, and who will be in the room during the hearing</li>
+  </ul>
+<p class="govuk-body">You can also ask the court for:</p>
+
+<!-- https://design-system.service.gov.uk/styles/typography/#lists-->
+<ul class="govuk-list govuk-list--bullet">
+  <li>a room fitted with a hearing enhancement system, such as an induction loop or an infrared receiver</li>
+  <li>a speech to text reporter (a palantypist)</li>
+  <li>a lip speaker, or a sign language interpreter</li>
+</ul>
+
+  
+  </div>
+</div>
+
+<!-- accordion section 8 -->
+
+<div class="govuk-accordion__section">
+  <div class="govuk-accordion__section-header">
+    <h2 class="govuk-accordion__section-heading">
+      <span class="govuk-accordion__section-button" id="accordion-default-heading-4">
+        Ask for the court to consider your language requirements
+        <p class="govuk-body">Request that the court provides a language interpreter.</p>
+      </span>
+    </h2>
+  </div>
+  <div id="accordion-default-content-4" class="govuk-accordion__section-content" aria-labelledby="accordion-default-heading-4">
+    <p class='govuk-body'>You can ask for:</p>
+
+    <!-- https://design-system.service.gov.uk/styles/typography/#lists-->
+    <ul class="govuk-list govuk-list--bullet">
+      <li>documents in Welsh</li>
+      <li>documents translated to another language</li>
+      <li>a language interpreter</li>
+
+      <p class="govuk-body">Give details of your specific language requirements.</p>
+
+    </ul>
+  </div>
+</div>
+
+</div>
+<!-- end accordion -->
+
+
+
+<form action="cyaradj.html" method="get">
+<div class="govuk-form-group">
+<!-- https://design-system.service.gov.uk/styles/typography/ -->
+<h3 class="govuk-heading-s">Give details of what you need the court to do</h3>
+  <div id="more-detail-hint" class="govuk-hint">
+    Explain what support you will need before and during the court hearing.
+  </div>
+  <textarea class="govuk-textarea" id="message" name="message" rows="6" aria-describedby="more-detail-hint" >
+    
+
+  </textarea>
+
+
+</div>
+
+
+<!-- NB2- use this if you have ARE using logic and delete the above -->
+<div class="govuk-button-group">
+  <button class="govuk-button" data-module="govuk-button">
+    continue
+  </button>
+
+  <a class="govuk-link" href="/applicanttasklist/appserved.html">Cancel</a>
+</div>
+
+
+
+
+
+</form>
+
+
+<!-- enter all content of the left column before the div below-->
+</div>
+
+<!-- right column-->
+      <div class="govuk-grid-column-one-third">
+        <details class="govuk-details" data-module="govuk-details">
+          <summary class="govuk-details__summary">
+            <span class="govuk-details__summary-text">
+             Contact us for help
+             </span>
+           </summary>
+           <div class="govuk-details__text">
+            
+     
+            <p class="govuk-body govuk-!-font-weight-regular">You can <a href="#" class="govuk-link">contact the relevant court</a> if you need to discuss your case.</p>
+  
+            <p class="govuk-body">They cannot give you legal advice or answer questions about applications submitted.</p>
+  
+            <p class="govuk-body govuk-!-font-weight-bold">Feedback</p>
+    
+            <p class="govuk-body govuk-!-font-weight-regular">If you would like to report a problem or have a suggestion to help improve this service, send an email to: <a href="#" class="govuk-link">C100applications@justice.gov.uk</a></p>
+           
+            <p class="govuk-body">This email should only be used for feedback on the digital service.</p>
+     
+           </div>
+         </details>
+
+<!-- enter all content for the right column before the div below-->      
+</div>
+    </div>
+
+  </main>
+</div>
+
+
+
+{% endblock %}

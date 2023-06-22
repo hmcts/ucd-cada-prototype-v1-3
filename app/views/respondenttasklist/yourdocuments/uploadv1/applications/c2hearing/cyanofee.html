@@ -1,0 +1,199 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  HMCTS prototyping
+{% endblock %}
+
+
+{% block header %}
+  <!-- Blank header with no service name for the start page -->
+
+{{ govukHeader({
+    homepageUrl: "/",
+    serviceName: "Child arrangements and family injunction",
+    serviceUrl: "/",
+    containerClasses: "govuk-width-container"
+}) }}
+
+{% endblock %}
+
+{% block beforeContent %}
+
+<div class="govuk-phase-banner">
+  <p class="govuk-phase-banner__content">
+    <strong class="govuk-tag govuk-phase-banner__content__tag">
+      BETA
+    </strong>
+    <span class="govuk-phase-banner__text">
+      This is a new service – your <a class="govuk-link" href="https://www.smartsurvey.co.uk/s/C100_Feedback/?pageurl=X  " target="_blank">feedback</a> will help us to improve it.
+    </span>
+  </p>
+</div>
+
+
+
+<a href="#" class="govuk-back-link" onclick="history.back(-1)">Back</a>
+
+
+
+{% endblock %}
+
+{% block content %}
+
+<!-- https://design-system.service.gov.uk/styles/layout/-->
+
+<div class="govuk-width-container">
+  <main class="govuk-main-wrapper">
+
+    <div class="govuk-grid-row">
+<!-- Left column-->
+<div class="govuk-grid-column-two-thirds">
+
+
+  <!-- https://design-system.service.gov.uk/styles/typography/ -->
+  <h1 class="govuk-heading-l">Check your answers</h1>
+  <!-- https://design-system.service.gov.uk/styles/typography/ -->
+  <p class="govuk-body-l">Case number #123456789123456</p>
+  
+          <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+            <div class="govuk-summary-list__row">
+              <dt class="govuk-summary-list__key">
+                What are you applying for?
+              </dt>
+              <dd class="govuk-summary-list__value">
+                C2 application
+              </dd>
+              <dd class="govuk-summary-list__actions">
+                <a class="govuk-link" href="#">
+                  Change<span class="govuk-visually-hidden"> name</span>
+                </a>
+              </dd>
+            </div>
+
+        
+
+
+            <div class="govuk-summary-list__row">
+              <dt class="govuk-summary-list__key">
+                Which hearing are you applying to delay or cancel?
+              </dt>
+              <dd class="govuk-summary-list__value">
+                Monday 12 July 2023
+              </dd>
+              <dd class="govuk-summary-list__actions">
+                <a class="govuk-link" href="#">
+                  Change<span class="govuk-visually-hidden"> hearing date</span>
+                </a>
+              </dd>
+            </div>
+
+
+            <div class="govuk-summary-list__row">
+              <dt class="govuk-summary-list__key">
+                Document uploaded 
+              </dt>
+              <dd class="govuk-summary-list__value">
+                <a href="#" class="govuk-link">c2application.pdf</a>
+              </dd>
+              <dd class="govuk-summary-list__actions">
+                <a class="govuk-link" href="#">
+                  Change<span class="govuk-visually-hidden"> document</span>
+                </a>
+              </dd>
+            </div>
+            <div class="govuk-summary-list__row">
+              <dt class="govuk-summary-list__key">
+                Do you have supporting documents to upload?
+              </dt>
+              <dd class="govuk-summary-list__value">
+                Yes
+              </dd>
+              <dd class="govuk-summary-list__actions">
+                <a class="govuk-link" href="#">
+                  Change<span class="govuk-visually-hidden"> documents</span>
+                </a>
+              </dd>
+            </div>
+            <div class="govuk-summary-list__row">
+              <dt class="govuk-summary-list__key">
+                Document uploaded 
+              </dt>
+              <dd class="govuk-summary-list__value">
+                <a href="#" class="govuk-link">evidence.pdf </a>
+              </dd>
+              <dd class="govuk-summary-list__actions">
+                <a class="govuk-link" href="#">
+                  Change<span class="govuk-visually-hidden"> contact details</span>
+                </a>
+              </dd>
+            </div>
+            <div class="govuk-summary-list__row">
+              <dt class="govuk-summary-list__key">
+                Does the other person in the case agree with the date change?
+              </dt>
+              <dd class="govuk-summary-list__value">
+                Yes
+              </dd>
+              <dd class="govuk-summary-list__actions">
+                <a class="govuk-link" href="#">
+                  Change<span class="govuk-visually-hidden"> contact details</span>
+                </a>
+              </dd>
+            </div>
+          </dl>
+          
+
+    <div class="govuk-button-group govuk-!-margin-top-9">
+    
+    <a href="appnofee.html" role="button" draggable="false" class="govuk-button" data-module="govuk-button">
+      Submit application
+    </a>
+    
+    <a class="govuk-link" href="/respondenttasklist/speakwithcafcass.html">Cancel</a>
+    </div>
+    
+  
+    
+    
+    
+
+
+        
+<!-- enter all content of the left column before the div below-->
+</div>
+
+<!-- right column-->
+      <div class="govuk-grid-column-one-third">
+        <details class="govuk-details" data-module="govuk-details">
+          <summary class="govuk-details__summary">
+            <span class="govuk-details__summary-text">
+             Contact us for help
+             </span>
+           </summary>
+           <div class="govuk-details__text">
+            
+     
+            <p class="govuk-body govuk-!-font-weight-regular">You can <a href="#" class="govuk-link">contact the relevant court</a> if you need to discuss your case.</p>
+  
+            <p class="govuk-body">They cannot give you legal advice or answer questions about applications submitted.</p>
+  
+            <p class="govuk-body govuk-!-font-weight-bold">Feedback</p>
+    
+            <p class="govuk-body govuk-!-font-weight-regular">If you would like to report a problem or have a suggestion to help improve this service, send an email to: <a href="#" class="govuk-link">C100applications@justice.gov.uk</a></p>
+           
+            <p class="govuk-body">This email should only be used for feedback on the digital service.</p>
+     
+           </div>
+         </details>
+
+<!-- enter all content for the right column before the div below-->      
+</div>
+    </div>
+
+  </main>
+</div>
+
+
+
+
+{% endblock %}

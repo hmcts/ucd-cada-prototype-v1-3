@@ -1,0 +1,209 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Child arrangement and family injunction
+{% endblock %}
+
+
+{% block header %}
+
+{{ govukHeader({
+    homepageUrl: "/",
+    serviceName: serviceName,
+    serviceUrl: "/",
+    containerClasses: "govuk-width-container"
+}) }}
+
+{% endblock %}
+
+{% block beforeContent %}
+
+
+<div class="govuk-phase-banner">
+  <p class="govuk-phase-banner__content">
+    <strong class="govuk-tag govuk-phase-banner__content__tag">
+      alpha
+    </strong>
+    <span class="govuk-phase-banner__text">
+      This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.
+    </span>
+  </p>
+</div>
+
+
+{% endblock %}
+
+
+{% block content %}
+
+
+<!-- https://design-system.service.gov.uk/styles/typography/ -->
+<h1 class="govuk-heading-l"><span class="govuk-caption-l">Sam Richards</span>Child arrangements and family injunction cases</h1>
+
+<!-- https://design-system.service.gov.uk/styles/typography/ -->
+<h3 class="govuk-heading-s">Activate an access code or start an application:</h3>
+
+<!-- https://design-system.service.gov.uk/styles/typography/#lists-->
+<ul class="govuk-list">
+  <li>
+    <a class="govuk-link" href="/pinactivation/enterpin.html">Activate access code</a>
+  </li>
+  <li>
+    <a class="govuk-link" href="/screening/screening.html" target="_blank">New child arrangements application (C100)</a>
+  </li>
+  <li>
+    <a class="govuk-link" href="https://www.gov.uk/injunction-domestic-violence">New non-molestation or occupation order (FL401)</a>
+  </li>
+</ul>
+
+
+<!-- Board -->
+
+
+<div class="govuk-tabs govuk-!-margin-top-8" data-module="govuk-tabs" >
+
+  <ul class="govuk-tabs__list">
+    <li class="govuk-tabs__list-item govuk-tabs__list-item--selected">
+      <a class="govuk-tabs__tab" href="#past-day">
+        Draft applications
+      </a>
+    </li>
+    <li class="govuk-tabs__list-item">
+      <a class="govuk-tabs__tab" href="#past-week">
+        Active cases
+      </a>
+    </li>
+    <li class="govuk-tabs__list-item">
+      <a class="govuk-tabs__tab" href="#past-month">
+        Closed cases
+      </a>
+    </li>
+
+  </ul>
+
+
+  <div class="govuk-tabs__panel" id="past-day">
+    <h2 class="govuk-heading-m">Your applications</h2>
+    <p class="govuk-body">You have 28 days to submit the application.</p>
+    <table class="govuk-table">
+      <thead class="govuk-table__head">
+        <tr class="govuk-table__row">
+          <th scope="col" class="govuk-table__header">Case number</th>
+          <th scope="col" class="govuk-table__header">Case type</th>
+          <th scope="col" class="govuk-table__header">Status</th>
+          <th scope="col" class="govuk-table__header">Created date</th>
+        </tr>
+      </thead>
+      <tbody class="govuk-table__body">
+        <!-- <tr class="govuk-table__row">
+          <td class="govuk-table__cell"> 
+          <a href="/applicanttasklist/returned" class="govuk-link">1636575673018538</a> </td>
+          <td class="govuk-table__cell">C100</td>
+          <td class="govuk-table__cell">Application submitted</td>
+          <td class="govuk-table__cell">17 Oct 2022</td>
+        </tr> -->
+        <!-- <tr class="govuk-table__row">
+          <td class="govuk-table__cell"><a href="applicanttasklist/presub" class="govuk-link">1636575673019640</a></td>
+          <td class="govuk-table__cell">C100</td>
+          <td class="govuk-table__cell">Draft</td>
+          <td class="govuk-table__cell">19 Oct 2022</td>
+        </tr> -->
+
+      </tbody>
+    </table>
+  </div>
+  <div class="govuk-tabs__panel govuk-tabs__panel--hidden" id="past-week">
+    <h2 class="govuk-heading-m">Ongoing cases</h2>
+    <table class="govuk-table">
+      <thead class="govuk-table__head">
+        <tr class="govuk-table__row">
+          <th scope="col" class="govuk-table__header">Case number</th>
+          <th scope="col" class="govuk-table__header">Case type</th>
+          <th scope="col" class="govuk-table__header">Applicant</th>
+          <th scope="col" class="govuk-table__header">Last updated</th>
+        </tr>
+      </thead>
+      <tbody class="govuk-table__body">
+        <!-- <tr class="govuk-table__row">
+          <td class="govuk-table__cell"><a href="applicanttasklist/appserved" class="govuk-link">1636575673086571</a></td>
+          <td class="govuk-table__cell">C100</td>
+          <td class="govuk-table__cell">Sam Richards</td>
+          <td class="govuk-table__cell">2 Oct 2022</td>
+        </tr>
+        <tr class="govuk-table__row">
+          <td class="govuk-table__cell"><a href="/darespondenttasklist/start" class="govuk-link">1636575673019021</a></td>
+          <td class="govuk-table__cell">FL401</td>
+          <td class="govuk-table__cell">Julia Richards</td>
+          <td class="govuk-table__cell">19 Jul 2022</td>
+        </tr>
+        <tr class="govuk-table__row">
+          <td class="govuk-table__cell"><a href="/respondenttasklist/startreply" class="govuk-link">1636575673018538</a></td>
+          <td class="govuk-table__cell">C100</td>
+          <td class="govuk-table__cell">Julia Richards</td>
+          <td class="govuk-table__cell">21 Mar 2022</td>
+        </tr> -->
+      </tbody>
+    </table>
+  </div>
+  <div class="govuk-tabs__panel govuk-tabs__panel--hidden" id="past-month">
+    <h2 class="govuk-heading-m">Completed cases</h2>
+    <table class="govuk-table">
+      <thead class="govuk-table__head">
+        <tr class="govuk-table__row">
+          <th scope="col" class="govuk-table__header">Case number</th>
+          <th scope="col" class="govuk-table__header">Case type</th>
+          <th scope="col" class="govuk-table__header">Applicant</th>
+          <th scope="col" class="govuk-table__header">Close date</th>
+        </tr>
+      </thead>
+      <tbody class="govuk-table__body">
+        <!-- <tr class="govuk-table__row">
+          <td class="govuk-table__cell"><a href="#" class="govuk-link">1636575673018538</a></td>
+          <td class="govuk-table__cell">C100</td>
+          <td class="govuk-table__cell">Julia Richards</td>
+          <td class="govuk-table__cell">19 Jul 2022</td>
+        </tr>
+        <tr class="govuk-table__row">
+          <td class="govuk-table__cell"><a href="#" class="govuk-link">1636575673018538</a></td>
+          <td class="govuk-table__cell">FL401</td>
+          <td class="govuk-table__cell">Jane Doe</td>
+          <td class="govuk-table__cell">2 Mar 1999</td>
+        </tr> -->
+
+      </tbody>
+    </table>
+  </div>
+  <!-- <div class="govuk-tabs__panel govuk-tabs__panel--hidden" id="past-year">
+    <h2 class="govuk-heading-l">Past year</h2>
+    <table class="govuk-table">
+      <thead class="govuk-table__head">
+        <tr class="govuk-table__row">
+          <th scope="col" class="govuk-table__header">Case manager</th>
+          <th scope="col" class="govuk-table__header">Cases opened</th>
+          <th scope="col" class="govuk-table__header">Cases closed</th>
+        </tr>
+      </thead>
+      <tbody class="govuk-table__body">
+        <tr class="govuk-table__row">
+          <td class="govuk-table__cell">David Francis</td>
+          <td class="govuk-table__cell">1380</td>
+          <td class="govuk-table__cell">1472</td>
+        </tr>
+        <tr class="govuk-table__row">
+          <td class="govuk-table__cell">Paul Farmer</td>
+          <td class="govuk-table__cell">1129</td>
+          <td class="govuk-table__cell">1083</td>
+        </tr>
+        <tr class="govuk-table__row">
+          <td class="govuk-table__cell">Rita Patel</td>
+          <td class="govuk-table__cell">1539</td>
+          <td class="govuk-table__cell">1265</td>
+        </tr>
+      </tbody>
+    </table>
+  </div> -->
+</div>
+
+
+
+{% endblock %}

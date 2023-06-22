@@ -1,0 +1,217 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  HMCTS prototyping
+{% endblock %}
+
+
+{% block header %}
+  <!-- Blank header with no service name for the start page -->
+
+{{ govukHeader({
+    homepageUrl: "/",
+    serviceName: "Child arrangements and family injunction",
+    serviceUrl: "/",
+    containerClasses: "govuk-width-container"
+}) }}
+
+{% endblock %}
+
+{% block beforeContent %}
+<div class="govuk-phase-banner">
+  <p class="govuk-phase-banner__content">
+    <strong class="govuk-tag govuk-phase-banner__content__tag">
+      BETA
+    </strong>
+    <span class="govuk-phase-banner__text">
+      This is a new service – your <a class="govuk-link" href="https://www.smartsurvey.co.uk/s/C100_Feedback/?pageurl=X  " target="_blank">feedback</a> will help us to improve it.
+    </span>
+  </p>
+</div>
+
+<a href="returnstart" class="govuk-back-link" >Back</a>
+{% endblock %}
+
+{% block content %}
+
+<!-- https://design-system.service.gov.uk/styles/layout/-->
+
+
+
+
+<div class="govuk-width-container">
+  <main class="govuk-main-wrapper">
+
+    <div class="govuk-grid-row">
+<!-- Left column-->
+      <div class="govuk-grid-column-two-thirds">
+
+
+        <!-- https://design-system.service.gov.uk/styles/typography/ -->
+        <h1 class="govuk-heading-l"><span class="govuk-caption-l">Complete your application</span>Check your answers</h1>
+
+        <!-- https://design-system.service.gov.uk/styles/typography/ -->
+        <p class="govuk-body-l">Case number #1636575673018538</p>
+
+        <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              Your message
+            </dt>
+            <dd class="govuk-summary-list__value">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+
+            </dd>
+            <dd class="govuk-summary-list__actions">
+              <a class="govuk-link" href="#">
+                Change<span class="govuk-visually-hidden"> name</span>
+              </a>
+            </dd>
+          </div>
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key" style="border-bottom:1px solid #fff">
+              Supporting material
+            </dt>
+            <dd class="govuk-summary-list__value" >
+              <!-- https://design-system.service.gov.uk/styles/typography/ -->
+              <h3 class="govuk-heading-s">Do you have supporting material to upload?</h3>
+              <p class="govuk-body">Yes</p>
+            </dd>
+            <dd class="govuk-summary-list__actions" style="border-bottom:1px solid #fff">
+              <a class="govuk-link" href="#">
+                Change<span class="govuk-visually-hidden"> Supporting material</span>
+              </a>
+            </dd>
+          </div>
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key" style="border-bottom:1px solid #fff">
+
+            </dt>
+            <dd class="govuk-summary-list__value">
+              <h3 class="govuk-heading-s">What is this document?</h3>
+              <p class="govuk-body">MIAM certificate</p>
+            </dd>
+            <dd class="govuk-summary-list__actions" style="border-bottom:1px solid #fff">
+              <a class="govuk-link" href="#" >
+
+              </a>
+            </dd>
+          </div>
+
+
+
+
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key" >
+
+            </dt>
+            <dd class="govuk-summary-list__value">
+
+              <h3 class="govuk-heading-s">Files uploaded</h3>
+              <a class="govuk-link" href="#"> A_document.pdf </a>
+
+            </dd>
+            <dd class="govuk-summary-list__actions" >
+
+              </div>
+
+              <div class="govuk-summary-list__row">
+                <dt class="govuk-summary-list__key" style="border-bottom:1px solid #fff">
+    
+                </dt>
+                <dd class="govuk-summary-list__value" >
+    
+                  <h3 class="govuk-heading-s">
+                    What is this document?</h3>
+<p class="govuk-body">Birth certificate</p>
+    
+                </dd>
+                <dd class="govuk-summary-list__actions" style="border-bottom:1px solid #fff">
+                  <a class="govuk-link" href="#">
+                    Change<span class="govuk-visually-hidden"> name</span>
+                  </a>
+                </dd>
+
+    
+                  </div>
+                  <div class="govuk-summary-list__row" >
+                    <dt class="govuk-summary-list__key" >
+        
+                    </dt>
+                    <dd class="govuk-summary-list__value" >
+        
+                      <h3 class="govuk-heading-s">Files uploaded</h3>
+                      <a class="govuk-link" href="#"> A_document.pdf </a>
+        
+                    </dd>
+                    <dd class="govuk-summary-list__actions" >
+        
+                      </div>
+              
+</dl>
+
+<!-- https://design-system.service.gov.uk/styles/typography/ -->
+<h3 class="govuk-heading-s">Statement of truth</h3>
+
+
+<p class="govuk-body">This confirms that the information you are submitting is true and accurate, to the best of your knowledge.</p>
+
+<div class="govuk-checkboxes__item govuk-!-margin-bottom-9">
+  <input class="govuk-checkboxes__input" id="statement-truth-3" name="sot" type="checkbox" value="statement-yes">
+  <label class="govuk-label govuk-checkboxes__label" for="Statement of truth">
+    I believe that the facts stated in this application are true
+  </label>
+</div>
+
+
+<!-- https://design-system.service.gov.uk/components/button/ -->
+
+<!-- NB1- use this if you have ARE NOT using logic and delete the below -->
+<div class="govuk-button-group">
+
+<a href="responsesubmitted" role="button" draggable="false" class="govuk-button" data-module="govuk-button">
+  Submit
+</a>
+
+<a class="govuk-link" href="/applicanttasklist/returned.html">Cancel</a>
+</div>
+
+      
+<!-- enter all content of the left column before the div below-->
+</div>
+
+<!-- right column-->
+      <div class="govuk-grid-column-one-third">
+        <details class="govuk-details" data-module="govuk-details">
+          <summary class="govuk-details__summary">
+            <span class="govuk-details__summary-text">
+              Contact us for help
+            </span>
+          </summary>
+          <div class="govuk-details__text">
+
+            <h3 class="govuk-heading-s">Get in touch</h3>
+
+            <p class="govuk-body">If you'd like to report a problem or have a suggestion to help improve this service for others, get in touch by sending an email to:</p>
+      
+            
+            <a href="#" class="govuk-link">C100applications@justice.gov.uk</a>
+      
+            <!-- https://design-system.service.gov.uk/styles/typography/ -->
+            <p class="govuk-body">this email should only be used for feedback on the digital service.
+              We cannot answer any questions about applications that have been submitted. You can<a href="https://ucd-cada-prototype-design.herokuapp.com/darespondenttasklist/start#" class="govuk-link">contact the relevant court</a>if you need to discuss your case..</p>
+
+
+          </div>
+        </details>
+
+<!-- enter all content for the right column before the div below-->      
+</div>
+    </div>
+
+  </main>
+</div>
+
+
+
+{% endblock %}

@@ -1,0 +1,254 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  HMCTS prototyping
+{% endblock %}
+
+
+{% block header %}
+  <!-- Blank header with no service name for the start page -->
+
+{{ govukHeader({
+    homepageUrl: "/",
+    serviceName: "Child arrangements and family injunction",
+    serviceUrl: "/",
+    containerClasses: "govuk-width-container"
+}) }}
+
+{% endblock %}
+
+{% block beforeContent %}
+
+<div class="govuk-phase-banner">
+  <p class="govuk-phase-banner__content">
+    <strong class="govuk-tag govuk-phase-banner__content__tag">
+      BETA
+    </strong>
+    <span class="govuk-phase-banner__text">
+      This is a new service – your <a class="govuk-link" href="https://www.smartsurvey.co.uk/s/C100_Feedback/?pageurl=X  " target="_blank">feedback (opens in a new tab) </a> will help us to improve it.
+    </span>
+  </p>
+</div>
+
+<a href="#" class="govuk-back-link" onclick="history.back(-1)">Back</a>
+
+
+
+{% endblock %}
+
+{% block content %}
+
+<head> 
+  <script type="text/javascript">
+    window.onload = function() {
+       document.getElementById('ifYes').style.display = 'none';
+       document.getElementById('ifNo').style.display = 'none';
+   }
+   function yesnoCheck() {
+       if (document.getElementById('yesCheck').checked) {
+           document.getElementById('ifYes').style.display = 'block';
+           document.getElementById('ifNo').style.display = 'none';
+           document.getElementById('redhat1').style.display = 'none';
+           document.getElementById('aix1').style.display = 'none';
+       } 
+       else if(document.getElementById('noCheck').checked) {
+           document.getElementById('ifNo').style.display = 'block';
+           document.getElementById('ifYes').style.display = 'none';
+           document.getElementById('redhat1').style.display = 'none';
+           document.getElementById('aix1').style.display = 'none';
+      }
+   }
+   function yesnoCheck1() {
+      if(document.getElementById('redhat').checked) {
+          document.getElementById('redhat1').style.display = 'block';
+          document.getElementById('aix1').style.display = 'none';
+       }
+      if(document.getElementById('aix').checked) {
+          document.getElementById('aix1').style.display = 'block';
+          document.getElementById('redhat1').style.display = 'none';
+       }
+   }
+   </script>
+
+<script>
+function toggle_visibility(id) {
+var e = document.getElementById(id);
+e.style.display = ((e.style.display!='none') ? 'none' : 'block');
+}
+</script>
+
+
+   </head>
+
+<!-- https://design-system.service.gov.uk/styles/layout/-->
+
+<div class="govuk-width-container">
+  <main class="govuk-main-wrapper">
+
+    <div class="govuk-grid-row">
+<!-- Left column-->
+      <div class="govuk-grid-column-two-thirds">
+<!-- https://design-system.service.gov.uk/styles/typography/ -->
+
+<!-- https://design-system.service.gov.uk/styles/typography/ -->
+<h1 class="govuk-heading-l"><span class="govuk-caption-l">Delay or cancel a hearing date</span>Do you have supporting documents to upload?</h1>
+
+
+
+
+
+<div class="govuk-form-group">
+  <fieldset class="govuk-fieldset" aria-describedby="changed-name-hint">
+
+
+<div id="changed-name-hint" class="govuk-hint">
+  If the court has asked you to upload documents or submit an amended application, you will need to provide those files.
+</div>
+
+<div class="govuk-radios govuk-radios--inline" data-module="govuk-radios">
+<div class="govuk-radios__item">
+ <input class="govuk-radios__input" type="radio" onclick="javascript:yesnoCheck();" name="yesno" id="yesCheck"/>
+ <label class="govuk-label govuk-radios__label" for="changed-name">
+  Yes
+</label>
+</div>
+
+<div class="govuk-radios__item">
+ <input class="govuk-radios__input" type="radio" onclick="javascript:yesnoCheck();" name="yesno" id="noCheck"/>
+ <label class="govuk-label govuk-radios__label" for="changed-name-2">
+  No
+</label>
+</div>
+
+
+</div>
+
+<br>
+ <div id="ifYes" style="display:none">
+
+
+
+  <div class="govuk-inset-text">
+
+
+
+
+
+
+    <div class="govuk-form-group">
+
+
+      <!-- https://design-system.service.gov.uk/styles/typography/ -->
+      <h3 class="govuk-heading-s">Upload documents</h3>
+
+      <div id="changed-name-hint" class="govuk-hint">
+        Give each document a file name that makes it clear what it is about. For example position-statement.docx. Files must end with JPG, JPEG, BMP, PNG, TIF, PDF, DOC or DOCX.
+      </div>
+
+
+      <table class="govuk-table">
+   
+        <thead class="govuk-table__head">
+
+          <tr class="govuk-table__row">
+            <td scope="row" class="govuk-table__cell"></th>
+            <td class="govuk-table__cell"></td>
+          </tr>
+
+          <tr class="govuk-table__row">
+            <td scope="row" class="govuk-table__cell">No files uploaded</th>
+            <td class="govuk-table__cell"></td>
+          </tr>
+        </tbody>
+      </table>
+
+<!-- Please refer to: https://www.figma.com/file/A8lGSBhv4JhdgLklPBqbJM/May-2023---re-work-Apps-within-proceedings?type=design&node-id=149%3A37736&t=G5YNvycYbCBlB0U1-1 to see how the payload works and to see error messages. -->
+      <input class="govuk-file-upload" id="file-upload-1" name="file-upload-1" type="file">
+    </div>
+
+
+
+
+  </div>
+  <div id="foo" style="display:none;">
+
+    <div class="govuk-inset-text">
+
+
+  
+  </div>
+
+
+
+ </div>
+
+
+
+ 
+
+
+
+ <div id="ifNo" style="display:none">
+
+ </div>
+
+</fieldset>
+</div>
+
+
+
+
+
+
+<div class="govuk-button-group govuk-!-margin-top-6">
+
+<a href="consent.html" role="button" draggable="false" class="govuk-button" data-module="govuk-button">
+  Continue
+</a>
+
+<a class="govuk-link" href="/respondenttasklist/startreply.html">Cancel</a>
+</div>
+
+
+
+
+
+
+
+
+      
+<!-- enter all content of the left column before the div below-->
+</div>
+
+<!-- right column-->
+      <div class="govuk-grid-column-one-third">
+               <details class="govuk-details" data-module="govuk-details">
+          <summary class="govuk-details__summary">
+            <span class="govuk-details__summary-text">
+             Contacts for help
+             </span>
+           </summary>
+           <div class="govuk-details__text">
+            
+     
+            <p class="govuk-body govuk-!-font-weight-regular">You can <a href="#" class="govuk-link">contact the relevant court</a> if you need to discuss your case.</p>
+  
+            <p class="govuk-body">They cannot give you legal advice or answer questions about applications submitted.</p>
+  
+            <p class="govuk-body govuk-!-font-weight-bold">Feedback</p>
+    
+            <p class="govuk-body govuk-!-font-weight-regular">If you would like to report a problem or have a suggestion to help improve this service, send an email to: <a href="#" class="govuk-link">C100applications@justice.gov.uk</a></p>
+           
+            <p class="govuk-body">This email should only be used for feedback on the digital service.</p>
+     
+           </div>
+         </details> 
+
+<!-- enter all content for the right column before the div below-->      
+</div>
+    </div>
+
+  </main>
+</div>
+
+{% endblock %}

@@ -3248,6 +3248,8 @@ router.post('/applicanttasklist/applications/responsetoallegations/start-answer'
                 }
 
               });
+
+              
             router.post('/applicanttasklist/aboutyou/editcontactdetails/confidentiality/detailsusedbefore-answer', function (req, res) {
                 // Make a variable and give it the value from 'how-many-balls'
                 var detailsUsed = req.session.data['detailsknown']
@@ -3264,22 +3266,21 @@ router.post('/applicanttasklist/applications/responsetoallegations/start-answer'
 
               });
 
-// Run this code when a form is submitted to 'juggling-balls-answer'
-router.post('/idam/payonline', function (req, res) {
+              router.post('/idam/payonline', function (req, res) {
 
-  // Make a variable and give it the value from 'how-many-balls'
-  var payonline = req.session.data['payonline']
-
-  // Check whether the variable matches a condition
-  if (payonline == "yes"){
-    // Send user to next page
-    res.redirect('/idam/legalrepresentation.html')
-  } else {
-    // Send user to ineligible page
-    res.redirect('/idam/paperform.html')
-  }
-
-})
+                // Make a variable and give it the value from 'how-many-balls'
+                var payonline = req.session.data['payonline']
+              
+                // Check whether the variable matches a condition
+                if (payonline == "yes"){
+                  // Send user to next page
+                  res.redirect('/idam/legalrepresentation.html')
+                } else {
+                  // Send user to ineligible page
+                  res.redirect('/idam/paperform.html')
+                }
+              
+              })
 
 router.post('/applicanttasklist/aboutyou/contactpreferences/contactpreferences', function (req, res) {
   // Make a variable and give it the value from 'how-many-balls'
@@ -3300,6 +3301,27 @@ router.post('/applicanttasklist/aboutyou/contactpreferences/contactpreferences',
   }
 
 })
+
+
+router.post('/respondenttasklist/aboutyou/contactpreferences/contactpreferences', function (req, res) {
+  // Make a variable and give it the value from 'how-many-balls'
+  var contactpreferences = req.session.data['contactpreferences']
+  // Check whether the variable matches a condition
+
+  if (contactpreferences=="email"){
+    // Send user to next page
+    res.redirect('/respondenttasklist/aboutyou/contactpreferences/contactemail');
+    
+  }else {
+    // Send user to next page
+    res.redirect('/respondenttasklist/aboutyou/contactpreferences/contactpost');
+
+  }
+
+})
+
+
+
 
 router.post('/applicanttasklist/aboutyou/contactpreferences/contactpreferenceserror', function (req, res) {
   // Make a variable and give it the value from 'how-many-balls'
@@ -3430,4 +3452,464 @@ router.post('/screening/payonline', function (req, res) {
 
 })
 
+// Run this code when a form is submitted to 'juggling-balls-answer'
+router.post('/applicanttasklist/yourdocuments/uploadv1/position/requested.html', function (req, res) {
+
+  // Make a variable and give it the value from 'how-many-balls'
+  var requested = req.session.data['requested']
+
+  // Check whether the variable matches a condition
+  if (requested == "yes"){
+    // Send user to next page
+    res.redirect('/applicanttasklist/yourdocuments/uploadv1/position/howdocumentshared')
+  } else {
+    // Send user to ineligible page
+    res.redirect('/applicanttasklist/yourdocuments/uploadv1/docnotrequested.html')
+  }
+
+})
+
+// Run this code when a form is submitted to 'juggling-balls-answer'
+router.post('/applicanttasklist/yourdocuments/uploadv1/medical/requested.html', function (req, res) {
+
+  // Make a variable and give it the value from 'how-many-balls'
+  var requested = req.session.data['requested']
+
+  // Check whether the variable matches a condition
+  if (requested == "yes"){
+    // Send user to next page
+    res.redirect('/applicanttasklist/yourdocuments/uploadv1/medical/howdocumentshared')
+  } else {
+    // Send user to ineligible page
+    res.redirect('/applicanttasklist/yourdocuments/uploadv1/docnotrequested.html')
+  }
+
+})
+
+
+
+// Run this code when a form is submitted to 'juggling-balls-answer'
+router.post('/applicanttasklist/yourdocuments/uploadv1/requested.html', function (req, res) {
+
+  // Make a variable and give it the value from 'how-many-balls'
+  var requested = req.session.data['requested']
+
+  // Check whether the variable matches a condition
+  if (requested == "yes"){
+    // Send user to next page
+    res.redirect('/applicanttasklist/yourdocuments/uploadv1/howdocumentshared.html')
+  } else {
+    // Send user to ineligible page
+    res.redirect('/applicanttasklist/yourdocuments/uploadv1/docnotrequested.html')
+  }
+
+})
+
+// Run this code when a form is submitted to 'juggling-balls-answer'
+router.post('/applicanttasklist/yourdocuments/uploadv1/applications/hwf.html', function (req, res) {
+
+  // Make a variable and give it the value from 'how-many-balls'
+  var hwf = req.session.data['hwf']
+
+  // Check whether the variable matches a condition
+  if (hwf == "yes"){
+    // Send user to next page
+    res.redirect('/applicanttasklist/yourdocuments/uploadv1/applications/enterhwf.html')
+  } else {
+    // Send user to ineligible page
+    res.redirect('/applicanttasklist/yourdocuments/uploadv1/applications/checkanswers1.html')
+  }
+
+})
+
+
+
+// Run this code when a form is submitted to 'juggling-balls-answer'
+router.post('/applicanttasklist/yourdocuments/uploadv1/applications/enterhwf.html', function (req, res) {
+
+  // Make a variable and give it the value from 'how-many-balls'
+  var hwf = req.session.data['hwf']
+
+  // Check whether the variable matches a condition
+  if (hwf == "yes"){
+    // Send user to next page
+    res.redirect('/applicanttasklist/yourdocuments/uploadv1/applications/checkanswers2.html')
+  } else {
+    // Send user to ineligible page
+    res.redirect('/applicanttasklist/yourdocuments/uploadv1/applications/applyhwf.html')
+  }
+
+})
+
+
+// Run this code when a form is submitted to 'juggling-balls-answer'
+router.post('/applicanttasklist/yourdocuments/uploadv1/applications/c2agree.html', function (req, res) {
+
+  // Make a variable and give it the value from 'how-many-balls'
+  var agree = req.session.data['agree']
+
+  // Check whether the variable matches a condition
+  if (agree == "yes"){
+    // Send user to next page
+    res.redirect('/applicanttasklist/yourdocuments/uploadv1/applications/hwf2.html')
+
+  } else {
+    // Send user to ineligible page
+    res.redirect('/applicanttasklist/yourdocuments/uploadv1/applications/c2informed.html')
+  }
+
+})
+
+
+// Run this code when a form is submitted to 'juggling-balls-answer'
+router.post('/applicanttasklist/yourdocuments/uploadv1/applications/hwf2.html', function (req, res) {
+
+  // Make a variable and give it the value from 'how-many-balls'
+  var hwf = req.session.data['hwf']
+
+  // Check whether the variable matches a condition
+  if (hwf == "yes"){
+    // Send user to next page
+    res.redirect('/applicanttasklist/yourdocuments/uploadv1/applications/enterhwf.html')
+  } else {
+    // Send user to ineligible page
+    res.redirect('/applicanttasklist/yourdocuments/uploadv1/applications/checkanswers3.html')
+  }
+
+})
+
+
+// Run this code when a form is submitted to 'juggling-balls-answer'
+router.post('/applicanttasklist/yourdocuments/uploadv1/applications/c2informed.html', function (req, res) {
+
+  // Make a variable and give it the value from 'how-many-balls'
+  var agree = req.session.data['agree']
+
+  // Check whether the variable matches a condition
+  if (agree == "yes"){
+    // Send user to next page
+    res.redirect('/applicanttasklist/yourdocuments/uploadv1/applications/hwf.html')
+
+  } else {
+    // Send user to ineligible page
+    res.redirect('/applicanttasklist/yourdocuments/uploadv1/applications/hwf2.html')
+  }
+
+})
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// Run this code when a form is submitted to 'juggling-balls-answer'
+router.post('/respondenttasklist/yourdocuments/uploadv1/applications/hwf.html', function (req, res) {
+
+  // Make a variable and give it the value from 'how-many-balls'
+  var hwf = req.session.data['hwf']
+
+  // Check whether the variable matches a condition
+  if (hwf == "yes"){
+    // Send user to next page
+    res.redirect('/respondenttasklist/yourdocuments/uploadv1/applications/enterhwf.html')
+  } else {
+    // Send user to ineligible page
+    res.redirect('/respondenttasklist/yourdocuments/uploadv1/applications/checkanswers1.html')
+  }
+
+})
+
+
+
+// Run this code when a form is submitted to 'juggling-balls-answer'
+router.post('/respondenttasklist/yourdocuments/uploadv1/applications/enterhwf.html', function (req, res) {
+
+  // Make a variable and give it the value from 'how-many-balls'
+  var hwf = req.session.data['hwf']
+
+  // Check whether the variable matches a condition
+  if (hwf == "yes"){
+    // Send user to next page
+    res.redirect('/respondenttasklist/yourdocuments/uploadv1/applications/checkanswers2.html')
+  } else {
+    // Send user to ineligible page
+    res.redirect('/respondenttasklist/yourdocuments/uploadv1/applications/applyhwf.html')
+  }
+
+})
+
+
+// Run this code when a form is submitted to 'juggling-balls-answer'
+router.post('/respondenttasklist/yourdocuments/uploadv1/applications/c2agree.html', function (req, res) {
+
+  // Make a variable and give it the value from 'how-many-balls'
+  var agree = req.session.data['agree']
+
+  // Check whether the variable matches a condition
+  if (agree == "yes"){
+    // Send user to next page
+    res.redirect('/respondenttasklist/yourdocuments/uploadv1/applications/hwf2.html')
+
+  } else {
+    // Send user to ineligible page
+    res.redirect('/respondenttasklist/yourdocuments/uploadv1/applications/c2informed.html')
+  }
+
+})
+
+
+// Run this code when a form is submitted to 'juggling-balls-answer'
+router.post('/respondenttasklist/yourdocuments/uploadv1/applications/hwf2.html', function (req, res) {
+
+  // Make a variable and give it the value from 'how-many-balls'
+  var hwf = req.session.data['hwf']
+
+  // Check whether the variable matches a condition
+  if (hwf == "yes"){
+    // Send user to next page
+    res.redirect('/respondenttasklist/yourdocuments/uploadv1/applications/enterhwf.html')
+  } else {
+    // Send user to ineligible page
+    res.redirect('/respondenttasklist/yourdocuments/uploadv1/applications/checkanswers3.html')
+  }
+
+})
+
+
+// Run this code when a form is submitted to 'juggling-balls-answer'
+router.post('/respondenttasklist/yourdocuments/uploadv1/applications/c2informed.html', function (req, res) {
+
+  // Make a variable and give it the value from 'how-many-balls'
+  var agree = req.session.data['agree']
+
+  // Check whether the variable matches a condition
+  if (agree == "yes"){
+    // Send user to next page
+    res.redirect('/respondenttasklist/yourdocuments/uploadv1/applications/hwf.html')
+
+  } else {
+    // Send user to ineligible page
+    res.redirect('/respondenttasklist/yourdocuments/uploadv1/applications/hwf2.html')
+  }
+
+})
+
+
+// Run this code when a form is submitted to 'juggling-balls-answer'
+router.post('/respondenttasklist/yourdocuments/uploadv1/applications/c2hearing/start.html', function (req, res) {
+
+  // Make a variable and give it the value from 'how-many-balls'
+  var formc2 = req.session.data['formc2']
+
+  // Check whether the variable matches a condition
+  if (formc2 == "yes"){
+    // Send user to next page
+    res.redirect('/respondenttasklist/yourdocuments/uploadv1/applications/c2hearing/hearing.html')
+
+  } else {
+    // Send user to ineligible page
+    res.redirect('/respondenttasklist/yourdocuments/uploadv1/applications/c2hearing/c2download.html')
+  }
+
+})
+
+
+// Run this code when a form is submitted to 'juggling-balls-answer'
+router.post('/respondenttasklist/yourdocuments/uploadv1/applications/c2/start.html', function (req, res) {
+
+  // Make a variable and give it the value from 'how-many-balls'
+  var formc2 = req.session.data['formc2']
+
+  // Check whether the variable matches a condition
+  if (formc2 == "yes"){
+    // Send user to next page
+    res.redirect('/respondenttasklist/yourdocuments/uploadv1/applications/c2/uploadc2.html')
+
+  } else {
+    // Send user to ineligible page
+    res.redirect('/respondenttasklist/yourdocuments/uploadv1/applications/c2/c2download.html')
+  }
+
+})
+
+
+
+
+// Run this code when a form is submitted to 'juggling-balls-answer'
+router.post('/respondenttasklist/yourdocuments/uploadv1/applications/c2hearing/consent.html', function (req, res) {
+
+  // Make a variable and give it the value from 'how-many-balls'
+  var consent = req.session.data['consent']
+
+  // Check whether the variable matches a condition
+  if (consent == "yes"){
+    // Send user to next page
+    res.redirect('/respondenttasklist/yourdocuments/uploadv1/applications/c2hearing/cyanofee.html')
+
+  } else {
+    // Send user to ineligible page
+    res.redirect('/respondenttasklist/yourdocuments/uploadv1/applications/c2hearing/hwf.html')
+  }
+
+})
+
+
+// Run this code when a form is submitted to 'juggling-balls-answer'
+router.post('/respondenttasklist/yourdocuments/uploadv1/applications/c2/consent.html', function (req, res) {
+
+  // Make a variable and give it the value from 'how-many-balls'
+  var consent = req.session.data['consent']
+
+  // Check whether the variable matches a condition
+  if (consent == "yes"){
+    // Send user to next page
+    res.redirect('/respondenttasklist/yourdocuments/uploadv1/applications/c2/hwf53.html')
+
+  } else {
+    // Send user to ineligible page
+    res.redirect('/respondenttasklist/yourdocuments/uploadv1/applications/c2/notice.html')
+  }
+
+})
+
+
+// Run this code when a form is submitted to 'juggling-balls-answer'
+router.post('/respondenttasklist/yourdocuments/uploadv1/applications/c2/notice.html', function (req, res) {
+
+  // Make a variable and give it the value from 'how-many-balls'
+  var notice = req.session.data['notice']
+
+  // Check whether the variable matches a condition
+  if (notice == "yes"){
+    // Send user to next page
+    res.redirect('/respondenttasklist/yourdocuments/uploadv1/applications/c2/hwf167.html')
+
+  } else {
+    // Send user to ineligible page
+    res.redirect('/respondenttasklist/yourdocuments/uploadv1/applications/c2/hwf53.html')
+  }
+
+})
+
+
+
+
+
+// Run this code when a form is submitted to 'juggling-balls-answer'
+router.post('/respondenttasklist/yourdocuments/uploadv1/applications/c2hearing/hwf.html', function (req, res) {
+
+  // Make a variable and give it the value from 'how-many-balls'
+  var hwf = req.session.data['hwf']
+
+  // Check whether the variable matches a condition
+  if (hwf == "yes"){
+    // Send user to next page
+    res.redirect('/respondenttasklist/yourdocuments/uploadv1/applications/c2hearing/hwfyes.html')
+
+  } else {
+    // Send user to ineligible page
+    res.redirect('/respondenttasklist/yourdocuments/uploadv1/applications/c2hearing/cyapay.html')
+  }
+
+})
+
+
+// Run this code when a form is submitted to 'juggling-balls-answer'
+router.post('/respondenttasklist/yourdocuments/uploadv1/applications/c2/hwf167.html', function (req, res) {
+
+  // Make a variable and give it the value from 'how-many-balls'
+  var hwf = req.session.data['hwf']
+
+  // Check whether the variable matches a condition
+  if (hwf == "yes"){
+    // Send user to next page
+    res.redirect('/respondenttasklist/yourdocuments/uploadv1/applications/c2/hwfyes.html')
+
+  } else {
+    // Send user to ineligible page
+    res.redirect('/respondenttasklist/yourdocuments/uploadv1/applications/c2/cyapay167.html')
+  }
+
+})
+
+
+// Run this code when a form is submitted to 'juggling-balls-answer'
+router.post('/respondenttasklist/yourdocuments/uploadv1/applications/c2/hwf53.html', function (req, res) {
+
+  // Make a variable and give it the value from 'how-many-balls'
+  var hwf = req.session.data['hwf']
+
+  // Check whether the variable matches a condition
+  if (hwf == "yes"){
+    // Send user to next page
+    res.redirect('/respondenttasklist/yourdocuments/uploadv1/applications/c2/hwfyes.html')
+
+  } else {
+    // Send user to ineligible page
+    res.redirect('/respondenttasklist/yourdocuments/uploadv1/applications/c2/cyapay53.html')
+  }
+
+})
+
+
+
+
+
+// Run this code when a form is submitted to 'juggling-balls-answer'
+router.post('/respondenttasklist/yourdocuments/uploadv1/applications/c2hearing/hwfyes.html', function (req, res) {
+
+  // Make a variable and give it the value from 'how-many-balls'
+  var contact = req.session.data['contact']
+
+  // Check whether the variable matches a condition
+  if (contact == "yes"){
+    // Send user to next page
+    res.redirect('/respondenttasklist/yourdocuments/uploadv1/applications/c2hearing/cyanofee2.html')
+
+  } else {
+    // Send user to ineligible page
+    res.redirect('/respondenttasklist/yourdocuments/uploadv1/applications/c2hearing/hwfno.html')
+  }
+
+})
+
+// Run this code when a form is submitted to 'juggling-balls-answer'
+router.post('/respondenttasklist/yourdocuments/uploadv1/applications/c2/hwfyes.html', function (req, res) {
+
+  // Make a variable and give it the value from 'how-many-balls'
+  var contact = req.session.data['contact']
+
+  // Check whether the variable matches a condition
+  if (contact == "yes"){
+    // Send user to next page
+    res.redirect('/respondenttasklist/yourdocuments/uploadv1/applications/c2/cyanofee2.html')
+
+  } else {
+    // Send user to ineligible page
+    res.redirect('/respondenttasklist/yourdocuments/uploadv1/applications/c2/hwfno.html')
+  }
+
+
+})
+
+
+
+
+
+
+
+
+
 module.exports = router
+
+
+
+

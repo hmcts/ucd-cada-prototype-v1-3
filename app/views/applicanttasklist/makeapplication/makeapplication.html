@@ -1,0 +1,458 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  HMCTS prototyping
+{% endblock %}
+
+
+{% block header %}
+  <!-- Blank header with no service name for the start page -->
+
+{{ govukHeader({
+    homepageUrl: "/",
+    serviceName: "Child arrangements and family injunction",
+    serviceUrl: "/",
+    containerClasses: "govuk-width-container"
+}) }}
+
+{% endblock %}
+
+{% block beforeContent %}
+
+<div class="govuk-phase-banner">
+  <p class="govuk-phase-banner__content">
+    <strong class="govuk-tag govuk-phase-banner__content__tag">
+      Beta
+    </strong>
+    <span class="govuk-phase-banner__text">
+      This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.
+    </span>
+  </p>
+</div>
+
+
+
+<div class="govuk-breadcrumbs govuk-breadcrumbs--collapse-on-mobile">
+  <ol class="govuk-breadcrumbs__list">
+    <li class="govuk-breadcrumbs__list-item">
+      <a class="govuk-breadcrumbs__link" href="/accountdashboard.html">Home</a>
+    </li>
+    <li class="govuk-breadcrumbs__list-item">
+      <a class="govuk-breadcrumbs__link" href="/applicanttasklist/appserved.html">Case overview</a>
+    </li>
+  </ol>
+</div>
+
+
+{% endblock %}
+
+{% block content %}
+
+<!-- https://design-system.service.gov.uk/styles/layout/-->
+
+<div class="govuk-width-container">
+  <main class="govuk-main-wrapper">
+
+    <div class="govuk-grid-row">
+<!-- Left column-->
+      <div class="govuk-grid-column-two-thirds">
+        <h1 class="govuk-heading-l">Make an application about your case</h1>
+        <p class="govuk-body">Select a form to contact the court with your request.</p>
+      
+<p class="govuk-body">These requests will be reviewed by the court and a copy will be sent to the respondent, who will be able to have their say.</p>
+
+<p class="govuk-body">You may be able to ask for some details not to be shared with the respondent.</p>
+
+
+<!-- Acordion component -->
+
+
+<div class="govuk-accordion" data-module="govuk-accordion" id="accordion-default">
+  <div class="govuk-accordion__section">
+    <div class="govuk-accordion__section-header">
+      <h2 class="govuk-accordion__section-heading">
+        <span class="govuk-accordion__section-button" id="accordion-default-heading-1">
+          Ask for permission to start legal proceedings
+        </span>
+      </h2>
+    </div>
+    <div id="accordion-default-content-1" class="govuk-accordion__section-content" aria-labelledby="accordion-default-heading-1">
+      <p class='govuk-body'>Apply to the court for permission to start legal proceedings.</p>
+
+      <!-- https://design-system.service.gov.uk/styles/typography/ -->
+     <a href="/applicanttasklist/makeapplication/c2application.html" class="govuk-link">Apply to the court using form C2</a>
+    </div>
+  </div>
+
+
+
+
+  <div class="govuk-accordion__section">
+    <div class="govuk-accordion__section-header">
+      <h2 class="govuk-accordion__section-heading">
+        <span class="govuk-accordion__section-button" id="accordion-default-heading-2">
+          Ask the court to make an order
+        </span>
+      </h2>
+    </div>
+    <div id="accordion-default-content-2" class="govuk-accordion__section-content" aria-labelledby="accordion-default-heading-2">
+      <p class='govuk-body'>Request that the court issues an order or direction in the current proceedings.</p>
+
+      <a href="/applicanttasklist/makeapplication/c2application.html" class="govuk-link">Make this request using Form C2</a>
+
+    </div>
+  </div>
+
+
+
+
+
+
+  <div class="govuk-accordion__section">
+    <div class="govuk-accordion__section-header">
+      <h2 class="govuk-accordion__section-heading">
+        <span class="govuk-accordion__section-button" id="accordion-default-heading-3">
+          Ask to delay or cancel a hearing date
+        </span>
+      </h2>
+    </div>
+    <div id="accordion-default-content-3" class="govuk-accordion__section-content" aria-labelledby="accordion-default-heading-3">
+      <p class='govuk-body'>Request that the court issues an order or direction in the current proceedings.</p>
+
+      <a href="/applicanttasklist/makeapplication/c2application.html" class="govuk-link">Make this request using Form C2</a>
+
+    </div>
+  </div>
+
+
+
+
+
+
+  <div class="govuk-accordion__section">
+    <div class="govuk-accordion__section-header">
+      <h2 class="govuk-accordion__section-heading">
+        <span class="govuk-accordion__section-button" id="accordion-default-heading-4">
+          Ask for more time to do what is required by a court order
+        </span>
+      </h2>
+    </div>
+    <div id="accordion-default-content-4" class="govuk-accordion__section-content" aria-labelledby="accordion-default-heading-4">
+      <p class='govuk-body'>Apply for a time extension to take the actions set out by a court order.</p>
+      <a href="/applicanttasklist/makeapplication/c2application.html" class="govuk-link">Apply to the court using form C2</a>
+
+    </div>
+  </div>
+
+
+
+
+  <div class="govuk-accordion__section">
+    <div class="govuk-accordion__section-header">
+      <h2 class="govuk-accordion__section-heading">
+        <span class="govuk-accordion__section-button" id="accordion-default-heading-4">
+          Ask to bring in an expert
+        </span>
+      </h2>
+    </div>
+    <div id="accordion-default-content-4" class="govuk-accordion__section-content" aria-labelledby="accordion-default-heading-4">
+      <p class='govuk-body'>Apply for permission to appoint an expert to an ongoing court case.</p>
+      <a href="/applicanttasklist/makeapplication/c2application.html" class="govuk-link">Apply to the court using form C2</a>
+
+    </div>
+  </div>
+
+
+
+  <div class="govuk-accordion__section">
+    <div class="govuk-accordion__section-header">
+      <h2 class="govuk-accordion__section-heading">
+        <span class="govuk-accordion__section-button" id="accordion-default-heading-4">
+          Ask to share documents with someone else
+        </span>
+      </h2>
+    </div>
+    <div id="accordion-default-content-4" class="govuk-accordion__section-content" aria-labelledby="accordion-default-heading-4">
+      <p class='govuk-body'>Apply for permission to share court documents with a third party to the case.</p>
+      <a href="/applicanttasklist/makeapplication/c2application.html" class="govuk-link">Apply to the court using form C2</a>
+    </div>
+  </div>
+
+
+  <div class="govuk-accordion__section">
+    <div class="govuk-accordion__section-header">
+      <h2 class="govuk-accordion__section-heading">
+        <span class="govuk-accordion__section-button" id="accordion-default-heading-4">
+          Ask to make an application
+        </span>
+      </h2>
+    </div>
+    <div id="accordion-default-content-4" class="govuk-accordion__section-content" aria-labelledby="accordion-default-heading-4">
+      <p class='govuk-body'>Apply for permission to make an application to the court.</p>
+      <a href="/applicanttasklist/makeapplication/c2application.html" class="govuk-link">Apply to the court using form C2</a>
+    </div>
+  </div>
+
+
+
+  <div class="govuk-accordion__section">
+    <div class="govuk-accordion__section-header">
+      <h2 class="govuk-accordion__section-heading">
+        <span class="govuk-accordion__section-button" id="accordion-default-heading-4">
+          Ask to join or leave a case
+        </span>
+      </h2>
+    </div>
+    <div id="accordion-default-content-4" class="govuk-accordion__section-content" aria-labelledby="accordion-default-heading-4">
+      <p class='govuk-body'>Apply for permission to join or leave ongoing court proceedings.</p>
+      <a href="/applicanttasklist/makeapplication/c2application.html" class="govuk-link">Apply to the court using form C2</a>
+    </div>
+  </div>
+
+
+
+  <div class="govuk-accordion__section">
+    <div class="govuk-accordion__section-header">
+      <h2 class="govuk-accordion__section-heading">
+        <span class="govuk-accordion__section-button" id="accordion-default-heading-4">
+          Ask to withdraw an application 
+        </span>
+      </h2>
+    </div>
+    <div id="accordion-default-content-4" class="govuk-accordion__section-content" aria-labelledby="accordion-default-heading-4">
+      <p class='govuk-body'>Apply for permission to withdraw the proceedings.</p>
+      <a href="/applicanttasklist/makeapplication/c2application.html" class="govuk-link">Apply to the court using form C2</a>
+    </div>
+  </div>
+
+
+
+  <div class="govuk-accordion__section">
+    <div class="govuk-accordion__section-header">
+      <h2 class="govuk-accordion__section-heading">
+        <span class="govuk-accordion__section-button" id="accordion-default-heading-4">
+          Ask the court to change, extend or cancel an order
+        </span>
+      </h2>
+    </div>
+    <div id="accordion-default-content-4" class="govuk-accordion__section-content" aria-labelledby="accordion-default-heading-4">
+      <p class='govuk-body'>Apply for the court to vary, extend or discharge an existing order in ongoing proceedings.</p>
+      <a href="/applicanttasklist/makeapplication/fl403application.html" class="govuk-link">Apply to the court using form FL403</a>
+    </div>
+  </div>
+
+
+
+  <div class="govuk-accordion__section">
+    <div class="govuk-accordion__section-header">
+      <h2 class="govuk-accordion__section-heading">
+        <span class="govuk-accordion__section-button" id="accordion-default-heading-4">
+          Ask the court to prevent questioning in person by someone you have accused of abuse
+        </span>
+      </h2>
+    </div>
+    <div id="accordion-default-content-4" class="govuk-accordion__section-content" aria-labelledby="accordion-default-heading-4">
+      <p class='govuk-body'>Apply for the court to consider whether to prevent cross-examination by the accused person.</p>
+      <a href="/applicanttasklist/makeapplication/ex740application.html" class="govuk-link">Apply to the court using form EX740</a>
+    </div>
+  </div>
+
+  <div class="govuk-accordion__section">
+    <div class="govuk-accordion__section-header">
+      <h2 class="govuk-accordion__section-heading">
+        <span class="govuk-accordion__section-button" id="accordion-default-heading-4">
+          Ask the court to prevent questioning in person by someone who has accused you of abuse
+        </span>
+      </h2>
+    </div>
+    <div id="accordion-default-content-4" class="govuk-accordion__section-content" aria-labelledby="accordion-default-heading-4">
+      <p class='govuk-body'>Apply for the court to consider whether to prevent cross-examination by the accuser.</p>
+      <a href="/applicanttasklist/makeapplication/ex741application.html" class="govuk-link">Apply to the court using form EX741</a>
+    </div>
+  </div>
+
+
+
+
+  <div class="govuk-accordion__section">
+    <div class="govuk-accordion__section-header">
+      <h2 class="govuk-accordion__section-heading">
+        <span class="govuk-accordion__section-button" id="accordion-default-heading-4">
+          Appeal a court order or ask for permission to appeal
+        </span>
+      </h2>
+    </div>
+    <div id="accordion-default-content-4" class="govuk-accordion__section-content" aria-labelledby="accordion-default-heading-4">
+      <p class='govuk-body'>Let the court know about your appeal, or ask the court for permission to appeal a case.</p>
+      <a href="/applicanttasklist/makeapplication/n161application.html" class="govuk-link">Inform the court using form N161</a>
+    </div>
+  </div>
+
+
+  <div class="govuk-accordion__section">
+    <div class="govuk-accordion__section-header">
+      <h2 class="govuk-accordion__section-heading">
+        <span class="govuk-accordion__section-button" id="accordion-default-heading-4">
+          Ask the court for personal service by a court bailiff
+        </span>
+      </h2>
+    </div>
+    <div id="accordion-default-content-4" class="govuk-accordion__section-content" aria-labelledby="accordion-default-heading-4">
+      <p class='govuk-body'>Apply for a court bailiff to hand court papers to the other person in the case.</p>
+      <a href="/applicanttasklist/makeapplication/d89application.html" class="govuk-link">Apply to the court using form D89</a>
+    </div>
+  </div>
+
+
+
+  <div class="govuk-accordion__section">
+    <div class="govuk-accordion__section-header">
+      <h2 class="govuk-accordion__section-heading">
+        <span class="govuk-accordion__section-button" id="accordion-default-heading-4">
+          Ask the court to enforce a child arrangements order
+        </span>
+      </h2>
+    </div>
+    <div id="accordion-default-content-4" class="govuk-accordion__section-content" aria-labelledby="accordion-default-heading-4">
+      <p class='govuk-body'>Apply for the court to enforce a child arrangements order.</p>
+      <a href="/applicanttasklist/makeapplication/c79application.html" class="govuk-link">Apply using form C79</a>
+    </div>
+  </div>
+
+
+  <div class="govuk-accordion__section">
+    <div class="govuk-accordion__section-header">
+      <h2 class="govuk-accordion__section-heading">
+        <span class="govuk-accordion__section-button" id="accordion-default-heading-4">
+          Ask the court to take action when a person in the case is disobeying a court order
+        </span>
+      </h2>
+    </div>
+    <div id="accordion-default-content-4" class="govuk-accordion__section-content" aria-labelledby="accordion-default-heading-4">
+      <p class='govuk-body'>Apply for the court to consider whether a person is disobeying a court order, or is unfairly influencing proceedings. This is known as 'contempt of court'.</p>
+      <a href="/applicanttasklist/makeapplication/fc600application.html" class="govuk-link">Apply using form FC600</a>
+    </div>
+  </div>
+
+
+  <div class="govuk-accordion__section">
+    <div class="govuk-accordion__section-header">
+      <h2 class="govuk-accordion__section-heading">
+        <span class="govuk-accordion__section-button" id="accordion-default-heading-4">
+          Ask the court to issue an arrest warrant
+        </span>
+      </h2>
+    </div>
+    <div id="accordion-default-content-4" class="govuk-accordion__section-content" aria-labelledby="accordion-default-heading-4">
+      <p class='govuk-body'>Apply for the court to issue an arrest warrant for someone who is involved in the case.</p>
+      <a href="/applicanttasklist/makeapplication/fl407application.html" class="govuk-link">Apply using form FL407</a>
+    </div>
+  </div>
+
+
+  <div class="govuk-accordion__section">
+    <div class="govuk-accordion__section-header">
+      <h2 class="govuk-accordion__section-heading">
+        <span class="govuk-accordion__section-button" id="accordion-default-heading-4">
+          Ask the court to make an order relating to a child
+        </span>
+      </h2>
+    </div>
+    <div id="accordion-default-content-4" class="govuk-accordion__section-content" aria-labelledby="accordion-default-heading-4">
+      <p class='govuk-body'>Apply for any order relating to a child, except for care and supervision orders, Section 8 orders or the enforcement of a child arrangements order.</p>
+      <a href="/applicanttasklist/makeapplication/c1application.html" class="govuk-link">Apply using form C1</a>
+    </div>
+  </div>
+
+
+
+  <div class="govuk-accordion__section">
+    <div class="govuk-accordion__section-header">
+      <h2 class="govuk-accordion__section-heading">
+        <span class="govuk-accordion__section-button" id="accordion-default-heading-4">
+          Ask for an order authorising search for, taking charge of, and delivery of a child
+        </span>
+      </h2>
+    </div>
+    <div id="accordion-default-content-4" class="govuk-accordion__section-content" aria-labelledby="accordion-default-heading-4">
+      <p class='govuk-body'>Apply for an order authorising search for, taking charge of, and delivery of a child.</p>
+      <a href="/applicanttasklist/makeapplication/c3application.html" class="govuk-link">Apply using form C3</a>
+    </div>
+  </div>
+
+
+
+  <div class="govuk-accordion__section">
+    <div class="govuk-accordion__section-header">
+      <h2 class="govuk-accordion__section-heading">
+        <span class="govuk-accordion__section-button" id="accordion-default-heading-4">
+          Ask the court to order someone to provide information on where a child is
+        </span>
+      </h2>
+    </div>
+    <div id="accordion-default-content-4" class="govuk-accordion__section-content" aria-labelledby="accordion-default-heading-4">
+      <p class='govuk-body'>Apply for the court to order someone to provide information on where a child is, or who they are with.</p>
+      <a href="/applicanttasklist/makeapplication/c4application.html" class="govuk-link">Apply using form C4</a>
+    </div>
+  </div>
+
+
+
+  <div class="govuk-accordion__section">
+    <div class="govuk-accordion__section-header">
+      <h2 class="govuk-accordion__section-heading">
+        <span class="govuk-accordion__section-button" id="accordion-default-heading-4">
+          Ask the court to summon a witness
+        </span>
+      </h2>
+    </div>
+    <div id="accordion-default-content-4" class="govuk-accordion__section-content" aria-labelledby="accordion-default-heading-4">
+      <p class='govuk-body'>Apply for the court to summon a witness in the case.</p>
+      <a href="/applicanttasklist/makeapplication/fp25application.html" class="govuk-link">Apply using form FP25</a>
+    </div>
+  </div>
+
+
+
+
+
+</div>
+
+<!-- enter all content of the left column before the div below-->
+</div>
+
+<!-- right column-->
+      <div class="govuk-grid-column-one-third">
+        <details class="govuk-details" data-module="govuk-details">
+          <summary class="govuk-details__summary">
+            <span class="govuk-details__summary-text">
+             Contacts for help
+             </span>
+           </summary>
+           <div class="govuk-details__text">
+            
+     
+            <p class="govuk-body govuk-!-font-weight-regular">You can <a href="#" class="govuk-link">contact the relevant court</a> if you need to discuss your case.</p>
+  
+            <p class="govuk-body">They cannot give you legal advice or answer questions about applications submitted.</p>
+  
+            <p class="govuk-body govuk-!-font-weight-bold">Feedback</p>
+    
+            <p class="govuk-body govuk-!-font-weight-regular">If you would like to report a problem or have a suggestion to help improve this service, send an email to: <a href="#" class="govuk-link">C100applications@justice.gov.uk</a></p>
+           
+            <p class="govuk-body">This email should only be used for feedback on the digital service.</p>
+     
+           </div>
+         </details>
+
+<!-- enter all content for the right column before the div below-->      
+</div>
+    </div>
+
+  </main>
+</div>
+
+
+
+
+{% endblock %}

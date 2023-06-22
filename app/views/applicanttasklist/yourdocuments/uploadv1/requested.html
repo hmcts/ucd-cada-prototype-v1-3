@@ -15,6 +15,10 @@
 }) }}
 
 {% endblock %}
+{% block beforeContent %}
+
+<a href="#" class="govuk-back-link" onclick="history.back(-1)">Back</a>
+{% endblock %}
 
 {% block content %}
 
@@ -24,9 +28,8 @@
   <div class="govuk-grid-column-two-thirds">
     <div class="govuk-width-container">
 
-      <a href="#" onclick="history.back(-1)"  class="govuk-back-link">Back</a>
 
-
+      <form action="/applicanttasklist/yourdocuments/uploadv1/requested.html" method="post" novalidate>
 
       <h1 class="govuk-heading-xl">
         <span class="govuk-caption-l">Witness statements and evidence</span>
@@ -49,14 +52,14 @@
 
                   <div class="govuk-radios" data-module="govuk-radios">
                     <div class="govuk-radios__item">
-                      <input class="govuk-radios__input" id="yes-redirect" name="where-do-you-live" type="radio" value="yes">
-                      <label class="govuk-label govuk-radios__label" for="yes-redirect">
+                      <input class="govuk-radios__input" id="requested-yes" name="requested" type="radio" value="yes">
+                      <label class="govuk-label govuk-radios__label" for="requested-yes">
                         Yes
                       </label>
                     </div>
                     <div class="govuk-radios__item">
-                      <input class="govuk-radios__input" id="no-redirect" name="where-do-you-live" type="radio" value="no">
-                      <label class="govuk-label govuk-radios__label" for="no-redirect">
+                      <input class="govuk-radios__input" id="requested-no" name="requested" type="radio" value="no">
+                      <label class="govuk-label govuk-radios__label" for="requested-no">
                         No
                       </label>
                     </div>
@@ -75,7 +78,7 @@
 
           <div class="govuk-button-group">
 
-            <form action="howdocumentshared" method="post" novalidate>
+            
 
               <input type="hidden" name="answers-checked" value="true">
 

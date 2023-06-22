@@ -15,6 +15,11 @@
 }) }}
 
 {% endblock %}
+{% block beforeContent %}
+
+<a href="#" class="govuk-back-link" onclick="history.back(-1)">Back</a>
+{% endblock %}
+
 
 {% block content %}
 
@@ -24,9 +29,8 @@
   <div class="govuk-grid-column-two-thirds">
     <div class="govuk-width-container">
 
-      <a href="#" onclick="history.back(-1)"  class="govuk-back-link">Back</a>
 
-
+      <form action="/applicanttasklist/yourdocuments/uploadv1/medical/requested.html" method="post" novalidate>
 
       <h1 class="govuk-heading-xl">
         <span class="govuk-caption-l">Expert reports</span>
@@ -49,14 +53,14 @@
 
                   <div class="govuk-radios" data-module="govuk-radios">
                     <div class="govuk-radios__item">
-                      <input class="govuk-radios__input" id="yes-redirect" name="where-do-you-live" type="radio" value="yes">
-                      <label class="govuk-label govuk-radios__label" for="yes-redirect">
+                      <input class="govuk-radios__input" id="requested-yes" name="requested" type="radio" value="yes">
+                      <label class="govuk-label govuk-radios__label" for="requested-yes">
                         Yes
                       </label>
                     </div>
                     <div class="govuk-radios__item">
-                      <input class="govuk-radios__input" id="no-redirect" name="where-do-you-live" type="radio" value="no">
-                      <label class="govuk-label govuk-radios__label" for="no-redirect">
+                      <input class="govuk-radios__input" id="requested-no" name="requested" type="radio" value="no">
+                      <label class="govuk-label govuk-radios__label" for="requested-no">
                         No
                       </label>
                     </div>
@@ -75,7 +79,7 @@
 
           <div class="govuk-button-group">
 
-            <form action="howdocumentshared" method="post" novalidate>
+         
 
               <input type="hidden" name="answers-checked" value="true">
 
@@ -93,27 +97,25 @@
     <div class="govuk-grid-column-one-third">
 
       <details class="govuk-details" data-module="govuk-details">
-
-          <summary class="govuk-details__summary">
-
-           <span class="govuk-details__summary-text">
-            Contacts for help
-            </span>
-
-          </summary>
-
-          <div class="govuk-details__text">
-           Ask a question or get any help in any language
-           <p class="govuk-body govuk-!-font-weight-bold">Telephone</p>
-
-           <p class="govuk-body govuk-!-font-weight-regular">0300 303 0742</p>
-           <p class="govuk-body govuk-!-font-weight-regular">Monday to Friday, 8am to 8pm</p>
-           <a href="#" class="govuk-link">Find out about call charges</a>
-           <p class="govuk-body govuk-!-font-weight-regular">(opens in a new window)</p>
-
-          </div>
-
-      </details>
+        <summary class="govuk-details__summary">
+          <span class="govuk-details__summary-text">
+           Contacts for help
+           </span>
+         </summary>
+   
+         <!-- https://design-system.service.gov.uk/styles/typography/ -->
+         <h3 class="govuk-heading-s">Get in touch</h3>
+   
+         <p class="govuk-body">If you'd like to report a problem or have a suggestion to help improve this service for others, get in touch by sending an email to:</p>
+   
+         
+         <a href="#" class="govuk-link">C100applications@justice.gov.uk</a>
+   
+         <!-- https://design-system.service.gov.uk/styles/typography/ -->
+         <p class="govuk-body">this email should only be used for feedback on the digital service.
+           We cannot answer any questions about applications that have been submitted. You can <a href="https://ucd-cada-prototype-design.herokuapp.com/darespondenttasklist/start#" class="govuk-link">contact the relevant court</a>if you need to discuss your case..</p>
+         </div>
+       </details>
 
     </div>
 

@@ -15,6 +15,10 @@
 }) }}
 
 {% endblock %}
+{% block beforeContent %}
+
+<a href="#" class="govuk-back-link" onclick="history.back(-1)">Back</a>
+{% endblock %}
 
 {% block content %}
 
@@ -24,7 +28,7 @@
   <div class="govuk-grid-column-two-thirds">
     <div class="govuk-width-container">
 
-<a href="#" onclick="history.back(-1)" class="govuk-back-link">Back</a>
+
 
 
       <h1 class="govuk-heading-xl">

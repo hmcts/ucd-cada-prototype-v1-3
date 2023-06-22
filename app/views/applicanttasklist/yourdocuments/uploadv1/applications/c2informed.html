@@ -1,0 +1,136 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  HMCTS prototyping
+{% endblock %}
+
+
+{% block header %}
+  <!-- Blank header with no service name for the start page -->
+
+{{ govukHeader({
+    homepageUrl: "/",
+    serviceName: "Child arrangements and family injunction",
+    serviceUrl: "/",
+    containerClasses: "govuk-width-container"
+}) }}
+
+{% endblock %}
+
+{% block beforeContent %}
+
+<div class="govuk-phase-banner">
+  <p class="govuk-phase-banner__content">
+    <strong class="govuk-tag govuk-phase-banner__content__tag">
+      BETA
+    </strong>
+    <span class="govuk-phase-banner__text">
+      This is a new service – your <a class="govuk-link" href="https://www.smartsurvey.co.uk/s/C100_Feedback/?pageurl=X  ">feedback</a> will help us to improve it.
+    </span>
+  </p>
+</div>
+
+
+
+<a href="#" class="govuk-back-link" onclick="history.back(-1)">Back</a>
+
+
+
+{% endblock %}
+
+{% block content %}
+
+<!-- https://design-system.service.gov.uk/styles/layout/-->
+
+<div class="govuk-width-container">
+  <main class="govuk-main-wrapper">
+
+    <div class="govuk-grid-row">
+
+
+      <form action="/applicanttasklist/yourdocuments/uploadv1/applications/c2informed.html" method="post" novalidate>
+
+<!-- Left column-->
+<div class="govuk-grid-column-two-thirds">
+
+
+  <!-- https://design-system.service.gov.uk/styles/typography/ -->
+  <h1 class="govuk-heading-l">Can the respondent be informed about the application?</h1>
+  <p class="govuk-body">If there is a reason the respondent cannot be informed about the application, the court may need to consider it without their involvement. This is known as 'without notice'.</p>
+
+  <p class="govuk-body">We need to ask this question as it may determine the court fees you need to pay.</p>
+
+
+  <div class="govuk-form-group">
+    <fieldset class="govuk-fieldset">
+      <div class="govuk-radios" data-module="govuk-radios">
+        <div class="govuk-radios__item">
+          <input class="govuk-radios__input" id="agree-yes" name="agree" type="radio" value="yes">
+          <label class="govuk-label govuk-radios__label" for="agree-yes">
+            Yes
+          </label>
+        </div>
+        <div class="govuk-radios__item">
+          <input class="govuk-radios__input" id="agree-no" name="agree" type="radio" value="no">
+          <label class="govuk-label govuk-radios__label" for="agree-no">
+            No
+          </label>
+        </div>
+      </div>
+    </fieldset>
+  </div>
+  
+
+
+<div class="govuk-button-group">
+  <button class="govuk-button" data-module="govuk-button">
+    Continue
+  </button>
+
+  <a class="govuk-link" href="/applicanttasklist/appserved.html">Cancel</a>
+</div>
+
+
+
+
+
+  </form>
+        
+<!-- enter all content of the left column before the div below-->
+</div>
+
+<!-- right column-->
+      <div class="govuk-grid-column-one-third">
+        <details class="govuk-details" data-module="govuk-details">
+          <summary class="govuk-details__summary">
+            <span class="govuk-details__summary-text">
+             Contact us for help
+             </span>
+           </summary>
+           <div class="govuk-details__text">
+            
+     
+            <p class="govuk-body govuk-!-font-weight-regular">You can <a href="#" class="govuk-link">contact the relevant court</a> if you need to discuss your case.</p>
+  
+            <p class="govuk-body">They cannot give you legal advice or answer questions about applications submitted.</p>
+  
+            <p class="govuk-body govuk-!-font-weight-bold">Feedback</p>
+    
+            <p class="govuk-body govuk-!-font-weight-regular">If you would like to report a problem or have a suggestion to help improve this service, send an email to: <a href="#" class="govuk-link">C100applications@justice.gov.uk</a></p>
+           
+            <p class="govuk-body">This email should only be used for feedback on the digital service.</p>
+     
+           </div>
+         </details>
+
+<!-- enter all content for the right column before the div below-->      
+</div>
+    </div>
+
+  </main>
+</div>
+
+
+
+
+{% endblock %}

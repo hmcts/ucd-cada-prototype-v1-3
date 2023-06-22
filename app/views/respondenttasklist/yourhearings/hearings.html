@@ -18,13 +18,25 @@
 
 {% block beforeContent %}
 
+<div class="govuk-phase-banner">
+  <p class="govuk-phase-banner__content">
+    <strong class="govuk-tag govuk-phase-banner__content__tag">
+      BETA
+    </strong>
+    <span class="govuk-phase-banner__text">
+      This is a new service – your <a class="govuk-link" href="https://www.smartsurvey.co.uk/s/C100_Feedback/?pageurl=X  " target="_blank">feedback (opens in a new tab) </a> will help us to improve it.
+    </span>
+  </p>
+</div>
+
+
 <div class="govuk-breadcrumbs govuk-breadcrumbs--collapse-on-mobile">
   <ol class="govuk-breadcrumbs__list">
     <li class="govuk-breadcrumbs__list-item">
       <a class="govuk-breadcrumbs__link" href="/accountdashboard.html">Home</a>
     </li>
     <li class="govuk-breadcrumbs__list-item">
-      <a class="govuk-breadcrumbs__link" href="/respondenttasklist/speakwithcafcass">Case view</a>
+      <a class="govuk-breadcrumbs__link" href="/respondenttasklist/startreply">Case overview</a>
     </li>
   </ol>
 </div>
@@ -48,7 +60,7 @@
     <h3 class="govuk-heading-l">Your next hearing</h3>
 
       <h4 class="govuk-heading-m govuk-!-margin-left-9">
-        Final hearing
+        First hearing
       </h4>
     <h4 class="govuk-heading-s govuk-!-margin-left-9"> You should attend this hearing</h4>
   <dl class="govuk-summary-list govuk-summary-list--no-border govuk-!-margin-left-9">
@@ -58,7 +70,7 @@
           Date
       </dt>
       <dd class="govuk-summary-list__value">
-        Monday 12 July 2021
+        Monday 12 July 2023
       </dd>
     </div>
 
@@ -147,7 +159,7 @@
 
   </dl>
 
-
+<!-- 
   <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
 
 
@@ -207,7 +219,7 @@
           <a href="">Useful documents (Map)</a>
       </dd>
     </div>
-
+ -->
 
 
 <!--       <div class="govuk-summary-list__row">
@@ -220,7 +232,7 @@
     </div> -->
 
 
-    <div class="govuk-summary-list__row">
+    <!-- <div class="govuk-summary-list__row">
       <dt class="govuk-summary-list__key">
        Hearing outcome
       </dt>
@@ -300,15 +312,17 @@
 
 
 
-    </dl>
+    </dl> -->
+
+    <p class="govuk-notification-banner__heading">
+      <a class="govuk-notification-banner__link" href="/respondenttasklist/makeapplication/c2hearing.html">Ask to delay or cancel a hearing date</a>
+    </p>
 
 
 
 
 
-
-
-      <div class="govuk-button-group">
+      <div class="govuk-button-group govuk-!-margin-top-9">
         <a class="govuk-button govuk-button--secondary" data-module="govuk-button" href="../startreply">Go back</a>
        </div>
 
@@ -329,23 +343,27 @@
 
 
 
-    	<details class="govuk-details" data-module="govuk-details">
- 			 <summary class="govuk-details__summary">
-   			 <span class="govuk-details__summary-text">
-    		  Contacts for help
-  			  </span>
-  			</summary>
-  			<div class="govuk-details__text">
-   			 Ask a question or get any help in any language
-   			 <p class="govuk-body govuk-!-font-weight-bold">Telephone</p>
+  <details class="govuk-details" data-module="govuk-details">
+    <summary class="govuk-details__summary">
+      <span class="govuk-details__summary-text">
+       Contact us for help
+       </span>
+     </summary>
+     <div class="govuk-details__text">
+      
 
-   			 <p class="govuk-body govuk-!-font-weight-regular">0300 303 0742</p>
-   			 <p class="govuk-body govuk-!-font-weight-regular">Monday to Friday, 8am to 8pm</p>
-   			 <a href="#" class="govuk-link">Find out about call charges</a>
-   			 <p class="govuk-body govuk-!-font-weight-regular">(opens in a new window)</p>
+      <p class="govuk-body govuk-!-font-weight-regular">You can <a href="#" class="govuk-link">contact the relevant court</a> if you need to discuss your case.</p>
 
-			  </div>
-			</details>
+      <p class="govuk-body">They cannot give you legal advice or answer questions about applications submitted.</p>
+
+      <p class="govuk-body govuk-!-font-weight-bold">Feedback</p>
+
+      <p class="govuk-body govuk-!-font-weight-regular">If you would like to report a problem or have a suggestion to help improve this service, send an email to: <a href="#" class="govuk-link">C100applications@justice.gov.uk</a></p>
+     
+      <p class="govuk-body">This email should only be used for feedback on the digital service.</p>
+
+     </div>
+   </details>
 
 
 
